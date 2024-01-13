@@ -1,0 +1,74 @@
+[{
+  "_id": {
+    "$oid": "65a2302ba9c0083c09511e9e"
+  },
+  "Name": "Akshay",
+  "Marks": 500
+},
+{
+  "_id": {
+    "$oid": "65a2307aa9c0083c09511ea0"
+  },
+  "item": "journal",
+  "qty": 25,
+  "tags": [
+    "blank",
+    "red"
+  ],
+  "size": {
+    "h": 14,
+    "w": 21,
+    "uom": "cm"
+  }
+},
+{
+  "_id": {
+    "$oid": "65a2307aa9c0083c09511ea1"
+  },
+  "item": "mat",
+  "qty": 85,
+  "tags": [
+    "gray"
+  ],
+  "size": {
+    "h": 27.9,
+    "w": 35.5,
+    "uom": "cm"
+  }
+},
+{
+  "_id": {
+    "$oid": "65a2307aa9c0083c09511ea2"
+  },
+  "item": "mousepad",
+  "qty": 25,
+  "tags": [
+    "gel",
+    "blue"
+  ],
+  "size": {
+    "h": 19,
+    "w": 22.85,
+    "uom": "cm"
+  }
+},
+{
+  "_id": {
+    "$oid": "65a237cc076bef990796edd1"
+  },
+  "Name": "Madhur",
+  "RollNo": 12,
+  "GPA": 4.4,
+  "isFullTime": false,
+  "graduationDate": null,
+  "courses": [
+    "Maths",
+    "Chemistry",
+    "Biology"
+  ],
+  "address": {
+    "street": "Subhash Nagar",
+    "City": "New Delhi",
+    "Zip": "110027"
+  }
+}]
