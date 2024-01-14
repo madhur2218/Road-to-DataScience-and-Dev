@@ -1,3 +1,8 @@
+CREATE-C
+READ- R
+UPDATE -U
+DELETE -D
+
 use School // creates a db called school
 use MI //created a database MI 
 
@@ -109,4 +114,38 @@ db.School.deleteOne({RollNo:12})
 
 db.School.deleteMany({isFullTime: false})
 
+//Comparasion Operators 
+db.Student.find({name : {$ne: {"Madhur"}}})  //$ne means NOT EQUAL
+db.Student.find({age: {$le:40}}) //less than
+db.Student.find({age: {$lte: 32}}) //less than equal to 
+db.Student.find({age: {$gt: 21}}) //greater than 
+db.Student.find({age : {$gte: 21}}) //grater than equal to 
+db.Student.find({age: {$get :32 , $lte : 12}})  // grater than and less than in one query
 
+db.Student.find({name: {$in: ["Madhur", "Malhar", "Naman"]}})
+db.Student.find({name: {$nin : ["Madhur", "Malhar", "Ishant"]}})
+
+//Logical Operators 
+$and
+$or
+$not
+$nor
+
+db.Student.find({$and: {[{isFullTime: true},{age: {$le: {23}}}]})
+db.Student.find({age: {$not: {$get:40}})
+
+
+//Indexing
+//Indexing provides efficient querying. Here we are storing our data as B-Trees
+db.Student.find({name: "Madhur"}).explain("ExecutionStats")  ///Using this query we are finding Madhur using a linear search, as it searches each document one by one 
+//Now using indexes:
+db.Student.createIndex({name: 1})//Assigning name in asc order
+db.Student.find({name: "Madhur"}).explain("ExecutionStatus") //This time it only searches for one document
+db.Student.dropIndex("madhur_1")
+//If we are doing a lot of searching, it is recommeneded to use indexing. Do not use indexing while updating 
+
+//Collections
+show Collections
+db.createCollection("teachers", {capped:true, size: 100000, max: 100}) // size should not be more than 10mb, max documents should not be more than 100
+//Capped collections are fixed-size collections that support high-throughput operations that insert and retrieve documents based on insertion order.
+db.Courses.drop() //drops a collection
