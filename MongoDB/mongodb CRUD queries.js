@@ -12,7 +12,7 @@ db.dropDatabase("MI")  //Drops a database
 //Insert one document in 
 db.SAMI.insertOne({ Name: "Akshay", Marks: 500 })
 db.SAMI.insertOne({ Name: "Madhur", Marks: 524 })
-db.School.insertOne({ Name: "Malhar", Marks: 21, Gpa: 4.4 })
+db.School.insertOne({ Name: "Malhar", Marks: 21,QE Gpa: 4.4 })
 db.School.insertOne({ Name: "Naman", Marks: 43, Gpa: 1.2 })
 db.School.insertOne({ Name: "Ishant", Marks: 12, Gpa 4.5})
 
