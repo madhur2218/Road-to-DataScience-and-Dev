@@ -72,7 +72,7 @@ db.School.insertOne({Name: "Madhur",RollNo : 12, GPA: 4.4, isFullTime: false, re
 
 //Sorting and Limiting 
 
-db.School.find().sort({name: 1})  //fir ascending order 1
+db.School.find().sort({name: 1})  //for ascending order 1
 db.School.find().sort({name: -1}) // for descending order -1
 db.School.find().sort({item: 1})
 
@@ -149,3 +149,53 @@ show Collections
 db.createCollection("teachers", {capped:true, size: 100000, max: 100}) // size should not be more than 10mb, max documents should not be more than 100
 //Capped collections are fixed-size collections that support high-throughput operations that insert and retrieve documents based on insertion order.
 db.Courses.drop() //drops a collection
+
+
+
+.......................................................
+
+USE Cars
+db.createCollection("BMW")
+db.createCollection("Audi")
+db.createCollection("Mercedes")
+
+db.BMW.insertOne({first_name: "Madhur", last_name: "Nagrath", pno: 7586933995, underWarranty: false, Profession: ["banker", "trader", "developer"], model:[{model_name:"X231", purchaseyear: 2021, value: 100},{model_name:"GLS", purchaseyear: 2023, value: 1000} ]})
+
+db.BMW.insertOne({first_name: "Naman", last_name: "Bhatia", pno: 71423933995, underWarranty: true, Profession: ["banker", "developer"], model:[{model_name:"134fxv", purchaseyear: 2012, value: 10},{model_name:"GLS42", purchaseyear: 2023, value: 10000} ]})
+
+db.BMW.insertMany([{first_name: "Malhar", last_name: "Sharma", pno: 23423933995, underWarranty: false, Profession: ["teacher", "developer"], model:[{model_name:"645hg", purchaseyear: 2011, value: 50},{model_name:"WEQ42", purchaseyear: 2023, value: 10} ]},{first_name: "iSHANT", last_name: "N", pno: 7644689000, underWarranty: true, Profession: ["banker", "developer","DECEIVER"], model:[{model_name:"135f1245765", purchaseyear: 2012, value: 10},{model_name:"GLS42", purchaseyear: 2023, value: 10000} ]} ])
+
+db.BMW.insertMany([
+    { item: "journal", qty: 25, tags: ["blank", "red"], size: { h: 14, w: 21, uom: "cm" } },
+    { item: "mat", qty: 85, tags: ["gray"], size: { h: 27.9, w: 35.5, uom: "cm" } },
+    { item: "mousepad", qty: 25, tags: ["gel", "blue"], size: { h: 19, w: 22.85, uom: "cm" } }
+]);
+
+
+db.BMW.find({})
+
+db.BMW.find().sort({first_name: 1})
+db.BMW.find().sort({first_name: -1})
+db.BMW.find().sort({first_name:1}).limit(1)
+db.BMW.find().sort({first_name:-1}).limit(2)
+
+db.BMW.find({},{underWarranty: false})
+db.BMW.find({}, {first_name:"Madhur", last_name: "Bhatia"})
+
+db.BMW.updateOne({first_name: "Madhur"}, {$set:{isFullTime: false}})
+db.BMW.updateMany({}, {$set: {isFullTime: true}})
+db.BMW.updateMany({isFullTime:{$exits:false}}, {$set:{isFullTime:true}})
+
+db.Audi.drop() // deletes a collection
+db.BMW.deleteOne({first_name: "Madhur"})
+db.BMW.deleteMany({isFullTime: false})
+
+db.BMW.find({value : {$get:32}})
+db.BMW.find({value: {$gte: 10, $lte: 120}})
+db.BMW.find({name: {$in: ["Madhur", "Malhar"]}})
+db.BMW.find({
+    $and: [
+      { underWarranty: true },
+      { value: { $gte: 12 } }
+    ]
+  })
