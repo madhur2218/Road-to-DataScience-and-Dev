@@ -1,0 +1,11 @@
+python -m virtualenv myenv  
+ cd .\myenv\Scripts\
+activate
+deactivate
+
+pip freeze > requirements.txt
+`pip install fastapi`
+
+pip install -r flask 
+
+Always a good habit to write the requirements file in the text file and the use above command to install the requirements
