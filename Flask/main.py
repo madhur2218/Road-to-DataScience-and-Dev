@@ -1,5 +1,9 @@
+# Integrating html with flask
+# Get/Post requests
+
+
 # import flask module
-from flask import Flask, redirect, url_for
+from flask import Flask, redirect, url_for, render_template
 
 # instance of flask application
 app = Flask(__name__)
@@ -7,7 +11,7 @@ app = Flask(__name__)
 # home route that returns below text when root url is accessed
 @app.route("/")
 def siemens():
-    return "<p>I work in Siemens!</p>"
+     return render_template("index.html")
 
 @app.route("/members")
 def members():
@@ -30,6 +34,13 @@ def result(marks):
         result = "fail"
     
     return redirect(url_for(result,score=marks))
+
+@app.route("/submit", methods = ['POST', 'GET'])
+def submit():
+  
+    
+    return redirect(url_for(result,score=marks))
+
 
 if __name__ == '__main__':
     app.run(debug=True)
