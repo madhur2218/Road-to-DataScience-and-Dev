@@ -6,7 +6,15 @@
                            http://www.springframework.org/schema/beans/spring-beans.xsd
                            http://www.springframework.org/schema/context
                            http://www.springframework.org/schema/context/spring-context.xsd">
-
+<!--This line is for xml. based config-->
 <!--    <bean id="vehicle" class="org.example.Bike" />-->
+
+<!--    This line is for annotation based config-->
     <context:component-scan base-package="org.example"/>
+
+    <bean id="tyre" class="org.example.Tyre">
+<!--        <property name="brand" value="MRF"/> &lt;!&ndash; Removed the extra space before "brand" &ndash;&gt;-->
+<!--            <constructor-arg value="CEAT"/>   This is used for constructor injection-->
+    </bean>
+
 </beans>
