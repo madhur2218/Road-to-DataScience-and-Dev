@@ -4,4 +4,16 @@ RUN apt-get update
 RUN apt-get install -y curl
 RUN curl -sL https://deb.nodesource.com/setup_18.x | bash -
 RUN apt-get upgrade -y
+<<<<<<< HEAD
+RUN apt-get install -y nodejs
+
+COPY main.js main.js
+COPY package-lock.json package-lock.json 
+COPY package.json package.json
+
+RUN npm install
+
+ENTRYPOINT [ "node", "main.js" ]
+=======
 RUN apt-get install -y nodejsx
+>>>>>>> b138a24bb6a9a439d9238a4cd69a08410d2a7224
