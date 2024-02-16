@@ -6,23 +6,17 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class DemoController {
     @Autowired
-    private final Coach cricketCoach;
-    @Autowired
-    private final Coach footballCoach;
+    private Coach cricketCoach;
 
-    @Autowired
-    public DemoController(Coach cricketCoach, Coach footballCoach) {
-        this.cricketCoach = cricketCoach;
-        this.footballCoach = footballCoach;
-    }
+
+ public void setCoach(Coach cricketCoach){
+     this.cricketCoach= cricketCoach;
+ }
 
     @GetMapping("/dailyworkoutCricket")
     public String getDailyWorkoutCricket() {
-        return cricketCoach.getdailyWorkout();
+        return cricketCoach.dailyWorkout();
     }
 
-    @GetMapping("/dailyworkoutFootball")
-    public String getDailyWorkoutFootball() {
-        return footballCoach.getdailyWorkout();
-    }
+
 }
