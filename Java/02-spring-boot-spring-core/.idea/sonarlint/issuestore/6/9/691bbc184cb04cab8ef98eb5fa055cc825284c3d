@@ -1,9 +1,0 @@
-
-t	java:S116
-"XRename this field "cricket_coach" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÛÂ˜Õ8Íîí‚Û1
-z	java:S116"YRename this field "football_coach" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(½«›øÿÿÿÿ8Îîí‚Û1
-_
-java:S6813	"BRemove this field injection and use constructor injection instead.(êæÄŞ8Îîí‚Û1
-_
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8Ïîí‚Û1
-X	java:S125"<This block of commented-out lines of code should be removed.(Ÿ‰ª8Úîí‚Û1
