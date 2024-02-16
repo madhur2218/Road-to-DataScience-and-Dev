@@ -8,6 +8,9 @@ import org.springframework.web.bind.annotation.RestController;
 public class DemoController {
     @Autowired
     private Coach cricket_coach;
+    @Autowired
+    private Coach football_coach;
+
 
 //    public DemoController(Coach coach){
 //        cricket_coach =coach;
@@ -18,6 +21,13 @@ public class DemoController {
             return cricket_coach.getdailyWorkout();
 
         }
+
+        @GetMapping("/dailyWorkout/Football")
+        public String getDailyWorkout1(){
+            return football_coach.getdailyWorkout();
+
+        }
+
 
 
 }
