@@ -1,25 +1,23 @@
 package com.example.ComponentScanning.demo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class DemoController {
 
-    private Coach cricketCoach;  //this is example of field injection
+    private Coach myCoach;  //this is example of field injection
     @Autowired
-    public DemoController(Coach cricketCoach){
-        this.cricketCoach= cricketCoach;
+    public DemoController(@Qualifier("footballCoach") Coach myCoach){
+        this.myCoach= myCoach;
     }
 
 
- public void setCoach(Coach cricketCoach){
-     this.cricketCoach= cricketCoach;
- }
 
-    @GetMapping("/dailyworkoutCricket")
+    @GetMapping("/dailyworkoutSport")
     public String getDailyWorkoutCricket() {
-        return cricketCoach.dailyWorkout();
+        return myCoach.dailyWorkout();
     }
 
 
