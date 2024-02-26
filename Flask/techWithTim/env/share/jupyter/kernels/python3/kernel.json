@@ -1,0 +1,14 @@
+{
+ "argv": [
+  "d:/Road-to-DS-2024/Flask/techWithTim/env\\python.exe",
+  "-m",
+  "ipykernel_launcher",
+  "-f",
+  "{connection_file}"
+ ],
+ "display_name": "Python 3 (ipykernel)",
+ "language": "python",
+ "metadata": {
+  "debugger": true
+ }
+}
