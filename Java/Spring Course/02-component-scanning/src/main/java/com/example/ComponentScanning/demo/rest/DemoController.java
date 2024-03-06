@@ -12,6 +12,7 @@ public class DemoController {
     @Autowired
     private final Coach footballCoach;
 
+    //Constructor injection
     @Autowired
     public DemoController(Coach cricketCoach, Coach footballCoach) {
         this.cricketCoach = cricketCoach;

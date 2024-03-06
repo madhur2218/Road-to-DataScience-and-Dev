@@ -9,14 +9,14 @@ public class DemoController {
 
     private Coach myCoach;  //this is example of field injection
     @Autowired
-    public DemoController(@Qualifier("footballCoach") Coach myCoach){
+    public DemoController(@Qualifier("baseballCoach") Coach myCoach){
         this.myCoach= myCoach;
     }
 
 
 
-    @GetMapping("/dailyworkoutSport")
-    public String getDailyWorkoutCricket() {
+    @GetMapping("/dailyWorkout")
+    public String getDailyWorkoutBaseball() {
         return myCoach.dailyWorkout();
     }
 

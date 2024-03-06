@@ -1,8 +1,6 @@
 
 7
 pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
-S
-#src/main/java/org/example/Main.java,0\b\0ba1b9c7a4878802f938e331cc2d8a042087ec6b
 b
 2src/main/java/org/example/WorkingWith2DArrays.java,d\f\df05ddb1440bb12c3a0a3c02555ccfeffdf49aee
 a
