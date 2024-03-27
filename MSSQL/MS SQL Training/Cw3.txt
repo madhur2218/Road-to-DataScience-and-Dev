@@ -1,0 +1,224 @@
+ --------------------------------------------------------------------------------------------------------------------------------------
+  -- set operators  (union all, union, intersect, except)
+  -- q1 set oper q2 set oper q3
+  -- query shd be identical in structure
+  -- corresponding cols shd  be of compatible datatypes
+  select empno,ename as empname,job,sal from emp where sal>2000
+  union 
+  select empno,ename,job,sal from emp where job='manager' ;
+  ---------------------------------------------------------------------------------------------------------------
+    select empno,ename as empname,job,sal from emp where sal>2000
+  intersect
+  select empno,ename,job,sal from emp where job='manager';
+  ------------------------------------------------------------------------------------------
+   select empno,ename as empname,job,sal from emp where sal>2000
+  except
+  select empno,ename,job,sal from emp where job='manager';
+
+  -- which are the dept in which no employee is working
+  select deptno from dept
+  except
+  select distinct deptno from emp;
+  ----------------------------------
+  select * from dept where deptno not in(select distinct deptno from emp);
+  ----------------------------------
+ /* join o/p  t1.c1  t2.c1  t1.c2
+ set oper o/p
+    t1
+	    c1
+	t2 */
+
+	--------------------------------------------------------------------------------------------------------------------------------------
+	-- Advanced group functions --
+	-- get deptwise jobwise headcount
+select deptno, job,count(*) hct from emp group by rollup( deptno,job) order by deptno; -- sub tabulations
+select deptno, count(*) from emp group by rollup(deptno)  order by deptno;
+select deptno, job,count(*) hct from emp group by cube( deptno,job) order by deptno; -- cross tabulations 
+ /* select count(*) from emp, select count(*) from emp group by deptno, select count(*) from emp group by job,
+  select count(*) from emp group by deptno,job;*/
+  select deptno, job,count(*) hct , grouping(deptno) dno, grouping(job) ejob from emp 
+  group by cube( deptno,job) order by deptno;
+
+  select deptno ,count(*) hct from emp group by deptno;  -- 3
+  select job,count(*) hct from emp group by job;--- 5
+  select deptno,job, count(*) hct from emp group by deptno,job;  --9
+
+  select deptno,job , count(*) hct from emp group by grouping sets( (deptno), (job), (deptno,job))  -- 17
+  -----------------------------------------------------------------------------------------------------------------------------------------------
+  select empno,ename,sum(sal) from emp;
+  -- Analytical functions/ window functions over, partition by
+  -- sum, min, max, avg, count, row_number, rank, dense_rank, lead, lag
+    select empno,ename,sal,sum(sal) over() as tsal  from emp;
+	 select empno,ename,sal,deptno, sum(sal) over(partition by deptno) as tsal  from emp order by deptno;
+	 -- arrange the emp based on seniory in each dept (number the emp records)
+	 select empno,ename,sal,deptno,hiredate, row_number() over(partition by deptno order by hiredate) as Elist  from emp 
+	 order by deptno;
+
+	 -- get the seniormost emp from each dept
+	 select * from ( select empno,ename,sal,deptno,hiredate, row_number() over(partition by deptno order by hiredate) as Elist  from emp ) x
+	 where elist=1
+
+	 --- rank (to rank the records)
+	  select empno,ename,sal,deptno, rank() over(partition by deptno order by sal desc) as Elist  from emp 
+	 order by deptno;
+	 -- dense_rank
+	 	  select empno,ename,sal,deptno, dense_rank() over(partition by deptno order by sal desc) as Elist  from emp 
+	 order by deptno;
+	 SELECT empno,deptno, ename,sal,
+     LEAD (sal,1) OVER (PARTITION BY deptno ORDER BY sal ) AS higher_salary,
+	 lag(sal,1) over(PARTITION BY deptno ORDER BY sal ) AS lower_salary
+     FROM emp;
+	 ------------------------------------------------------------
+	 -- DDL, DML, TCL
+	 
+
+create table course(cid numeric(3) constraint cid_pk primary key,
+cname varchar(10) constraint cn_nn not null,
+cfees numeric(7,2) constraint cf_ch check(cfees>2000),constraint cn_uq unique(cname));
+------------------------------
+create table student(sid numeric(4) primary key,
+sname varchar(10) not null,sdob date,
+sadd varchar(20)  default 'Pune',
+scid numeric(3) constraint scid_fk references course(cid)on delete set null);
+--------------------------------------------------------------------
+-- alter -- add/remove cols, add/remove constraints, change the datatype/size of the col
+-- rename col, table
+alter table student add sphno numeric(10) ;
+alter table student add unique(sphno);
+alter table student drop column sphno;
+alter table student alter column sadd varchar(30);
+--------------------------------------------------------------------
+/* truncate table tablename;-- remove all the rows from the table (retain the definition/structure)
+-- space is freed
+drop table tablename;-- both data amd metadata is lost-- space is freed */
+
+-- Task   Pk on dept-deptno, emp-empno, FK- dept-deptno
+alter table dept alter column deptno  numeric(2) not null;
+alter table dept add constraint dno_Pk primary key(deptno);
+------------------------------------------------------------------------------------------------------
+alter table emp add primary key (empno);
+alter table emp add foreign key(deptno) references dept(deptno) on update cascade;
+-----------------------------------------------------------------------------------------------------------------------
+select * into copyemp from emp;  --all cols with all records
+select * from copyemp;
+drop table copyemp;
+select empno,ename,deptno,sal into copyemp from emp where deptno=20; -- selected cols with select recods
+select * from copyemp;
+drop table copyemp;
+select empno,ename as empname,deptno,sal as empsal into copyemp from emp
+where deptno=20;
+select * from copyemp;
+drop table copyemp;
+select * into copyemp from emp where 1=2;-- copy the structure no data
+insert into copyemp select * from emp where sal>2000;
+select * from copyemp;
+------------------------------------------------------------------------------------------
+-- DML-- insert, update, delete, merge
+select * from course;
+insert into course values(5,'MSsql',3500);
+select * from course;
+select * from student;
+insert into student values(101,'Asha','2000-07-19',null,3);
+select * from student;
+insert into student values(102,'Arun','2000-07-22',default,1);
+select * from student;
+insert into student values(103,'Arun','2000-07-22',default,1);
+insert into student(sid,sname,scid) values(104,'Smitha',4);
+insert into student(sid,sname,scid) values(105,'Preeti',1);
+insert into student(sid,sname,scid) values(103,'Abhay',2);
+select * from student;
+create table mytab(id numeric(2) identity(1,1),name varchar(20));
+insert into mytab (name) values('suma');
+select * from mytab;
+-- DML, TCL, commit, rollback, save
+-- auto commit on mode
+-- explicitly start our transactions
+-- update  (modify the values in the cols of the table)
+begin transaction
+select * from dept;
+update dept set deptno=11 where deptno=10;
+select * from dept;
+select * from emp;
+rollback transaction;
+select * from dept;
+select * from emp;
+set implicit_transactions on; -- no autocommit
+select * from emp;
+update emp set sal=sal+100;
+select * from emp;
+commit;
+set implicit_transactions off;  -- autocommit enabled
+update emp set sal=sal-100;
+select * from student;
+update student set sdob=dateadd(year,-20,getdate()),sadd='Chennai'
+where sid=103;
+select * from student;
+-- hiredate of emp ford shd be the dob of student Smitha
+update student set sdob=(select hiredate from emp where ename='Ford') where sname='Smitha';
+select * from student;
+begin transaction
+delete from student;
+select * from student;
+rollback transaction;
+select * from student;
+begin transaction
+delete from course where cid=4;
+select * from course;
+select * from student;
+-- merge  (upsert)-- update/insert/delete  (based on select)
+-- source table, target table (target table will get merged with source)
+select * from student;
+-- target
+CREATE TABLE SMarks( StID numeric(4) REFERENCES Student,Stmarks INTEGER);
+----------------------------------------------------------------------
+INSERT INTO SMarks VALUES(101,230)
+INSERT INTO SMarks VALUES(102,255)
+INSERT INTO SMarks VALUES(103,200)
+-----------------------------------------------
+select * from smarks;
+-------------------------------------------------------------------
+MERGE SMarks  stm
+USING (SELECT Sid,sname FROM Student)  sd
+ON (stm.StID = sd.Sid)
+WHEN MATCHED  and stm.stmarks>250 then delete
+when matched then
+ UPDATE SET stm.StMarks = stm.StMarks + 25
+WHEN NOT MATCHED THEN
+INSERT(StID,StMarks)
+VALUES(sd.Sid,25);
+go
+
+select * from sMarks;
+begin transaction
+i1
+i2
+commit transaction
+begin transaction
+i3
+u1
+save transaction a;-- naming/setting a label
+u2
+save transaction b;-- come back and stand here  commit/rollback (i3,u1,u2)
+d1 -- wrongly done
+i4
+i5
+rollback transaction b;-- after b erveryoperation is erased
+-- views -- logical  not physical
+-- view is presentation / show the o/p of a query
+-- view is a saved select statement in the database
+-- security, data independence,  reduce complexity of query
+create view empv1 as select * from emp where sal>2000;
+select * from empv1;
+-- dml operations allowed on simple view
+update empv1 set sal=1500 where ename='FORD';
+select * from empv1;
+select * from emp;
+alter view empv1 as select * from emp where sal>2000 with check option;
+select * from empv1;
+update empv1 set sal=1500 where ename='king';
+sp_helptext 'EMPV1';
+create view empdeptvw with encryption as select e.*,d.dname from emp e join dept d on e.deptno=d.deptno;
+select * from empdeptvw;
+sp_helptext 'empdeptvw';
+alter view  empdeptvw as select e.*,d.dname from emp e join dept d on e.deptno=d.deptno;
+sp_helptext 'empdeptvw';
