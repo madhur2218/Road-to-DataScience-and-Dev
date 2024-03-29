@@ -34,7 +34,33 @@ function subtraction(a:number, b :number ) : number{
 }
 
 
-//GENERICS
+//Classes
+
+class Student{
+    fName: string;
+    lname: string;
+    age : number;
+    courses :string [];
+
+    constructor(fname: string, lname: string, age:number, courses:string[]){
+
+        this.fName = fname;
+        this.lname = lname;
+        this.age = age;
+        this.courses = courses;
+    }
+
+    enroll(courseName: string){
+        this.courses.push(courseName);
+    }
+
+}
+
+let student = new Student('Madhur', 'Nagrath', 123, ['Angular'])
+
+student.enroll("react")
+
+
 
 
 
