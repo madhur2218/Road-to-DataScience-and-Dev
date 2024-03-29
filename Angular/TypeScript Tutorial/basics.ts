@@ -61,6 +61,25 @@ let student = new Student('Madhur', 'Nagrath', 123, ['Angular'])
 student.enroll("react")
 
 
+class Cuboid{
+    length: number;
+    breadth: number;
+    height: number;
+    sName: string[];
+
+    constructor(l:number, b: number, h : number, sName: string[]){
+        this.length = l ;
+        this.breadth = b;
+        this.height = h;
+        this.sName= sName;
+    }
+    addShape(add:string){
+        this.sName.push(add);
+    }
+}
+
+let shape = new Cuboid(2,2,2,["Cuboid"]);
+shape.addShape('cube');
 
 
 
