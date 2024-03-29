@@ -36,8 +36,8 @@ arr[3] = 'green'
 
 console.log(arr.length)
 
-function greet(){
-    console.log('i am greeting')
+function greet(Name){
+    console.log('i am greeting ' + Name)
 }
 
-greet();
+greet('Madhur');
