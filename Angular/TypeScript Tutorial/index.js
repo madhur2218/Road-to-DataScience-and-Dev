@@ -35,3 +35,9 @@ console.log(arr[1])
 arr[3] = 'green'
 
 console.log(arr.length)
+
+function greet(){
+    console.log('i am greeting')
+}
+
+greet();
