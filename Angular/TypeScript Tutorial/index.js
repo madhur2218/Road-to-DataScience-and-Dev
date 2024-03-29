@@ -32,3 +32,6 @@ console.log(person)
 let arr = ['red', 'blue']
 console.log(arr)
 console.log(arr[1])
+arr[3] = 'green'
+
+console.log(arr.length)
