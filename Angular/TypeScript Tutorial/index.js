@@ -36,8 +36,16 @@ arr[3] = 'green'
 
 console.log(arr.length)
 
-function greet(Name){
-    console.log('i am greeting ' + Name)
+function greet(Name, Surname){
+    console.log('i am greeting ' + Name + " "+ Surname)
 }
 
-greet('Madhur');
+greet('Madhur' , 'Nagrath');
+
+
+function Calculate(number){
+    return number*number;
+}
+
+console.log(Calculate(2))
+
