@@ -1,8 +1,19 @@
 import org.example.CalculatorService;
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
+import java.util.Date;
+
 public class CalculatorServiceTest {
+
+
+    @BeforeAll
+    public static void init(){
+        System.out.println("run all test cases");
+        System.out.println("started all tests" + new Date());
+    }
 
 //test two methods of sum
     @Test
@@ -26,6 +37,13 @@ public class CalculatorServiceTest {
         double result = CalculatorService.div(2.0,2.0);
         int expected =1 ;
         Assertions.assertEquals(expected, result);
+
+    }
+
+    @AfterAll
+    public static void cleanup(){
+        System.out.println("All test cases end");
+        System.out.println("End test cases " + new Date());
 
     }
 
