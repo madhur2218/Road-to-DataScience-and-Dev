@@ -20,12 +20,15 @@ public class CalculatorServiceTest {
     }
 
 //test two methods of sum
-    @Test
-    public void addTest(){
+    @Test()
+    @Timeout(200)
+    public void addTest() throws InterruptedException {
 
         for(int i=0; i<=20;i++){
             counter = counter+1;
         }
+
+        Thread.sleep(300);  //Here my testcase would fail as my test case should take 200 nanosec to execute but we have used a thread shich sleeps for 300nanoseconds
 
         int result = CalculatorService.add(2,3);
         //actual result
