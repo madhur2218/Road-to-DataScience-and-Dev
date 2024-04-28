@@ -39,6 +39,7 @@ public class CalculatorServiceTest {
     }
 
     @Test
+    @Disabled //this test case would be disabled and would not run
     public void multTest(){
         int result = CalculatorService.mult(2,4);
         int expected = 8;
@@ -46,6 +47,7 @@ public class CalculatorServiceTest {
     }
 
     @Test
+    @DisplayName("Tis is a custome name ")
     public void divTest(){
         double result = CalculatorService.div(2.0,2.0);
         int expected =1 ;
@@ -65,6 +67,11 @@ public class CalculatorServiceTest {
     //@BeforeEach
     //@AfterAll
     //@AfterEach
+
+    //Junit5=Junit Vintage(provide backward support and compatibality for Junit3 and 4) + Junit Platform(Junit API and is responsible for launching testing framework) + Junit Jupiter(new annotations)
+
+    //Annotations in Junit5
+
 
 }
 
