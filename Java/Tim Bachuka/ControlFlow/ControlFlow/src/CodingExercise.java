@@ -6,7 +6,7 @@ public class CodingExercise {
 
     }
 
-    public static void checkNumber(int num){
+    public static void checkNumber(int num){   //Solved with and without return statement
 //        int number= num;
         if(num>0){
             System.out.println("positive");
@@ -15,7 +15,6 @@ public class CodingExercise {
         }
         else
             System.out.println("zero");
-
 //        return number;
     }
 }
