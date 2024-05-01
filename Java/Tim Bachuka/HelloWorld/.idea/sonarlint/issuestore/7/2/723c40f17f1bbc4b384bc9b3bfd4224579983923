@@ -1,0 +1,9 @@
+
+n	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(ØÀìÚûÿÿÿÿ8èûÛÄñ1
+7
+java:S1220""Move this file to a named package.8êûÛÄñ1
+a
+java:S2583"DChange this condition so that it does not always evaluate to "false"(¦Øéù8à±İÄñ1
+D
+java:S1125"'Remove the unnecessary boolean literal.(¦Øéù8õäãÅñ1
+W	java:S125"<This block of commented-out lines of code should be removed.(µñîv8úœãÅñ1
