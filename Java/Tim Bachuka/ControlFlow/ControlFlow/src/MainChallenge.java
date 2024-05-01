@@ -11,6 +11,8 @@ public class MainChallenge {
         int highScore = calculateScore(true, 5000,100, 5); //Passing the arguments from below method
         System.out.println("Highscore is " + highScore);
 
+        calculateScore1();
+
 
         score = 10000;
         bonus = 200;
@@ -31,7 +33,7 @@ public class MainChallenge {
 
     }
 
-    public static int calculateScore( boolean gameOver ,int score,int bonus,int levelComplete ) //These are my parameters for methods
+    public static int calculateScore(boolean gameOver ,int score,int bonus,int levelComplete ) //These are my parameters for methods
         {
 
         int finalScore = score;
@@ -41,5 +43,24 @@ public class MainChallenge {
             finalScore= finalScore+1000;
         }
         return finalScore;
+        }
 
-    }}
+        public static void calculateScore1(){
+            boolean gameOver = true;
+            int score = 10000;
+            int bonus = 200;
+            int levelComplete = 8;
+            int finalScore = score;
+
+            if (gameOver==true) {
+                finalScore = finalScore + ( levelComplete * bonus);
+                finalScore= finalScore+1000;
+            }
+
+            System.out.println(finalScore);
+
+        }
+
+
+}
+
