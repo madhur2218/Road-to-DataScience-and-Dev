@@ -2,9 +2,9 @@
 7
 java:S1220""Move this file to a named package.8Ä§Ý“ó1
 T
-java:S2589"7Remove this expression which always evaluates to "true"(»ýÅ‚8æ³ì“ó1
-T
 java:S25897"7Remove this expression which always evaluates to "true"(»ýÅ‚8æ³ì“ó1
+T
+java:S2589"7Remove this expression which always evaluates to "true"(»ýÅ‚8æ³ì“ó1
 [
 java:S1854	">Remove this useless assignment to local variable "finalScore".(ÁÞ§ù8Ì§Ý“ó1
 ^
