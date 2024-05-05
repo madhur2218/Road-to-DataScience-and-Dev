@@ -60,7 +60,5 @@ public class MainChallenge {
             System.out.println(finalScore);
 
         }
-
-
 }
 
