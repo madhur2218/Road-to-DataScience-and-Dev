@@ -1,3 +1,6 @@
+import java.sql.SQLOutput;
+import java.util.Scanner;
+
 public class ParsingValuesAndReadingInputData {
     public static void main(String[] args) {
 
@@ -11,9 +14,11 @@ public class ParsingValuesAndReadingInputData {
         double actualAge = Double.parseDouble(myAge);
         System.out.println(actualAge);
 
-
-        System.out.println(getInputFromConsole(anotherYear));
-        System.out.println(getInputFromConsole(anotherYear));
+        try {
+            System.out.println(getInputFromConsole(anotherYear));
+        }catch (NullPointerException e ) {
+            System.out.println(getInputFromScanner(anotherYear));
+        }
 
     }
 
@@ -27,7 +32,14 @@ public class ParsingValuesAndReadingInputData {
     }
 
     public static String getInputFromScanner(int anotherYear){
-        return "";
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Hi what is your name");
+        String name = sc.nextLine();
+        System.out.println("Hi "+ name+  " thank for taking this course" );
+
+        String dob= "20";
+        int age = Integer.parseInt(dob);
+        return "SO YOU ARE " +age + " old";
     }
 
 
