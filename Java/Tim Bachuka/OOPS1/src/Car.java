@@ -1,3 +1,5 @@
+import java.util.Locale;
+
 public class Car {
     private String brand = "bmw";   //These are my fields as they are declared in class not in local method
     private String build = "model x";
@@ -16,7 +18,17 @@ public class Car {
     }
 
     public void setBrand(String brand) {
-        this.brand = brand;
+        if(brand == null){
+            brand = "UNKNOWN";
+        }
+        String lowerCase = brand.toLowerCase();
+        switch (lowerCase) {
+            case "tesla", "ferrari", "bmw" -> {
+                this.brand = brand;}
+                default -> {
+                    this.brand = "UNSUPPORTED";
+                }
+        }
     }
 
     public String getBuild() {
