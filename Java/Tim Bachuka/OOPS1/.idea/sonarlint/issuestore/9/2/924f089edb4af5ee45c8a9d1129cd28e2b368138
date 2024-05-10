@@ -1,0 +1,8 @@
+
+7
+java:S1220""Move this file to a named package.8Éþ×Êõ1
+[
+java:S1854"9Remove this useless assignment to local variable "targa".(ÔÝ›ºùÿÿÿÿ8×þ×Êõ1
+]	java:S125	"<This block of commented-out lines of code should be removed.(ˆ±êäúÿÿÿÿ8Þþ×Êõ1
+L
+java:S1481"*Remove this unused "targa" local variable.(ÔÝ›ºùÿÿÿÿ8àþ×Êõ1

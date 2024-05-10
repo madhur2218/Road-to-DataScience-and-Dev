@@ -1,0 +1,13 @@
+
+7
+java:S1220""Move this file to a named package.8…¸…ö1
+W
+java:S1854"5Remove this useless assignment to local variable "b".(Æ„Ùìÿÿÿÿÿ8‰¸…ö1
+W
+java:S1854"5Remove this useless assignment to local variable "a".(ò†äıÿÿÿÿ8‰¸…ö1
+H
+java:S1481"&Remove this unused "a" local variable.(ò†äıÿÿÿÿ8Š¸…ö1
+H
+java:S1481"&Remove this unused "b" local variable.(Æ„Ùìÿÿÿÿÿ8Š¸…ö1
+C
+java:S1481%"&Remove this unused "z" local variable.(ğÇ²û8Œ¸…ö1
