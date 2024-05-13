@@ -1,0 +1,9 @@
+
+7
+java:S1220""Move this file to a named package.8Í…’÷1
+U
+java:S1854"8Remove this useless assignment to local variable "arr2".(ËÇ—¹8æ…’÷1
+F
+java:S1481")Remove this unused "arr2" local variable.(ËÇ—¹8è…’÷1
+X	java:S125"<This block of commented-out lines of code should be removed.(û´¸Ï8è…’÷1
+]	java:S125""<This block of commented-out lines of code should be removed.( ½üÿÿÿÿ8é…’÷1
