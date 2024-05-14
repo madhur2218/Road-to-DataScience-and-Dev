@@ -1,5 +1,9 @@
 
-0
-java:S1220""Move this file to a named package.
-]
-java:S2094"BRemove this empty class, write its code or make it an "interface".(’éëşÿÿÿÿ
+7
+java:S1220""Move this file to a named package.8ÔÅ–÷1
+L
+java:S1197"*Move the array designators [] to the type.(ääôşÿÿÿÿ8áÅ–÷1
+:
+java:S2119+"Save and re-use this "Random".(¼İÅf8åÅ–÷1
+G
+java:S1197,"*Move the array designators [] to the type.(ù˜‡ê8åÅ–÷1

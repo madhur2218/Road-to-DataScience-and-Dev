@@ -52,7 +52,7 @@ public class Main {
             System.out.println(element);
         }
 
-        System.out.println(Arrays.toString(arr7));
+        System.out.println(Arrays.toString(arr7)); // no use of for loop for printing elements in array
 
         Object objectVariable = arr7;
         if(objectVariable instanceof double[]){
