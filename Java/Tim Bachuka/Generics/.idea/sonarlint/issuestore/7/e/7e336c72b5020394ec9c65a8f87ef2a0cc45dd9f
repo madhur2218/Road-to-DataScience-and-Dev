@@ -1,0 +1,13 @@
+
+7
+java:S1220""Move this file to a named package.8ϊ±δω1
+‚
+java:S4165"fRemove this useless assignment; "TeamName" already holds the assigned value along all execution paths.(ΛΎΩx8ύ±δω1
+o	java:S116"SRename this field "TeamName" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ΌΑ‘8ώ±δω1
+K
+java:S1656"/Remove or correct this useless self-assignment.(ΛΎΩx8²δω1
+O
+java:S1068	"-Remove this unused "totalLoss" private field.(•¨ΐάόÿÿÿÿ8‚²δω1
+N
+java:S1068
+",Remove this unused "totalWin" private field.(«ΞΝ™ϊÿÿÿÿ8ƒ²δω1
