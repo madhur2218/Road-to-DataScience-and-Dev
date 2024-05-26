@@ -1,7 +1,7 @@
 
 R
 java:S4973"<Strings and Boxed types should be compared using "equals()".(¯îÈ»
-R
-java:S4973"<Strings and Boxed types should be compared using "equals()".(ÓèÏ
+W
+java:S4973"<Strings and Boxed types should be compared using "equals()".(İäššıÿÿÿÿ
 0
 java:S1220""Move this file to a named package.

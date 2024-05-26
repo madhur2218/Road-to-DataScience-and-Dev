@@ -1,0 +1,18 @@
+
+0
+java:S1220""Move this file to a named package.
+o
+java:S3008"RRename this field "outer_x" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ø†¨8Š»‘šû1
+t
+java:S3008"RRename this field "outer_y" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(”ü‘ùÿÿÿÿ8›ê®šû1
+t
+java:S3008
+"XRename this field "outer_private" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œ¿Øx8ù¯šû1
+\
+java:S1118":Add a private constructor to hide the implicit public one.(¢€è¤ûÿÿÿÿ8û¯šû1
+\
+java:S1854$"?Remove this useless assignment to local variable "outerObject".(³¢ğª8±…®šû1
+G
+java:S2440$"*Remove this instantiation of "OuterClass".(³¢ğª8ÿ¯šû1
+M
+java:S1481$"0Remove this unused "outerObject" local variable.(³¢ğª8²…®šû1
