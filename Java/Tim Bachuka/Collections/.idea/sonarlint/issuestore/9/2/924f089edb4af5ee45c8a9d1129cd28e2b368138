@@ -1,5 +1,11 @@
 
+L
+java:S3740"/Provide the parametrized type for this generic.(ªñ—8„««Õü1
+L
+java:S3740"/Provide the parametrized type for this generic.(ªñ—8†««Õü1
 7
-java:S1220""Move this file to a named package.8³°¥Ñû1
-M
-java:S1611"1Remove the parentheses around the "str" parameter(¶¼¶F8½°¥Ñû1
+java:S1220""Move this file to a named package.8‡««Õü1
+S
+java:S1854"6Remove this useless assignment to local variable "l1".(ªñ—8‹««Õü1
+D
+java:S1481"'Remove this unused "l1" local variable.(ªñ—8««Õü1

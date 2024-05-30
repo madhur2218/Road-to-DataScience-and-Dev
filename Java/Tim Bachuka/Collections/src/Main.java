@@ -8,24 +8,20 @@ public class Main {
         //Maps do not implements collection framework
         //ArrayList vs TreeSet vs HashSet
 
-        Collection<String> list = new TreeSet<>();
-
-        String [] names ={"madhur", "ashutosh", "naman"};
-        list.addAll(Arrays.asList(names));
-        System.out.println(list);
-        list.add("ishant");
-        list.addAll(Arrays.asList("bhatia", "mohini", "Gary"));
-        System.out.println(list);
-        boolean b =list.contains("Madhur");
-        System.out.println("Madhur is contained in list :" + b);
-
-        list.removeIf((str)-> str.charAt(0) == 'G');
-        System.out.println(list);
         //list.sort(); will get error as collection interface does not have sort method
         //LinkedList implements both List and Dequeue
         //Sets do not contain duplicate element - HashSet, TreeSet and LinkedHashset
         //Map stores key-value pairs - Keys are set and Values are separate collection - keys are unique and values are not unique
         //Elements in a tree are also stored in key-value node called as an Entry
+
+        List l1 = new ArrayList();
+        List<String> l2 = new ArrayList<>();
+
+        //Adding new elements to arraylist
+        l2.add("ashu");
+        l2.add("madhur");
+        System.out.println(l2);
+
 
     }
 }
