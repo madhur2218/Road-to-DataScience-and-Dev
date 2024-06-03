@@ -1,4 +1,5 @@
 import java.util.*;
+import java.util.HashMap;
 
 public class Main {
     public static void main(String[] args) {
@@ -226,9 +227,114 @@ public class Main {
         System.out.println(ll4);
 
 
+        //Hashmap and Map
+        HashMap h2 = new HashMap();
+        HashMap <Integer, String> h1 = new HashMap<>();
+
+        h1.put(1,"madhur");
+        h1.put(2,"neha");
+        h1.put(2,"ashu");
+        h1.put(3,"ishant");
+        h1.put(4,"ashu");
+
+        System.out.println(h1);
+        System.out.println(h1.get(1));
+        h1.remove(1);
+        System.out.println(h1);
+
+        System.out.println(h1.containsKey(1));
+        System.out.println(h1.containsValue("ashu"));
+
+        System.out.println(h1.isEmpty());
+
+        System.out.println(h1.keySet());// returns keys as set collection as keys are not duplicate
+        System.out.println(h1.values()); // returns values as a collection not set
+
+        ArrayList a = new ArrayList(h1.values());
+        System.out.println(a);
+
+        h1.entrySet();
+
+        //Entry level methods in HashMap
+
+        for(Object o : h1.values()){
+            System.out.println(o);
+        }
+
+        for(int i1  : h1.keySet()){
+            System.out.println(i1);
+        }
+
+        for(String s1  : h1.values()){
+            System.out.println(s1);
+        }
+
+        Iterator i2 = h1.entrySet().iterator();
+        while(i2.hasNext()){
+            System.out.println(i2.next());
+        }
+
+
+        //Entry level interface methods for HashMaps
+
+        for(Map.Entry element:h1.entrySet()){
+            System.out.println(element.getKey() + " " + element.getValue());
+        }
+
+        Set s1=h1.entrySet();
+        Iterator i3 = s1.iterator();
+        while(i3.hasNext()){
+           Map.Entry entry = (Map.Entry) i3.next();
+            System.out.println(entry.getKey() + " " + entry.getValue() );
+        }
 
 
 
+        //HashTable
+        Hashtable ht1 = new Hashtable();
+        Hashtable<Integer, String> ht2 = new Hashtable<>(12, (float)0.50);
+
+        ht2.put(1, "ASHU");
+        ht2.put(2,"madhur");
+        //ht2.put(2,"mudit");
+        ht2.put(3,"gillu");
+        ht2.put(4,"naman");
+        System.out.println(ht2);
+
+        System.out.println(ht2.get(1));
+
+        ht2.remove(1);
+        System.out.println(ht2);
+
+        ht2.containsKey(1);
+        ht2.containsValue("ASHU"); //t OR f
+
+        ht2.isEmpty();
+
+        for( int o : ht2.keySet()){
+            System.out.println(ht2.get(o));
+
+        }
+
+
+        //Entry specific method
+
+        for(Map.Entry o : ht2.entrySet()){
+            System.out.println(o.getKey()+ " " + o.getValue());
+        }
+
+        //Using iterator
+
+        Set s = ht2.entrySet();
+        Iterator i4= s.iterator();
+        while(i4.hasNext()){
+            Map.Entry entry = (Map.Entry)i4.next();
+            System.out.println(entry.getKey() + " " + entry.getValue());
+
+        }
+
+
+        //LinkedHashMap
 
 
 

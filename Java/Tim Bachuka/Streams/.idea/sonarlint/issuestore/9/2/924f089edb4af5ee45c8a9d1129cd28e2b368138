@@ -1,0 +1,17 @@
+
+7
+java:S1220""Move this file to a named package.8ğïşúı1
+]	java:S125"<This block of commented-out lines of code should be removed.(ÃœÆ”şÿÿÿÿ8ıïşúı1
+o
+java:S6204"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ª™¨¹8şïşúı1
+o
+java:S6204$"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ª™¨¹8şïşúı1
+]	java:S125)"<This block of commented-out lines of code should be removed.(‡ÓÕ¨üÿÿÿÿ8ÿïşúı1
+`
+java:S1612>">Replace this lambda with method reference 'Person::getSalary'.(¡ŠàÕûÿÿÿÿ8€ğşúı1
+b
+java:S1612?"@Replace this lambda with method reference 'System.out::println'.(ÎÆºîıÿÿÿÿ8ğşúı1
+]
+java:S1612N";Replace this lambda with method reference 'Person::getAge'.(ÁÎÄ¶şÿÿÿÿ8‚ğşúı1
+^
+java:S1612O"<Replace this lambda with method reference 'Person::getName'.(ŸóÎ÷øÿÿÿÿ8‚ğşúı1
