@@ -1,17 +1,22 @@
 
 7
-java:S1220""Move this file to a named package.8ğïşúı1
-]	java:S125"<This block of commented-out lines of code should be removed.(ÃœÆ”şÿÿÿÿ8ıïşúı1
+java:S1220""Move this file to a named package.8°İíšş1
+]	java:S125
+"<This block of commented-out lines of code should be removed.(ÃœÆ”şÿÿÿÿ8Ñİíšş1
 o
-java:S6204"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ª™¨¹8şïşúı1
+java:S6204"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ª™¨¹8Òİíšş1
 o
-java:S6204$"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ª™¨¹8şïşúı1
-]	java:S125)"<This block of commented-out lines of code should be removed.(‡ÓÕ¨üÿÿÿÿ8ÿïşúı1
+java:S6204&"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ª™¨¹8Òİíšş1
+]	java:S125+"<This block of commented-out lines of code should be removed.(‡ÓÕ¨üÿÿÿÿ8Óİíšş1
 `
-java:S1612>">Replace this lambda with method reference 'Person::getSalary'.(¡ŠàÕûÿÿÿÿ8€ğşúı1
+java:S1612@">Replace this lambda with method reference 'Person::getSalary'.(¡ŠàÕûÿÿÿÿ8Õİíšş1
 b
-java:S1612?"@Replace this lambda with method reference 'System.out::println'.(ÎÆºîıÿÿÿÿ8ğşúı1
+java:S1612A"@Replace this lambda with method reference 'System.out::println'.(ÎÆºîıÿÿÿÿ8Õİíšş1
 ]
-java:S1612N";Replace this lambda with method reference 'Person::getAge'.(ÁÎÄ¶şÿÿÿÿ8‚ğşúı1
+java:S1612P";Replace this lambda with method reference 'Person::getAge'.(ÁÎÄ¶şÿÿÿÿ8Öİíšş1
 ^
-java:S1612O"<Replace this lambda with method reference 'Person::getName'.(ŸóÎ÷øÿÿÿÿ8‚ğşúı1
+java:S1612Q"<Replace this lambda with method reference 'Person::getName'.(ŸóÎ÷øÿÿÿÿ8×İíšş1
+Q
+java:S1128"/Remove this unused import 'java.sql.SQLOutput'.(ê¤òÃùÿÿÿÿ8¡öîšş1
+Y
+java:S1128"7Remove this unused import 'java.util.stream.IntStream'.(ÙÉ½Ÿùÿÿÿÿ8Ø½Œ›ş1
