@@ -1,0 +1,12 @@
+{
+  "version" : "5.2.0.v202311301336",
+  "projects" : [ {
+    "name" : "Day1",
+    "active" : true,
+    "origin" : {
+      "providerId" : "local",
+      "spaceId" : "local",
+      "relativePath" : "Day1"
+    }
+  } ]
+}

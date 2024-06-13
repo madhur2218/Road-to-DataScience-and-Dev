@@ -1,0 +1,69 @@
+{
+    "version": "5.2.0.v202311301336",
+    "created": "2024-06-13 14:23",
+    "nodestats": {
+        "nodes": [
+            {
+                "id": "org.knime.ext.poi3.node.io.filehandling.excel.reader.ExcelTableReaderNodeFactory",
+                "nodename": "Excel Reader",
+                "nrexecs": 2,
+                "nrfails": 0,
+                "exectime": 267,
+                "nrcreated": 1,
+                "successor": "n/a",
+                "successornodename": "n/a"
+            },
+            {
+                "id": "org.knime.rest.nodes.get.RestGetNodeFactory",
+                "nodename": "GET Request",
+                "nrexecs": 0,
+                "nrfails": 3,
+                "exectime": 286,
+                "nrcreated": 1,
+                "successor": "org.knime.json.node.totable.JSONToTableNodeFactory",
+                "successornodename": "JSON to Table"
+            },
+            {
+                "id": "org.knime.json.node.totable.JSONToTableNodeFactory",
+                "nodename": "JSON to Table",
+                "nrexecs": 0,
+                "nrfails": 0,
+                "exectime": 0,
+                "nrcreated": 1,
+                "successor": "n/a",
+                "successornodename": "n/a"
+            },
+            {
+                "id": "org.knime.database.extension.postgres.node.connector.PostgreSQLDBConnectorNodeFactory",
+                "nodename": "PostgreSQL Connector",
+                "nrexecs": 0,
+                "nrfails": 0,
+                "exectime": 0,
+                "nrcreated": 1,
+                "successor": "n/a",
+                "successornodename": "n/a"
+            }
+        ],
+        "metaNodes": {
+        },
+        "wrappedNodes": {
+        },
+        "createdVia": {
+            "WEB_UI": 4
+        }
+    },
+    "uptime": 12354963,
+    "workflowsOpened": 1,
+    "remoteWorkflowsOpened": 0,
+    "columnarStorageWorkflowsOpened": 0,
+    "workflowsImported": 0,
+    "workflowsExported": 0,
+    "webUIPerspectiveSwitches": 0,
+    "javaUIPerspectiveSwitches": 0,
+    "lastUsedPerspective": "none",
+    "launches": 1,
+    "lastApplicationID": "org.knime.product.KNIME_APPLICATION",
+    "timeSinceLastStart": 12354963,
+    "crashes": 0,
+    "properlyShutDown": true
+}

@@ -1,0 +1,108 @@
+2024-06-13 19:55:41,871 : WARN  : comm-pool-thread-2 :  : Node : Excel Reader : 3:1 : Please specify a file
+2024-06-13 20:09:00,183 : WARN  : main :  : Node : Excel Reader : 3:1 : The node configuration changed and the table spec will be recalculated during execution.
+2024-06-13 20:09:01,376 : WARN  : main :  : Node : Excel Reader : 3:1 : The node configuration changed and the table spec will be recalculated during execution.
+2024-06-13 20:09:32,470 : WARN  : comm-pool-thread-5 :  : Node : Excel Reader : 3:1 : The node configuration changed and the table spec will be recalculated during execution.
+2024-06-13 23:01:53,302 : WARN  : KNIME-Worker-4-GET Request 3:2 :  : RestNodeModel : GET Request : 3:2 : The KNIME-wide proxy settings are activated but none were specified. Defaulting to using no proxy.
+2024-06-13 23:01:53,519 : ERROR : KNIME-Worker-4-GET Request 3:2 :  : Node : GET Request : 3:2 : Execute failed: URI can not be built
+jakarta.ws.rs.core.UriBuilderException: URI can not be built
+	at org.apache.cxf.jaxrs.impl.UriBuilderImpl.doBuild(UriBuilderImpl.java:134)
+	at org.apache.cxf.jaxrs.impl.UriBuilderImpl.buildFromEncoded(UriBuilderImpl.java:259)
+	at org.apache.cxf.jaxrs.client.AbstractClient.getCurrentURI(AbstractClient.java:319)
+	at org.apache.cxf.jaxrs.client.WebClient.fromClient(WebClient.java:314)
+	at org.apache.cxf.jaxrs.client.WebClient.fromClient(WebClient.java:294)
+	at org.apache.cxf.jaxrs.client.spec.ClientImpl$WebTargetImpl.request(ClientImpl.java:313)
+	at org.knime.rest.nodes.common.RestNodeModel.createRequest(RestNodeModel.java:1157)
+	at org.knime.rest.nodes.common.RestNodeModel.makeFirstCall(RestNodeModel.java:440)
+	at org.knime.rest.nodes.common.RestNodeModel.execute(RestNodeModel.java:399)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:588)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1297)
+	at org.knime.core.node.Node.execute(Node.java:1059)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:595)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:98)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:201)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:367)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:221)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+Caused by: java.net.URISyntaxException: Illegal character in fragment at index 73: https://www.worldometers.info/world-population/us-population/#:~:text=The current population of the,latest United Nations data 1.
+	at java.base/java.net.URI$Parser.fail(Unknown Source)
+	at java.base/java.net.URI$Parser.checkChars(Unknown Source)
+	at java.base/java.net.URI$Parser.parse(Unknown Source)
+	at java.base/java.net.URI.<init>(Unknown Source)
+	at org.apache.cxf.jaxrs.impl.UriBuilderImpl.buildURIFromEncoded(UriBuilderImpl.java:216)
+	at org.apache.cxf.jaxrs.impl.UriBuilderImpl.buildURI(UriBuilderImpl.java:189)
+	at org.apache.cxf.jaxrs.impl.UriBuilderImpl.doBuild(UriBuilderImpl.java:126)
+	... 21 more
+2024-06-13 23:01:58,516 : WARN  : KNIME-Worker-4-GET Request 3:2 :  : RestNodeModel : GET Request : 3:2 : The KNIME-wide proxy settings are activated but none were specified. Defaulting to using no proxy.
+2024-06-13 23:01:58,519 : ERROR : KNIME-Worker-4-GET Request 3:2 :  : Node : GET Request : 3:2 : Execute failed: URI can not be built
+jakarta.ws.rs.core.UriBuilderException: URI can not be built
+	at org.apache.cxf.jaxrs.impl.UriBuilderImpl.doBuild(UriBuilderImpl.java:134)
+	at org.apache.cxf.jaxrs.impl.UriBuilderImpl.buildFromEncoded(UriBuilderImpl.java:259)
+	at org.apache.cxf.jaxrs.client.AbstractClient.getCurrentURI(AbstractClient.java:319)
+	at org.apache.cxf.jaxrs.client.WebClient.fromClient(WebClient.java:314)
+	at org.apache.cxf.jaxrs.client.WebClient.fromClient(WebClient.java:294)
+	at org.apache.cxf.jaxrs.client.spec.ClientImpl$WebTargetImpl.request(ClientImpl.java:313)
+	at org.knime.rest.nodes.common.RestNodeModel.createRequest(RestNodeModel.java:1157)
+	at org.knime.rest.nodes.common.RestNodeModel.makeFirstCall(RestNodeModel.java:440)
+	at org.knime.rest.nodes.common.RestNodeModel.execute(RestNodeModel.java:399)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:588)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1297)
+	at org.knime.core.node.Node.execute(Node.java:1059)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:595)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:98)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:201)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:367)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:221)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+Caused by: java.net.URISyntaxException: Illegal character in fragment at index 73: https://www.worldometers.info/world-population/us-population/#:~:text=The current population of the,latest United Nations data 1.
+	at java.base/java.net.URI$Parser.fail(Unknown Source)
+	at java.base/java.net.URI$Parser.checkChars(Unknown Source)
+	at java.base/java.net.URI$Parser.parse(Unknown Source)
+	at java.base/java.net.URI.<init>(Unknown Source)
+	at org.apache.cxf.jaxrs.impl.UriBuilderImpl.buildURIFromEncoded(UriBuilderImpl.java:216)
+	at org.apache.cxf.jaxrs.impl.UriBuilderImpl.buildURI(UriBuilderImpl.java:189)
+	at org.apache.cxf.jaxrs.impl.UriBuilderImpl.doBuild(UriBuilderImpl.java:126)
+	... 21 more
+2024-06-13 23:01:59,750 : WARN  : KNIME-Worker-4-GET Request 3:2 :  : RestNodeModel : GET Request : 3:2 : The KNIME-wide proxy settings are activated but none were specified. Defaulting to using no proxy.
+2024-06-13 23:01:59,753 : ERROR : KNIME-Worker-4-GET Request 3:2 :  : Node : GET Request : 3:2 : Execute failed: URI can not be built
+jakarta.ws.rs.core.UriBuilderException: URI can not be built
+	at org.apache.cxf.jaxrs.impl.UriBuilderImpl.doBuild(UriBuilderImpl.java:134)
+	at org.apache.cxf.jaxrs.impl.UriBuilderImpl.buildFromEncoded(UriBuilderImpl.java:259)
+	at org.apache.cxf.jaxrs.client.AbstractClient.getCurrentURI(AbstractClient.java:319)
+	at org.apache.cxf.jaxrs.client.WebClient.fromClient(WebClient.java:314)
+	at org.apache.cxf.jaxrs.client.WebClient.fromClient(WebClient.java:294)
+	at org.apache.cxf.jaxrs.client.spec.ClientImpl$WebTargetImpl.request(ClientImpl.java:313)
+	at org.knime.rest.nodes.common.RestNodeModel.createRequest(RestNodeModel.java:1157)
+	at org.knime.rest.nodes.common.RestNodeModel.makeFirstCall(RestNodeModel.java:440)
+	at org.knime.rest.nodes.common.RestNodeModel.execute(RestNodeModel.java:399)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:588)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1297)
+	at org.knime.core.node.Node.execute(Node.java:1059)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:595)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:98)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:201)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:367)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:221)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+Caused by: java.net.URISyntaxException: Illegal character in fragment at index 73: https://www.worldometers.info/world-population/us-population/#:~:text=The current population of the,latest United Nations data 1.
+	at java.base/java.net.URI$Parser.fail(Unknown Source)
+	at java.base/java.net.URI$Parser.checkChars(Unknown Source)
+	at java.base/java.net.URI$Parser.parse(Unknown Source)
+	at java.base/java.net.URI.<init>(Unknown Source)
+	at org.apache.cxf.jaxrs.impl.UriBuilderImpl.buildURIFromEncoded(UriBuilderImpl.java:216)
+	at org.apache.cxf.jaxrs.impl.UriBuilderImpl.buildURI(UriBuilderImpl.java:189)
+	at org.apache.cxf.jaxrs.impl.UriBuilderImpl.doBuild(UriBuilderImpl.java:126)
+	... 21 more
+2024-06-13 23:17:56,829 : WARN  : comm-pool-thread-21 :  : Node : PostgreSQL Connector : 3:4 : Database host is not defined.
+2024-06-13 23:19:39,234 : ERROR : Clear OSGi configuration :  : InvokeUpdateAction :  :  : Could not clean OSGi configuration area: C:\Users\madhu\AppData\Local\Programs\KNIME\configuration\org.eclipse.osgi\131\0\.cp\os\win32\x86_64\localfile_1_0_0.dll
