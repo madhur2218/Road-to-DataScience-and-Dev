@@ -85,14 +85,14 @@ public class Main {
     }
 
 
-    private static List<Person> getPerson(){
+    static List<Person> getPerson(){
         return List.of(
                 new Person("madhur",23,1122, Gender.FEMALE),
         new Person("ishant",12,34, Gender.MALE),
         new Person("naman",122,314, Gender.FEMALE)
         );
 
-       //
+
 
 
     }

@@ -1,22 +1,13 @@
 
-7
-java:S1220""Move this file to a named package.8°Ýíšþ1
-]	java:S125
-"<This block of commented-out lines of code should be removed.(ÃœÆ”þÿÿÿÿ8ÑÝíšþ1
-o
-java:S6204"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ª™¨¹8ÒÝíšþ1
-o
-java:S6204&"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ª™¨¹8ÒÝíšþ1
-]	java:S125+"<This block of commented-out lines of code should be removed.(‡ÓÕ¨üÿÿÿÿ8ÓÝíšþ1
-`
-java:S1612@">Replace this lambda with method reference 'Person::getSalary'.(¡ŠàÕûÿÿÿÿ8ÕÝíšþ1
-b
-java:S1612A"@Replace this lambda with method reference 'System.out::println'.(ÎÆºîýÿÿÿÿ8ÕÝíšþ1
-]
-java:S1612P";Replace this lambda with method reference 'Person::getAge'.(ÁÎÄ¶þÿÿÿÿ8ÖÝíšþ1
-^
-java:S1612Q"<Replace this lambda with method reference 'Person::getName'.(ŸóÎ÷øÿÿÿÿ8×Ýíšþ1
-Q
-java:S1128"/Remove this unused import 'java.sql.SQLOutput'.(ê¤òÃùÿÿÿÿ8¡öîšþ1
-Y
-java:S1128"7Remove this unused import 'java.util.stream.IntStream'.(ÙÉ½Ÿùÿÿÿÿ8Ø½Œ›þ1
+r	java:S106"+Replace this use of System.out by a logger.(è—Ìêýÿÿÿÿ8ûòî¶þ1J$b211b2aa-8b3d-4c32-8376-e13ecdc8bcff
+m	java:S106!"+Replace this use of System.out by a logger.(ª”—ì8üòî¶þ1J$d1e6efa0-851f-48c7-8e1a-70a5dcb18f2d
+l	java:S106)"+Replace this use of System.out by a logger.(§‘8ýòî¶þ1J$caa6be0e-0d2b-45ad-ad41-e7b69dc4b740
+r	java:S1061"+Replace this use of System.out by a logger.(®ýáëûÿÿÿÿ8ÿòî¶þ1J$15a57dd1-5e50-40bc-b40f-a20812876b78
+r	java:S1067"+Replace this use of System.out by a logger.(›êÞÂúÿÿÿÿ8‚óî¶þ1J$790edf7d-8cc7-4660-8575-af9af189e577
+r	java:S106<"+Replace this use of System.out by a logger.(‡ÄÞþÿÿÿÿ8ƒóî¶þ1J$ee90f081-459b-4d58-91d4-048110924906
+r	java:S106A"+Replace this use of System.out by a logger.(ÎÆºîýÿÿÿÿ8„óî¶þ1J$e78bd64d-22c5-49ae-a744-1e8a28659252
+r	java:S106H"+Replace this use of System.out by a logger.(ˆð’•úÿÿÿÿ8†óî¶þ1J$d73a259b-7a08-4ee3-8b6b-40f923cd175f
+m	java:S106I"+Replace this use of System.out by a logger.(š¹À 8ˆóî¶þ1J$eadc811a-d58d-4e49-a7c8-d19dcf4cb3a6
+r	java:S106J"+Replace this use of System.out by a logger.(ªÓ¼áþÿÿÿÿ8Šóî¶þ1J$6a3aadb4-ba49-413e-b3a8-893ea9a123ba
+r	java:S106S"+Replace this use of System.out by a logger.(Ž£úÖùÿÿÿÿ8Žóî¶þ1J$93361ebc-5d4b-4fa3-b8a5-dca1cc523b99
+m	java:S106T"+Replace this use of System.out by a logger.(£ÆÏÁ8‘óî¶þ1J$0aa50264-e034-4579-8f6e-5ee57449e503
