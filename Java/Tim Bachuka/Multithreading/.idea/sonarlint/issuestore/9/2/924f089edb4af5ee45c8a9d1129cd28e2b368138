@@ -1,0 +1,41 @@
+
+g	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ßòèú‚2
+g	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8âòèú‚2
+g	java:S112G"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8äòèú‚2
+g	java:S112["FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8åòèú‚2
+7
+java:S1220""Move this file to a named package.8çòèú‚2
+{
+java:S2142
+"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(ä ¹€8óòèú‚2
+W
+java:S1161":Add the "@Override" annotation above this method signature(“–ış8õòèú‚2
+{
+java:S2142"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(ä ¹€8öòèú‚2
+W
+java:S1161!":Add the "@Override" annotation above this method signature(“–ış8÷òèú‚2
+j	java:S100,"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¸¯Â×8÷òèú‚2
+b
+java:S1124,"EReorder the modifiers to comply with the Java Language Specification.(¸¯Â×8øòèú‚2
+i	java:S1002"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(©®›P8ùòèú‚2
+a
+java:S11242"EReorder the modifiers to comply with the Java Language Specification.(©®›P8ùòèú‚2
+W
+java:S1161@":Add the "@Override" annotation above this method signature(“–ış8ûòèú‚2
+{
+java:S2142F"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(ä ¹€8üòèú‚2
+W
+java:S1161U":Add the "@Override" annotation above this method signature(“–ış8ıòèú‚2
+{
+java:S2142Z"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(ä ¹€8ıòèú‚2
+S
+java:S1854i"6Remove this useless assignment to local variable "t2".(¶÷Æõ8ıòèú‚2
+W
+java:S1854f"5Remove this useless assignment to local variable "t".(ÁñàÌúÿÿÿÿ8şòèú‚2
+H
+java:S1481f"&Remove this unused "t" local variable.(ÁñàÌúÿÿÿÿ8şòèú‚2
+D
+java:S1481i"'Remove this unused "t2" local variable.(¶÷Æõ8şòèú‚2
+]	java:S125k"<This block of commented-out lines of code should be removed.(‡ÃŠ¯şÿÿÿÿ8şòèú‚2
+J
+java:S1874y"-Remove this use of "getId"; it is deprecated.(˜»ù8ÿòèú‚2
