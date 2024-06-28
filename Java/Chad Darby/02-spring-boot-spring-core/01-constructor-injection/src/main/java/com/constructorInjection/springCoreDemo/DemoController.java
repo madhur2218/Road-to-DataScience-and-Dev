@@ -7,18 +7,23 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class DemoController {
 
-    //define a private field for dependency
-    private Coach coach;
+    private final Coach coach;
+    private final IFootballCoach footballCoach;
 
+    // Combined constructor for dependency injection
     @Autowired
-    public DemoController(Coach coach) {
+    public DemoController(Coach coach, IFootballCoach footballCoach) {
         this.coach = coach;
+        this.footballCoach = footballCoach;
     }
 
-    @GetMapping("/dailyWorkout")
+    @GetMapping("/dailyWorkout")  // Used to build a URL
     public String getDailyWorkout(){
         return coach.getDailyWorkout();
-
     }
 
+    @GetMapping("/dailyFootballCoaching")
+    public String getFootballCoaching(){
+        return footballCoach.getFootballCoach();
+    }
 }
