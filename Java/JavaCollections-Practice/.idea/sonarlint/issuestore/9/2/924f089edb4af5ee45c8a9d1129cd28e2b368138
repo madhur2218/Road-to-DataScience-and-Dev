@@ -1,0 +1,112 @@
+
+Q
+java:S3740"/Provide the parametrized type for this generic.(Ó…Ş°ıÿÿÿÿ8‰ıçĞ†2
+L
+java:S3740"/Provide the parametrized type for this generic.(²²ûº8‰ıçĞ†2
+Q
+java:S3740+"/Provide the parametrized type for this generic.(›˜üÇøÿÿÿÿ8ÖÁêĞ†2
+Q
+java:S3740+"/Provide the parametrized type for this generic.(›˜üÇøÿÿÿÿ8ÖÁêĞ†2
+Q
+java:S3740E"/Provide the parametrized type for this generic.(êşöçüÿÿÿÿ8ÖÁêĞ†2
+Q
+java:S3740E"/Provide the parametrized type for this generic.(êşöçüÿÿÿÿ8×ÁêĞ†2
+Q
+java:S3740S"/Provide the parametrized type for this generic.(Ö…¬Çøÿÿÿÿ8×ÁêĞ†2
+Q
+java:S3740S"/Provide the parametrized type for this generic.(Ö…¬Çøÿÿÿÿ8×ÁêĞ†2
+L
+java:S3740^"/Provide the parametrized type for this generic.(ïøúˆ8×ÁêĞ†2
+L
+java:S3740^"/Provide the parametrized type for this generic.(ïøúˆ8×ÁêĞ†2
+Q
+java:S3740m"/Provide the parametrized type for this generic.(¤œè¥ûÿÿÿÿ8×ÁêĞ†2
+Q
+java:S3740v"/Provide the parametrized type for this generic.(—¦æûÿÿÿÿ8‰ıçĞ†2
+Q
+java:S3740v"/Provide the parametrized type for this generic.(—¦æûÿÿÿÿ8‰ıçĞ†2
+R
+java:S3740ı"/Provide the parametrized type for this generic.(š•Òõÿÿÿÿÿ8‰ıçĞ†2
+R
+java:S3740ı"/Provide the parametrized type for this generic.(š•Òõÿÿÿÿÿ8‰ıçĞ†2
+M
+java:S3740†"/Provide the parametrized type for this generic.(¸õ½“8×ÁêĞ†2
+R
+java:S3740Œ"/Provide the parametrized type for this generic.(´•›ñøÿÿÿÿ8ØÁêĞ†2
+R
+java:S3740Œ"/Provide the parametrized type for this generic.(´•›ñøÿÿÿÿ8ØÁêĞ†2
+R
+java:S3740ª"/Provide the parametrized type for this generic.(›ÇæÕÿÿÿÿÿ8ØÁêĞ†2
+n	java:S117¢"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(»„ïŠ8ŠıçĞ†2
+s	java:S117ª"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(›ÇæÕÿÿÿÿÿ8ŠıçĞ†2
+7
+java:S1220""Move this file to a named package.8ŒıçĞ†2
+r
+java:S1149S"PReplace the synchronized class "Stack" by an unsynchronized one such as "Deque".(Ö…¬Çøÿÿÿÿ8ôÂêĞ†2
+W
+java:S1854ÿ"9Remove this useless assignment to local variable "names".(ëŸÃó8–şçĞ†2
+\
+java:S1854ı"9Remove this useless assignment to local variable "names".(š•Òõÿÿÿÿÿ8–şçĞ†2
+S
+java:S1854«"5Remove this useless assignment to local variable "b".(¡ÜŒ•8õÂêĞ†2
+I
+java:S2201:",The return value of "contains" must be used.(ÚÔ±†8ùÂêĞ†2
+p
+java:S6204”"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ÁÖı²8¢şçĞ†2
+p
+java:S6204™"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ª™¨¹8£şçĞ†2
+p
+java:S6204 "RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ª™¨¹8£şçĞ†2
+I
+java:S2201¦"+The return value of "collect" must be used.(ª™¨¹8¤şçĞ†2
+p
+java:S6204¦"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ª™¨¹8¤şçĞ†2
+D
+java:S1481«"&Remove this unused "b" local variable.(¡ÜŒ•8ÿÂêĞ†2
+J
+java:S2201¯",The return value of "allMatch" must be used.(Âúû›8ÿÂêĞ†2
+O
+java:S2201·",The return value of "anyMatch" must be used.(ş¾¤¬ùÿÿÿÿ8ÿÂêĞ†2
+K
+java:S2201¿"-The return value of "noneMatch" must be used.(ç Œş8€ÃêĞ†2
+t
+java:S2159¿"VRemove this call to "equals"; comparisons between unrelated types always return false.(ç Œş8€ÃêĞ†2
+J
+java:S2201Ç"'The return value of "max" must be used.(ßñÕšşÿÿÿÿ8€ÃêĞ†2
+E
+java:S2201Ê"'The return value of "max" must be used.(¿Æ¨İ8€ÃêĞ†2
+u
+java:S6204á"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ªçŸŠøÿÿÿÿ8¤şçĞ†2
+u
+java:S6204ç"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ªçŸŠøÿÿÿÿ8¥şçĞ†2
+p
+java:S6204ï"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ª™¨¹8¦şçĞ†2
+u
+java:S6204ô"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ªçŸŠøÿÿÿÿ8§şçĞ†2
+M
+java:S1481ı"*Remove this unused "names" local variable.(š•Òõÿÿÿÿÿ8£şçĞ†2
+p
+java:S6204€"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ğ„æï8„ÃêĞ†2
+p
+java:S6204ƒ"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(íÑÍ×8„ÃêĞ†2
+I
+java:S2201Š"+The return value of "collect" must be used.(ª™¨¹8¥şçĞ†2
+p
+java:S6204Š"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ª™¨¹8„ÃêĞ†2
+[
+java:S1612‰"=Replace this lambda with method reference 'Objects::nonNull'.(¥‚‹8¤şçĞ†2
+I
+java:S2201”"+The return value of "collect" must be used.(ª™¨¹8…ÃêĞ†2
+p
+java:S6204”"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ª™¨¹8…ÃêĞ†2
+[
+java:S1612“"=Replace this lambda with method reference 'Objects::nonNull'.(‘Ş’³8¥şçĞ†2
+^	java:S125˜"<This block of commented-out lines of code should be removed.(ÁƒŒúşÿÿÿÿ8¥şçĞ†2
+p
+java:S6204¤"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ª™¨¹8†ÃêĞ†2
+]
+java:S1612£"@Replace this lambda with method reference 'String::toUpperCase'.(›Ñ„N8§şçĞ†2
+u
+java:S6204¨"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ğÕ™’ùÿÿÿÿ8‡ÃêĞ†2
+Q
+java:S1128"4Remove this unused import 'org.w3c.dom.ls.LSOutput'.(Ò½¾Š8‰ÃêĞ†2
