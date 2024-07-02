@@ -2,6 +2,7 @@ import org.w3c.dom.ls.LSOutput;
 
 import java.util.*;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class Main {
     public static void main(String[] args) {
@@ -308,9 +309,117 @@ public class Main {
      //Read about consumer and predicate
 
 
+     //Non terminal methods : filter, map , distinct, flatmap, limit
+     //Terminal operations : collect , count, min, max, foreach, toArary, foreach
+
+
+     //distinct, limit and count
+     ArrayList<Integer> intArr = new ArrayList<>();
+     intArr.add(12);
+     intArr.add(11);
+     intArr.add(15);
+     intArr.add(11);
+     intArr.add(13);
+     intArr.add(12);
+
+     //Distinct
+     List<Integer> distinctNumbers = intArr.stream()
+             .distinct()
+             .collect(Collectors.toList());
+
+     intArr.stream()
+             .distinct()
+             .forEach(System.out::println);
+
+     //Count
+     long countDist = intArr.stream()
+             .distinct()
+             .count();
+
+     //Limit
+     intArr.stream()
+             .limit(2)
+             .collect(Collectors.toList());
+
+
+     long count = intArr.stream()
+             .filter(filt -> filt % 2 == 0)
+             .count();
+
+     //min and max
+     Optional<Integer> max = intArr.stream()
+             .max(Integer::compareTo);
+
+     intArr.stream()
+             .min((a1,b1) -> {return a1.compareTo(b1)});
+
+     //Reduce method
+     Optional<Integer> reduce = intArr.stream()
+             .reduce((value, combinedValue) -> {
+              return combinedValue + value;
+             });
+
+
+
+     //More methods : sorted ,anymatch, nonematch, allmatch,findany,findfirst
+
+     intArr.stream()
+             .sorted()
+             .collect(Collectors.toList());
+
+     intArr.stream()
+             .sorted(Comparator.reverseOrder())
+             .collect(Collectors.toList());
+
+     Set<String> fruits = new HashSet<>();
+     fruits.add("One apple");
+     fruits.add("One papaya");
+     fruits.add("One orange");
+     fruits.add("One banana");
+
+     fruits.stream()
+             .anyMatch(v-> v.startsWith("One"));  //true
+
+     fruits.stream()
+             .allMatch(v-> v.startsWith("One")); //true
+
+     fruits.stream()
+             .noneMatch(v-> v.startsWith("One"));  //true
+
+
+     //Concatination of lists
+
+     List stream1 = new ArrayList();
+     stream1.add(1);
+     stream1.add(2);
+     stream1.add(3);
+     stream1.add(4);
+     stream1.add(5);
+
+     List stream2 = new ArrayList();
+     stream2.add(6);
+     stream2.add(7);
+     stream2.add(8);
+     stream2.add(9);
+     stream2.add(10);
+
+     Stream<Integer> ss1 = stream1.stream();
+     Stream<Integer> ss2 = stream2.stream();
+
+     Stream.concat(ss1,ss2).collect(Collectors.toList());
+
+
+
+
+
+
+
+
+
 
 
     }
+
 
 
 
