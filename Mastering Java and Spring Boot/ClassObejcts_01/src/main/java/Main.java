@@ -10,6 +10,9 @@ public class Main {
         c1.setColor("audi");
         c1.describeCar();
 
+        Car c2 = null;
+        c2.setColor("black");
+
 
 
     }
