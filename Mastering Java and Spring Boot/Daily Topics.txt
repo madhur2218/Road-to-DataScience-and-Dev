@@ -1,0 +1,6 @@
+26/8/24:
+
+1. Class
+2. Objects
+3. NullPointerException
+4. Getter and setter - encaspsulation
