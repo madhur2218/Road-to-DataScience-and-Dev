@@ -350,8 +350,8 @@ public class Main {
      Optional<Integer> max = intArr.stream()
              .max(Integer::compareTo);
 
-     intArr.stream()
-             .min((a1,b1) -> {return a1.compareTo(b1)});
+//     intArr.stream()
+//             .min((a1,b1) -> {return a1.compareTo(b1)});
 
      //Reduce method
      Optional<Integer> reduce = intArr.stream()
@@ -410,11 +410,17 @@ public class Main {
 
 
 
+    List<Customer> customers = EKartDB.getAll();
 
+     List<String> collect3 = customers.stream()
+             .map(customer -> customer.getEmail()).collect(Collectors.toList());
 
+     System.out.println(collect3);
 
+     List<String> collect5 = customers.stream()
+             .flatMap(customer -> customer.getPhoneNumber().stream()).collect(Collectors.toList());
 
-
+     System.out.println(collect5);
 
 
 
