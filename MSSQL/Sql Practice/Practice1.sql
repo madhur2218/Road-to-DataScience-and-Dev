@@ -90,6 +90,62 @@ Select Min(amount) From payment
 Select Count(amount) From payment
 Select Avg(Distinct(amount)) From payment
 
+--Operators
+
+Select * From Payment
+Where customer_id IN (341,342,343)
+Order By customer_id ASC
+
+Select * From Payment
+Where customer_id != 341       --NOT EQUAL
+
+
+Select * From customer 
+Where first_name IS NULL
+
+Select * From customer 
+Where first_name IS NOT NULL
+
+Select film_id From film_category
+UNION ALL
+Select film_id From inventory
+
+Select film_id From film_category
+EXCEPT ALL
+Select film_id From inventory
+
+
+Select film_id AS fildids From inventory
+
+
+(select city, length(city) from station   --union all
+order by length(city) ASC, city asc
+LIMIT 1)
+UNION ALL
+(select city, length(city) from station
+order by length(city)DESC, city ASC
+Limit 1);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -120,8 +176,11 @@ Select Avg(Distinct(amount)) From payment
 18. Having
 19. Limit 
 20. Offset - imp
+21. Union  - imp, displays distinct values
+	Union ALL - imp, displays non distinct values also
+	AS
 
-21. Operators
+	
 
 
 
