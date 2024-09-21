@@ -74,9 +74,9 @@ Having sum(amount) >1.99
 
 --Limit clause 
 Select * From customer
-Where first_name LIKE '%M%'
+Where first_name LIKE 'M%'
 Order By first_name ASC
-Limit 1 offset 2
+Limit 1 offset 4
 
 --Mod - retrives values where ID was even
 Select DISTINCT(city) From Station
@@ -184,6 +184,33 @@ Select char_length(email) from customer
 
 Select reverse(email) From customer
 
+Select count(amount) as num_transactions From payment
+
+Select customer_id, sum(amount) AS new_amount From PAYMENT
+Group By customer_id 
+Having sum(amount) > 10
+LIMIT 1 offset 1
+
+
+
+--Joins
+
+Select * From payment 								--inner join
+INNER JOIN customer
+ON payment.customer_id = customer.customer_id
+
+Select * From payment
+FULL OUTER JOIN customer							--outer join
+On payment.customer_id = customer.customer_id
+
+
+
+
+
+
+
+
+
 
 
 
@@ -270,6 +297,10 @@ REPLACE: Replaces one or more instances of a substring within a string
 INSTR: Searches for the position of a substring within a string 
 LEFT: Extracts a specified number of characters from the beginning of a string 
 RIGHT: Extracts a specified number of characters from the end of a string
+
+
+Joins
+Inner, Outer, Left,Right,full
 		
 
 	
