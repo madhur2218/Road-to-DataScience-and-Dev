@@ -127,6 +127,85 @@ order by length(city)DESC, city ASC
 Limit 1);
 
 
+Select * From actor
+Where first_name ILIKE '%A' or first_name ILIKE '%e'  and first_name ILIKE '%A' or first_name ILIKE '%e'
+Order By first_name asc
+
+
+SELECT DISTINCT first_name
+FROM actor
+WHERE (first_name LIKE 'a%' OR first_name LIKE 'e%' OR first_name LIKE 'i%' OR first_name LIKE 'o%' OR first_name LIKE 'u%')
+  AND (first_name LIKE '%a' OR first_name LIKE '%e' OR first_name LIKE '%i' OR first_name LIKE '%o' OR first_name LIKE '%u');
+
+
+SELECT DISTINCT first_name
+FROM actor
+WHERE (LEFT(first_name, 1) IN ('a', 'e', 'i', 'o', 'u'))
+  AND (RIGHT(first_name, 1) IN ('a', 'e', 'i', 'o', 'u'));
+
+
+  --String Functions 
+  Select CHAR_LENGTH (first_name),first_name,LAST_NAME From actor
+  Where LAST_name = 'Stallone'
+
+  Select EMAIL, character_length(email) From customer
+  
+  Select LEFT (first_name,1), rIGHT(first_name,1) From actor 
+  Where first_name IN ('A','E','I','O','U') AND last_name IN ('a','e','i','o','u')
+
+
+SELECT first_name, last_name 
+FROM actor
+WHERE 
+    LEFT(first_name, 1) NOT IN ('A', 'E', 'I', 'O', 'U') 
+AND 
+    RIGHT(first_name, 1) NOT IN ('a', 'e', 'i', 'o', 'u')
+AND
+    LEFT(last_name, 1) IN ('A', 'E', 'I', 'O', 'U')
+AND
+    RIGHT(last_name, 1) IN ('a', 'e', 'i', 'o', 'u');
+
+
+Select  Distinct first_name From actor
+Where Left(first_name,1) NOT IN ('A', 'E', 'I', 'O', 'U') AND Right (first_name,1) NOT IN ('a', 'e', 'i', 'o', 'u');
+
+
+Select first_name || '  ' || last_name AS full_name From CUSTOMER  --CONCAT FUNCTION 
+
+SELECT DISTINCT SUBSTRING(email, 1, POSITION('@' IN email) - 1) AS email_before_at  --Substring function
+FROM CUSTOMER; 
+Select Position('e' IN 'MADHUR');
+Select SUBSTRING(address,1,POSITION(' ' IN address)) from address
+Select SUBSTRING(district,1,POSITION(' ' IN district)) From ADDRESS
+
+Select Length(address) From address   	--length and char_length function (same, not difference in these functions)
+Select Length(email) From customer
+Select char_length(email) from customer
+
+Select reverse(email) From customer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+  
+  
+  
+  
+
+
+
 
 
 
@@ -179,6 +258,19 @@ Limit 1);
 21. Union  - imp, displays distinct values
 	Union ALL - imp, displays non distinct values also
 	AS
+	String Functions
+
+CONCAT: Joins two or more strings together 
+SUBSTRING: Extracts a substring from a larger string 
+LENGTH: Returns the length of a string 
+LOWER: Converts a string to lowercase 
+UPPER: Converts a string to uppercase 
+TRIM: Removes whitespace or specified characters from the beginning or end of a string 
+REPLACE: Replaces one or more instances of a substring within a string 
+INSTR: Searches for the position of a substring within a string 
+LEFT: Extracts a specified number of characters from the beginning of a string 
+RIGHT: Extracts a specified number of characters from the end of a string
+		
 
 	
 
