@@ -203,6 +203,60 @@ Select * From payment
 FULL OUTER JOIN customer							--outer join
 On payment.customer_id = customer.customer_id
 
+Select * From payment
+Full Outer Join customer
+On customer.customer_id = payment.customer_id
+Where customer.customer_id IS NULL 
+or
+payment.customer_id IS  NULL
+
+Select * From payment
+Full Outer Join customer
+On customer.customer_id = payment.customer_id
+Where customer.customer_id IS NOT NULL 
+or
+payment.customer_id IS NOT NULL
+
+
+Select * From customer
+LEFT OUTER JOIN payment
+ON customer.customer_id = payment.customer_id
+
+
+Select * From film 
+LEFT OUTER JOIN INVENTORY
+ON inventory.FILM_ID = film.film_id
+Where inventory.FILM_ID is null
+
+
+
+Select * From Sales_Q1
+UNION
+Select * From Sales_Q2
+
+
+--Mathemetical Operators 
+Select ROUND((rental_rate/replacement_cost),3)*100 as percent  FROM FILM
+
+
+--String Functions and Operations
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -267,6 +321,7 @@ On payment.customer_id = customer.customer_id
 1. Select
 2. Where
 3. Distinct
+   Round
 4. Count
 5. Max
 6. Min
