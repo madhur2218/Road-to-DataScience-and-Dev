@@ -1,21 +1,0 @@
-
-7
-java:S1220""Move this file to a named package.8õâüÖ“2
-
-java:S4165"bRemove this useless assignment; "game" already holds the assigned value along all execution paths.(Íä§Í8ÀÜŠ×“2
-S
-java:S2589#"7Remove this expression which always evaluates to "true"(’ä$8¾ÁıÖ“2
-S
-java:S2589"7Remove this expression which always evaluates to "true"(’ä$8ÀÜŠ×“2
-V
-java:S1854"9Remove this useless assignment to local variable "score".(Ô¬µ×8ëˆ×“2
-[
-java:S1854"9Remove this useless assignment to local variable "bonus".(À‰ïˆşÿÿÿÿ8ëˆ×“2
-_
-java:S1854"BRemove this useless assignment to local variable "levelCompleted".(Õü’ñ8ëˆ×“2
-C
-java:S1125"'Remove the unnecessary boolean literal.(’ä$8ÇÁıÖ“2
-X	java:S125"<This block of commented-out lines of code should be removed.(á¯¡ª8ÇÁıÖ“2
-C
-java:S1125#"'Remove the unnecessary boolean literal.(’ä$8Ÿ‘Š×“2
-X	java:S125$"<This block of commented-out lines of code should be removed.(á¯¡ª8 ‘Š×“2

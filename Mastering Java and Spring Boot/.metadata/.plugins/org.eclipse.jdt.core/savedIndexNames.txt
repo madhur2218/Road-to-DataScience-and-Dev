@@ -1,3 +1,0 @@
-INDEX VERSION 1.134+D:\Road-to-DS-2024\Mastering Java and Spring Boot\.metadata\.plugins\org.eclipse.jdt.core
-1865797976.index
-3435648363.index
