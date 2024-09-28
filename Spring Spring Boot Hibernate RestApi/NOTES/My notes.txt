@@ -36,6 +36,24 @@ NULL- special keyword meaning variable has type but no reference to object, mean
 	- String name ="madhur;  here name is variable and some value has been assigned to it.
 	-Variables are assigned default values in java.
 	
--Getters and Setters: getter is a method in a class which retrieves the value of private field and return it.
+-Getters and Setters: getter is a meth
+od in a class which retrieves the value of private field and return it.
 					  setter is a method in a class which sets the value of a private field.(can contain some more security features say if-else for data security)
 					 -Purpose of these methods is to protect private variables and follow princ. of Encapsulation
+					- Setters can have validation functionality hence it cannot make invalid objects.	
+					
+-The this keyword in Java is a reference to the current object, meaning it refers to the instance of the class in which it is used
+ - When instance variables have the same name as method parameters, this helps differentiate between them
+ 
+-Car c3 = null; //initializing instance of car with null reference, if we set anything it gives nullpointer exception at runtime.
+
+-Constructors: used in creation of object.
+				-Same name as that of class name, does not have any return type
+				-Never use return type for constructor not even void
+				-Specify access modifiers to control who should be able to create object for class.
+				-Instead of using setter methods for setting values for object,we can use Constructors
+				- Constructor is created during compilation process of java code 
+		-Default constructor: if class do not contain any constructor declaration, then it is default constructor.
+		-Constructor Overloading is declaring multiple constructors with different parameters.
+		-Or of number of parameters of constructor is same, then their type or order should be differennt.
+ 
