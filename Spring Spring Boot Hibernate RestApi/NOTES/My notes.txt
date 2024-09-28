@@ -56,4 +56,8 @@ od in a class which retrieves the value of private field and return it.
 		-Default constructor: if class do not contain any constructor declaration, then it is default constructor.
 		-Constructor Overloading is declaring multiple constructors with different parameters.
 		-Or of number of parameters of constructor is same, then their type or order should be differennt.
+Constructor overloading/chaining:
+	-Never call setter method in a constructor
+	-Constructors are primarily used to set up initial values for the instance variables of a class. This ensures that an object starts its life in a valid state.
+		
  

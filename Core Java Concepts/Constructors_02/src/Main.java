@@ -15,5 +15,9 @@ public class Main {
         Account madhur = new Account("123124",1000,"madhur","madhurnagrath@gmail.com","7656788908");
         madhur.withdrawlAmount(200);
 
+        Account tim = new Account("tim","tim@gmail.com","5675346457");
+        System.out.println(tim.getNumber());
+        System.out.println(tim.getBalance());
+        System.out.println(tim.getCustomerName());
 }
     }

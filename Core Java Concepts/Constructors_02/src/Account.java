@@ -6,6 +6,7 @@ public class Account {
     private String customerPhone;
 
     public Account(){
+        this("123124",1000,"madhur","madhurnagrath@gmail.com","7656788908");
         System.out.println("Empty constructor");
     }
 
@@ -15,6 +16,13 @@ public class Account {
         this.customerName = customerName;
         this.customerEmail = customerEmail;
         this.customerPhone = customerPhone;
+    }
+
+    public Account(String customerName, String customerEmail, String customerPhone) {
+        this("123124",1000,customerName,customerEmail,customerPhone);
+//        this.customerName = customerName;
+//        this.customerEmail = customerEmail;
+//        this.customerPhone = customerPhone;
     }
 
     public Account(String number, double balance) {
