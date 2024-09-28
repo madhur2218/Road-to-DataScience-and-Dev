@@ -270,7 +270,14 @@ INSERT INTO account (user_name, password, email, created_on, last_login)
 VALUES ('jose', 'password', 'jose@gmail.com', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP - INTERVAL '1 day');
 
 INSERT INTO account (user_name, password, email, created_on, last_login)
+VALUES ('madhur', 'password1', 'madhur@gmail.com', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP - INTERVAL '1 day');
+
+INSERT INTO account (user_name, password, email, created_on, last_login)
 VALUES ('madhur', 'password1', 'madhur@gmail.com', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+
+
+INSERT INTO job(job_name)
+VALUES('astronaut')
 
 INSERT INTO job(job_name)
 VALUES('software engineer')
@@ -281,9 +288,103 @@ VALUES('astronaut')
 INSERT INTO job(job_name)
 VALUES('president')
 
+INSERT INTO job_acc	
 
 
+INSERT INTO account_job(user_id,job_id,hire_date)
+VALUES(1,1,CURRENT_TIMESTA MP)
 
+INSERT INTO account_job(user_id,job_id,hire_date)
+VALUES(2,2,CURRENT_TIMESTAMP)
+
+
+SELECT * FROM account
+SELECT * FROM job
+SELECT * FROM account_job
+
+
+SELECT * FROM account
+UPDATE account
+SET user_name = 'naman'
+WHERE user_name = 'madhur'
+RETURNING account
+
+UPDATE account
+SET last_login = created_on
+WHERE user_id = 1
+
+
+UPDATE account_job
+SET hire_date = account.last_login
+FROM account
+WHERE account_job.user_id = account.user_id 
+AND account.user_id = 2
+
+
+-- Step 1: Update the account_job table
+UPDATE account_job
+SET user_id = 3  -- New user_id
+WHERE user_id = 1;  -- Old user_id
+
+-- Step 2: Update the account table
+UPDATE account
+SET user_id = 3  -- New user_id
+WHERE user_id = 1;  -- Old user_id
+
+
+INSERT INTO job(job_name)
+VALues('cowboy')
+
+DELETE FROM job --deleted everything from table
+
+DELETE FROM job 
+WHERE job_name = 'cowboy'
+RETURNING job
+
+SELECT * FROM job
+
+CREATE TABLE information(
+	info_id SERIAL PRIMARY KEY,
+	title VARCHAR(500) NOT NULL,
+	person VARCHAR(50) NOT NULL UNIQUE 
+
+)
+
+ALTER TABLE information			--RENAMING TABLE
+RENAME TO new_information
+
+ALTER TABLE new_information   	--RENAMING COLUMN
+RENAME COLUMN person TO people 
+
+ALTER TABLE new_information
+ALTER COLUMN title DROP NOT NULL 
+
+INSERT INTO new_information(people)
+VALUES('2 people')
+
+ALTER TABLE new_information
+ADD COLUMN user_name VARCHAR(20) null
+
+ALTER TABLE new_information
+DROP COLUMN user_name
+
+--Check Constraint
+
+CREATE TABLE employee(
+	emp_id SERIAL PRIMARY KEY NOT NULL, 
+	first_name VARCHAR(30) NOT NULL,
+	last_name VARCHAR(30) NOT NULL,
+	birthday DATE CHECK (birthday > '1990-01-01'),
+	hire_date DATE CHECK (hire_date > birthday),
+	salary INT CHECK (salary > 0)
+
+)
+
+INSERT INTO employee (first_name,last_name,birthday,hire_date,salary)
+VALUES('MADHUR','NAGRATH','2000-10-22','2024-07-24',200000)
+
+DROP TABLE employee
+SELECT * FROM employee
 
 
 
