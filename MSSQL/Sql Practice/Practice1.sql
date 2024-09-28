@@ -242,6 +242,49 @@ Select ROUND((rental_rate/replacement_cost),3)*100 as percent  FROM FILM
 --String Functions and Operations
 
 
+--Create,Update,Delete,Drop,Alter Commands
+
+Create Table account(
+	user_id SERIAL PRIMARY KEY NOT NULL,
+	user_name VARCHAR(50) UNIQUE NOT NULL,
+	password VARCHAR(50) NOT NULL,
+	email VARCHAR(50) UNIQUE NOT NULL,
+	created_on TIMESTAMP NOT NULL,
+	last_login TIMESTAMP(3) NOT NULL
+)
+
+
+Create Table job(
+	job_id Serial PRIMARY KEY,
+	job_name VARCHAR(200) UNIQUE NOT NULL
+)
+
+
+Create Table account_job(
+	user_id INT REFERENCES account(user_id),
+	job_id INT REFERENCES job(job_id),
+	hire_date TIMESTAMP
+)
+
+INSERT INTO account (user_name, password, email, created_on, last_login)
+VALUES ('jose', 'password', 'jose@gmail.com', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP - INTERVAL '1 day');
+
+INSERT INTO account (user_name, password, email, created_on, last_login)
+VALUES ('madhur', 'password1', 'madhur@gmail.com', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+
+INSERT INTO job(job_name)
+VALUES('software engineer')
+
+INSERT INTO job(job_name)
+VALUES('astronaut')
+
+INSERT INTO job(job_name)
+VALUES('president')
+
+
+
+
+
 
 
 
