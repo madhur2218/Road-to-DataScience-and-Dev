@@ -23,6 +23,10 @@ public class Main {
 
         Car c3 = null; //initializing instance of car with null reference, if we set anything it gives nullpointer exception
 
+        Account ram = new Account();
+        ram.withdrawlAmount(20);
+        ram.depositFunds(100);
+        ram.withdrawlAmount(80);
 
 
 
