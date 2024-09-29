@@ -1,0 +1,63 @@
+Types of languages : 
+	1. Procedural - java, python
+	2. Functional - python
+	3. Object Oriented - java, python
+	
+-Statically and Dynamically typed languages:
+
+-More than one reference variables can point to same object 
+-If any one of the reference variable changes the obejct, then the object will get changed for all references.
+-Value of reference variable is stored in stack and value of object is stored in heap and the refernce 
+variable points to the object which is present in heap.
+
+-Object with no reference variable - garbage collection will come and remove this: same happens in python and java
+
+-Class: blueprpint for creating objects.
+	-State and behaviour
+	-Class describes the data field(state) and behaviour(methods).
+	- Instance and static fields
+	-Classes are defined in groups called packages.
+	-Default if package is not defined, then it belongs to default package
+	
+Access Modifier:
+	-public: any other class in package can access this class.
+	-private: no other class can access this member.
+	-protected: allows cla	sses in the same package and any other subclasses in other package to access the member
+	-default: member is accessable only to class in same package.
+	
+Encapsulation: hiding fields and methods from public access.
+				hiding information of our object from public 
+				
+				
+Always remember instance is an object.
+Fields and variables are same.
+
+NULL- special keyword meaning variable has type but no reference to object, meaning that no object is assigned to this variable.
+	- String name ="madhur;  here name is variable and some value has been assigned to it.
+	-Variables are assigned default values in java.
+	
+-Getters and Setters: getter is a meth
+od in a class which retrieves the value of private field and return it.
+					  setter is a method in a class which sets the value of a private field.(can contain some more security features say if-else for data security)
+					 -Purpose of these methods is to protect private variables and follow princ. of Encapsulation
+					- Setters can have validation functionality hence it cannot make invalid objects.	
+					
+-The this keyword in Java is a reference to the current object, meaning it refers to the instance of the class in which it is used
+ - When instance variables have the same name as method parameters, this helps differentiate between them
+ 
+-Car c3 = null; //initializing instance of car with null reference, if we set anything it gives nullpointer exception at runtime.
+
+-Constructors: used in creation of object.
+				-Same name as that of class name, does not have any return type
+				-Never use return type for constructor not even void
+				-Specify access modifiers to control who should be able to create object for class.
+				-Instead of using setter methods for setting values for object,we can use Constructors
+				- Constructor is created during compilation process of java code 
+		-Default constructor: if class do not contain any constructor declaration, then it is default constructor.
+		-Constructor Overloading is declaring multiple constructors with different parameters.
+		-Or of number of parameters of constructor is same, then their type or order should be differennt.
+Constructor overloading/chaining:
+	-Never call setter method in a constructor
+	-Constructors are primarily used to set up initial values for the instance variables of a class. This ensures that an object starts its life in a valid state.
+		
+ 
