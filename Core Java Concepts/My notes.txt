@@ -5,6 +5,88 @@ Types of languages :
 	
 -Statically and Dynamically typed languages:
 
+
+
+
+
+-Java Architecture/How java code executes:
+	-.java file is human redable file and is our source code.
+	-Java compiler (compiler exexutes entire file) converts the .java code not directly into machine redable code in 0 AND 1 but 
+	  it converts it into .class (byte code) file
+	-This .class file cannot run on system, we need JVM to run this and thats why Java is platform independent.
+	-Then java interpreter(executes code line by line) converts this code into Machine code in 1 and 0 format.
+	
+More on platform independence:
+	1. Means that byte code (.class file) can run on all opertaing systems.
+	2.We need to convert this source code to machine code for machine to understand.
+	3.Compiler helps in doing this by converting it into executable code.
+	4.After compiling C/C++ code we get an .exe file which is platform dependent(ie. on windeows it will run but in mac it will not run, we will have to ocmpile this code again to run it)
+	5.In java, we get this bytecode(.class file) and JVM converts this into machine code.
+	6. Java is platform independent but JVM is platform dependent.(ie. i got my class file in windows which jvm will interpret in windows but this class file will remain same but jvm would be different in case for mac.)
+	
+JDK vs JRE vs JVM 
+	1. jdk(java devlopment kit)= jre(java runtime environment) + devlopment tools.
+	2. jre(java runtime environment) = jvm(java virtual machine) + library classes
+	
+JDK
+	1.Provides environment(package/files)to devlop and run java code.
+	2.JDK is a package which includes:
+		-devlopment tools - to provide environment to devlop programme.
+		-JRE - to execute programme
+		- compiler - javac (this converts java code to byte code)
+		-archiver - jar
+		-docs generator - javadoc
+		-interpreter/loader
+JRE	
+	1.Installation papckage that provides environment to only run the programme.
+	2.It consists of:
+		-Deployment tech
+		-User interface
+		-Integration lib/base lib/base
+		-JVM
+	3.After we get the .class file, next thing happens at run time:
+		-Class loader executes all the classes needed to execute the programme.
+		-JVM sends code to byte code verifier to check for format of code.
+		- More like a box and jvm is the actual content inside this box.
+		
+JVM: responsible for executing the code line by line.
+	whatever work jvm is doing it is doing with help of libraries provided by jre.
+		
+What happens at Compile and Run time:
+
+	Compile Time:  [.java file] (javac compilation) ->.class file
+	Run Time    :  Class loader -> byteCode Veryfier -> Interpreter -> Runtime-> Hardware
+	
+How JVM works:
+	1. Class Loader
+		-Loading:
+			-reads .class file and generates binary data.
+			-an object of this class file is created in heap.
+		-Linking:
+			-JVM verifies this .class file
+			-allocates memory for class variables and default values.
+			-replace symbolic references from type with direct references.
+		-Initialization:
+			-All static variables are assigned with their values defined in the code and static block.
+		JVM contains stack and heap memory allocations.
+	2.JVM Evecution
+		Interpreter:
+				-Line by line execution
+				-When one method is called many times,it interprets again and again.
+	3.JIT(just in time env): those methods that are repeated, JIT provides direct machine code so re-interpretataion is not required.
+			Makes execution faster
+			Garbage collection
+		
+	
+	    
+		
+		
+Steps: 1.Java source code 
+	   2. JDK 
+	   3. ByteCode 
+	   4. JVM - converts byte code to executable code
+	   5. JRE - responsible for what we see on UI
+
 -More than one reference variables can point to same object 
 -If any one of the reference variable changes the obejct, then the object will get changed for all references.
 -Value of reference variable is stored in stack and value of object is stored in heap and the refernce 
@@ -22,7 +104,7 @@ variable points to the object which is present in heap.
 Access Modifier:
 	-public: any other class in package can access this class.
 	-private: no other class can access this member.
-	-protected: allows cla	sses in the same package and any other subclasses in other package to access the member
+	-protected: allows classes in the same package and any other subclasses in other package to access the member
 	-default: member is accessable only to class in same package.
 	
 Encapsulation: hiding fields and methods from public access.
@@ -60,4 +142,4 @@ Constructor overloading/chaining:
 	-Never call setter method in a constructor
 	-Constructors are primarily used to set up initial values for the instance variables of a class. This ensures that an object starts its life in a valid state.
 		
- 
+
