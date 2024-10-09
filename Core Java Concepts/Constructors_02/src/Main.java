@@ -19,5 +19,21 @@ public class Main {
         System.out.println(tim.getNumber());
         System.out.println(tim.getBalance());
         System.out.println(tim.getCustomerName());
-}
+
+
+
+        Customer raj = new Customer("raj", 10.01, "raj@gmail.com");
+        System.out.println(raj.getEmail());
+
+        Customer secondCustomer = new Customer();
+        System.out.println(secondCustomer.getName());
+
+        Customer malhar= new Customer("malhar",20.134,"malhar@gmail.com");
+        System.out.println(malhar.getName());
+        System.out.println(malhar.getCreditLimit());
+        System.out.println(malhar.getEmail());
+
+
     }
+
+}
