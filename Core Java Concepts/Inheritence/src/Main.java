@@ -6,18 +6,14 @@ public class Main {
         Animal a1 = new Animal("Generic Animal", "Huge",400);
         a1.makeNoise();
         a1.move("slow");
-        Main a = new Main();
-       a.doAnimalStuff(a1,"slow");
+       doAnimalStuff(a1,"slow");
 
         Dog d1 = new Dog();
-        a.doAnimalStuff(d1,"fast");
-
-
-
+        doAnimalStuff(d1,"fast");
 
     }
 
-    public void doAnimalStuff(Animal animal, String speed){
+    public static void doAnimalStuff(Animal animal, String speed){
          animal.makeNoise();
          animal.move("fast");
          animal.toString();

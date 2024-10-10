@@ -54,4 +54,29 @@
 			-Artifact id : name of peoject
 			-Version: specific release version
 	-By default, spring will load properties from application.properties file.
-			
+	
+-There are 30+ spring boot starters (dependencies which we place in pom file) by Spring Dev team.
+
+-The spring-boot-starter-parent is a special Maven parent project provided by Spring Boot, used to simplify the configuration and management of a Spring Boot application. 
+It includes a set of default settings and conventions that make it easier to develop and manage Spring Boot projects, especially for dependency management, plugin configuration, and version control.
+	-Key Features and Benefits of spring-boot-starter-parent:
+Dependency Version Management:
+	-spring-boot-starter-parent includes a BOM (Bill of Materials) that manages versions for all Spring Boot-related dependencies. This means you don’t need to specify explicit versions for Spring libraries, as it provides default, compatible versions for each dependency.
+		For example, if you add dependencies like spring-boot-starter-web or spring-boot-starter-data-jpa, the spring-boot-starter-parent ensures that all of these have compatible versions without you needing to manage them individually.
+
+	
+-By adding dependency of spring-bootdev-tools, we do not need to reload our project again, once code gets updated, it will automatically update my webpage change. - helps in automatic reloading.
+
+Springboot Actuator:
+	-Used to manage health of application.
+	-Exposes restEng points to manage application
+	-We easily get devops functionality using springboot actuator
+	-We simply have to add dependency to our pom file
+	-REST endpoints are automatically added to application (no need to write restEnd points again).
+	-by default only /health endpoint is exposed.
+	-/info provides information about your application
+	-to expose /info, we make changes in application.properties file
+	-/beans, /mappings, /auditevents some more endpoints
+	-Sprint security: spring actuator, we dont want all of our restEndpoints to be exposed publically, hence we can use spring security actuator for this.
+	
+	
