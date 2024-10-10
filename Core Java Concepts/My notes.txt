@@ -76,11 +76,7 @@ How JVM works:
 	3.JIT(just in time env): those methods that are repeated, JIT provides direct machine code so re-interpretataion is not required.
 			Makes execution faster
 			Garbage collection
-		
-	
-	    
-		
-		
+				
 Steps: 1.Java source code 
 	   2. JDK 
 	   3. ByteCode 
@@ -93,6 +89,19 @@ Steps: 1.Java source code
 variable points to the object which is present in heap.
 
 -Object with no reference variable - garbage collection will come and remove this: same happens in python and java
+
+
+
+
+
+
+
+
+
+
+
+
+TIM BUCHAKA:
 
 -Class: blueprpint for creating objects.
 	-State and behaviour
@@ -142,4 +151,53 @@ Constructor overloading/chaining:
 	-Never call setter method in a constructor
 	-Constructors are primarily used to set up initial values for the instance variables of a class. This ensures that an object starts its life in a valid state.
 		
+Instance vs Object vs Class vs Reference
+	-Taking example of a house.
+	-Class is blueprint of house.
+	-Using blueprint we can build as many houses as we like.
+	-each house we build using new operator is an object
+	-An object can also be known as instance
+	-Each house we build has an address, this is called reference. We can always copy these references as we like but still there would be same house which we would be referring to.
+	-We always have reference to an object in memory, in order to access that object we always use this reference.
+	- new House("Red");   -> not providing any reference hence garbageCollection will come into picture and remove this object.
+	
+	
+Static vs Instance Variables
+	-Static variable is declared using static keyword.
+	-Every instance of class shares same static variable.
+	-If any change is made to that variable then all other instances will see effect of that change.
+	-Always use class name and not reference name to access static variable.
+	-An onject/instance is not refeired to to access a static variable.
+	-When a variable is declared as static, then a single copy of the variable is created and shared among all objects at the class level. Static variables are, essentially, global variables. All instances of the class share the same static variable.
+	
+Instance Variables
+	-Dont use static keyword.
+	-Instqance variables belong to specific instance of a class.
+	
+-Stativ vs Instance Methods
+	-Static methods are declared with static keyword.
+	-Cannot use this keyword in static method.
+	-Whenever u see a method that do not use instance variables should be declared as static method.
+	-Static methods do not require an instance to be created, can be directly called using class name.
+	-Instance methods belongs to instance of a class.
+	-To use instance methods, we first create the instance of that class by using new keyword.
+-When should a method be declated Static or Instance??
+	-If it contains instance variables or instance methods then declare it as instance variable, if not then static method.
+	
+The static keyword in Java is used to define class-level members, meaning that the static members (variables, methods, blocks, or nested classes) belong to the class itself rather than to any individual instance of the class. Here's a breakdown of the different contexts in which static can be used, along with its purpose:
 
+1. Static Variables (Class Variables)
+	-A static variable is shared among all instances of a class. All objects of that class share the same copy of the variable, and any changes made to the variable by one object are visible to all other objects.
+
+Purpose:
+	-To maintain a common property across all objects of the class.
+	-Useful when memory efficiency is required, as there is only one copy of the variable, not a separate copy for each object.
+	
+
+-Java POJOs
+	-Pojo or plane old java object is a class that only contains instance fields.
+	-It is used to house data and pass data between functional classes.
+	-It has usually no or very few methods other than getter and setter methods for instance fields.
+	-Also called DTO, data transfer object and can also be recognised as java bean.
+	-Usually used as when database is required to convert database fields as objects.
+	

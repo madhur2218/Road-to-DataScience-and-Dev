@@ -1,0 +1,39 @@
+What is SQL : Structured query language
+-ORACLE
+-POSTGRES
+-MICROSOFT SQL 
+-MY SQL
+-IBM DB2
+-SQLITE
+-MARIA DB2
+-TERA DATA
+-HIVE
+
+SQL is used in RDBMS(relational database management system)in form of tables
+
+SQL Commands classification-
+	-DDL(data defination language): Create, drop, alter, truncate
+	-DML(data manipulation language): insert, update, delete, merge
+	-DQL(data query language) : select
+	-TCL(tansaction control language): commit, rollback, savepoint
+	-DCL(data control language): grant, revoke
+	
+Data types: tables in rdbms have rows and columns which have certain data types	
+	-VARCHAR
+	-INT 
+	-BOOLEAN
+	-FLOAT
+	-DATE
+Constraints: refers to limitations that are applied to a column 
+	-CHECK
+	-NOT NULL
+	-NULL
+	-UNIQUE
+	-PRIMARY KEY
+	-FOREIGN KEY
+	
+	
+	DDL COMMANDS 
+	dml commands
+
+
