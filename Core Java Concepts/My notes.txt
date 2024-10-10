@@ -201,3 +201,12 @@ Purpose:
 	-Also called DTO, data transfer object and can also be recognised as java bean.
 	-Usually used as when database is required to convert database fields as objects.
 	
+-Inheritence:
+	-Way to organize classes in parent-child hierarchy which lets child inherit variables and methods from its parents.
+	-eg. Animal is base class and other classes are said to be subclasses for animals.
+	-Parent can have multiple child.
+	-ToString method is used to print objects 
+	-Using extends keyword, we declare that out subclass is child of our parent class.
+	-super() is a lot like this();
+	-It is a way to call a constructor on superclass directly from subclass constructor.
+	
