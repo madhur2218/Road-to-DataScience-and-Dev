@@ -86,3 +86,33 @@ Springboot Actuator:
 	-By default spring boot reads info from a standard property file ie. application.properties
 	-Properties are roughly grouped as following
 		-Core, web, security,data, actuator, integration, devTools, testing
+		
+Spring Framework:
+
+-Inversion of Control
+	-Instead of creating objects manually, we leave everything to spring.
+	-Spring IoC container is a part of the Spring Framework that manages beans by instantiating, configuring, and assembling them.
+	-Spring ioc container is responsible for IOC and Dependency Injection.
+Configuring Spring Container:
+	1. XML configuration (legacy)
+	2. Java Annotations (modern)
+	3. Java source code (modern)
+	
+	Dependency Injection: Dependency Injection (DI) is a design pattern used in software development to manage dependencies between objects. It is a form of Inversion of Control (IoC), where the responsibility of creating objects (dependencies) is transferred from a class to an external entity, often a framework or container. This helps in making the code more modular, testable, and flexible.
+		-Dependency Injection reduces the need for hardcoded dependencies within classes, enhances modularity, and improves the overall flexibility and testability of your application.
+		-Constructor Injection: If a class cannot function without a certain dependency, you should use constructor injection. This makes it clear that the dependency is required and enforces it at the time of object creation.
+	-For dependency injection, spring can use autowiring.
+	-Spring will look for class that matches class or interface.
+	-Spring will inject automatically, hence called autowired.
+	-Spring will scan for Component.
+	-@Component annotataion marks class as a spring bean.
+		-Spring bean is a regular java class managed by Spring.
+		-Spring provides features like: database access and transactions, Rest api and web MVC, Security etc.
+	-@SpringBootApplication comprises of the following:
+		1.@EnableAutoConfiguration: enables spring boot auto config support.
+		2.@Component: enables component scanning for current package and recursively scans sub-packages.
+		3.@Configuration: [DOUBT]
+	-By default spring boot starts component scanning for same package as your spring boot application and scans sub packages recursively.
+	-Component scanning works for base package but for Scanning other packages we need to define this manually.
+	
+	
