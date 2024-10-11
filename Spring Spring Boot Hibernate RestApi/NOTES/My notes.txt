@@ -79,4 +79,10 @@ Springboot Actuator:
 	-/beans, /mappings, /auditevents some more endpoints
 	-Sprint security: spring actuator, we dont want all of our restEndpoints to be exposed publically, hence we can use spring security actuator for this.
 	
-	
+	-To build project using cmd, use: .\mvnw.cmd package, this creates jar package in target folder.
+	-To run locally, use ./mvnw spring-boot:run
+
+-Injesting cutom properties files
+	-By default spring boot reads info from a standard property file ie. application.properties
+	-Properties are roughly grouped as following
+		-Core, web, security,data, actuator, integration, devTools, testing

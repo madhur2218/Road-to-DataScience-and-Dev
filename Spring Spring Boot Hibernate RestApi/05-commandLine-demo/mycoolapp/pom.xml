@@ -39,17 +39,11 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
 		</dependency>
-		<!--ADD SUPPORT FOR SPRING ACTUATOR-->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-actuator</artifactId>
-		</dependency>
 
-		<!--ADD SUPPORT FOR SPRING SECURITY ACTUATOR-->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-cd</artifactId>
-		</dependency>
+<!--		<dependency>-->
+<!--			<groupId>org.springframework.boot</groupId>-->
+<!--			<artifactId>spring-boot-starter-actuator</artifactId>-->
+<!--		</dependency>-->
 <!--		<properties>-->
 <!--			<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>-->
 <!--			<maven.compiler.source>1.8</maven.compiler.source>-->
