@@ -131,6 +131,26 @@ Lazy Initialization:
 	-Only creates objects when needed.
 	-Helps with faster startup time when there are large number of components.
 	
+Bean Scopes - refers to lifecycle of a bean.
+	-Means how long does the bean live.
+	=How many instances are being created
+	-How is bean shared.
+	-Default scope is singleton meaning spring container creates only one instance of bean by default and is cashed in memory.
+	-Singleton: cretes a single shared instance of a bean. Default scope.
+	-Prototype: creates new bean instance for eash container request.
+	-Request, Session: scoped for http request only.
+	
+In Java, @PostConstruct is an annotation used to indicate that a method should be executed after dependency injection is done on a bean but before the bean is put into service.
+Key Points:
+	Purpose:
+	It allows you to perform any necessary initialization tasks, such as setting up default values, connecting to external resources, or performing calculations, after the bean's dependencies have been injected.
+	Lifecycle:
+	The @PostConstruct method is called only once in the bean's lifecycle, immediately after the bean is created and its dependencies have been injected.
+	Usage:
+	You can annotate only one method per class with @PostConstruct. The method must not have any parameters and must not return a value.
+	
+	
+	
 	
 	
 	
