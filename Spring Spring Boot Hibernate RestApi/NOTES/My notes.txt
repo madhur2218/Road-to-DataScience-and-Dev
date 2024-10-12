@@ -114,5 +114,23 @@ Configuring Spring Container:
 		3.@Configuration: [DOUBT]
 	-By default spring boot starts component scanning for same package as your spring boot application and scans sub packages recursively.
 	-Component scanning works for base package but for Scanning other packages we need to define this manually.
+	-Setter injection: setting injection only based on using setter methods in class.
+	-Constructor injection: required dependencies.
+	-Setter injection: optional dependencies.
+	-Field Inkection- not recommended as it makes difficult to write UT.(FIELD INJECTION USES JAVA REFLECTION)
+
+Qualifiers:
+	-@Qualifier annotation is used in Spring to resolve ambiguity when multiple beans of the same type exist.
+	
+Primary
+	-@Primary is an alternative for @Qualifier, but Primary can only have only one for multiple implementations.
+	-We cannot mark multiple classes with @Primary.
+	-We can mix @Primary and @Qualifier together but @Qualifier will have higer priority.
+	
+Lazy Initialization:
+	-Only creates objects when needed.
+	-Helps with faster startup time when there are large number of components.
+	
+	
 	
 	
