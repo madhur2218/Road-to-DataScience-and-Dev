@@ -1,6 +1,7 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+
 public class Main {
+
+
     public static void main(String[] args) {
         Account ram = new Account();
         ram.setCustomerName("ram");
@@ -32,6 +33,18 @@ public class Main {
         System.out.println(malhar.getName());
         System.out.println(malhar.getCreditLimit());
         System.out.println(malhar.getEmail());
+
+        Car c1 = new Car("Tesla","blue", 4,true);
+        System.out.println(c1.toString());
+        c1.setDoors(2);
+        System.out.println(c1.toString());
+
+        Car c2 = new Car();
+        System.out.println(c2.toString());
+
+        Car c3 = new Car(false);
+        System.out.println(c3.toString());
+
 
 
     }
