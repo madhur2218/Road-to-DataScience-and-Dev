@@ -210,3 +210,8 @@ Purpose:
 	-super() is a lot like this();
 	-It is a way to call a constructor on superclass directly from subclass constructor.
 	
+
+-About java.lang.Object	
+	-Every class is java extends a special class called Object, hence there is always inheritence happening.
+	-Hashcode is created everytime an instance is created eg. Student@5f184fc6 -> Student is my class name and following characters is the hashcode.
+	
