@@ -215,3 +215,20 @@ Purpose:
 	-Every class is java extends a special class called Object, hence there is always inheritence happening.
 	-Hashcode is created everytime an instance is created eg. Student@5f184fc6 -> Student is my class name and following characters is the hashcode.
 	
+-This vs Super:
+	-super is used to call the parent class members(variables or methods).
+	-this is used to call the current class members(variables and methods).
+	-this is requred when we have same name as instance variable or field.
+	-super is commonly used with method overriding.
+	-this is used mainly in constructor and setters.
+	
+-Method overloading and Method Overriding:
+	-Methodoverloading mearning providing same name to different methods in class having different paramaters
+	-We can overload static or instance methods.
+	-Method overloading is compile time polymorphism meaning that compiler is determining the right method to call based on method name and argument list.
+	-Usually overloading happens in single class but overloading can also happen in subclasses 
+	-Defining a method in child class that already exists in parent class with same signature(same name and parameters) is method overriding
+	-Method overriding is called Run time polymorphism or dynamic method dispatch bcoz method that is going to be called is decided at run time by JVM.
+	-Only instance methods can be overridden and not static methods.
+	
+	
