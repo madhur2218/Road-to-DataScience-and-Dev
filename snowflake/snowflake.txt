@@ -1,5 +1,8 @@
-//Getting to know Interface
+--Getting to know Interface
 
 create database snowflake_sample_data from share sfc_samples.sample_data;
 
 grant import privileges on database snowflake_sample_data to role public
+
+//Select database
+SELECT * FROM SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.CUSTOMER
