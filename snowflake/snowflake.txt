@@ -59,3 +59,8 @@ If you want a **Pepperoni Pizza**, here's how Snowflake works:
 This system ensures your pizza (query result) is delivered **fast**, **accurately**, and **even during a busy rush** without breaking a sweat.
 
 
+--Setting up warehouse in snowflake
+	1. GUI
+	2. SQL
+	
+	
