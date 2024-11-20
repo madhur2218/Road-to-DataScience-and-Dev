@@ -76,6 +76,15 @@ COMMENT = 'THIS IS MY SECOND WAREHOUSE'
 DROP WAREHOUSE MY_DUMMY_WAREHOUSE
 
 --Scaling policies
-	-Here comes the concept of multi-clustering
+	-Here comes the concept of multi-clustering and autoscaling
+	say if we a query, this would be processed by single warehouse
+	Auto scaling: when to start an additional cluster??
+	There are 2 scaling policies - Standard (favours starting additional warehouses)
+								 - Economy (favours conserving credits rather than starting additional warehouses)
+								 
+								 
+--Exploring our databases: creating databases and running them in worksheet
+	SELECT * FROM FIRST_DB.FIRST_SCHEMA.MY_FIRST_TABLE
+drop table FIRST_DB.FIRST_SCHEMA.MY_FIRST_TABLE
 	
 	
