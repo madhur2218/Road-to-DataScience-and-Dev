@@ -63,4 +63,19 @@ This system ensures your pizza (query result) is delivered **fast**, **accuratel
 	1. GUI
 	2. SQL
 	
+	//Sql command to create new WAREHOUSE
+CREATE WAREHOUSE MY_DUMMY_WAREHOUSE
+WITH 
+WAREHOUSE_SIZE = XSMALL
+MAX_CLUSTER_COUNT=3
+AUTO_SUSPEND = 300 //THIS IS IN SECONDS
+AUTO_RESUME = TRUE
+COMMENT = 'THIS IS MY SECOND WAREHOUSE'
+
+//dELETING A WAREHOUSE
+DROP WAREHOUSE MY_DUMMY_WAREHOUSE
+
+--Scaling policies
+	-Here comes the concept of multi-clustering
+	
 	
