@@ -235,4 +235,9 @@ By decoupling compute and storage, Snowflake provides flexibility to optimize bo
 	
 	
 --Loading Data	
-	-
+	-Stages - not to be confused with datawarehouse stages
+	-location of data files where data can be loaded from.
+	-Two types - external and internal stages
+	-External stage - cloud platforms, s3, gcp, azure- database created object created in schema
+					- CREATE STAGE (url, access settings)
+	-Internal stage -  local storage maintained by snowflake
