@@ -88,3 +88,151 @@ DROP WAREHOUSE MY_DUMMY_WAREHOUSE
 drop table FIRST_DB.FIRST_SCHEMA.MY_FIRST_TABLE
 	
 	
+--Loading data into snowflake
+	
+
+--What is Datawarehouse:
+	Purpose of datawarehouse- databse used for reporting and data analysis.
+	
+	### **What is a Data Warehouse?**
+
+A **data warehouse** is a central repository that stores large volumes of structured and semi-structured data from multiple sources. It is designed specifically for **querying, reporting, and analysis**, rather than transaction processing. 
+
+Data warehouses enable businesses to make data-driven decisions by consolidating and organizing historical data for easy access and insights.
+
+---
+
+### **Characteristics of a Data Warehouse**
+1. **Subject-Oriented**: Organized around key business areas (e.g., sales, finance, inventory).
+2. **Integrated**: Combines data from multiple sources into a consistent format.
+3. **Non-Volatile**: Once data is entered, it remains unchanged and is available for historical analysis.
+4. **Time-Variant**: Tracks data changes over time, supporting trend analysis.
+
+---
+
+### **How It Works**
+1. **Data Sources**: Data is collected from operational databases, CRM systems, IoT devices, etc.
+2. **ETL Process**: Data undergoes **Extraction, Transformation, and Loading (ETL)** to ensure it's clean, consistent, and ready for analysis.
+3. **Data Storage**: Processed data is stored in the data warehouse in a structured format.
+4. **Access for Analytics**: Analysts use tools like Power BI, Tableau, or SQL queries to generate reports, dashboards, and insights.
+
+---
+
+### **Example**
+Let’s say a **retail company** wants to analyze its sales performance over the past five years across different regions and customer demographics. 
+
+1. **Data Sources**:
+   - Point-of-Sale (POS) systems.
+   - Customer Relationship Management (CRM) data.
+   - Inventory databases.
+   - Marketing campaign data.
+
+2. **ETL Process**:
+   - Extract: Data is fetched from these systems.
+   - Transform: Cleanse and standardize formats (e.g., unify date formats or fix missing values).
+   - Load: Data is loaded into the warehouse.
+
+3. **Stored Data**:
+   - Organized into tables like `Sales`, `Customers`, `Products`, and `Regions`.
+
+4. **Analysis**:
+   - A manager uses Power BI to:
+     - Identify sales trends over years.
+     - Analyze which regions performed best.
+     - Evaluate the success of marketing campaigns on sales.
+
+---
+
+### **Simpler Example**
+Imagine a **library** that collects books from multiple publishers:
+- Each publisher has its own format, but the library organizes them into standardized shelves (categories like fiction, science, history).
+- Readers (business analysts) can easily find books (data) based on their needs without worrying about the publisher's original format.
+
+---
+
+### **Benefits**
+- Centralized data for better decision-making.
+- Historical data tracking for trends and forecasting.
+- Supports complex queries and large-scale analytics.
+  
+**Popular Data Warehouse Tools**:
+- Snowflake
+- Amazon Redshift
+- Google BigQuery
+- Microsoft Azure Synapse Analytics
+
+
+In **Snowflake**, **compute** refers to the **virtual warehouses** (also known as warehouses), which are clusters of computational resources that process data and execute queries. Compute is a critical part of Snowflake's architecture, enabling the execution of various operations such as data loading, querying, and analytics.
+
+---
+
+### **Key Features of Compute in Snowflake**
+
+1. **Virtual Warehouses**:
+   - Snowflake's compute layer consists of **virtual warehouses**.
+   - Each warehouse is a cluster of compute resources (CPU, memory, storage) that performs query execution and data manipulation.
+
+2. **Elastic and Independent**:
+   - Compute resources are independent of storage. You can scale up or down your compute resources without impacting storage.
+   - Warehouses can be resized to handle more users or heavier workloads and can also be suspended when not in use to save costs.
+
+3. **Concurrency**:
+   - Multiple virtual warehouses can operate simultaneously without interfering with each other.
+   - Different workloads (e.g., data loading, querying, reporting) can use separate warehouses to avoid resource contention.
+
+4. **Pay-as-You-Use**:
+   - Compute costs are based on the time virtual warehouses are running. You pay only for the compute resources used.
+
+5. **Auto-Scaling and Auto-Suspend**:
+   - **Auto-Scaling**: Snowflake automatically adds or removes compute nodes within a warehouse to handle varying workloads.
+   - **Auto-Suspend**: Warehouses automatically stop when idle, reducing costs.
+
+---
+
+### **How Compute Works in Snowflake**
+
+1. **Query Execution**:
+   - When a user runs a query, it is processed by a virtual warehouse.
+   - The warehouse fetches the necessary data from the storage layer and performs the computations.
+
+2. **Workload Separation**:
+   - For example, a company can use:
+     - One warehouse for **ETL processes** (Extract, Transform, Load).
+     - Another warehouse for **BI tools** like Tableau or Power BI.
+     - A third warehouse for **data science experiments**.
+
+3. **Performance Optimization**:
+   - Large queries or analytics jobs can benefit from scaling up the warehouse size (e.g., from `Small` to `Large`).
+   - Teams working on small, routine queries can use smaller warehouses to save costs.
+
+---
+
+### **Example**
+
+#### Scenario:
+You’re a data analyst working for an e-commerce company. You want to:
+1. Run a report to find the top-selling products.
+2. Load daily transaction data into the database.
+
+#### Compute in Action:
+1. **Separate Virtual Warehouses**:
+   - Use a `Medium` virtual warehouse for running the sales report.
+   - Use a `Large` virtual warehouse for loading data, as ETL processes require more resources.
+
+2. **Efficient Resource Usage**:
+   - The warehouses are running only while the tasks are active.
+   - Once the queries and data loading are done, Snowflake suspends the warehouses, saving costs.
+
+---
+
+### **Benefits of Snowflake Compute**
+- **Scalability**: Adjust compute resources based on workload needs.
+- **Cost Efficiency**: Pay only for the compute power used.
+- **High Concurrency**: Handle multiple users and workloads without performance degradation.
+- **Simplicity**: No need to manage physical infrastructure or compute resources manually.
+
+By decoupling compute and storage, Snowflake provides flexibility to optimize both based on the specific requirements of your data workload.
+	
+	
+--Loading Data	
+	-
