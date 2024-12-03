@@ -2,6 +2,10 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-
+        System.out.println("hello world");
+        int helloWorld = 12;
+        System.out.println(helloWorld);
+        helloWorld = 1000;
+        System.out.println(helloWorld);
     }
 }
