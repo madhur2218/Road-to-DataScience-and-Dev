@@ -5,8 +5,9 @@ public class Main {
         System.out.println("hello world");
         int helloWorld = 12;
         System.out.println(helloWorld);
-        helloWorld = 1000;
+        helloWorld = 10020;
         System.out.println(helloWorld);
         System.out.println("hello world");
+
     }
 }
