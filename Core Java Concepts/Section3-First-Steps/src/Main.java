@@ -8,6 +8,6 @@ public class Main {
         helloWorld = 10020;
         System.out.println(helloWorld);
         System.out.println("hello world");
-        System.out.println("hi");
+
     }
 }
