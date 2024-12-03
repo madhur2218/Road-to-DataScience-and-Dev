@@ -7,5 +7,6 @@ public class Main {
         System.out.println(helloWorld);
         helloWorld = 1000;
         System.out.println(helloWorld);
+        System.out.println("hello world");
     }
 }
