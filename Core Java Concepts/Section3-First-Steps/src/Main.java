@@ -54,8 +54,36 @@ public class Main {
         float float_num = 12.12f;
         double d = (double) (float_num);
 
-        //Character and Boolean type
-        
+        //Strings
+        String s1 = "This is a string";
+        System.out.println(s1);
+        System.out.println("I AM A STRING");
+        String sal= "10";
+        int sal_int = 10;
+        System.out.println(sal+sal_int+sal);
+
+        Double sal_doub = 10.100006D;
+        String mysal="24";
+        System.out.println(sal_doub+mysal);
+
+        //Prefix and Postfix
+        int result =1;
+        result = result + 1;   // common way to increment a variable
+        System.out.println(result);
+
+        int result1 =1;
+        result1++;   // postfilx increment operator
+        System.out.println(result1);
+        result1--;
+        System.out.println(result1);
+
+        int i=1;
+        int j = 1 ;
+        result  = i++ +j;
+        System.out.println(result);
+        System.out.println(i);
+
+
 
 
 
