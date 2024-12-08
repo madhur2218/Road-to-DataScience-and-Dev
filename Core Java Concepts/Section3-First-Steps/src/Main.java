@@ -83,6 +83,13 @@ public class Main {
         System.out.println(result);
         System.out.println(i);
 
+    //Compound operator
+        int res = 10;
+        res -=5.5;
+        System.out.println(res);
+
+
+
 
 
 
