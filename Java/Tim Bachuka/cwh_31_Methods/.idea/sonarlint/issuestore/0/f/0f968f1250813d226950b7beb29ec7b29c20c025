@@ -1,6 +1,0 @@
-
-{
-java:S1488"YImmediately return this expression instead of assigning it to the temporary variable "c".(«¹Âµùÿÿÿÿ8þ³Ü‡ö1
-i	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(ÍÜ‘ä8þ³Ü‡ö1
-7
-java:S1220""Move this file to a named package.8þ³Ü‡ö1

@@ -1,8 +1,0 @@
-
-0
-java:S1220""Move this file to a named package.
-n	java:S116"RRename this field "outer_y" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(µ¤ÆÉ8‡»‘šû1
-t	java:S116
-"XRename this field "outer_private" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÜğšÀ8‰»‘šû1
-o
-java:S3008"RRename this field "outer_x" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ø†¨8Š»‘šû1

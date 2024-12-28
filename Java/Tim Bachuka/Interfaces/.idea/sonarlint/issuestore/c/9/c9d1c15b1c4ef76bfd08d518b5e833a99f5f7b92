@@ -1,16 +1,0 @@
-
-7
-java:S1220""Move this file to a named package.8»ÙĞ×ú1
-m	java:S114"QRename this interface name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(±‰Æ­8½ÙĞ×ú1
-
-java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(şù Ù8ÅˆÙ×ú1
-
-java:S1186	"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(–º¼Ä8ÇˆÙ×ú1
-
-java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¶Å³¨8ÈˆÙ×ú1
-
-java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ç³Àß8ÊˆÙ×ú1
-v	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(®ÚõÛ8¿ÙĞ×ú1
-v	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(öíş¡8ÁÙĞ×ú1
-g
-java:S1124*"EReorder the modifiers to comply with the Java Language Specification.(šŒšıÿÿÿÿ8ÅÙĞ×ú1

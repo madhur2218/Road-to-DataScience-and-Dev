@@ -1,11 +1,0 @@
-
-7
-java:S1220""Move this file to a named package.8‹Ÿ€Öú1
-X
-java:S1854
-"6Remove this useless assignment to local variable "t1".(áÖ‰ÿÿÿÿÿ8“Ÿ€Öú1
-W	java:S125"<This block of commented-out lines of code should be removed.(ï­ãR8”Ÿ€Öú1
-I
-java:S1481
-"'Remove this unused "t1" local variable.(áÖ‰ÿÿÿÿÿ8•Ÿ€Öú1
-X	java:S125"<This block of commented-out lines of code should be removed.(Æã€è8™Ÿ€Öú1
