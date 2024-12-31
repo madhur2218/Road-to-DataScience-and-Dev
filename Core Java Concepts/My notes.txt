@@ -207,7 +207,7 @@ Purpose:
 	-Parent can have multiple child.
 	-ToString method is used to print objects 
 	-Using extends keyword, we declare that out subclass is child of our parent class.
-	-super() is a lot like this();
+	-super() is a lot like this();x`
 	-It is a way to call a constructor on superclass directly from subclass constructor.
 	
 
