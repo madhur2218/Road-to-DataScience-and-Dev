@@ -1,0 +1,4 @@
+Airline Data Injestion
+- 1 dimention table(table containg text) of Airport codes.
+- On dailty basis, in s3 the data will come in hive style partition.
+- 
