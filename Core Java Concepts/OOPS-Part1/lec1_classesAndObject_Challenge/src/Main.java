@@ -15,7 +15,20 @@ public class Main {
         ashuAccount.withdrawlAmount(9000);
         ashuAccount.depositFunds(9000);
         ashuAccount.withdrawlAmount(10000);
+        System.out.println("............................");
 
+        Person madhur = new Person();
+        madhur.setAge(24);
+        madhur.setFirstName("Madhur");
+        madhur.setLastName("Nagrath");
+        String result = madhur.getFullName();
+        System.out.println(result);
+
+        Person ashu=new Person();
+        ashu.setLastName("sahu");
+        ashu.setFirstName("");
+        String result1 = ashu.getFullName();
+        System.out.println(result1);
 
     }
 }
