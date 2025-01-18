@@ -13,8 +13,8 @@ public class Monitor extends Product {
         this.resolution = resolution;
     }
 
-    public void pixelAt(int x, int y, String color){
-        System.out.printf(String.format("Drawing pixel at %d, %d and %c",x,y,color));
+    public void drawPixelAt(int x, int y, String color){
+        System.out.printf(String.format("Drawing pixel at %d, %d and %s",x,y,color));
     }
 
     public String getResolution() {
