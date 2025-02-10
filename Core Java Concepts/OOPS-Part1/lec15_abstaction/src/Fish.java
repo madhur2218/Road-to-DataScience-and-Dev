@@ -1,27 +1,27 @@
-public class Dog extends Animal{
+public class Fish extends Animal{
 
-    public Dog(String type, String size, double weight){
+    public Fish(String type, String size, double weight){
         super(type,size,weight);
     }
 
     @Override
     public void move(String speed) {
         if(speed.equals("slow")){
-            System.out.println(type + " walking");
+            System.out.println(getExpliciteType() + " swimming lazily");
         }
         else{
-            System.out.println(type + " running");
+            System.out.println(getExpliciteType() + " drating franatically ");
         }
     }
 
     @Override
     public void makeNoise() {
 
-        if(type == "Wolf"){
-            System.out.println("howling !!");
+        if(type == "Goldfish"){
+            System.out.println("swish !!");
         }
         else{
-            System.out.println("Woof!");
+            System.out.println("splash!");
         }
 
     }

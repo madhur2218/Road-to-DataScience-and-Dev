@@ -1,4 +1,12 @@
-package PACKAGE_NAME;
+public abstract class Mammal extends Animal {
+    public Mammal(String type, String size, double weight) {
+        super(type, size, weight);
+    }
 
-public class Mammal {
+    @Override
+    public void move(String speed) {
+        System.out.println(getExpliciteType() + " ");
+        System.out.println(speed.equals("slow") ? "walks":"runs");
+    }
+
 }

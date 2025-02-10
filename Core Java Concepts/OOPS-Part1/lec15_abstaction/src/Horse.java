@@ -1,4 +1,17 @@
-package PACKAGE_NAME;
+public class Horse extends Mammal{
+    public Horse(String type, String size, double weight) {
+        super(type, size, weight);
+    }
 
-public class Horse {
+    @Override
+    public void makeNoise() {
+
+    }
+
+    @Override
+    public void shedHair() {
+
+    }
+
+
 }
