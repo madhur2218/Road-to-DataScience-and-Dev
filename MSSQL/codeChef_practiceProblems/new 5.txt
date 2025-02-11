@@ -15,6 +15,14 @@ Q5: Write a query to select all the distinct companies (company_name) in the Wor
 Table name: Works
 A5: SELECT DISTINCT(company_name) FROM Works
 
+Q5: Write a query to find the total count of books whose genre is Fiction.
+	Note: Output column name should be fiction_count.
+A5: SELECT COUNT(genre) AS fiction_count FROM Books
+	WHERE genre = 'Fiction'
+	
+Q6: Write a query to select only the movie names where the ratings are greater than 7 but less than 9.
+A6: SELECT Movie_name FROM Cinema WHERE Rating > 7 AND Rating < 9
+
 
 
 
