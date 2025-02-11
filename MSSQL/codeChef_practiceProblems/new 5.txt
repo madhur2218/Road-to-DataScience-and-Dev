@@ -1,0 +1,20 @@
+Q1: Write a query to output all the columns from the Products table.
+A1: select * From Products
+
+Q2:Write a query to find all product_name and category that have a price greater than 100.00 from the Products table.
+A2:SELECT product_name, category FROM Products 
+	WHERE price> 100.00
+	
+Q3: Write a query to calculate the average salary across all companies combined. Rename the column as avg_salary
+A3: SELECT avg(salary) as avg_salary FROM Works
+
+Q4: Write a query to retrieve the department_name and location of people who live in location that starts with 'S'.
+A4: SELECT department_name, location FROM departments WHERE location LIKE '%S';
+
+Q5: Write a query to select all the distinct companies (company_name) in the Works table.
+Table name: Works
+A5: SELECT DISTINCT(company_name) FROM Works
+
+
+
+
