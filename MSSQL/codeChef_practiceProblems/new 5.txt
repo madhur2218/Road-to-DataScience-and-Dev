@@ -23,6 +23,26 @@ A5: SELECT COUNT(genre) AS fiction_count FROM Books
 Q6: Write a query to select only the movie names where the ratings are greater than 7 but less than 9.
 A6: SELECT Movie_name FROM Cinema WHERE Rating > 7 AND Rating < 9
 
+Q7: Write a query to retrieve book_id, title, author and published_year of the books which have NULL rating for their books.
+A7: SELECT book_id, title, author, published_year FROM Library WHERE rating isnull
 
+Q7: Create a query to retrieve the employee_name, company, and salary for employees in the full-time category, ordered by salary in descending order
+A7: SELECT employee_name, company, salary FROM Employees WHERE category = 'Full-Time'  ORDER BY salary DESC 
+
+Q8: Write a query to group the employees by their department and display the total number of employees (as total_employees) in each department.
+A8: SELECT department, COUNT(employee_name) AS total_employees FROM Employees
+	GROUP BY department
+	
+Q9:Write a query to retrieve the author_id, author_name, and publication_name for authors whose articles got zero views. The result should be sorted by author_id in ascending order.
+Return the result table sorted by id in ascending order.
+A9: SELECT author_id, author_name, publication_name FROM Views WHERE view_count = 0  ORDER BY author_id ASC
+
+Q10:Write a query to find the names of the top 3 distinct players by highest score who have won matches, including their scores.
+A10:SELECT DISTINCT (player_name), score from Players
+ORDER BY score desc
+LIMIT 3
+
+Q11:
+A11:
 
 
