@@ -36,8 +36,8 @@ public class Main {
         System.out.println(animals);
 
         LinkedList<String> liquid = new LinkedList<>();
-        liquid.add("water");;
-        System.out.println(liquid);
+        liquid.add("water");
+        
 
     }
 }

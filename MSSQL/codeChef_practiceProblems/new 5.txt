@@ -42,7 +42,14 @@ A10:SELECT DISTINCT (player_name), score from Players
 ORDER BY score desc
 LIMIT 3
 
-Q11:
-A11:
+Q13:Write a query to retrieve the details of the last five matches played, including the match ID, the names of the players who participated, the name of the winning player, match date, and the final score of the winner.
+A13:SELECT m.match_id, m.player_1, m.player_2, m.winner, m.match_date, p.score FROM Matches m 
+INNER JOIN Players p ON m.winner = p.player_name
+Order By m.match_date desc
+LIMIT 5
 
 
+
+IMP QUESTIONS
+Till how many levels ( maximum ) can we nest Aggregate functions ?
+When you execute SELECT COUNT(*) FROM TABLE, even if the table contains null values, the COUNT(*) function will still count all rows in the table, including those with null values, effectively returning the total number of rows regardless of nulls present in any column. 
