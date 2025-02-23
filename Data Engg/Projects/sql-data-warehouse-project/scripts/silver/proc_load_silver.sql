@@ -111,6 +111,8 @@ BEGIN
         PRINT '>> Load Duration: ' + CAST(DATEDIFF(SECOND, @start_time, @end_time) AS NVARCHAR) + ' seconds';
         PRINT '>> -------------';
 
+		SELECT * FROM bronze.crm_prd_info;
+
         -- Loading crm_sales_details
         SET @start_time = GETDATE();
 		PRINT '>> Truncating Table: silver.crm_sales_details';
@@ -127,7 +129,7 @@ BEGIN
 			sls_quantity,
 			sls_price
 		)
-		SELECT 
+		SELECT
 			sls_ord_num,
 			sls_prd_key,
 			sls_cust_id,
@@ -159,6 +161,7 @@ BEGIN
         PRINT '>> Load Duration: ' + CAST(DATEDIFF(SECOND, @start_time, @end_time) AS NVARCHAR) + ' seconds';
         PRINT '>> -------------';
 
+		SELECT COUNT(*) FROM bronze.crm_sales_details
         -- Loading erp_cust_az12
         SET @start_time = GETDATE();
 		PRINT '>> Truncating Table: silver.erp_cust_az12';
@@ -251,3 +254,43 @@ BEGIN
 		PRINT '=========================================='
 	END CATCH
 END
+
+
+
+/*
+	this is the correct query for silver load prd_info
+
+	-- Ensure previous statements are terminated properly
+WITH CTE AS (
+    SELECT 
+        prd_id,
+        REPLACE(SUBSTRING(prd_key, 1, 5), '-', '_') AS cat_id,
+        SUBSTRING(prd_key, 7, LEN(prd_key)) AS prd_key,
+        prd_nm,
+        ISNULL(prd_cost, 0) AS prd_cost,
+        CASE 
+            WHEN UPPER(TRIM(prd_line)) = 'M' THEN 'Mountain'
+            WHEN UPPER(TRIM(prd_line)) = 'R' THEN 'Road'
+            WHEN UPPER(TRIM(prd_line)) = 'S' THEN 'Other Sales'
+            WHEN UPPER(TRIM(prd_line)) = 'T' THEN 'Touring'
+            ELSE 'n/a'
+        END AS prd_line,
+        CAST(prd_start_dt AS DATE) AS prd_start_dt,
+        LEAD(prd_start_dt) OVER (PARTITION BY prd_key ORDER BY prd_start_dt) AS next_start_dt
+    FROM (SELECT DISTINCT prd_id, prd_key, prd_nm, prd_cost, prd_line, prd_start_dt FROM bronze.crm_prd_info) AS unique_data
+)
+
+-- Correct INSERT INTO placement
+INSERT INTO silver.crm_prd_info (prd_id, cat_id, prd_key, prd_nm, prd_cost, prd_line, prd_start_dt, prd_end_dt)
+SELECT 
+    prd_id, 
+    cat_id, 
+    prd_key, 
+    prd_nm, 
+    prd_cost, 
+    prd_line, 
+    prd_start_dt, 
+    CAST(DATEADD(DAY, -1, next_start_dt) AS DATE) AS prd_end_dt
+FROM CTE;
+
+*/
