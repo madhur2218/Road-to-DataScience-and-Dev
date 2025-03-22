@@ -1,0 +1,37 @@
+opening vs code from cmd - code .
+
+Creating python environment:
+    --Anaconda installation
+	conda create -p venv python==3.12
+    conda activate venv
+    pip install -r requirements.txt
+
+    --When not using conda
+    python -m venv venv
+    activate
+    deactivate
+	
+	pip install virtualenv
+	virtualenv -p python3 virtual_env
+	activate
+	
+	 
+
+--Runing a .py file
+python sum.py
+
+--Install ipykernel for .ipynb files
+
+--Python version
+    python --version
+
+
+
+Practice questions links:
+https://csiplearninghub.com/python-if-else-conditional-statement-practice/
+https://codeforwin.org/c-programming/if-else-programming-practice
+https://www.geeksforgeeks.org/python-programming-examples/
+https://www.superprof.co.in/
+
+V
+
