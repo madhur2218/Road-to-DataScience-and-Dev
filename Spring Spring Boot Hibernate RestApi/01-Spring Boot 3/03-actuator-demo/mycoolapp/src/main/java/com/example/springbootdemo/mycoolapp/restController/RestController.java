@@ -1,11 +1,22 @@
 package com.example.springbootdemo.mycoolapp.restController;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @org.springframework.web.bind.annotation.RestController
 public class RestController {
     //exposing an endpoint which returns hello world
+
+    @Value("${coach.name}")
+    private String coachName;
+
+    @Value("${travelName}")
+    private String travelName;
+
+    @Value("${team.name}")
+    private String teamName;
+
     @GetMapping("/")
     public String helloWorld(){
         return "hello world";
@@ -22,8 +33,24 @@ public class RestController {
     }
 
     @GetMapping("/fortunite")
-    public String getFortune(){
+    public String getFortune() {
         return "today is your lucky day";
     }
 
-}
+        @GetMapping("/coachName")
+        private String listCoachName() {
+            return coachName;
+        }
+
+        @GetMapping("/travelName")
+        private String lsitTravelName(){
+        return travelName;
+        }
+
+        @GetMapping("/team.name")
+        private String listTeamName(){
+        return teamName;
+        }
+
+
+    }
