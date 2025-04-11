@@ -86,6 +86,95 @@ SELECT c.name AS customer_name, o.order_id
 FROM Customers c
 LEFT JOIN Orders o ON c.customer_id = o.customer_id;
 
+--Find orders that contain more than 1 product
+SELECT oi.order_id, SUM(p.product_id) FROM Order_Items AS oi
+LEFT JOIN Prroducts p
+ON oi.product_id = p.product_id
+GROUP BY p.product_id
+HAVING SUM(p.product_id)>1
+
+SELECT order_id, product_id FROM Order_Items
+GROUP BY product_id
+HAVING SUM(product_id)>1
+
+--List all products that have never been ordered.
+SELECT p.product_id, oi.order_id FROM Products p
+LEFT JOIN Order_Items oi
+ON p.product_id = oi.product_id
+WHERE product_id IS NULL
+
+--Find the most ordered product by total quantity.
+SELECT oi.product_id, p.product_name, SUM(oi.quantity) FROM Order_Items oi
+LEFT JOIN Products p 
+ON oi.product_id = p.product_id 
+GROUP BY oi.product_id 
+ORDER BY DESC
+LIMIT 1
+
+--Show all orders placed in February 2023 with customer names
+SELECT c.name, o.order_id FROM Customers c 
+LEFT JOIN Orders o
+ON c.customer_id = o.customer_id
+WHERE o.order_date BETWEEN '2023-02-01' AND '2023-02-29'
+
+--List all orders with product names and total price per item
+SELECT o.order_id, p.product_name, oi.quantity, (p.price * oi.quantity) AS total_price FROM Orders o
+JOIN Order_Items oi ON o.order_id = oi.order_id
+JOIN Products p ON oi.product_id = p.product_id;
+
+--Total number of orders by each customer
+SELECT customer_id, COUNT(order_id) FROM Orders
+GROUP BY customer_id
+
+--Number of employees in each department
+SELECT department_id, COUNT(*) AS num_employees FROM Employees
+GROUP BY department_id
+
+--Total sales per product
+SELECT product_id, SUM(quantity) FROM Order_Items
+GROUP BY product_id
+
+--Average salary by department
+SELECT department_id, SUM(salary) FROM avg_salary
+FROM Employees
+GROUP BY department_id
+
+--Number of customers by country
+SELECT country, COUNT(*) FROM Customer
+GROUP BY country;
+
+--Top-selling product in each category
+SELECT product_id, SUM(quantity) AS total_quantity
+FROM Products p
+JOIN Order_Items oi ON p.product_id = oi.product_id
+GROUP BY product_id;
+
+-- Monthly revenue from orders
+
+--Highest paid employee in each department
+SELECT department_id, MAX(salary) AS max_salary
+FROM Employees
+GROUP BY department_id;
+
+--Average order value per customer
+SELECT o.customer_id, ROUND(SUM(p.price * oi.quantity) / COUNT(DISTINCT o.order_id), 2) AS avg_order_value
+FROM Orders o
+JOIN Order_Items oi ON o.order_id = oi.order_id
+JOIN Products p ON oi.product_id = p.product_id
+GROUP BY o.customer_id;
+
+--Departments with more than 5 employees
+SELECT department_id, COUNT(*) AS employee_count FROM Employees
+GROUP BY department_id
+HAVING COUNT(*)>5
+
+
+
+
+
+
+
+
 
 
 
