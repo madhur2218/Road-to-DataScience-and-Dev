@@ -168,6 +168,35 @@ SELECT department_id, COUNT(*) AS employee_count FROM Employees
 GROUP BY department_id
 HAVING COUNT(*)>5
 
+--Total order count by each customer
+SELECT c.customer_id, c.name, COUNT(o.order_id) FROM Customers
+INNER JOIN Orders o 
+ON c.customer_id = o.customer_id
+GROUP BY c.name
+
+--Total revenue per country
+SELECT c.country, SUM(o.total_revenue) FROM Customer c 
+INNER JOIN Order o 
+ON c.customer_id = o.customer_id
+GROUP BY c.country
+
+--Number of products bought per order
+SELECT o.order_id, SUM(oi.quantity) FROM Orders o 
+INNER JOIN Order_Items oi ON o.order_id = oi.order_id
+GROUP BY o.order_id;
+
+--Average quantity ordered per product
+SELECT p.name, AVG(oi.quantity) FROM Products p 
+INNER JOIN Order_items oi
+ON p.product_id = oi.product_id
+GROUP BY p.name;
+
+
+
+
+
+
+
 
 
 
