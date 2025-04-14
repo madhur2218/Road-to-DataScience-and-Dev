@@ -1,0 +1,13 @@
+2025-04-14 23:40:07,328 - DEBUG - Subtraction 2 - 3 = -1
+2025-04-14 23:40:29 - ArithematicOperationsApp - DEBUG - Subtraction 2 - 3 = -1
+2025-04-14 23:41:25 - ArithematicOperationsApp - DEBUG - Addition 2 + 3 = 5
+2025-04-14 23:41:25 - ArithematicOperationsApp - DEBUG - Subtraction 2 - 3 = -1
+2025-04-14 23:43:06 - ArithematicOperationsApp - DEBUG - Addition 2 + 3 = 5
+2025-04-14 23:43:06 - ArithematicOperationsApp - DEBUG - Subtraction 2 - 3 = -1
+2025-04-14 23:43:06 - ArithematicOperationsApp - DEBUG - Addition 0 + 3 = 3
+2025-04-14 23:43:38 - ArithematicOperationsApp - DEBUG - Addition 2 + 3 = 5
+2025-04-14 23:43:38 - ArithematicOperationsApp - DEBUG - Subtraction 2 - 3 = -1
+2025-04-14 23:43:38 - ArithematicOperationsApp - DEBUG - Division 0 % 3 = 0
+2025-04-14 23:43:53 - ArithematicOperationsApp - DEBUG - Addition 2 + 3 = 5
+2025-04-14 23:43:53 - ArithematicOperationsApp - DEBUG - Subtraction 2 - 3 = -1
+2025-04-14 23:43:53 - ArithematicOperationsApp - ERROR - Division by zero error
