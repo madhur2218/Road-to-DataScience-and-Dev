@@ -1,5 +1,29 @@
 --Practice questions from hackerRank
 
+--Basic selext challenges
+
+--1. Revising the Select Query I
+select * from CITY 
+where population > 100000 AND countrycode = 'USA'
+
+--2. Revising the Select Query 2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 --Query all columns (attributes) for every row in the CITY table.
 --The CITY table is described as follows:
 SELECT * FROM CITY
