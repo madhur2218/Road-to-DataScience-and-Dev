@@ -36,6 +36,22 @@ where mod(id,2) = 0
 select count(city) - count(distinct(city)) FROM STATION  
 
 --10 Weather Observation Station 5
+(
+    SELECT CITY, LENGTH(CITY) AS NAME_LENGTH
+    FROM STATION
+    ORDER BY LENGTH(CITY) ASC, CITY ASC
+    LIMIT 1
+)
+UNION
+(
+    SELECT CITY, LENGTH(CITY) AS NAME_LENGTH
+    FROM STATION
+    ORDER BY LENGTH(CITY) DESC, CITY ASC
+    LIMIT 1
+);
+
+
+
 
  
 
