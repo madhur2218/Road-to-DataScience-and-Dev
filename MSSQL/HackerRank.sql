@@ -7,15 +7,37 @@ select * from CITY
 where population > 100000 AND countrycode = 'USA'
 
 --2. Revising the Select Query 2
+select name from CITY 
+where population >120000 and COUNTRYCODE = 'USA'
 
+--3. SELECT ALL
+select * from city
 
+--4	Select By ID
+select * from CITY 
+where id = 1661
 
+--5 Japanese Cities' Attributes
+select * from CITY 
+where COUNTRYCODE = 'JPN'
 
+--6.Japanese Cities' Names
+select name from CITY 
+where COUNTRYCODE  = 'JPN'
 
+--7. Weather Observation Station 1
+select city, state from STATION 
 
+--8 Weather Observation Station 3
+select distinct(city) from STATION 
+where mod(id,2) = 0
 
+--9 Weather Observation Station 4
+select count(city) - count(distinct(city)) FROM STATION  
 
+--10 Weather Observation Station 5
 
+ 
 
 
 
