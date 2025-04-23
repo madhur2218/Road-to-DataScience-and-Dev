@@ -1,0 +1,126 @@
+[ {
+  "Agreement No." : "C000094",
+  "product" : "Gold Investment",
+  "date" : "2017-09-25",
+  "amount" : 1407.01
+}, {
+  "Agreement No." : "C000095",
+  "product" : "Private Investment",
+  "date" : "2017-10-25",
+  "amount" : 1275.83
+}, {
+  "Agreement No." : "C000097",
+  "product" : "Private Investment",
+  "date" : "2017-11-18",
+  "amount" : 1295.12
+}, {
+  "Agreement No." : "C000098",
+  "product" : "Private Investment",
+  "date" : "2017-12-13",
+  "amount" : 1041.96
+}, {
+  "Agreement No." : "C000099",
+  "product" : "Gold Investment",
+  "date" : "2017-08-21",
+  "amount" : 9.11
+}, {
+  "Agreement No." : "C000007",
+  "product" : "Fund Manager+",
+  "date" : "2017-11-11",
+  "amount" : 690.21
+}, {
+  "Agreement No." : "C000009",
+  "product" : "Fund Manager+",
+  "date" : "2017-12-03",
+  "amount" : 475.94
+}, {
+  "Agreement No." : "C000013",
+  "product" : "Fund Manager+",
+  "date" : "2017-01-01",
+  "amount" : 315.91
+}, {
+  "Agreement No." : "C000018",
+  "product" : "Fund Manager+",
+  "date" : "2017-09-07",
+  "amount" : 1964.92
+}, {
+  "Agreement No." : "C000024",
+  "product" : "Fund Manager+",
+  "date" : "2017-09-06",
+  "amount" : 438.25
+}, {
+  "Agreement No." : "C000035",
+  "product" : "CO Investment",
+  "date" : "2017-04-01",
+  "amount" : 852.18
+}, {
+  "Agreement No." : "C000037",
+  "product" : "Fund Manager+",
+  "date" : "2017-06-21",
+  "amount" : 1507.44
+}, {
+  "Agreement No." : "C000043",
+  "product" : "Fund Manager+",
+  "date" : "2017-03-05",
+  "amount" : 1954.19
+}, {
+  "Agreement No." : "C000048",
+  "product" : "CO Investment",
+  "date" : "2017-05-03",
+  "amount" : 1466.72
+}, {
+  "Agreement No." : "C000058",
+  "product" : "Fund Manager+",
+  "date" : "2017-10-26",
+  "amount" : 758.69
+}, {
+  "Agreement No." : "C000067",
+  "product" : "CO Investment",
+  "date" : "2017-11-03",
+  "amount" : 1347.41
+}, {
+  "Agreement No." : "C000072",
+  "product" : "Fund Manager+",
+  "date" : "2017-10-20",
+  "amount" : 966.48
+}, {
+  "Agreement No." : "C000074",
+  "product" : "Fund Manager+",
+  "date" : "2017-04-07",
+  "amount" : 1195.53
+}, {
+  "Agreement No." : "C000085",
+  "product" : "Fund Manager+",
+  "date" : "2017-09-12",
+  "amount" : 1620.35
+}, {
+  "Agreement No." : "C000087",
+  "product" : "Fund Manager+",
+  "date" : "2017-02-06",
+  "amount" : 587.87
+}, {
+  "Agreement No." : "C000089",
+  "product" : "Fund Manager+",
+  "date" : "2017-07-17",
+  "amount" : 1557.17
+}, {
+  "Agreement No." : "C000090",
+  "product" : "Fund Manager+",
+  "date" : "2017-12-15",
+  "amount" : 1171.38
+}, {
+  "Agreement No." : "C000091",
+  "product" : "CO Investment",
+  "date" : "2017-07-22",
+  "amount" : 12221.79
+}, {
+  "Agreement No." : "C000093",
+  "product" : "Fund Manager+",
+  "date" : "2017-10-12",
+  "amount" : 717.93
+}, {
+  "Agreement No." : "C000096",
+  "product" : "Fund Manager+",
+  "date" : "2017-02-21",
+  "amount" : 1337.68
+} ]

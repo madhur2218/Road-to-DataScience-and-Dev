@@ -1,0 +1,2 @@
+C:\Users\z004rr9n\Desktop\Knime Hackathon\Fraud Detection in Investment Contracts – Outlier Detection\data\Contracts\Investment_Agreement_Contracts.xml
+C:\Users\z004rr9n\Desktop\Knime Hackathon\Fraud Detection in Investment Contracts – Outlier Detection\data\Contracts\Investment_Agreement_Contracts.json

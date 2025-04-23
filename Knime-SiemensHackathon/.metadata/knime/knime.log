@@ -1,0 +1,1657 @@
+2025-04-23 09:23:58,668 : ERROR : main :  : WindowsDefenderExceptionHandler :  :  : PowerShell command powershell -inputformat none -outputformat text -NonInteractive -Command Get-Item -Path 'Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Defender\Exclusions\Processes' -ErrorAction Stop | Select-Object -ExpandProperty Property did not terminate successfully.
+2025-04-23 09:23:58,668 : ERROR : main :  : WindowsDefenderExceptionHandler :  :  : Stderr is:
+2025-04-23 09:23:58,668 : ERROR : main :  : WindowsDefenderExceptionHandler :  :  : Get-Item : Requested registry access is not allowed.
+2025-04-23 09:23:58,668 : ERROR : main :  : WindowsDefenderExceptionHandler :  :  : At line:1 char:1
+2025-04-23 09:23:58,668 : ERROR : main :  : WindowsDefenderExceptionHandler :  :  : + Get-Item -Path 'Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windo ...
+2025-04-23 09:23:58,668 : ERROR : main :  : WindowsDefenderExceptionHandler :  :  : + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-04-23 09:23:58,668 : ERROR : main :  : WindowsDefenderExceptionHandler :  :  :     + CategoryInfo          : PermissionDenied: (HKEY_LOCAL_MACH...sions\Processes:String) [Get-Item], SecurityExcepti 
+2025-04-23 09:23:58,668 : ERROR : main :  : WindowsDefenderExceptionHandler :  :  :    on
+2025-04-23 09:23:58,668 : ERROR : main :  : WindowsDefenderExceptionHandler :  :  :     + FullyQualifiedErrorId : System.Security.SecurityException,Microsoft.PowerShell.Commands.GetItemCommand
+2025-04-23 09:23:58,668 : ERROR : main :  : WindowsDefenderExceptionHandler :  :  :  
+2025-04-23 09:23:58,843 : WARN  : main :  : VariableReplacer$OriginVariableReplacer :  :  : Origin headers cache file 'C:\Program Files\KNIME\Profiles\.originHeaders' does not exist. 'origin' variables will not be replaced.
+2025-04-23 09:38:27,873 : WARN  : Thread-1227 :  : OAuthAuthenticator :  :  : Could not stop OAuth redirect listener: null
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireSharedInterruptibly(Unknown Source)
+	at java.base/java.util.concurrent.CountDownLatch.await(Unknown Source)
+	at org.eclipse.jetty.io.ManagedSelector.doStop(ManagedSelector.java:137)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.stop(AbstractLifeCycle.java:132)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.stop(ContainerLifeCycle.java:182)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStop(ContainerLifeCycle.java:205)
+	at org.eclipse.jetty.io.SelectorManager.doStop(SelectorManager.java:280)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.stop(AbstractLifeCycle.java:132)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.stop(ContainerLifeCycle.java:182)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStop(ContainerLifeCycle.java:205)
+	at org.eclipse.jetty.server.AbstractConnector.doStop(AbstractConnector.java:375)
+	at org.eclipse.jetty.server.AbstractNetworkConnector.doStop(AbstractNetworkConnector.java:82)
+	at org.eclipse.jetty.server.ServerConnector.doStop(ServerConnector.java:241)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.stop(AbstractLifeCycle.java:132)
+	at org.eclipse.jetty.server.Server.doStop(Server.java:658)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.stop(AbstractLifeCycle.java:132)
+	at com.knime.explorer.server.rest.OAuthAuthenticator.stopServer(OAuthAuthenticator.java:733)
+	at com.knime.explorer.server.rest.OAuthAuthenticator.login(OAuthAuthenticator.java:599)
+	at com.knime.explorer.server.rest.OAuthLoginDialog.lambda$0(OAuthLoginDialog.java:179)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2025-04-23 09:40:56,107 : ERROR : main :  : KnimeBrowserView :  :  : %cerror%c Error captured hook ::  
+      background: #c0392b;
+      border-radius: 0.5em;
+      color: white;
+      font-weight: bold;
+      padding: 2px 0.5em;
+      [object Object] (source: http://org.knime.ui.java/assets/index-CPG1Nwkw.js; line: 87)
+2025-04-23 09:41:11,483 : ERROR : main :  : KnimeBrowserView :  :  : %cerror%c Error captured hook ::  
+      background: #c0392b;
+      border-radius: 0.5em;
+      color: white;
+      font-weight: bold;
+      padding: 2px 0.5em;
+      [object Object] (source: http://org.knime.ui.java/assets/index-CPG1Nwkw.js; line: 87)
+2025-04-23 09:42:44,616 : ERROR : main :  : KnimeBrowserView :  :  : %cerror%c Error captured hook ::  
+      background: #c0392b;
+      border-radius: 0.5em;
+      color: white;
+      font-weight: bold;
+      padding: 2px 0.5em;
+      [object Object] (source: http://org.knime.ui.java/assets/index-CPG1Nwkw.js; line: 87)
+2025-04-23 09:42:45,211 : ERROR : main :  : KnimeBrowserView :  :  : %cerror%c Error captured hook ::  
+      background: #c0392b;
+      border-radius: 0.5em;
+      color: white;
+      font-weight: bold;
+      padding: 2px 0.5em;
+      [object Object] (source: http://org.knime.ui.java/assets/index-CPG1Nwkw.js; line: 87)
+2025-04-23 09:58:26,068 : WARN  : Thread-1395 :  : OAuthAuthenticator :  :  : Could not stop OAuth redirect listener: null
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireSharedInterruptibly(Unknown Source)
+	at java.base/java.util.concurrent.CountDownLatch.await(Unknown Source)
+	at org.eclipse.jetty.io.ManagedSelector.doStop(ManagedSelector.java:137)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.stop(AbstractLifeCycle.java:132)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.stop(ContainerLifeCycle.java:182)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStop(ContainerLifeCycle.java:205)
+	at org.eclipse.jetty.io.SelectorManager.doStop(SelectorManager.java:280)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.stop(AbstractLifeCycle.java:132)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.stop(ContainerLifeCycle.java:182)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStop(ContainerLifeCycle.java:205)
+	at org.eclipse.jetty.server.AbstractConnector.doStop(AbstractConnector.java:375)
+	at org.eclipse.jetty.server.AbstractNetworkConnector.doStop(AbstractNetworkConnector.java:82)
+	at org.eclipse.jetty.server.ServerConnector.doStop(ServerConnector.java:241)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.stop(AbstractLifeCycle.java:132)
+	at org.eclipse.jetty.server.Server.doStop(Server.java:658)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.stop(AbstractLifeCycle.java:132)
+	at com.knime.explorer.server.rest.OAuthAuthenticator.stopServer(OAuthAuthenticator.java:733)
+	at com.knime.explorer.server.rest.OAuthAuthenticator.login(OAuthAuthenticator.java:599)
+	at com.knime.explorer.server.rest.OAuthLoginDialog.lambda$0(OAuthLoginDialog.java:179)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2025-04-23 09:58:59,886 : WARN  : Thread-1429 :  : OAuthAuthenticator :  :  : Could not stop OAuth redirect listener: null
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireSharedInterruptibly(Unknown Source)
+	at java.base/java.util.concurrent.CountDownLatch.await(Unknown Source)
+	at org.eclipse.jetty.io.ManagedSelector.doStop(ManagedSelector.java:137)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.stop(AbstractLifeCycle.java:132)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.stop(ContainerLifeCycle.java:182)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStop(ContainerLifeCycle.java:205)
+	at org.eclipse.jetty.io.SelectorManager.doStop(SelectorManager.java:280)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.stop(AbstractLifeCycle.java:132)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.stop(ContainerLifeCycle.java:182)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStop(ContainerLifeCycle.java:205)
+	at org.eclipse.jetty.server.AbstractConnector.doStop(AbstractConnector.java:375)
+	at org.eclipse.jetty.server.AbstractNetworkConnector.doStop(AbstractNetworkConnector.java:82)
+	at org.eclipse.jetty.server.ServerConnector.doStop(ServerConnector.java:241)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.stop(AbstractLifeCycle.java:132)
+	at org.eclipse.jetty.server.Server.doStop(Server.java:658)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.stop(AbstractLifeCycle.java:132)
+	at com.knime.explorer.server.rest.OAuthAuthenticator.stopServer(OAuthAuthenticator.java:733)
+	at com.knime.explorer.server.rest.OAuthAuthenticator.login(OAuthAuthenticator.java:599)
+	at com.knime.explorer.server.rest.OAuthLoginDialog.lambda$0(OAuthLoginDialog.java:179)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2025-04-23 10:04:30,782 : WARN  : Thread-1577 :  : OAuthAuthenticator :  :  : Could not stop OAuth redirect listener: null
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireSharedInterruptibly(Unknown Source)
+	at java.base/java.util.concurrent.CountDownLatch.await(Unknown Source)
+	at org.eclipse.jetty.io.ManagedSelector.doStop(ManagedSelector.java:137)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.stop(AbstractLifeCycle.java:132)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.stop(ContainerLifeCycle.java:182)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStop(ContainerLifeCycle.java:205)
+	at org.eclipse.jetty.io.SelectorManager.doStop(SelectorManager.java:280)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.stop(AbstractLifeCycle.java:132)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.stop(ContainerLifeCycle.java:182)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStop(ContainerLifeCycle.java:205)
+	at org.eclipse.jetty.server.AbstractConnector.doStop(AbstractConnector.java:375)
+	at org.eclipse.jetty.server.AbstractNetworkConnector.doStop(AbstractNetworkConnector.java:82)
+	at org.eclipse.jetty.server.ServerConnector.doStop(ServerConnector.java:241)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.stop(AbstractLifeCycle.java:132)
+	at org.eclipse.jetty.server.Server.doStop(Server.java:658)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.stop(AbstractLifeCycle.java:132)
+	at com.knime.explorer.server.rest.OAuthAuthenticator.stopServer(OAuthAuthenticator.java:733)
+	at com.knime.explorer.server.rest.OAuthAuthenticator.login(OAuthAuthenticator.java:599)
+	at com.knime.explorer.server.rest.OAuthLoginDialog.lambda$0(OAuthLoginDialog.java:179)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2025-04-23 10:07:34,049 : ERROR : main :  : KnimeBrowserView :  :  : %cerror%c Error captured hook ::  
+      background: #c0392b;
+      border-radius: 0.5em;
+      color: white;
+      font-weight: bold;
+      padding: 2px 0.5em;
+      [object Object] (source: http://org.knime.ui.java/assets/index-CPG1Nwkw.js; line: 87)
+2025-04-23 10:13:07,637 : WARN  : comm-pool-thread-21 :  : Node : Excel Reader : 3:1 : Please specify a file
+2025-04-23 10:27:16,992 : WARN  : comm-pool-thread-21 :  : Node : CSV Reader : 3:1 : Please specify a file
+2025-04-23 10:27:24,409 : WARN  : comm-pool-thread-21 :  : Node : JSON Reader : 3:2 : Please specify a file
+2025-04-23 10:27:55,085 : WARN  : comm-pool-thread-21 :  : Node : JSON Reader : 3:3:2 : Please specify a file
+2025-04-23 10:27:55,123 : WARN  : comm-pool-thread-21 :  : Node : JSON Reader : 3:3:0:3 : Please specify a file
+2025-04-23 10:27:58,594 : WARN  : comm-pool-thread-21 :  : Node : JSON Reader : 3:3:2 : Please specify a file
+2025-04-23 10:27:58,596 : WARN  : comm-pool-thread-21 :  : Node : JSON Reader : 3:2 : Please specify a file
+2025-04-23 10:28:00,779 : WARN  : comm-pool-thread-21 :  : Node : JSON Reader : 3:3:2 : Please specify a file
+2025-04-23 10:28:05,132 : WARN  : comm-pool-thread-21 :  : Node : JSON Reader : 3:2 : Please specify a file
+2025-04-23 11:06:29,962 : ERROR : main :  : KnimeBrowserView :  :  : %cerror%c serverEventHandler::Error 
+      background: #c0392b;
+      border-radius: 0.5em;
+      color: white;
+      font-weight: bold;
+      padding: 2px 0.5em;
+      Error: dom element hasn't been set yet (source: http://org.knime.ui.java/assets/index-CPG1Nwkw.js; line: 87)
+2025-04-23 11:08:01,125 : ERROR : main :  : WindowsDefenderExceptionHandler :  :  : PowerShell command powershell -inputformat none -outputformat text -NonInteractive -Command Get-Item -Path 'Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Defender\Exclusions\Processes' -ErrorAction Stop | Select-Object -ExpandProperty Property did not terminate successfully.
+2025-04-23 11:08:01,125 : ERROR : main :  : WindowsDefenderExceptionHandler :  :  : Stderr is:
+2025-04-23 11:08:01,125 : ERROR : main :  : WindowsDefenderExceptionHandler :  :  : Get-Item : Requested registry access is not allowed.
+2025-04-23 11:08:01,125 : ERROR : main :  : WindowsDefenderExceptionHandler :  :  : At line:1 char:1
+2025-04-23 11:08:01,125 : ERROR : main :  : WindowsDefenderExceptionHandler :  :  : + Get-Item -Path 'Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windo ...
+2025-04-23 11:08:01,125 : ERROR : main :  : WindowsDefenderExceptionHandler :  :  : + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-04-23 11:08:01,125 : ERROR : main :  : WindowsDefenderExceptionHandler :  :  :     + CategoryInfo          : PermissionDenied: (HKEY_LOCAL_MACH...sions\Processes:String) [Get-Item], SecurityExcepti 
+2025-04-23 11:08:01,125 : ERROR : main :  : WindowsDefenderExceptionHandler :  :  :    on
+2025-04-23 11:08:01,125 : ERROR : main :  : WindowsDefenderExceptionHandler :  :  :     + FullyQualifiedErrorId : System.Security.SecurityException,Microsoft.PowerShell.Commands.GetItemCommand
+2025-04-23 11:08:01,125 : ERROR : main :  : WindowsDefenderExceptionHandler :  :  :  
+2025-04-23 11:08:01,257 : WARN  : main :  : VariableReplacer$OriginVariableReplacer :  :  : Origin headers cache file 'C:\Program Files\KNIME\Profiles\.originHeaders' does not exist. 'origin' variables will not be replaced.
+2025-04-23 11:16:23,428 : ERROR : main :  : WindowsDefenderExceptionHandler :  :  : PowerShell command powershell -inputformat none -outputformat text -NonInteractive -Command Get-Item -Path 'Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Defender\Exclusions\Processes' -ErrorAction Stop | Select-Object -ExpandProperty Property did not terminate successfully.
+2025-04-23 11:16:23,428 : ERROR : main :  : WindowsDefenderExceptionHandler :  :  : Stderr is:
+2025-04-23 11:16:23,428 : ERROR : main :  : WindowsDefenderExceptionHandler :  :  : Get-Item : Requested registry access is not allowed.
+2025-04-23 11:16:23,428 : ERROR : main :  : WindowsDefenderExceptionHandler :  :  : At line:1 char:1
+2025-04-23 11:16:23,428 : ERROR : main :  : WindowsDefenderExceptionHandler :  :  : + Get-Item -Path 'Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windo ...
+2025-04-23 11:16:23,428 : ERROR : main :  : WindowsDefenderExceptionHandler :  :  : + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-04-23 11:16:23,428 : ERROR : main :  : WindowsDefenderExceptionHandler :  :  :     + CategoryInfo          : PermissionDenied: (HKEY_LOCAL_MACH...sions\Processes:String) [Get-Item], SecurityExcepti 
+2025-04-23 11:16:23,428 : ERROR : main :  : WindowsDefenderExceptionHandler :  :  :    on
+2025-04-23 11:16:23,428 : ERROR : main :  : WindowsDefenderExceptionHandler :  :  :     + FullyQualifiedErrorId : System.Security.SecurityException,Microsoft.PowerShell.Commands.GetItemCommand
+2025-04-23 11:16:23,428 : ERROR : main :  : WindowsDefenderExceptionHandler :  :  :  
+2025-04-23 11:16:23,501 : WARN  : main :  : VariableReplacer$OriginVariableReplacer :  :  : Origin headers cache file 'C:\Program Files\KNIME\Profiles\.originHeaders' does not exist. 'origin' variables will not be replaced.
+2025-04-23 11:18:39,788 : WARN  : Thread-1057 :  : OAuthAuthenticator :  :  : Could not stop OAuth redirect listener: null
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireSharedInterruptibly(Unknown Source)
+	at java.base/java.util.concurrent.CountDownLatch.await(Unknown Source)
+	at org.eclipse.jetty.io.ManagedSelector.doStop(ManagedSelector.java:137)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.stop(AbstractLifeCycle.java:132)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.stop(ContainerLifeCycle.java:182)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStop(ContainerLifeCycle.java:205)
+	at org.eclipse.jetty.io.SelectorManager.doStop(SelectorManager.java:280)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.stop(AbstractLifeCycle.java:132)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.stop(ContainerLifeCycle.java:182)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStop(ContainerLifeCycle.java:205)
+	at org.eclipse.jetty.server.AbstractConnector.doStop(AbstractConnector.java:375)
+	at org.eclipse.jetty.server.AbstractNetworkConnector.doStop(AbstractNetworkConnector.java:82)
+	at org.eclipse.jetty.server.ServerConnector.doStop(ServerConnector.java:241)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.stop(AbstractLifeCycle.java:132)
+	at org.eclipse.jetty.server.Server.doStop(Server.java:658)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.stop(AbstractLifeCycle.java:132)
+	at com.knime.explorer.server.rest.OAuthAuthenticator.stopServer(OAuthAuthenticator.java:733)
+	at com.knime.explorer.server.rest.OAuthAuthenticator.login(OAuthAuthenticator.java:599)
+	at com.knime.explorer.server.rest.OAuthLoginDialog.lambda$0(OAuthLoginDialog.java:179)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2025-04-23 11:19:46,129 : WARN  : ModalContext :  : Node : KNIME Hub Authenticator : 4:3 : Mountpoint 'shs-dataneers-hub-dev' not connected
+2025-04-23 11:20:25,519 : ERROR : KNIME-Worker-1-KNIME Hub Authenticator 4:3 :  : Node : KNIME Hub Authenticator : 4:3 : Mountpoint 'shs-dataneers-hub-dev' not connected
+org.knime.core.node.message.MessageAwareInvalidSettingsException: Mountpoint 'shs-dataneers-hub-dev' not connected
+	at org.knime.core.node.message.Message.toInvalidSettingsException(Message.java:199)
+	at com.knime.hub.nodes.authentication.HubAuthenticationNodeModel.createSpecFromMountpoint(HubAuthenticationNodeModel.java:151)
+	at com.knime.hub.nodes.authentication.HubAuthenticationNodeModel.createSpec(HubAuthenticationNodeModel.java:126)
+	at com.knime.hub.nodes.authentication.HubAuthenticationNodeModel.execute(HubAuthenticationNodeModel.java:188)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:596)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1284)
+	at org.knime.core.node.Node.execute(Node.java:1049)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:603)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:98)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:198)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:369)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:223)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+2025-04-23 11:20:25,523 : WARN  : KNIME-Worker-1-KNIME Hub Authenticator 4:3 :  : Node : KNIME Hub Authenticator : 4:3 : Mountpoint 'shs-dataneers-hub-dev' not connected
+2025-04-23 11:20:27,369 : ERROR : KNIME-Worker-1-KNIME Hub Authenticator 4:3 :  : Node : KNIME Hub Authenticator : 4:3 : Mountpoint 'shs-dataneers-hub-dev' not connected
+org.knime.core.node.message.MessageAwareInvalidSettingsException: Mountpoint 'shs-dataneers-hub-dev' not connected
+	at org.knime.core.node.message.Message.toInvalidSettingsException(Message.java:199)
+	at com.knime.hub.nodes.authentication.HubAuthenticationNodeModel.createSpecFromMountpoint(HubAuthenticationNodeModel.java:151)
+	at com.knime.hub.nodes.authentication.HubAuthenticationNodeModel.createSpec(HubAuthenticationNodeModel.java:126)
+	at com.knime.hub.nodes.authentication.HubAuthenticationNodeModel.execute(HubAuthenticationNodeModel.java:188)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:596)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1284)
+	at org.knime.core.node.Node.execute(Node.java:1049)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:603)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:98)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:198)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:369)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:223)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+2025-04-23 11:20:27,370 : WARN  : KNIME-Worker-1-KNIME Hub Authenticator 4:3 :  : Node : KNIME Hub Authenticator : 4:3 : Mountpoint 'shs-dataneers-hub-dev' not connected
+2025-04-23 11:20:30,652 : ERROR : KNIME-Worker-1-KNIME Hub Authenticator 4:3 :  : Node : KNIME Hub Authenticator : 4:3 : Mountpoint 'shs-dataneers-hub-dev' not connected
+org.knime.core.node.message.MessageAwareInvalidSettingsException: Mountpoint 'shs-dataneers-hub-dev' not connected
+	at org.knime.core.node.message.Message.toInvalidSettingsException(Message.java:199)
+	at com.knime.hub.nodes.authentication.HubAuthenticationNodeModel.createSpecFromMountpoint(HubAuthenticationNodeModel.java:151)
+	at com.knime.hub.nodes.authentication.HubAuthenticationNodeModel.createSpec(HubAuthenticationNodeModel.java:126)
+	at com.knime.hub.nodes.authentication.HubAuthenticationNodeModel.execute(HubAuthenticationNodeModel.java:188)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:596)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1284)
+	at org.knime.core.node.Node.execute(Node.java:1049)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:603)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:98)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:198)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:369)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:223)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+2025-04-23 11:20:30,655 : WARN  : KNIME-Worker-1-KNIME Hub Authenticator 4:3 :  : Node : KNIME Hub Authenticator : 4:3 : Mountpoint 'shs-dataneers-hub-dev' not connected
+2025-04-23 11:20:32,107 : ERROR : KNIME-Worker-1-KNIME Hub Authenticator 4:3 :  : Node : KNIME Hub Authenticator : 4:3 : Mountpoint 'shs-dataneers-hub-dev' not connected
+org.knime.core.node.message.MessageAwareInvalidSettingsException: Mountpoint 'shs-dataneers-hub-dev' not connected
+	at org.knime.core.node.message.Message.toInvalidSettingsException(Message.java:199)
+	at com.knime.hub.nodes.authentication.HubAuthenticationNodeModel.createSpecFromMountpoint(HubAuthenticationNodeModel.java:151)
+	at com.knime.hub.nodes.authentication.HubAuthenticationNodeModel.createSpec(HubAuthenticationNodeModel.java:126)
+	at com.knime.hub.nodes.authentication.HubAuthenticationNodeModel.execute(HubAuthenticationNodeModel.java:188)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:596)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1284)
+	at org.knime.core.node.Node.execute(Node.java:1049)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:603)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:98)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:198)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:369)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:223)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+2025-04-23 11:20:32,108 : WARN  : KNIME-Worker-1-KNIME Hub Authenticator 4:3 :  : Node : KNIME Hub Authenticator : 4:3 : Mountpoint 'shs-dataneers-hub-dev' not connected
+2025-04-23 11:20:32,894 : ERROR : KNIME-Worker-1-KNIME Hub Authenticator 4:3 :  : Node : KNIME Hub Authenticator : 4:3 : Mountpoint 'shs-dataneers-hub-dev' not connected
+org.knime.core.node.message.MessageAwareInvalidSettingsException: Mountpoint 'shs-dataneers-hub-dev' not connected
+	at org.knime.core.node.message.Message.toInvalidSettingsException(Message.java:199)
+	at com.knime.hub.nodes.authentication.HubAuthenticationNodeModel.createSpecFromMountpoint(HubAuthenticationNodeModel.java:151)
+	at com.knime.hub.nodes.authentication.HubAuthenticationNodeModel.createSpec(HubAuthenticationNodeModel.java:126)
+	at com.knime.hub.nodes.authentication.HubAuthenticationNodeModel.execute(HubAuthenticationNodeModel.java:188)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:596)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1284)
+	at org.knime.core.node.Node.execute(Node.java:1049)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:603)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:98)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:198)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:369)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:223)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+2025-04-23 11:20:32,896 : WARN  : KNIME-Worker-1-KNIME Hub Authenticator 4:3 :  : Node : KNIME Hub Authenticator : 4:3 : Mountpoint 'shs-dataneers-hub-dev' not connected
+2025-04-23 11:21:57,545 : WARN  : comm-pool-thread-1 :  : Node : String to Number : 4:5 : No columns selected
+2025-04-23 11:22:00,132 : WARN  : KNIME-Worker-1-String to Number 4:5 :  : Node : String to Number : 4:5 : No columns selected, returning input table.
+2025-04-23 11:22:58,127 : ERROR : main :  : KnimeBrowserView :  :  : %cerror%c RPC Client:: Error RPC request 
+      background: #c0392b;
+      border-radius: 0.5em;
+      color: white;
+      font-weight: bold;
+      padding: 2px 0.5em;
+      Error: No such node ID: 4:5 valid [4:1, 4:2, 4:3, 4:4] (source: http://org.knime.ui.java/assets/index-CPG1Nwkw.js; line: 87)
+2025-04-23 11:22:58,143 : ERROR : main :  : KnimeBrowserView :  :  : %cerror%c Unhandled rejection:: 
+      background: #c0392b;
+      border-radius: 0.5em;
+      color: white;
+      font-weight: bold;
+      padding: 2px 0.5em;
+      [object Object] (source: http://org.knime.ui.java/assets/index-CPG1Nwkw.js; line: 87)
+2025-04-23 11:22:58,143 : ERROR : main :  : KnimeBrowserView :  :  : Uncaught (in promise) Error: No such node ID: 4:5 valid [4:1, 4:2, 4:3, 4:4] (source: http://org.knime.ui.java/assets/index-CPG1Nwkw.js; line: 45)
+2025-04-23 11:23:43,343 : WARN  : comm-pool-thread-1 :  : Node : JSON to XML : 4:5 : No JSON columns! Use for example the "String to JSON" node to create one.
+2025-04-23 11:24:08,645 : WARN  : comm-pool-thread-1 :  : Node : JSON to XML : 4:5 : No JSON columns! Use for example the "String to JSON" node to create one.
+2025-04-23 11:24:43,993 : WARN  : comm-pool-thread-1 :  : Node : XML Reader : 4:6 : Please specify a file
+2025-04-23 11:26:03,876 : WARN  : comm-pool-thread-1 :  : Node : JSON Reader : 4:5 : Please specify a file
+2025-04-23 11:29:17,329 : WARN  : comm-pool-thread-1 :  : Node : XML Reader : 4:6 : Please specify a file
+2025-04-23 11:38:15,144 : WARN  : comm-pool-thread-1 :  : Node : JSON Path : 4:10 : No JSON path was specified, please enter at least one expression!
+2025-04-23 11:38:24,217 : WARN  : main :  : Node : JSON Path : 4:10 : No JSON path was specified, please enter at least one expression!
+2025-04-23 11:38:24,860 : WARN  : main :  : Node : JSON Path : 4:10 : No JSON path was specified, please enter at least one expression!
+2025-04-23 11:38:42,788 : WARN  : main :  : Node : JSON Path : 4:10 : No JSON path was specified, please enter at least one expression!
+2025-04-23 11:38:43,583 : WARN  : main :  : Node : JSON Path : 4:10 : No JSON path was specified, please enter at least one expression!
+2025-04-23 11:38:43,891 : WARN  : main :  : Node : JSON Path : 4:10 : No JSON path was specified, please enter at least one expression!
+2025-04-23 11:38:44,400 : WARN  : main :  : Node : JSON Path : 4:10 : No JSON path was specified, please enter at least one expression!
+2025-04-23 11:39:00,034 : WARN  : main :  : Node : JSON Path : 4:10 : No JSON path was specified, please enter at least one expression!
+2025-04-23 11:39:00,506 : WARN  : main :  : Node : JSON Path : 4:10 : No JSON path was specified, please enter at least one expression!
+2025-04-23 11:39:31,244 : WARN  : comm-pool-thread-1 :  : Node : JSON Path : 4:10 : No JSON path was specified, please enter at least one expression!
+2025-04-23 11:39:32,376 : WARN  : AWT-EventQueue-0 :  : JSONPathNodeDialog : JSON Path : 4:10 : No JSON column in the input table: name=default,columns=[Path]
+2025-04-23 11:39:36,512 : WARN  : AWT-EventQueue-0 :  : JSONPathNodeDialog : JSON Path : 4:10 : No JSON column in the input table: name=default,columns=[Path]
+2025-04-23 11:39:50,960 : WARN  : comm-pool-thread-1 :  : Node : JSON Path : 4:10 : No JSON path was specified, please enter at least one expression!
+2025-04-23 11:40:39,588 : ERROR : main :  : KnimeBrowserView :  :  : %cerror%c RPC Client:: Error RPC request 
+      background: #c0392b;
+      border-radius: 0.5em;
+      color: white;
+      font-weight: bold;
+      padding: 2px 0.5em;
+      Error: No such node ID: 4:10 valid [4:1, 4:2, 4:3, 4:4, 4:5, 4:6, 4:7, 4:8, 4:9] (source: http://org.knime.ui.java/assets/index-CPG1Nwkw.js; line: 87)
+2025-04-23 11:40:39,588 : ERROR : main :  : KnimeBrowserView :  :  : %cerror%c Unhandled rejection:: 
+      background: #c0392b;
+      border-radius: 0.5em;
+      color: white;
+      font-weight: bold;
+      padding: 2px 0.5em;
+      [object Object] (source: http://org.knime.ui.java/assets/index-CPG1Nwkw.js; line: 87)
+2025-04-23 11:40:39,589 : ERROR : main :  : KnimeBrowserView :  :  : Uncaught (in promise) Error: No such node ID: 4:10 valid [4:1, 4:2, 4:3, 4:4, 4:5, 4:6, 4:7, 4:8, 4:9] (source: http://org.knime.ui.java/assets/index-CPG1Nwkw.js; line: 45)
+2025-04-23 11:42:21,646 : WARN  : AWT-EventQueue-0 :  : JSONPathNodeDialog : JSON Path : 4:10 : No JSON column in the input table: name=default,columns=[]
+2025-04-23 11:42:24,477 : WARN  : AWT-EventQueue-0 :  : JSONPathNodeDialog : JSON Path : 4:10 : No JSON column in the input table: name=default,columns=[]
+2025-04-23 11:42:32,841 : WARN  : AWT-EventQueue-0 :  : JSONPathNodeDialog : JSON Path : 4:10 : No JSON column in the input table: name=default,columns=[]
+2025-04-23 11:42:38,093 : WARN  : comm-pool-thread-1 :  : Node : JSON Path : 4:10 : No JSON path was specified, please enter at least one expression!
+2025-04-23 11:44:11,302 : ERROR : KNIME-Worker-8-JSON Path 4:10 :  : Node : JSON Path : 4:10 : Execute failed: Expected at most one result, but got: 125 [[{Agreement No.=…-02-21, 1337.68]]
+   in row: Row0
+java.lang.IllegalStateException: Expected at most one result, but got: 125 [[{Agreement No.=…-02-21, 1337.68]]
+   in row: Row0
+	at org.knime.json.node.jsonpath.multi.JSONPathNodeModel$1.getCell(JSONPathNodeModel.java:308)
+	at org.knime.core.data.container.SingleCellFactory.getCell(SingleCellFactory.java:128)
+	at org.knime.core.data.container.SingleCellFactory.getCells(SingleCellFactory.java:105)
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewCellsForRow(RearrangeColumnsTable.java:565)
+	at org.knime.core.data.container.RearrangeColumnsTable$ConcurrentNewColCalculator.compute(RearrangeColumnsTable.java:784)
+	at org.knime.core.data.container.RearrangeColumnsTable$ConcurrentNewColCalculator.compute(RearrangeColumnsTable.java:1)
+	at org.knime.core.util.MultiThreadWorker$ComputationTask$1.call(MultiThreadWorker.java:442)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:369)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:223)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+2025-04-23 11:44:13,842 : ERROR : KNIME-Worker-9-JSON Path 4:10 :  : Node : JSON Path : 4:10 : Execute failed: Expected at most one result, but got: 125 [[{Agreement No.=…-02-21, 1337.68]]
+   in row: Row0
+java.lang.IllegalStateException: Expected at most one result, but got: 125 [[{Agreement No.=…-02-21, 1337.68]]
+   in row: Row0
+	at org.knime.json.node.jsonpath.multi.JSONPathNodeModel$1.getCell(JSONPathNodeModel.java:308)
+	at org.knime.core.data.container.SingleCellFactory.getCell(SingleCellFactory.java:128)
+	at org.knime.core.data.container.SingleCellFactory.getCells(SingleCellFactory.java:105)
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewCellsForRow(RearrangeColumnsTable.java:565)
+	at org.knime.core.data.container.RearrangeColumnsTable$ConcurrentNewColCalculator.compute(RearrangeColumnsTable.java:784)
+	at org.knime.core.data.container.RearrangeColumnsTable$ConcurrentNewColCalculator.compute(RearrangeColumnsTable.java:1)
+	at org.knime.core.util.MultiThreadWorker$ComputationTask$1.call(MultiThreadWorker.java:442)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:369)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:223)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+2025-04-23 11:45:49,472 : WARN  : comm-pool-thread-1 :  : Node : JSON Reader : 4:12 : Please specify a file
+2025-04-23 11:45:50,832 : ERROR : main :  : KnimeBrowserView :  :  : %cerror%c RPC Client:: Error RPC request 
+      background: #c0392b;
+      border-radius: 0.5em;
+      color: white;
+      font-weight: bold;
+      padding: 2px 0.5em;
+      Error: No such node ID: 4:10 valid [4:1, 4:2, 4:3, 4:4, 4:5, 4:6, 4:8, 4:9, 4:11, 4:12] (source: http://org.knime.ui.java/assets/index-CPG1Nwkw.js; line: 87)
+2025-04-23 11:45:50,832 : ERROR : main :  : KnimeBrowserView :  :  : %cerror%c Unhandled rejection:: 
+      background: #c0392b;
+      border-radius: 0.5em;
+      color: white;
+      font-weight: bold;
+      padding: 2px 0.5em;
+      [object Object] (source: http://org.knime.ui.java/assets/index-CPG1Nwkw.js; line: 87)
+2025-04-23 11:45:50,832 : ERROR : main :  : KnimeBrowserView :  :  : Uncaught (in promise) Error: No such node ID: 4:10 valid [4:1, 4:2, 4:3, 4:4, 4:5, 4:6, 4:8, 4:9, 4:11, 4:12] (source: http://org.knime.ui.java/assets/index-CPG1Nwkw.js; line: 45)
+2025-04-23 11:46:23,967 : WARN  : main :  : Node : Ungroup : 4:11 : No ungroup column selected. Node returns input table.
+2025-04-23 11:46:24,534 : WARN  : main :  : Node : Ungroup : 4:11 : No ungroup column selected. Node returns input table.
+2025-04-23 11:46:26,048 : WARN  : KNIME-Worker-10-JSON Path 4:10 :  : Node : Ungroup : 4:11 : No ungroup column selected. Node returns input table.
+2025-04-23 11:50:59,739 : ERROR : KNIME-Worker-11-JSON Path 4:10 :  : Node : JSON Path : 4:10 : Execute failed: java.lang.NoSuchMethodError: java.lang.Long: method 'void <init>()' not found
+java.lang.RuntimeException: java.lang.NoSuchMethodError: java.lang.Long: method 'void <init>()' not found
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewColsASynchronously(RearrangeColumnsTable.java:541)
+	at org.knime.core.data.container.RearrangeColumnsTable.create(RearrangeColumnsTable.java:414)
+	at org.knime.core.data.container.BufferedTableBackend.rearrange(BufferedTableBackend.java:212)
+	at org.knime.core.node.ExecutionContext.createColumnRearrangeTable(ExecutionContext.java:468)
+	at org.knime.core.node.streamable.simple.SimpleStreamableFunctionNodeModel.execute(SimpleStreamableFunctionNodeModel.java:117)
+	at org.knime.core.node.NodeModel.execute(NodeModel.java:820)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:596)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1284)
+	at org.knime.core.node.Node.execute(Node.java:1049)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:603)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:98)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:198)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:369)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:223)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+Caused by: java.lang.NoSuchMethodError: java.lang.Long: method 'void <init>()' not found
+	at net.minidev.asm.java.lang.LongAccAccess.newInstance(Unknown Source)
+	at net.minidev.json.writer.BeansMapper$Bean.createObject(BeansMapper.java:93)
+	at net.minidev.json.parser.JSONParserBase.readObject(JSONParserBase.java:561)
+	at net.minidev.json.parser.JSONParserBase.readFirst(JSONParserBase.java:365)
+	at net.minidev.json.parser.JSONParserBase.parse(JSONParserBase.java:218)
+	at net.minidev.json.parser.JSONParserString.parse(JSONParserString.java:58)
+	at net.minidev.json.parser.JSONParser.parse(JSONParser.java:285)
+	at net.minidev.json.JSONValue.parse(JSONValue.java:201)
+	at com.jayway.jsonpath.spi.mapper.JsonSmartMappingProvider.map(JsonSmartMappingProvider.java:85)
+	at org.knime.json.node.jsonpath.multi.JSONPathNodeModel$1.convertObjectToReturnType(JSONPathNodeModel.java:350)
+	at org.knime.json.node.jsonpath.multi.JSONPathNodeModel$1.getCell(JSONPathNodeModel.java:312)
+	at org.knime.core.data.container.SingleCellFactory.getCell(SingleCellFactory.java:128)
+	at org.knime.core.data.container.SingleCellFactory.getCells(SingleCellFactory.java:105)
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewCellsForRow(RearrangeColumnsTable.java:565)
+	at org.knime.core.data.container.RearrangeColumnsTable$ConcurrentNewColCalculator.compute(RearrangeColumnsTable.java:784)
+	at org.knime.core.data.container.RearrangeColumnsTable$ConcurrentNewColCalculator.compute(RearrangeColumnsTable.java:1)
+	at org.knime.core.util.MultiThreadWorker$ComputationTask$1.call(MultiThreadWorker.java:442)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	... 6 more
+2025-04-23 11:51:04,394 : ERROR : KNIME-Worker-12-JSON Path 4:10 :  : Node : JSON Path : 4:10 : Execute failed: java.lang.NoSuchMethodError: java.lang.Long: method 'void <init>()' not found
+java.lang.RuntimeException: java.lang.NoSuchMethodError: java.lang.Long: method 'void <init>()' not found
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewColsASynchronously(RearrangeColumnsTable.java:541)
+	at org.knime.core.data.container.RearrangeColumnsTable.create(RearrangeColumnsTable.java:414)
+	at org.knime.core.data.container.BufferedTableBackend.rearrange(BufferedTableBackend.java:212)
+	at org.knime.core.node.ExecutionContext.createColumnRearrangeTable(ExecutionContext.java:468)
+	at org.knime.core.node.streamable.simple.SimpleStreamableFunctionNodeModel.execute(SimpleStreamableFunctionNodeModel.java:117)
+	at org.knime.core.node.NodeModel.execute(NodeModel.java:820)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:596)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1284)
+	at org.knime.core.node.Node.execute(Node.java:1049)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:603)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:98)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:198)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:369)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:223)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+Caused by: java.lang.NoSuchMethodError: java.lang.Long: method 'void <init>()' not found
+	at net.minidev.asm.java.lang.LongAccAccess.newInstance(Unknown Source)
+	at net.minidev.json.writer.BeansMapper$Bean.createObject(BeansMapper.java:93)
+	at net.minidev.json.parser.JSONParserBase.readObject(JSONParserBase.java:561)
+	at net.minidev.json.parser.JSONParserBase.readFirst(JSONParserBase.java:365)
+	at net.minidev.json.parser.JSONParserBase.parse(JSONParserBase.java:218)
+	at net.minidev.json.parser.JSONParserString.parse(JSONParserString.java:58)
+	at net.minidev.json.parser.JSONParser.parse(JSONParser.java:285)
+	at net.minidev.json.JSONValue.parse(JSONValue.java:201)
+	at com.jayway.jsonpath.spi.mapper.JsonSmartMappingProvider.map(JsonSmartMappingProvider.java:85)
+	at org.knime.json.node.jsonpath.multi.JSONPathNodeModel$1.convertObjectToReturnType(JSONPathNodeModel.java:350)
+	at org.knime.json.node.jsonpath.multi.JSONPathNodeModel$1.getCell(JSONPathNodeModel.java:312)
+	at org.knime.core.data.container.SingleCellFactory.getCell(SingleCellFactory.java:128)
+	at org.knime.core.data.container.SingleCellFactory.getCells(SingleCellFactory.java:105)
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewCellsForRow(RearrangeColumnsTable.java:565)
+	at org.knime.core.data.container.RearrangeColumnsTable$ConcurrentNewColCalculator.compute(RearrangeColumnsTable.java:784)
+	at org.knime.core.data.container.RearrangeColumnsTable$ConcurrentNewColCalculator.compute(RearrangeColumnsTable.java:1)
+	at org.knime.core.util.MultiThreadWorker$ComputationTask$1.call(MultiThreadWorker.java:442)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	... 6 more
+2025-04-23 11:51:06,422 : ERROR : KNIME-Worker-11-JSON Path 4:10 :  : Node : JSON Path : 4:10 : Execute failed: java.lang.NoSuchMethodError: java.lang.Long: method 'void <init>()' not found
+java.lang.RuntimeException: java.lang.NoSuchMethodError: java.lang.Long: method 'void <init>()' not found
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewColsASynchronously(RearrangeColumnsTable.java:541)
+	at org.knime.core.data.container.RearrangeColumnsTable.create(RearrangeColumnsTable.java:414)
+	at org.knime.core.data.container.BufferedTableBackend.rearrange(BufferedTableBackend.java:212)
+	at org.knime.core.node.ExecutionContext.createColumnRearrangeTable(ExecutionContext.java:468)
+	at org.knime.core.node.streamable.simple.SimpleStreamableFunctionNodeModel.execute(SimpleStreamableFunctionNodeModel.java:117)
+	at org.knime.core.node.NodeModel.execute(NodeModel.java:820)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:596)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1284)
+	at org.knime.core.node.Node.execute(Node.java:1049)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:603)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:98)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:198)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:369)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:223)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+Caused by: java.lang.NoSuchMethodError: java.lang.Long: method 'void <init>()' not found
+	at net.minidev.asm.java.lang.LongAccAccess.newInstance(Unknown Source)
+	at net.minidev.json.writer.BeansMapper$Bean.createObject(BeansMapper.java:93)
+	at net.minidev.json.parser.JSONParserBase.readObject(JSONParserBase.java:561)
+	at net.minidev.json.parser.JSONParserBase.readFirst(JSONParserBase.java:365)
+	at net.minidev.json.parser.JSONParserBase.parse(JSONParserBase.java:218)
+	at net.minidev.json.parser.JSONParserString.parse(JSONParserString.java:58)
+	at net.minidev.json.parser.JSONParser.parse(JSONParser.java:285)
+	at net.minidev.json.JSONValue.parse(JSONValue.java:201)
+	at com.jayway.jsonpath.spi.mapper.JsonSmartMappingProvider.map(JsonSmartMappingProvider.java:85)
+	at org.knime.json.node.jsonpath.multi.JSONPathNodeModel$1.convertObjectToReturnType(JSONPathNodeModel.java:350)
+	at org.knime.json.node.jsonpath.multi.JSONPathNodeModel$1.getCell(JSONPathNodeModel.java:312)
+	at org.knime.core.data.container.SingleCellFactory.getCell(SingleCellFactory.java:128)
+	at org.knime.core.data.container.SingleCellFactory.getCells(SingleCellFactory.java:105)
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewCellsForRow(RearrangeColumnsTable.java:565)
+	at org.knime.core.data.container.RearrangeColumnsTable$ConcurrentNewColCalculator.compute(RearrangeColumnsTable.java:784)
+	at org.knime.core.data.container.RearrangeColumnsTable$ConcurrentNewColCalculator.compute(RearrangeColumnsTable.java:1)
+	at org.knime.core.util.MultiThreadWorker$ComputationTask$1.call(MultiThreadWorker.java:442)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	... 6 more
+2025-04-23 11:51:25,644 : ERROR : KNIME-Worker-12-JSON Path 4:10 :  : Node : JSON Path : 4:10 : Execute failed: java.lang.NoSuchMethodError: java.lang.Long: method 'void <init>()' not found
+java.lang.RuntimeException: java.lang.NoSuchMethodError: java.lang.Long: method 'void <init>()' not found
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewColsASynchronously(RearrangeColumnsTable.java:541)
+	at org.knime.core.data.container.RearrangeColumnsTable.create(RearrangeColumnsTable.java:414)
+	at org.knime.core.data.container.BufferedTableBackend.rearrange(BufferedTableBackend.java:212)
+	at org.knime.core.node.ExecutionContext.createColumnRearrangeTable(ExecutionContext.java:468)
+	at org.knime.core.node.streamable.simple.SimpleStreamableFunctionNodeModel.execute(SimpleStreamableFunctionNodeModel.java:117)
+	at org.knime.core.node.NodeModel.execute(NodeModel.java:820)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:596)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1284)
+	at org.knime.core.node.Node.execute(Node.java:1049)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:603)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:98)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:198)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:369)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:223)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+Caused by: java.lang.NoSuchMethodError: java.lang.Long: method 'void <init>()' not found
+	at net.minidev.asm.java.lang.LongAccAccess.newInstance(Unknown Source)
+	at net.minidev.json.writer.BeansMapper$Bean.createObject(BeansMapper.java:93)
+	at net.minidev.json.parser.JSONParserBase.readObject(JSONParserBase.java:561)
+	at net.minidev.json.parser.JSONParserBase.readFirst(JSONParserBase.java:365)
+	at net.minidev.json.parser.JSONParserBase.parse(JSONParserBase.java:218)
+	at net.minidev.json.parser.JSONParserString.parse(JSONParserString.java:58)
+	at net.minidev.json.parser.JSONParser.parse(JSONParser.java:285)
+	at net.minidev.json.JSONValue.parse(JSONValue.java:201)
+	at com.jayway.jsonpath.spi.mapper.JsonSmartMappingProvider.map(JsonSmartMappingProvider.java:85)
+	at org.knime.json.node.jsonpath.multi.JSONPathNodeModel$1.convertObjectToReturnType(JSONPathNodeModel.java:350)
+	at org.knime.json.node.jsonpath.multi.JSONPathNodeModel$1.getCell(JSONPathNodeModel.java:312)
+	at org.knime.core.data.container.SingleCellFactory.getCell(SingleCellFactory.java:128)
+	at org.knime.core.data.container.SingleCellFactory.getCells(SingleCellFactory.java:105)
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewCellsForRow(RearrangeColumnsTable.java:565)
+	at org.knime.core.data.container.RearrangeColumnsTable$ConcurrentNewColCalculator.compute(RearrangeColumnsTable.java:784)
+	at org.knime.core.data.container.RearrangeColumnsTable$ConcurrentNewColCalculator.compute(RearrangeColumnsTable.java:1)
+	at org.knime.core.util.MultiThreadWorker$ComputationTask$1.call(MultiThreadWorker.java:442)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	... 6 more
+2025-04-23 11:52:04,632 : ERROR : KNIME-Worker-11-JSON Path 4:10 :  : Node : JSON Path : 4:10 : Execute failed: java.lang.NoSuchMethodError: java.lang.Long: method 'void <init>()' not found
+java.lang.RuntimeException: java.lang.NoSuchMethodError: java.lang.Long: method 'void <init>()' not found
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewColsASynchronously(RearrangeColumnsTable.java:541)
+	at org.knime.core.data.container.RearrangeColumnsTable.create(RearrangeColumnsTable.java:414)
+	at org.knime.core.data.container.BufferedTableBackend.rearrange(BufferedTableBackend.java:212)
+	at org.knime.core.node.ExecutionContext.createColumnRearrangeTable(ExecutionContext.java:468)
+	at org.knime.core.node.streamable.simple.SimpleStreamableFunctionNodeModel.execute(SimpleStreamableFunctionNodeModel.java:117)
+	at org.knime.core.node.NodeModel.execute(NodeModel.java:820)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:596)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1284)
+	at org.knime.core.node.Node.execute(Node.java:1049)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:603)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:98)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:198)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:369)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:223)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+Caused by: java.lang.NoSuchMethodError: java.lang.Long: method 'void <init>()' not found
+	at net.minidev.asm.java.lang.LongAccAccess.newInstance(Unknown Source)
+	at net.minidev.json.writer.BeansMapper$Bean.createObject(BeansMapper.java:93)
+	at net.minidev.json.parser.JSONParserBase.readObject(JSONParserBase.java:561)
+	at net.minidev.json.parser.JSONParserBase.readFirst(JSONParserBase.java:365)
+	at net.minidev.json.parser.JSONParserBase.parse(JSONParserBase.java:218)
+	at net.minidev.json.parser.JSONParserString.parse(JSONParserString.java:58)
+	at net.minidev.json.parser.JSONParser.parse(JSONParser.java:285)
+	at net.minidev.json.JSONValue.parse(JSONValue.java:201)
+	at com.jayway.jsonpath.spi.mapper.JsonSmartMappingProvider.map(JsonSmartMappingProvider.java:85)
+	at org.knime.json.node.jsonpath.multi.JSONPathNodeModel$1.convertObjectToReturnType(JSONPathNodeModel.java:350)
+	at org.knime.json.node.jsonpath.multi.JSONPathNodeModel$1.getCell(JSONPathNodeModel.java:312)
+	at org.knime.core.data.container.SingleCellFactory.getCell(SingleCellFactory.java:128)
+	at org.knime.core.data.container.SingleCellFactory.getCells(SingleCellFactory.java:105)
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewCellsForRow(RearrangeColumnsTable.java:565)
+	at org.knime.core.data.container.RearrangeColumnsTable$ConcurrentNewColCalculator.compute(RearrangeColumnsTable.java:784)
+	at org.knime.core.data.container.RearrangeColumnsTable$ConcurrentNewColCalculator.compute(RearrangeColumnsTable.java:1)
+	at org.knime.core.util.MultiThreadWorker$ComputationTask$1.call(MultiThreadWorker.java:442)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	... 6 more
+2025-04-23 11:53:02,149 : ERROR : KNIME-Worker-12-JSON Path 4:10 :  : Node : JSON Path : 4:10 : Execute failed: java.lang.NoSuchMethodError: java.lang.Long: method 'void <init>()' not found
+java.lang.RuntimeException: java.lang.NoSuchMethodError: java.lang.Long: method 'void <init>()' not found
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewColsASynchronously(RearrangeColumnsTable.java:541)
+	at org.knime.core.data.container.RearrangeColumnsTable.create(RearrangeColumnsTable.java:414)
+	at org.knime.core.data.container.BufferedTableBackend.rearrange(BufferedTableBackend.java:212)
+	at org.knime.core.node.ExecutionContext.createColumnRearrangeTable(ExecutionContext.java:468)
+	at org.knime.core.node.streamable.simple.SimpleStreamableFunctionNodeModel.execute(SimpleStreamableFunctionNodeModel.java:117)
+	at org.knime.core.node.NodeModel.execute(NodeModel.java:820)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:596)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1284)
+	at org.knime.core.node.Node.execute(Node.java:1049)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:603)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:98)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:198)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:369)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:223)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+Caused by: java.lang.NoSuchMethodError: java.lang.Long: method 'void <init>()' not found
+	at net.minidev.asm.java.lang.LongAccAccess.newInstance(Unknown Source)
+	at net.minidev.json.writer.BeansMapper$Bean.createObject(BeansMapper.java:93)
+	at net.minidev.json.parser.JSONParserBase.readObject(JSONParserBase.java:561)
+	at net.minidev.json.parser.JSONParserBase.readFirst(JSONParserBase.java:365)
+	at net.minidev.json.parser.JSONParserBase.parse(JSONParserBase.java:218)
+	at net.minidev.json.parser.JSONParserString.parse(JSONParserString.java:58)
+	at net.minidev.json.parser.JSONParser.parse(JSONParser.java:285)
+	at net.minidev.json.JSONValue.parse(JSONValue.java:201)
+	at com.jayway.jsonpath.spi.mapper.JsonSmartMappingProvider.map(JsonSmartMappingProvider.java:85)
+	at org.knime.json.node.jsonpath.multi.JSONPathNodeModel$1.convertObjectToReturnType(JSONPathNodeModel.java:350)
+	at org.knime.json.node.jsonpath.multi.JSONPathNodeModel$1.getCell(JSONPathNodeModel.java:312)
+	at org.knime.core.data.container.SingleCellFactory.getCell(SingleCellFactory.java:128)
+	at org.knime.core.data.container.SingleCellFactory.getCells(SingleCellFactory.java:105)
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewCellsForRow(RearrangeColumnsTable.java:565)
+	at org.knime.core.data.container.RearrangeColumnsTable$ConcurrentNewColCalculator.compute(RearrangeColumnsTable.java:784)
+	at org.knime.core.data.container.RearrangeColumnsTable$ConcurrentNewColCalculator.compute(RearrangeColumnsTable.java:1)
+	at org.knime.core.util.MultiThreadWorker$ComputationTask$1.call(MultiThreadWorker.java:442)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	... 6 more
+2025-04-23 11:53:19,788 : ERROR : KNIME-Worker-11-JSON Path 4:10 :  : Node : JSON Path : 4:10 : Execute failed: java.lang.NoSuchMethodError: java.lang.Long: method 'void <init>()' not found
+java.lang.RuntimeException: java.lang.NoSuchMethodError: java.lang.Long: method 'void <init>()' not found
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewColsASynchronously(RearrangeColumnsTable.java:541)
+	at org.knime.core.data.container.RearrangeColumnsTable.create(RearrangeColumnsTable.java:414)
+	at org.knime.core.data.container.BufferedTableBackend.rearrange(BufferedTableBackend.java:212)
+	at org.knime.core.node.ExecutionContext.createColumnRearrangeTable(ExecutionContext.java:468)
+	at org.knime.core.node.streamable.simple.SimpleStreamableFunctionNodeModel.execute(SimpleStreamableFunctionNodeModel.java:117)
+	at org.knime.core.node.NodeModel.execute(NodeModel.java:820)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:596)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1284)
+	at org.knime.core.node.Node.execute(Node.java:1049)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:603)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:98)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:198)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:369)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:223)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+Caused by: java.lang.NoSuchMethodError: java.lang.Long: method 'void <init>()' not found
+	at net.minidev.asm.java.lang.LongAccAccess.newInstance(Unknown Source)
+	at net.minidev.json.writer.BeansMapper$Bean.createObject(BeansMapper.java:93)
+	at net.minidev.json.parser.JSONParserBase.readObject(JSONParserBase.java:561)
+	at net.minidev.json.parser.JSONParserBase.readFirst(JSONParserBase.java:365)
+	at net.minidev.json.parser.JSONParserBase.parse(JSONParserBase.java:218)
+	at net.minidev.json.parser.JSONParserString.parse(JSONParserString.java:58)
+	at net.minidev.json.parser.JSONParser.parse(JSONParser.java:285)
+	at net.minidev.json.JSONValue.parse(JSONValue.java:201)
+	at com.jayway.jsonpath.spi.mapper.JsonSmartMappingProvider.map(JsonSmartMappingProvider.java:85)
+	at org.knime.json.node.jsonpath.multi.JSONPathNodeModel$1.convertObjectToReturnType(JSONPathNodeModel.java:350)
+	at org.knime.json.node.jsonpath.multi.JSONPathNodeModel$1.getCell(JSONPathNodeModel.java:312)
+	at org.knime.core.data.container.SingleCellFactory.getCell(SingleCellFactory.java:128)
+	at org.knime.core.data.container.SingleCellFactory.getCells(SingleCellFactory.java:105)
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewCellsForRow(RearrangeColumnsTable.java:565)
+	at org.knime.core.data.container.RearrangeColumnsTable$ConcurrentNewColCalculator.compute(RearrangeColumnsTable.java:784)
+	at org.knime.core.data.container.RearrangeColumnsTable$ConcurrentNewColCalculator.compute(RearrangeColumnsTable.java:1)
+	at org.knime.core.util.MultiThreadWorker$ComputationTask$1.call(MultiThreadWorker.java:442)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	... 6 more
+2025-04-23 11:55:33,623 : ERROR : KNIME-Worker-13-JSON Path 4:10 :  : Node : JSON Path : 4:10 : Execute failed: java.lang.NoSuchMethodError: java.lang.Long: method 'void <init>()' not found
+java.lang.RuntimeException: java.lang.NoSuchMethodError: java.lang.Long: method 'void <init>()' not found
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewColsASynchronously(RearrangeColumnsTable.java:541)
+	at org.knime.core.data.container.RearrangeColumnsTable.create(RearrangeColumnsTable.java:414)
+	at org.knime.core.data.container.BufferedTableBackend.rearrange(BufferedTableBackend.java:212)
+	at org.knime.core.node.ExecutionContext.createColumnRearrangeTable(ExecutionContext.java:468)
+	at org.knime.core.node.streamable.simple.SimpleStreamableFunctionNodeModel.execute(SimpleStreamableFunctionNodeModel.java:117)
+	at org.knime.core.node.NodeModel.execute(NodeModel.java:820)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:596)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1284)
+	at org.knime.core.node.Node.execute(Node.java:1049)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:603)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:98)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:198)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:369)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:223)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+Caused by: java.lang.NoSuchMethodError: java.lang.Long: method 'void <init>()' not found
+	at net.minidev.asm.java.lang.LongAccAccess.newInstance(Unknown Source)
+	at net.minidev.json.writer.BeansMapper$Bean.createObject(BeansMapper.java:93)
+	at net.minidev.json.parser.JSONParserBase.readObject(JSONParserBase.java:561)
+	at net.minidev.json.parser.JSONParserBase.readFirst(JSONParserBase.java:365)
+	at net.minidev.json.parser.JSONParserBase.parse(JSONParserBase.java:218)
+	at net.minidev.json.parser.JSONParserString.parse(JSONParserString.java:58)
+	at net.minidev.json.parser.JSONParser.parse(JSONParser.java:285)
+	at net.minidev.json.JSONValue.parse(JSONValue.java:201)
+	at com.jayway.jsonpath.spi.mapper.JsonSmartMappingProvider.map(JsonSmartMappingProvider.java:85)
+	at org.knime.json.node.jsonpath.multi.JSONPathNodeModel$1.convertObjectToReturnType(JSONPathNodeModel.java:350)
+	at org.knime.json.node.jsonpath.multi.JSONPathNodeModel$1.getCell(JSONPathNodeModel.java:312)
+	at org.knime.core.data.container.SingleCellFactory.getCell(SingleCellFactory.java:128)
+	at org.knime.core.data.container.SingleCellFactory.getCells(SingleCellFactory.java:105)
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewCellsForRow(RearrangeColumnsTable.java:565)
+	at org.knime.core.data.container.RearrangeColumnsTable$ConcurrentNewColCalculator.compute(RearrangeColumnsTable.java:784)
+	at org.knime.core.data.container.RearrangeColumnsTable$ConcurrentNewColCalculator.compute(RearrangeColumnsTable.java:1)
+	at org.knime.core.util.MultiThreadWorker$ComputationTask$1.call(MultiThreadWorker.java:442)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	... 6 more
+2025-04-23 11:55:41,582 : ERROR : KNIME-Worker-14-JSON Path 4:10 :  : Node : JSON Path : 4:10 : Execute failed: java.lang.NoSuchMethodError: java.lang.Long: method 'void <init>()' not found
+java.lang.RuntimeException: java.lang.NoSuchMethodError: java.lang.Long: method 'void <init>()' not found
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewColsASynchronously(RearrangeColumnsTable.java:541)
+	at org.knime.core.data.container.RearrangeColumnsTable.create(RearrangeColumnsTable.java:414)
+	at org.knime.core.data.container.BufferedTableBackend.rearrange(BufferedTableBackend.java:212)
+	at org.knime.core.node.ExecutionContext.createColumnRearrangeTable(ExecutionContext.java:468)
+	at org.knime.core.node.streamable.simple.SimpleStreamableFunctionNodeModel.execute(SimpleStreamableFunctionNodeModel.java:117)
+	at org.knime.core.node.NodeModel.execute(NodeModel.java:820)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:596)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1284)
+	at org.knime.core.node.Node.execute(Node.java:1049)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:603)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:98)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:198)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:369)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:223)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+Caused by: java.lang.NoSuchMethodError: java.lang.Long: method 'void <init>()' not found
+	at net.minidev.asm.java.lang.LongAccAccess.newInstance(Unknown Source)
+	at net.minidev.json.writer.BeansMapper$Bean.createObject(BeansMapper.java:93)
+	at net.minidev.json.parser.JSONParserBase.readObject(JSONParserBase.java:561)
+	at net.minidev.json.parser.JSONParserBase.readFirst(JSONParserBase.java:365)
+	at net.minidev.json.parser.JSONParserBase.parse(JSONParserBase.java:218)
+	at net.minidev.json.parser.JSONParserString.parse(JSONParserString.java:58)
+	at net.minidev.json.parser.JSONParser.parse(JSONParser.java:285)
+	at net.minidev.json.JSONValue.parse(JSONValue.java:201)
+	at com.jayway.jsonpath.spi.mapper.JsonSmartMappingProvider.map(JsonSmartMappingProvider.java:85)
+	at org.knime.json.node.jsonpath.multi.JSONPathNodeModel$1.convertObjectToReturnType(JSONPathNodeModel.java:350)
+	at org.knime.json.node.jsonpath.multi.JSONPathNodeModel$1.getCell(JSONPathNodeModel.java:312)
+	at org.knime.core.data.container.SingleCellFactory.getCell(SingleCellFactory.java:128)
+	at org.knime.core.data.container.SingleCellFactory.getCells(SingleCellFactory.java:105)
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewCellsForRow(RearrangeColumnsTable.java:565)
+	at org.knime.core.data.container.RearrangeColumnsTable$ConcurrentNewColCalculator.compute(RearrangeColumnsTable.java:784)
+	at org.knime.core.data.container.RearrangeColumnsTable$ConcurrentNewColCalculator.compute(RearrangeColumnsTable.java:1)
+	at org.knime.core.util.MultiThreadWorker$ComputationTask$1.call(MultiThreadWorker.java:442)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	... 6 more
+2025-04-23 11:55:55,693 : WARN  : main :  : Node : Ungroup : 4:11 : No ungroup column selected. Node returns input table.
+2025-04-23 11:55:56,251 : WARN  : main :  : Node : Ungroup : 4:11 : No ungroup column selected. Node returns input table.
+2025-04-23 11:55:57,629 : ERROR : KNIME-Worker-13-JSON Path 4:10 :  : Node : JSON Path : 4:10 : Execute failed: Expected at most one result, but got: 25 [[{Agreement No.=…amount=1337.68}]]
+   in row: Row0
+java.lang.IllegalStateException: Expected at most one result, but got: 25 [[{Agreement No.=…amount=1337.68}]]
+   in row: Row0
+	at org.knime.json.node.jsonpath.multi.JSONPathNodeModel$1.getCell(JSONPathNodeModel.java:308)
+	at org.knime.core.data.container.SingleCellFactory.getCell(SingleCellFactory.java:128)
+	at org.knime.core.data.container.SingleCellFactory.getCells(SingleCellFactory.java:105)
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewCellsForRow(RearrangeColumnsTable.java:565)
+	at org.knime.core.data.container.RearrangeColumnsTable$ConcurrentNewColCalculator.compute(RearrangeColumnsTable.java:784)
+	at org.knime.core.data.container.RearrangeColumnsTable$ConcurrentNewColCalculator.compute(RearrangeColumnsTable.java:1)
+	at org.knime.core.util.MultiThreadWorker$ComputationTask$1.call(MultiThreadWorker.java:442)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:369)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:223)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+2025-04-23 11:55:57,632 : WARN  : KNIME-Worker-13-JSON Path 4:10 :  : Node : Ungroup : 4:11 : No ungroup column selected. Node returns input table.
+2025-04-23 11:56:18,016 : ERROR : KNIME-Worker-14-JSON Path 4:10 :  : Node : JSON Path : 4:10 : Execute failed: Expected at most one result, but got: 25 [[{Agreement No.=…amount=1337.68}]]
+   in row: Row0
+java.lang.IllegalStateException: Expected at most one result, but got: 25 [[{Agreement No.=…amount=1337.68}]]
+   in row: Row0
+	at org.knime.json.node.jsonpath.multi.JSONPathNodeModel$1.getCell(JSONPathNodeModel.java:308)
+	at org.knime.core.data.container.SingleCellFactory.getCell(SingleCellFactory.java:128)
+	at org.knime.core.data.container.SingleCellFactory.getCells(SingleCellFactory.java:105)
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewCellsForRow(RearrangeColumnsTable.java:565)
+	at org.knime.core.data.container.RearrangeColumnsTable$ConcurrentNewColCalculator.compute(RearrangeColumnsTable.java:784)
+	at org.knime.core.data.container.RearrangeColumnsTable$ConcurrentNewColCalculator.compute(RearrangeColumnsTable.java:1)
+	at org.knime.core.util.MultiThreadWorker$ComputationTask$1.call(MultiThreadWorker.java:442)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:369)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:223)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+2025-04-23 11:56:18,019 : WARN  : KNIME-Worker-14-JSON Path 4:10 :  : Node : Ungroup : 4:11 : No ungroup column selected. Node returns input table.
+2025-04-23 11:57:26,849 : WARN  : main :  : Node : JSON Path : 4:10 : com.jayway.jsonpath.InvalidPathException: Path must not end with a '.' or '..'
+2025-04-23 11:57:28,529 : WARN  : main :  : Node : JSON Path : 4:10 : com.jayway.jsonpath.InvalidPathException: Path must not end with a '.' or '..'
+2025-04-23 11:57:45,626 : WARN  : main :  : Node : JSON Path : 4:10 : com.jayway.jsonpath.InvalidPathException: Path must not end with a '.' or '..'
+2025-04-23 11:57:46,431 : WARN  : main :  : Node : JSON Path : 4:10 : com.jayway.jsonpath.InvalidPathException: Path must not end with a '.' or '..'
+2025-04-23 11:58:59,757 : WARN  : main :  : Node : JSON Path : 4:10 : com.jayway.jsonpath.InvalidPathException: Path must not end with a '.' or '..'
+2025-04-23 11:59:00,356 : WARN  : main :  : Node : JSON Path : 4:10 : com.jayway.jsonpath.InvalidPathException: Path must not end with a '.' or '..'
+2025-04-23 11:59:26,292 : WARN  : main :  : Node : JSON Path : 4:10 : com.jayway.jsonpath.InvalidPathException: Path must not end with a '.' or '..'
+2025-04-23 11:59:27,051 : WARN  : main :  : Node : JSON Path : 4:10 : com.jayway.jsonpath.InvalidPathException: Path must not end with a '.' or '..'
+2025-04-23 12:01:04,892 : WARN  : main :  : Node : Ungroup : 4:11 : No ungroup column selected. Node returns input table.
+2025-04-23 12:01:05,812 : WARN  : main :  : Node : Ungroup : 4:11 : No ungroup column selected. Node returns input table.
+2025-04-23 12:01:07,276 : WARN  : KNIME-Worker-16-JSON Path 4:10 :  : Node : Ungroup : 4:11 : No ungroup column selected. Node returns input table.
+2025-04-23 12:05:53,873 : ERROR : main :  : KnimeBrowserView :  :  : %cerror%c RPC Client:: Error RPC request 
+      background: #c0392b;
+      border-radius: 0.5em;
+      color: white;
+      font-weight: bold;
+      padding: 2px 0.5em;
+      Error: No such node ID: 4:10 valid [4:1, 4:2, 4:3, 4:4, 4:5, 4:6, 4:8, 4:9, 4:11, 4:12] (source: http://org.knime.ui.java/assets/index-CPG1Nwkw.js; line: 87)
+2025-04-23 12:05:53,874 : ERROR : main :  : KnimeBrowserView :  :  : %cerror%c Unhandled rejection:: 
+      background: #c0392b;
+      border-radius: 0.5em;
+      color: white;
+      font-weight: bold;
+      padding: 2px 0.5em;
+      [object Object] (source: http://org.knime.ui.java/assets/index-CPG1Nwkw.js; line: 87)
+2025-04-23 12:05:53,874 : ERROR : main :  : KnimeBrowserView :  :  : Uncaught (in promise) Error: No such node ID: 4:10 valid [4:1, 4:2, 4:3, 4:4, 4:5, 4:6, 4:8, 4:9, 4:11, 4:12] (source: http://org.knime.ui.java/assets/index-CPG1Nwkw.js; line: 45)
+2025-04-23 12:06:52,618 : ERROR : main :  : KnimeBrowserView :  :  : %cerror%c RPC Client:: Error RPC request 
+      background: #c0392b;
+      border-radius: 0.5em;
+      color: white;
+      font-weight: bold;
+      padding: 2px 0.5em;
+      Error: No such node ID: 4:12 valid [4:1, 4:2, 4:3, 4:4, 4:5, 4:6, 4:8, 4:9, 4:11] (source: http://org.knime.ui.java/assets/index-CPG1Nwkw.js; line: 87)
+2025-04-23 12:06:52,619 : ERROR : main :  : KnimeBrowserView :  :  : %cerror%c Unhandled rejection:: 
+      background: #c0392b;
+      border-radius: 0.5em;
+      color: white;
+      font-weight: bold;
+      padding: 2px 0.5em;
+      [object Object] (source: http://org.knime.ui.java/assets/index-CPG1Nwkw.js; line: 87)
+2025-04-23 12:06:52,619 : ERROR : main :  : KnimeBrowserView :  :  : Uncaught (in promise) Error: No such node ID: 4:12 valid [4:1, 4:2, 4:3, 4:4, 4:5, 4:6, 4:8, 4:9, 4:11] (source: http://org.knime.ui.java/assets/index-CPG1Nwkw.js; line: 45)
+2025-04-23 12:06:55,093 : ERROR : main :  : KnimeBrowserView :  :  : %cerror%c RPC Client:: Error RPC request 
+      background: #c0392b;
+      border-radius: 0.5em;
+      color: white;
+      font-weight: bold;
+      padding: 2px 0.5em;
+      Error: No such node ID: 4:9 valid [4:1, 4:2, 4:3, 4:4, 4:5, 4:6, 4:8, 4:11] (source: http://org.knime.ui.java/assets/index-CPG1Nwkw.js; line: 87)
+2025-04-23 12:06:55,093 : ERROR : main :  : KnimeBrowserView :  :  : %cerror%c Unhandled rejection:: 
+      background: #c0392b;
+      border-radius: 0.5em;
+      color: white;
+      font-weight: bold;
+      padding: 2px 0.5em;
+      [object Object] (source: http://org.knime.ui.java/assets/index-CPG1Nwkw.js; line: 87)
+2025-04-23 12:06:55,093 : ERROR : main :  : KnimeBrowserView :  :  : Uncaught (in promise) Error: No such node ID: 4:9 valid [4:1, 4:2, 4:3, 4:4, 4:5, 4:6, 4:8, 4:11] (source: http://org.knime.ui.java/assets/index-CPG1Nwkw.js; line: 45)
+2025-04-23 12:08:21,339 : ERROR : main :  : KnimeBrowserView :  :  : %cerror%c RPC Client:: Error RPC request 
+      background: #c0392b;
+      border-radius: 0.5em;
+      color: white;
+      font-weight: bold;
+      padding: 2px 0.5em;
+      Error: No such node ID: 4:8 valid [4:1, 4:2, 4:3, 4:4, 4:5, 4:6, 4:9] (source: http://org.knime.ui.java/assets/index-CPG1Nwkw.js; line: 87)
+2025-04-23 12:08:21,339 : ERROR : main :  : KnimeBrowserView :  :  : Uncaught (in promise) Error: No such node ID: 4:8 valid [4:1, 4:2, 4:3, 4:4, 4:5, 4:6, 4:9] (source: http://org.knime.ui.java/assets/index-CPG1Nwkw.js; line: 45)
+2025-04-23 12:08:22,343 : ERROR : main :  : KnimeBrowserView :  :  : %cerror%c RPC Client:: Error RPC request 
+      background: #c0392b;
+      border-radius: 0.5em;
+      color: white;
+      font-weight: bold;
+      padding: 2px 0.5em;
+      Error: No such node ID: 4:8 valid [4:1, 4:2, 4:3, 4:4, 4:5, 4:6, 4:9] (source: http://org.knime.ui.java/assets/index-CPG1Nwkw.js; line: 87)
+2025-04-23 12:11:52,884 : WARN  : main :  : Node : XPath : 4:9 : XPath expression cannot be compiled.
+2025-04-23 12:11:53,540 : WARN  : main :  : Node : XPath : 4:9 : XPath expression cannot be compiled.
+2025-04-23 12:12:07,857 : WARN  : main :  : Node : XPath : 4:9 : XPath expression cannot be compiled.
+2025-04-23 12:12:08,898 : WARN  : main :  : Node : XPath : 4:9 : XPath expression cannot be compiled.
+2025-04-23 12:12:09,419 : WARN  : main :  : Node : XPath : 4:9 : XPath expression cannot be compiled.
+2025-04-23 12:23:26,752 : ERROR : main :  : KnimeBrowserView :  :  : %cerror%c RPC Client:: Error RPC request 
+      background: #c0392b;
+      border-radius: 0.5em;
+      color: white;
+      font-weight: bold;
+      padding: 2px 0.5em;
+      Error: No such node ID: 4:10 valid [4:1, 4:2, 4:3, 4:4, 4:5, 4:6, 4:9] (source: http://org.knime.ui.java/assets/index-CPG1Nwkw.js; line: 87)
+2025-04-23 12:23:26,753 : ERROR : main :  : KnimeBrowserView :  :  : %cerror%c Unhandled rejection:: 
+      background: #c0392b;
+      border-radius: 0.5em;
+      color: white;
+      font-weight: bold;
+      padding: 2px 0.5em;
+      [object Object] (source: http://org.knime.ui.java/assets/index-CPG1Nwkw.js; line: 87)
+2025-04-23 12:23:26,753 : ERROR : main :  : KnimeBrowserView :  :  : Uncaught (in promise) Error: No such node ID: 4:10 valid [4:1, 4:2, 4:3, 4:4, 4:5, 4:6, 4:9] (source: http://org.knime.ui.java/assets/index-CPG1Nwkw.js; line: 45)
+2025-04-23 12:27:10,508 : ERROR : KNIME-Worker-24-KNIME Hub Authenticator 4:3 :  : Node : KNIME Hub Authenticator : 4:3 : Mountpoint 'shs-dataneers-hub-dev' not connected
+org.knime.core.node.message.MessageAwareInvalidSettingsException: Mountpoint 'shs-dataneers-hub-dev' not connected
+	at org.knime.core.node.message.Message.toInvalidSettingsException(Message.java:199)
+	at com.knime.hub.nodes.authentication.HubAuthenticationNodeModel.createSpecFromMountpoint(HubAuthenticationNodeModel.java:151)
+	at com.knime.hub.nodes.authentication.HubAuthenticationNodeModel.createSpec(HubAuthenticationNodeModel.java:126)
+	at com.knime.hub.nodes.authentication.HubAuthenticationNodeModel.execute(HubAuthenticationNodeModel.java:188)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:596)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1284)
+	at org.knime.core.node.Node.execute(Node.java:1049)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:603)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:98)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:198)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:369)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:223)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+2025-04-23 12:27:10,511 : WARN  : KNIME-Worker-24-KNIME Hub Authenticator 4:3 :  : Node : KNIME Hub Authenticator : 4:3 : Mountpoint 'shs-dataneers-hub-dev' not connected
+2025-04-23 12:27:12,104 : ERROR : KNIME-Worker-25-KNIME Hub Authenticator 4:3 :  : Node : KNIME Hub Authenticator : 4:3 : Mountpoint 'shs-dataneers-hub-dev' not connected
+org.knime.core.node.message.MessageAwareInvalidSettingsException: Mountpoint 'shs-dataneers-hub-dev' not connected
+	at org.knime.core.node.message.Message.toInvalidSettingsException(Message.java:199)
+	at com.knime.hub.nodes.authentication.HubAuthenticationNodeModel.createSpecFromMountpoint(HubAuthenticationNodeModel.java:151)
+	at com.knime.hub.nodes.authentication.HubAuthenticationNodeModel.createSpec(HubAuthenticationNodeModel.java:126)
+	at com.knime.hub.nodes.authentication.HubAuthenticationNodeModel.execute(HubAuthenticationNodeModel.java:188)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:596)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1284)
+	at org.knime.core.node.Node.execute(Node.java:1049)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:603)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:98)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:198)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:369)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:223)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+2025-04-23 12:27:12,106 : WARN  : KNIME-Worker-25-KNIME Hub Authenticator 4:3 :  : Node : KNIME Hub Authenticator : 4:3 : Mountpoint 'shs-dataneers-hub-dev' not connected
+2025-04-23 12:27:28,845 : ERROR : KNIME-Worker-24-KNIME Hub Authenticator 4:3 :  : Node : KNIME Hub Authenticator : 4:3 : Mountpoint 'shs-dataneers-hub-dev' not connected
+org.knime.core.node.message.MessageAwareInvalidSettingsException: Mountpoint 'shs-dataneers-hub-dev' not connected
+	at org.knime.core.node.message.Message.toInvalidSettingsException(Message.java:199)
+	at com.knime.hub.nodes.authentication.HubAuthenticationNodeModel.createSpecFromMountpoint(HubAuthenticationNodeModel.java:151)
+	at com.knime.hub.nodes.authentication.HubAuthenticationNodeModel.createSpec(HubAuthenticationNodeModel.java:126)
+	at com.knime.hub.nodes.authentication.HubAuthenticationNodeModel.execute(HubAuthenticationNodeModel.java:188)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:596)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1284)
+	at org.knime.core.node.Node.execute(Node.java:1049)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:603)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:98)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:198)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:369)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:223)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+2025-04-23 12:27:28,846 : WARN  : KNIME-Worker-24-KNIME Hub Authenticator 4:3 :  : Node : KNIME Hub Authenticator : 4:3 : Mountpoint 'shs-dataneers-hub-dev' not connected
+2025-04-23 12:27:30,879 : ERROR : KNIME-Worker-25-KNIME Hub Authenticator 4:3 :  : Node : KNIME Hub Authenticator : 4:3 : Mountpoint 'shs-dataneers-hub-dev' not connected
+org.knime.core.node.message.MessageAwareInvalidSettingsException: Mountpoint 'shs-dataneers-hub-dev' not connected
+	at org.knime.core.node.message.Message.toInvalidSettingsException(Message.java:199)
+	at com.knime.hub.nodes.authentication.HubAuthenticationNodeModel.createSpecFromMountpoint(HubAuthenticationNodeModel.java:151)
+	at com.knime.hub.nodes.authentication.HubAuthenticationNodeModel.createSpec(HubAuthenticationNodeModel.java:126)
+	at com.knime.hub.nodes.authentication.HubAuthenticationNodeModel.execute(HubAuthenticationNodeModel.java:188)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:596)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1284)
+	at org.knime.core.node.Node.execute(Node.java:1049)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:603)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:98)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:198)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:369)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:223)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+2025-04-23 12:27:30,880 : WARN  : KNIME-Worker-25-KNIME Hub Authenticator 4:3 :  : Node : KNIME Hub Authenticator : 4:3 : Mountpoint 'shs-dataneers-hub-dev' not connected
+2025-04-23 12:29:57,333 : ERROR : KNIME-Worker-26-KNIME Hub Authenticator 4:3 :  : Node : KNIME Hub Authenticator : 4:3 : Mountpoint 'shs-dataneers-hub-dev' not connected
+org.knime.core.node.message.MessageAwareInvalidSettingsException: Mountpoint 'shs-dataneers-hub-dev' not connected
+	at org.knime.core.node.message.Message.toInvalidSettingsException(Message.java:199)
+	at com.knime.hub.nodes.authentication.HubAuthenticationNodeModel.createSpecFromMountpoint(HubAuthenticationNodeModel.java:151)
+	at com.knime.hub.nodes.authentication.HubAuthenticationNodeModel.createSpec(HubAuthenticationNodeModel.java:126)
+	at com.knime.hub.nodes.authentication.HubAuthenticationNodeModel.execute(HubAuthenticationNodeModel.java:188)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:596)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1284)
+	at org.knime.core.node.Node.execute(Node.java:1049)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:603)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:98)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:198)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:369)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:223)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+2025-04-23 12:29:57,334 : WARN  : KNIME-Worker-26-KNIME Hub Authenticator 4:3 :  : Node : KNIME Hub Authenticator : 4:3 : Mountpoint 'shs-dataneers-hub-dev' not connected
+2025-04-23 12:29:58,164 : ERROR : KNIME-Worker-27-KNIME Hub Authenticator 4:3 :  : Node : KNIME Hub Authenticator : 4:3 : Mountpoint 'shs-dataneers-hub-dev' not connected
+org.knime.core.node.message.MessageAwareInvalidSettingsException: Mountpoint 'shs-dataneers-hub-dev' not connected
+	at org.knime.core.node.message.Message.toInvalidSettingsException(Message.java:199)
+	at com.knime.hub.nodes.authentication.HubAuthenticationNodeModel.createSpecFromMountpoint(HubAuthenticationNodeModel.java:151)
+	at com.knime.hub.nodes.authentication.HubAuthenticationNodeModel.createSpec(HubAuthenticationNodeModel.java:126)
+	at com.knime.hub.nodes.authentication.HubAuthenticationNodeModel.execute(HubAuthenticationNodeModel.java:188)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:596)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1284)
+	at org.knime.core.node.Node.execute(Node.java:1049)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:603)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:98)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:198)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:369)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:223)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+2025-04-23 12:29:58,165 : WARN  : KNIME-Worker-27-KNIME Hub Authenticator 4:3 :  : Node : KNIME Hub Authenticator : 4:3 : Mountpoint 'shs-dataneers-hub-dev' not connected
+2025-04-23 12:30:03,111 : ERROR : KNIME-Worker-26-KNIME Hub Authenticator 4:3 :  : Node : KNIME Hub Authenticator : 4:3 : Mountpoint 'shs-dataneers-hub-dev' not connected
+org.knime.core.node.message.MessageAwareInvalidSettingsException: Mountpoint 'shs-dataneers-hub-dev' not connected
+	at org.knime.core.node.message.Message.toInvalidSettingsException(Message.java:199)
+	at com.knime.hub.nodes.authentication.HubAuthenticationNodeModel.createSpecFromMountpoint(HubAuthenticationNodeModel.java:151)
+	at com.knime.hub.nodes.authentication.HubAuthenticationNodeModel.createSpec(HubAuthenticationNodeModel.java:126)
+	at com.knime.hub.nodes.authentication.HubAuthenticationNodeModel.execute(HubAuthenticationNodeModel.java:188)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:596)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1284)
+	at org.knime.core.node.Node.execute(Node.java:1049)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:603)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:98)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:198)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:369)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:223)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+2025-04-23 12:30:03,113 : WARN  : KNIME-Worker-26-KNIME Hub Authenticator 4:3 :  : Node : KNIME Hub Authenticator : 4:3 : Mountpoint 'shs-dataneers-hub-dev' not connected
+2025-04-23 12:49:11,941 : WARN  : comm-pool-thread-5 :  : Node : String to Date/Time (legacy) : 4:10 : Auto-guessing first String compatible column: AgreementNo.
+2025-04-23 12:49:11,942 : WARN  : comm-pool-thread-5 :  : Node : String to Date/Time (legacy) : 4:10 : No String compatible column found!
+2025-04-23 12:49:24,518 : WARN  : KNIME-Worker-28-String to Date/Time (legacy) 4:10 :  : Node : String to Date/Time (legacy) : 4:10 : Couldn't parse 20 row(s) due to parsing errors (data format wrong?)
+2025-04-23 12:50:08,310 : WARN  : comm-pool-thread-5 :  : Node : String to Date&Time : 4:11 : Node must be configured.
+2025-04-23 12:50:31,857 : ERROR : KNIME-Worker-29-String to Date&Time 4:11 :  : Node : String to Date&Time : 4:11 : Could not parse date in cell [Row0_1, column "date(Date&Time)", row number 1]: Pattern "dd.MM.yyyy HH:mm:ss.S" does not match "2018-01-06".
+ RowID  |   ..   |    product     |    date    | amount 
+--------+--------+----------------+------------+---------
+ Row0_1 | ..     | Private Inv... | 2018-01-06 | 1797.52
+                                    ^^^^^^^^^^
+Could not parse date in cell [Row0_1, column "date(Date&Time)", row number 1]: Pattern "dd.MM.yyyy HH:mm:ss.S" does not match "2018-01-06".
+org.knime.core.node.KNIMEException$KNIMERuntimeException: Could not parse date in cell [Row0_1, column "date(Date&Time)", row number 1]: Pattern "dd.MM.yyyy HH:mm:ss.S" does not match "2018-01-06".
+	at org.knime.core.node.KNIMEException.toUnchecked(KNIMEException.java:145)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel$StringToTimeCellFactory.getCell(StringToDateTimeNodeModel.java:540)
+	at org.knime.core.data.container.SingleCellFactory.getCells(SingleCellFactory.java:105)
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewCellsForRow(RearrangeColumnsTable.java:565)
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewColsSynchronously(RearrangeColumnsTable.java:484)
+	at org.knime.core.data.container.RearrangeColumnsTable.create(RearrangeColumnsTable.java:412)
+	at org.knime.core.data.container.BufferedTableBackend.rearrange(BufferedTableBackend.java:212)
+	at org.knime.core.node.ExecutionContext.createColumnRearrangeTable(ExecutionContext.java:468)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel.execute(StringToDateTimeNodeModel.java:335)
+	at org.knime.core.node.NodeModel.execute(NodeModel.java:820)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:596)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1284)
+	at org.knime.core.node.Node.execute(Node.java:1049)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:603)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:98)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:198)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:369)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:223)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+Caused by: org.knime.core.node.KNIMEException: Could not parse date in cell [Row0_1, column "date(Date&Time)", row number 1]: Pattern "dd.MM.yyyy HH:mm:ss.S" does not match "2018-01-06".
+	at org.knime.core.node.KNIMEException.of(KNIMEException.java:136)
+	... 22 more
+Caused by: java.time.format.DateTimeParseException: Text '2018-01-06' could not be parsed at index 2
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(Unknown Source)
+	at java.base/java.time.format.DateTimeFormatter.parse(Unknown Source)
+	at java.base/java.time.LocalDateTime.parse(Unknown Source)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel$StringToTimeCellFactory.getCell(StringToDateTimeNodeModel.java:514)
+	... 21 more
+2025-04-23 16:49:02,253 : WARN  : ModalContext :  : Node : KNIME Hub Authenticator : 5:3 : KNIME Hub connection no longer available. Please re-execute the node.
+2025-04-23 16:49:02,274 : WARN  : ModalContext :  : FileNodePersistor : MISSING PDF Parser : 5:8 : Unable to load port content for node "MISSING PDF Parser": Data cell implementation 'org.knime.ext.textprocessing.data.filestore.DocumentBufferedFileStoreCell' not found.
+org.knime.core.node.InvalidSettingsException: Data cell implementation 'org.knime.ext.textprocessing.data.filestore.DocumentBufferedFileStoreCell' not found.
+	at org.knime.core.data.DataType.load(DataType.java:690)
+	at org.knime.core.data.DataColumnSpec.load(DataColumnSpec.java:489)
+	at org.knime.core.data.DataTableSpec.load(DataTableSpec.java:322)
+	at org.knime.core.node.BufferedDataTable.loadSpec(BufferedDataTable.java:742)
+	at org.knime.core.node.BufferedDataTable.loadFromFile(BufferedDataTable.java:785)
+	at org.knime.core.node.FileNodePersistor.loadBufferedDataTable(FileNodePersistor.java:478)
+	at org.knime.core.node.FileNodePersistor.loadPort(FileNodePersistor.java:367)
+	at org.knime.core.node.FileNodePersistor.loadPorts(FileNodePersistor.java:331)
+	at org.knime.core.node.FileNodePersistor.load(FileNodePersistor.java:996)
+	at org.knime.core.node.workflow.FileNativeNodeContainerPersistor.loadNCAndModelSettings(FileNativeNodeContainerPersistor.java:281)
+	at org.knime.core.node.workflow.FileSingleNodeContainerPersistor.loadNodeContainer(FileSingleNodeContainerPersistor.java:265)
+	at org.knime.core.node.workflow.WorkflowManager.postLoad(WorkflowManager.java:8999)
+	at org.knime.core.node.workflow.WorkflowManager.loadContent(WorkflowManager.java:8901)
+	at org.knime.core.node.workflow.WorkflowManager.postLoad(WorkflowManager.java:9015)
+	at org.knime.core.node.workflow.WorkflowManager.loadContent(WorkflowManager.java:8901)
+	at org.knime.core.node.workflow.WorkflowManager.load(WorkflowManager.java:8765)
+	at org.knime.core.node.workflow.WorkflowManager.load(WorkflowManager.java:8686)
+	at org.knime.core.node.workflow.WorkflowManager.load(WorkflowManager.java:8659)
+	at org.knime.core.node.workflow.WorkflowManager.loadProject(WorkflowManager.java:8505)
+	at org.knime.workbench.editor2.LoadWorkflowRunnable.run(LoadWorkflowRunnable.java:199)
+	at org.knime.ui.java.util.DesktopAPUtil.loadWorkflow(DesktopAPUtil.java:188)
+	at org.knime.ui.java.util.DesktopAPUtil.fetchAndLoadWorkflowWithTask(DesktopAPUtil.java:152)
+	at org.knime.ui.java.api.OpenProject.loadProject(OpenProject.java:260)
+	at org.knime.ui.java.api.OpenProject.openProjectWithProgress(OpenProject.java:187)
+	at org.knime.ui.java.api.OpenProject.lambda$0(OpenProject.java:106)
+	at org.knime.ui.java.util.DesktopAPUtil.lambda$13(DesktopAPUtil.java:477)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:124)
+2025-04-23 16:49:02,280 : WARN  : ModalContext :  : Node : MISSING PDF Parser : 5:8 : Node can't be executed - Node "PDF Parser" not available from extension "KNIME Textprocessing" (provided by "KNIME AG, Zurich, Switzerland"; plugin "org.knime.ext.textprocessing" is not installed)
+2025-04-23 16:49:02,325 : WARN  : ModalContext :  : FileNodePersistor : MISSING Document Data Extractor : 5:49 : Unable to load port content for node "MISSING Document Data Extractor": Data cell implementation 'org.knime.ext.textprocessing.data.filestore.DocumentBufferedFileStoreCell' not found.
+org.knime.core.node.InvalidSettingsException: Data cell implementation 'org.knime.ext.textprocessing.data.filestore.DocumentBufferedFileStoreCell' not found.
+	at org.knime.core.data.DataType.load(DataType.java:690)
+	at org.knime.core.data.DataColumnSpec.load(DataColumnSpec.java:489)
+	at org.knime.core.data.DataTableSpec.load(DataTableSpec.java:322)
+	at org.knime.core.node.BufferedDataTable.loadSpec(BufferedDataTable.java:742)
+	at org.knime.core.node.BufferedDataTable.loadFromFile(BufferedDataTable.java:785)
+	at org.knime.core.node.FileNodePersistor.loadBufferedDataTable(FileNodePersistor.java:478)
+	at org.knime.core.node.FileNodePersistor.loadPort(FileNodePersistor.java:367)
+	at org.knime.core.node.FileNodePersistor.loadPorts(FileNodePersistor.java:331)
+	at org.knime.core.node.FileNodePersistor.load(FileNodePersistor.java:996)
+	at org.knime.core.node.workflow.FileNativeNodeContainerPersistor.loadNCAndModelSettings(FileNativeNodeContainerPersistor.java:281)
+	at org.knime.core.node.workflow.FileSingleNodeContainerPersistor.loadNodeContainer(FileSingleNodeContainerPersistor.java:265)
+	at org.knime.core.node.workflow.WorkflowManager.postLoad(WorkflowManager.java:8999)
+	at org.knime.core.node.workflow.WorkflowManager.loadContent(WorkflowManager.java:8901)
+	at org.knime.core.node.workflow.WorkflowManager.postLoad(WorkflowManager.java:9015)
+	at org.knime.core.node.workflow.WorkflowManager.loadContent(WorkflowManager.java:8901)
+	at org.knime.core.node.workflow.WorkflowManager.load(WorkflowManager.java:8765)
+	at org.knime.core.node.workflow.WorkflowManager.load(WorkflowManager.java:8686)
+	at org.knime.core.node.workflow.WorkflowManager.load(WorkflowManager.java:8659)
+	at org.knime.core.node.workflow.WorkflowManager.loadProject(WorkflowManager.java:8505)
+	at org.knime.workbench.editor2.LoadWorkflowRunnable.run(LoadWorkflowRunnable.java:199)
+	at org.knime.ui.java.util.DesktopAPUtil.loadWorkflow(DesktopAPUtil.java:188)
+	at org.knime.ui.java.util.DesktopAPUtil.fetchAndLoadWorkflowWithTask(DesktopAPUtil.java:152)
+	at org.knime.ui.java.api.OpenProject.loadProject(OpenProject.java:260)
+	at org.knime.ui.java.api.OpenProject.openProjectWithProgress(OpenProject.java:187)
+	at org.knime.ui.java.api.OpenProject.lambda$0(OpenProject.java:106)
+	at org.knime.ui.java.util.DesktopAPUtil.lambda$13(DesktopAPUtil.java:477)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:124)
+2025-04-23 16:49:02,349 : WARN  : ModalContext :  : FileNodePersistor : String Splitter (Regex) : 5:9 : Unable to load port content for node "String Splitter (Regex)": Data cell implementation 'org.knime.ext.textprocessing.data.filestore.DocumentBufferedFileStoreCell' not found.
+org.knime.core.node.InvalidSettingsException: Data cell implementation 'org.knime.ext.textprocessing.data.filestore.DocumentBufferedFileStoreCell' not found.
+	at org.knime.core.data.DataType.load(DataType.java:690)
+	at org.knime.core.data.DataColumnSpec.load(DataColumnSpec.java:489)
+	at org.knime.core.data.DataTableSpec.load(DataTableSpec.java:322)
+	at org.knime.core.node.BufferedDataTable.loadSpec(BufferedDataTable.java:742)
+	at org.knime.core.node.BufferedDataTable.loadFromFile(BufferedDataTable.java:785)
+	at org.knime.core.node.FileNodePersistor.loadBufferedDataTable(FileNodePersistor.java:478)
+	at org.knime.core.node.FileNodePersistor.loadPort(FileNodePersistor.java:367)
+	at org.knime.core.node.FileNodePersistor.loadPorts(FileNodePersistor.java:331)
+	at org.knime.core.node.FileNodePersistor.load(FileNodePersistor.java:996)
+	at org.knime.core.node.workflow.FileNativeNodeContainerPersistor.loadNCAndModelSettings(FileNativeNodeContainerPersistor.java:281)
+	at org.knime.core.node.workflow.FileSingleNodeContainerPersistor.loadNodeContainer(FileSingleNodeContainerPersistor.java:265)
+	at org.knime.core.node.workflow.WorkflowManager.postLoad(WorkflowManager.java:8999)
+	at org.knime.core.node.workflow.WorkflowManager.loadContent(WorkflowManager.java:8901)
+	at org.knime.core.node.workflow.WorkflowManager.postLoad(WorkflowManager.java:9015)
+	at org.knime.core.node.workflow.WorkflowManager.loadContent(WorkflowManager.java:8901)
+	at org.knime.core.node.workflow.WorkflowManager.load(WorkflowManager.java:8765)
+	at org.knime.core.node.workflow.WorkflowManager.load(WorkflowManager.java:8686)
+	at org.knime.core.node.workflow.WorkflowManager.load(WorkflowManager.java:8659)
+	at org.knime.core.node.workflow.WorkflowManager.loadProject(WorkflowManager.java:8505)
+	at org.knime.workbench.editor2.LoadWorkflowRunnable.run(LoadWorkflowRunnable.java:199)
+	at org.knime.ui.java.util.DesktopAPUtil.loadWorkflow(DesktopAPUtil.java:188)
+	at org.knime.ui.java.util.DesktopAPUtil.fetchAndLoadWorkflowWithTask(DesktopAPUtil.java:152)
+	at org.knime.ui.java.api.OpenProject.loadProject(OpenProject.java:260)
+	at org.knime.ui.java.api.OpenProject.openProjectWithProgress(OpenProject.java:187)
+	at org.knime.ui.java.api.OpenProject.lambda$0(OpenProject.java:106)
+	at org.knime.ui.java.util.DesktopAPUtil.lambda$13(DesktopAPUtil.java:477)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:124)
+2025-04-23 16:49:02,359 : WARN  : ModalContext :  : FileNodePersistor : String Splitter (Regex) : 5:48 : Unable to load port content for node "String Splitter (Regex)": Data cell implementation 'org.knime.ext.textprocessing.data.filestore.DocumentBufferedFileStoreCell' not found.
+org.knime.core.node.InvalidSettingsException: Data cell implementation 'org.knime.ext.textprocessing.data.filestore.DocumentBufferedFileStoreCell' not found.
+	at org.knime.core.data.DataType.load(DataType.java:690)
+	at org.knime.core.data.DataColumnSpec.load(DataColumnSpec.java:489)
+	at org.knime.core.data.DataTableSpec.load(DataTableSpec.java:322)
+	at org.knime.core.node.BufferedDataTable.loadSpec(BufferedDataTable.java:742)
+	at org.knime.core.node.BufferedDataTable.loadFromFile(BufferedDataTable.java:785)
+	at org.knime.core.node.FileNodePersistor.loadBufferedDataTable(FileNodePersistor.java:478)
+	at org.knime.core.node.FileNodePersistor.loadPort(FileNodePersistor.java:367)
+	at org.knime.core.node.FileNodePersistor.loadPorts(FileNodePersistor.java:331)
+	at org.knime.core.node.FileNodePersistor.load(FileNodePersistor.java:996)
+	at org.knime.core.node.workflow.FileNativeNodeContainerPersistor.loadNCAndModelSettings(FileNativeNodeContainerPersistor.java:281)
+	at org.knime.core.node.workflow.FileSingleNodeContainerPersistor.loadNodeContainer(FileSingleNodeContainerPersistor.java:265)
+	at org.knime.core.node.workflow.WorkflowManager.postLoad(WorkflowManager.java:8999)
+	at org.knime.core.node.workflow.WorkflowManager.loadContent(WorkflowManager.java:8901)
+	at org.knime.core.node.workflow.WorkflowManager.postLoad(WorkflowManager.java:9015)
+	at org.knime.core.node.workflow.WorkflowManager.loadContent(WorkflowManager.java:8901)
+	at org.knime.core.node.workflow.WorkflowManager.load(WorkflowManager.java:8765)
+	at org.knime.core.node.workflow.WorkflowManager.load(WorkflowManager.java:8686)
+	at org.knime.core.node.workflow.WorkflowManager.load(WorkflowManager.java:8659)
+	at org.knime.core.node.workflow.WorkflowManager.loadProject(WorkflowManager.java:8505)
+	at org.knime.workbench.editor2.LoadWorkflowRunnable.run(LoadWorkflowRunnable.java:199)
+	at org.knime.ui.java.util.DesktopAPUtil.loadWorkflow(DesktopAPUtil.java:188)
+	at org.knime.ui.java.util.DesktopAPUtil.fetchAndLoadWorkflowWithTask(DesktopAPUtil.java:152)
+	at org.knime.ui.java.api.OpenProject.loadProject(OpenProject.java:260)
+	at org.knime.ui.java.api.OpenProject.openProjectWithProgress(OpenProject.java:187)
+	at org.knime.ui.java.api.OpenProject.lambda$0(OpenProject.java:106)
+	at org.knime.ui.java.util.DesktopAPUtil.lambda$13(DesktopAPUtil.java:477)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:124)
+2025-04-23 16:49:02,391 : WARN  : ModalContext :  : FileNodePersistor : String Splitter (Regex) : 5:47 : Unable to load port content for node "String Splitter (Regex)": Data cell implementation 'org.knime.ext.textprocessing.data.filestore.DocumentBufferedFileStoreCell' not found.
+org.knime.core.node.InvalidSettingsException: Data cell implementation 'org.knime.ext.textprocessing.data.filestore.DocumentBufferedFileStoreCell' not found.
+	at org.knime.core.data.DataType.load(DataType.java:690)
+	at org.knime.core.data.DataColumnSpec.load(DataColumnSpec.java:489)
+	at org.knime.core.data.DataTableSpec.load(DataTableSpec.java:322)
+	at org.knime.core.node.BufferedDataTable.loadSpec(BufferedDataTable.java:742)
+	at org.knime.core.node.BufferedDataTable.loadFromFile(BufferedDataTable.java:785)
+	at org.knime.core.node.FileNodePersistor.loadBufferedDataTable(FileNodePersistor.java:478)
+	at org.knime.core.node.FileNodePersistor.loadPort(FileNodePersistor.java:367)
+	at org.knime.core.node.FileNodePersistor.loadPorts(FileNodePersistor.java:331)
+	at org.knime.core.node.FileNodePersistor.load(FileNodePersistor.java:996)
+	at org.knime.core.node.workflow.FileNativeNodeContainerPersistor.loadNCAndModelSettings(FileNativeNodeContainerPersistor.java:281)
+	at org.knime.core.node.workflow.FileSingleNodeContainerPersistor.loadNodeContainer(FileSingleNodeContainerPersistor.java:265)
+	at org.knime.core.node.workflow.WorkflowManager.postLoad(WorkflowManager.java:8999)
+	at org.knime.core.node.workflow.WorkflowManager.loadContent(WorkflowManager.java:8901)
+	at org.knime.core.node.workflow.WorkflowManager.postLoad(WorkflowManager.java:9015)
+	at org.knime.core.node.workflow.WorkflowManager.loadContent(WorkflowManager.java:8901)
+	at org.knime.core.node.workflow.WorkflowManager.load(WorkflowManager.java:8765)
+	at org.knime.core.node.workflow.WorkflowManager.load(WorkflowManager.java:8686)
+	at org.knime.core.node.workflow.WorkflowManager.load(WorkflowManager.java:8659)
+	at org.knime.core.node.workflow.WorkflowManager.loadProject(WorkflowManager.java:8505)
+	at org.knime.workbench.editor2.LoadWorkflowRunnable.run(LoadWorkflowRunnable.java:199)
+	at org.knime.ui.java.util.DesktopAPUtil.loadWorkflow(DesktopAPUtil.java:188)
+	at org.knime.ui.java.util.DesktopAPUtil.fetchAndLoadWorkflowWithTask(DesktopAPUtil.java:152)
+	at org.knime.ui.java.api.OpenProject.loadProject(OpenProject.java:260)
+	at org.knime.ui.java.api.OpenProject.openProjectWithProgress(OpenProject.java:187)
+	at org.knime.ui.java.api.OpenProject.lambda$0(OpenProject.java:106)
+	at org.knime.ui.java.util.DesktopAPUtil.lambda$13(DesktopAPUtil.java:477)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:124)
+2025-04-23 16:49:02,399 : WARN  : ModalContext :  : FileNodePersistor : String Splitter (Regex) : 5:46 : Unable to load port content for node "String Splitter (Regex)": Data cell implementation 'org.knime.ext.textprocessing.data.filestore.DocumentBufferedFileStoreCell' not found.
+org.knime.core.node.InvalidSettingsException: Data cell implementation 'org.knime.ext.textprocessing.data.filestore.DocumentBufferedFileStoreCell' not found.
+	at org.knime.core.data.DataType.load(DataType.java:690)
+	at org.knime.core.data.DataColumnSpec.load(DataColumnSpec.java:489)
+	at org.knime.core.data.DataTableSpec.load(DataTableSpec.java:322)
+	at org.knime.core.node.BufferedDataTable.loadSpec(BufferedDataTable.java:742)
+	at org.knime.core.node.BufferedDataTable.loadFromFile(BufferedDataTable.java:785)
+	at org.knime.core.node.FileNodePersistor.loadBufferedDataTable(FileNodePersistor.java:478)
+	at org.knime.core.node.FileNodePersistor.loadPort(FileNodePersistor.java:367)
+	at org.knime.core.node.FileNodePersistor.loadPorts(FileNodePersistor.java:331)
+	at org.knime.core.node.FileNodePersistor.load(FileNodePersistor.java:996)
+	at org.knime.core.node.workflow.FileNativeNodeContainerPersistor.loadNCAndModelSettings(FileNativeNodeContainerPersistor.java:281)
+	at org.knime.core.node.workflow.FileSingleNodeContainerPersistor.loadNodeContainer(FileSingleNodeContainerPersistor.java:265)
+	at org.knime.core.node.workflow.WorkflowManager.postLoad(WorkflowManager.java:8999)
+	at org.knime.core.node.workflow.WorkflowManager.loadContent(WorkflowManager.java:8901)
+	at org.knime.core.node.workflow.WorkflowManager.postLoad(WorkflowManager.java:9015)
+	at org.knime.core.node.workflow.WorkflowManager.loadContent(WorkflowManager.java:8901)
+	at org.knime.core.node.workflow.WorkflowManager.load(WorkflowManager.java:8765)
+	at org.knime.core.node.workflow.WorkflowManager.load(WorkflowManager.java:8686)
+	at org.knime.core.node.workflow.WorkflowManager.load(WorkflowManager.java:8659)
+	at org.knime.core.node.workflow.WorkflowManager.loadProject(WorkflowManager.java:8505)
+	at org.knime.workbench.editor2.LoadWorkflowRunnable.run(LoadWorkflowRunnable.java:199)
+	at org.knime.ui.java.util.DesktopAPUtil.loadWorkflow(DesktopAPUtil.java:188)
+	at org.knime.ui.java.util.DesktopAPUtil.fetchAndLoadWorkflowWithTask(DesktopAPUtil.java:152)
+	at org.knime.ui.java.api.OpenProject.loadProject(OpenProject.java:260)
+	at org.knime.ui.java.api.OpenProject.openProjectWithProgress(OpenProject.java:187)
+	at org.knime.ui.java.api.OpenProject.lambda$0(OpenProject.java:106)
+	at org.knime.ui.java.util.DesktopAPUtil.lambda$13(DesktopAPUtil.java:477)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:124)
+2025-04-23 16:49:02,405 : WARN  : ModalContext :  : FileNodePersistor : String to Number : 5:44 : Unable to load port content for node "String to Number": Data cell implementation 'org.knime.ext.textprocessing.data.filestore.DocumentBufferedFileStoreCell' not found.
+org.knime.core.node.InvalidSettingsException: Data cell implementation 'org.knime.ext.textprocessing.data.filestore.DocumentBufferedFileStoreCell' not found.
+	at org.knime.core.data.DataType.load(DataType.java:690)
+	at org.knime.core.data.DataColumnSpec.load(DataColumnSpec.java:489)
+	at org.knime.core.data.DataTableSpec.load(DataTableSpec.java:322)
+	at org.knime.core.node.BufferedDataTable.loadSpec(BufferedDataTable.java:742)
+	at org.knime.core.node.BufferedDataTable.loadFromFile(BufferedDataTable.java:785)
+	at org.knime.core.node.FileNodePersistor.loadBufferedDataTable(FileNodePersistor.java:478)
+	at org.knime.core.node.FileNodePersistor.loadPort(FileNodePersistor.java:367)
+	at org.knime.core.node.FileNodePersistor.loadPorts(FileNodePersistor.java:331)
+	at org.knime.core.node.FileNodePersistor.load(FileNodePersistor.java:996)
+	at org.knime.core.node.workflow.FileNativeNodeContainerPersistor.loadNCAndModelSettings(FileNativeNodeContainerPersistor.java:281)
+	at org.knime.core.node.workflow.FileSingleNodeContainerPersistor.loadNodeContainer(FileSingleNodeContainerPersistor.java:265)
+	at org.knime.core.node.workflow.WorkflowManager.postLoad(WorkflowManager.java:8999)
+	at org.knime.core.node.workflow.WorkflowManager.loadContent(WorkflowManager.java:8901)
+	at org.knime.core.node.workflow.WorkflowManager.postLoad(WorkflowManager.java:9015)
+	at org.knime.core.node.workflow.WorkflowManager.loadContent(WorkflowManager.java:8901)
+	at org.knime.core.node.workflow.WorkflowManager.load(WorkflowManager.java:8765)
+	at org.knime.core.node.workflow.WorkflowManager.load(WorkflowManager.java:8686)
+	at org.knime.core.node.workflow.WorkflowManager.load(WorkflowManager.java:8659)
+	at org.knime.core.node.workflow.WorkflowManager.loadProject(WorkflowManager.java:8505)
+	at org.knime.workbench.editor2.LoadWorkflowRunnable.run(LoadWorkflowRunnable.java:199)
+	at org.knime.ui.java.util.DesktopAPUtil.loadWorkflow(DesktopAPUtil.java:188)
+	at org.knime.ui.java.util.DesktopAPUtil.fetchAndLoadWorkflowWithTask(DesktopAPUtil.java:152)
+	at org.knime.ui.java.api.OpenProject.loadProject(OpenProject.java:260)
+	at org.knime.ui.java.api.OpenProject.openProjectWithProgress(OpenProject.java:187)
+	at org.knime.ui.java.api.OpenProject.lambda$0(OpenProject.java:106)
+	at org.knime.ui.java.util.DesktopAPUtil.lambda$13(DesktopAPUtil.java:477)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:124)
+2025-04-23 16:49:02,420 : WARN  : ModalContext :  : FileNodePersistor : Column Renamer : 5:43 : Unable to load port content for node "Column Renamer": Data cell implementation 'org.knime.ext.textprocessing.data.filestore.DocumentBufferedFileStoreCell' not found.
+org.knime.core.node.InvalidSettingsException: Data cell implementation 'org.knime.ext.textprocessing.data.filestore.DocumentBufferedFileStoreCell' not found.
+	at org.knime.core.data.DataType.load(DataType.java:690)
+	at org.knime.core.data.DataColumnSpec.load(DataColumnSpec.java:489)
+	at org.knime.core.data.DataTableSpec.load(DataTableSpec.java:322)
+	at org.knime.core.node.BufferedDataTable.loadSpec(BufferedDataTable.java:742)
+	at org.knime.core.node.BufferedDataTable.loadFromFile(BufferedDataTable.java:785)
+	at org.knime.core.node.FileNodePersistor.loadBufferedDataTable(FileNodePersistor.java:478)
+	at org.knime.core.node.FileNodePersistor.loadPort(FileNodePersistor.java:367)
+	at org.knime.core.node.FileNodePersistor.loadPorts(FileNodePersistor.java:331)
+	at org.knime.core.node.FileNodePersistor.load(FileNodePersistor.java:996)
+	at org.knime.core.node.workflow.FileNativeNodeContainerPersistor.loadNCAndModelSettings(FileNativeNodeContainerPersistor.java:281)
+	at org.knime.core.node.workflow.FileSingleNodeContainerPersistor.loadNodeContainer(FileSingleNodeContainerPersistor.java:265)
+	at org.knime.core.node.workflow.WorkflowManager.postLoad(WorkflowManager.java:8999)
+	at org.knime.core.node.workflow.WorkflowManager.loadContent(WorkflowManager.java:8901)
+	at org.knime.core.node.workflow.WorkflowManager.postLoad(WorkflowManager.java:9015)
+	at org.knime.core.node.workflow.WorkflowManager.loadContent(WorkflowManager.java:8901)
+	at org.knime.core.node.workflow.WorkflowManager.load(WorkflowManager.java:8765)
+	at org.knime.core.node.workflow.WorkflowManager.load(WorkflowManager.java:8686)
+	at org.knime.core.node.workflow.WorkflowManager.load(WorkflowManager.java:8659)
+	at org.knime.core.node.workflow.WorkflowManager.loadProject(WorkflowManager.java:8505)
+	at org.knime.workbench.editor2.LoadWorkflowRunnable.run(LoadWorkflowRunnable.java:199)
+	at org.knime.ui.java.util.DesktopAPUtil.loadWorkflow(DesktopAPUtil.java:188)
+	at org.knime.ui.java.util.DesktopAPUtil.fetchAndLoadWorkflowWithTask(DesktopAPUtil.java:152)
+	at org.knime.ui.java.api.OpenProject.loadProject(OpenProject.java:260)
+	at org.knime.ui.java.api.OpenProject.openProjectWithProgress(OpenProject.java:187)
+	at org.knime.ui.java.api.OpenProject.lambda$0(OpenProject.java:106)
+	at org.knime.ui.java.util.DesktopAPUtil.lambda$13(DesktopAPUtil.java:477)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:124)
+2025-04-23 16:49:02,425 : WARN  : ModalContext :  : FileNodePersistor : Column Filter : 5:45 : Unable to load port content for node "Column Filter": No BufferedDataTable  with ID 8
+org.knime.core.node.InvalidSettingsException: No BufferedDataTable  with ID 8
+	at org.knime.core.node.BufferedDataTable.getDataTable(BufferedDataTable.java:154)
+	at org.knime.core.data.container.RearrangeColumnsTable.<init>(RearrangeColumnsTable.java:195)
+	at org.knime.core.node.BufferedDataTable.loadFromFile(BufferedDataTable.java:862)
+	at org.knime.core.node.FileNodePersistor.loadBufferedDataTable(FileNodePersistor.java:478)
+	at org.knime.core.node.FileNodePersistor.loadPort(FileNodePersistor.java:367)
+	at org.knime.core.node.FileNodePersistor.loadPorts(FileNodePersistor.java:331)
+	at org.knime.core.node.FileNodePersistor.load(FileNodePersistor.java:996)
+	at org.knime.core.node.workflow.FileNativeNodeContainerPersistor.loadNCAndModelSettings(FileNativeNodeContainerPersistor.java:281)
+	at org.knime.core.node.workflow.FileSingleNodeContainerPersistor.loadNodeContainer(FileSingleNodeContainerPersistor.java:265)
+	at org.knime.core.node.workflow.WorkflowManager.postLoad(WorkflowManager.java:8999)
+	at org.knime.core.node.workflow.WorkflowManager.loadContent(WorkflowManager.java:8901)
+	at org.knime.core.node.workflow.WorkflowManager.postLoad(WorkflowManager.java:9015)
+	at org.knime.core.node.workflow.WorkflowManager.loadContent(WorkflowManager.java:8901)
+	at org.knime.core.node.workflow.WorkflowManager.load(WorkflowManager.java:8765)
+	at org.knime.core.node.workflow.WorkflowManager.load(WorkflowManager.java:8686)
+	at org.knime.core.node.workflow.WorkflowManager.load(WorkflowManager.java:8659)
+	at org.knime.core.node.workflow.WorkflowManager.loadProject(WorkflowManager.java:8505)
+	at org.knime.workbench.editor2.LoadWorkflowRunnable.run(LoadWorkflowRunnable.java:199)
+	at org.knime.ui.java.util.DesktopAPUtil.loadWorkflow(DesktopAPUtil.java:188)
+	at org.knime.ui.java.util.DesktopAPUtil.fetchAndLoadWorkflowWithTask(DesktopAPUtil.java:152)
+	at org.knime.ui.java.api.OpenProject.loadProject(OpenProject.java:260)
+	at org.knime.ui.java.api.OpenProject.openProjectWithProgress(OpenProject.java:187)
+	at org.knime.ui.java.api.OpenProject.lambda$0(OpenProject.java:106)
+	at org.knime.ui.java.util.DesktopAPUtil.lambda$13(DesktopAPUtil.java:477)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:124)
+2025-04-23 16:49:02,429 : WARN  : ModalContext :  : FileNodePersistor : String Manipulation : 5:53 : Unable to load port content for node "String Manipulation": No BufferedDataTable  with ID 9
+org.knime.core.node.InvalidSettingsException: No BufferedDataTable  with ID 9
+	at org.knime.core.node.BufferedDataTable.getDataTable(BufferedDataTable.java:154)
+	at org.knime.core.data.container.RearrangeColumnsTable.<init>(RearrangeColumnsTable.java:195)
+	at org.knime.core.node.BufferedDataTable.loadFromFile(BufferedDataTable.java:862)
+	at org.knime.core.node.FileNodePersistor.loadBufferedDataTable(FileNodePersistor.java:478)
+	at org.knime.core.node.FileNodePersistor.loadPort(FileNodePersistor.java:367)
+	at org.knime.core.node.FileNodePersistor.loadPorts(FileNodePersistor.java:331)
+	at org.knime.core.node.FileNodePersistor.load(FileNodePersistor.java:996)
+	at org.knime.core.node.workflow.FileNativeNodeContainerPersistor.loadNCAndModelSettings(FileNativeNodeContainerPersistor.java:281)
+	at org.knime.core.node.workflow.FileSingleNodeContainerPersistor.loadNodeContainer(FileSingleNodeContainerPersistor.java:265)
+	at org.knime.core.node.workflow.WorkflowManager.postLoad(WorkflowManager.java:8999)
+	at org.knime.core.node.workflow.WorkflowManager.loadContent(WorkflowManager.java:8901)
+	at org.knime.core.node.workflow.WorkflowManager.postLoad(WorkflowManager.java:9015)
+	at org.knime.core.node.workflow.WorkflowManager.loadContent(WorkflowManager.java:8901)
+	at org.knime.core.node.workflow.WorkflowManager.load(WorkflowManager.java:8765)
+	at org.knime.core.node.workflow.WorkflowManager.load(WorkflowManager.java:8686)
+	at org.knime.core.node.workflow.WorkflowManager.load(WorkflowManager.java:8659)
+	at org.knime.core.node.workflow.WorkflowManager.loadProject(WorkflowManager.java:8505)
+	at org.knime.workbench.editor2.LoadWorkflowRunnable.run(LoadWorkflowRunnable.java:199)
+	at org.knime.ui.java.util.DesktopAPUtil.loadWorkflow(DesktopAPUtil.java:188)
+	at org.knime.ui.java.util.DesktopAPUtil.fetchAndLoadWorkflowWithTask(DesktopAPUtil.java:152)
+	at org.knime.ui.java.api.OpenProject.loadProject(OpenProject.java:260)
+	at org.knime.ui.java.api.OpenProject.openProjectWithProgress(OpenProject.java:187)
+	at org.knime.ui.java.api.OpenProject.lambda$0(OpenProject.java:106)
+	at org.knime.ui.java.util.DesktopAPUtil.lambda$13(DesktopAPUtil.java:477)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:124)
+2025-04-23 16:49:02,433 : WARN  : ModalContext :  : FileNodePersistor : String Manipulation : 5:54 : Unable to load port content for node "String Manipulation": No BufferedDataTable  with ID 1401
+org.knime.core.node.InvalidSettingsException: No BufferedDataTable  with ID 1401
+	at org.knime.core.node.BufferedDataTable.getDataTable(BufferedDataTable.java:154)
+	at org.knime.core.data.container.RearrangeColumnsTable.<init>(RearrangeColumnsTable.java:195)
+	at org.knime.core.node.BufferedDataTable.loadFromFile(BufferedDataTable.java:862)
+	at org.knime.core.node.FileNodePersistor.loadBufferedDataTable(FileNodePersistor.java:478)
+	at org.knime.core.node.FileNodePersistor.loadPort(FileNodePersistor.java:367)
+	at org.knime.core.node.FileNodePersistor.loadPorts(FileNodePersistor.java:331)
+	at org.knime.core.node.FileNodePersistor.load(FileNodePersistor.java:996)
+	at org.knime.core.node.workflow.FileNativeNodeContainerPersistor.loadNCAndModelSettings(FileNativeNodeContainerPersistor.java:281)
+	at org.knime.core.node.workflow.FileSingleNodeContainerPersistor.loadNodeContainer(FileSingleNodeContainerPersistor.java:265)
+	at org.knime.core.node.workflow.WorkflowManager.postLoad(WorkflowManager.java:8999)
+	at org.knime.core.node.workflow.WorkflowManager.loadContent(WorkflowManager.java:8901)
+	at org.knime.core.node.workflow.WorkflowManager.postLoad(WorkflowManager.java:9015)
+	at org.knime.core.node.workflow.WorkflowManager.loadContent(WorkflowManager.java:8901)
+	at org.knime.core.node.workflow.WorkflowManager.load(WorkflowManager.java:8765)
+	at org.knime.core.node.workflow.WorkflowManager.load(WorkflowManager.java:8686)
+	at org.knime.core.node.workflow.WorkflowManager.load(WorkflowManager.java:8659)
+	at org.knime.core.node.workflow.WorkflowManager.loadProject(WorkflowManager.java:8505)
+	at org.knime.workbench.editor2.LoadWorkflowRunnable.run(LoadWorkflowRunnable.java:199)
+	at org.knime.ui.java.util.DesktopAPUtil.loadWorkflow(DesktopAPUtil.java:188)
+	at org.knime.ui.java.util.DesktopAPUtil.fetchAndLoadWorkflowWithTask(DesktopAPUtil.java:152)
+	at org.knime.ui.java.api.OpenProject.loadProject(OpenProject.java:260)
+	at org.knime.ui.java.api.OpenProject.openProjectWithProgress(OpenProject.java:187)
+	at org.knime.ui.java.api.OpenProject.lambda$0(OpenProject.java:106)
+	at org.knime.ui.java.util.DesktopAPUtil.lambda$13(DesktopAPUtil.java:477)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:124)
+2025-04-23 16:49:02,436 : WARN  : ModalContext :  : FileNodePersistor : Concatenate : 5:50 : Unable to load port content for node "Concatenate": No BufferedDataTable  with ID 1418
+org.knime.core.node.InvalidSettingsException: No BufferedDataTable  with ID 1418
+	at org.knime.core.node.BufferedDataTable.getDataTable(BufferedDataTable.java:154)
+	at org.knime.core.data.container.ConcatenateTable.load(ConcatenateTable.java:279)
+	at org.knime.core.node.BufferedDataTable.loadFromFile(BufferedDataTable.java:871)
+	at org.knime.core.node.FileNodePersistor.loadBufferedDataTable(FileNodePersistor.java:478)
+	at org.knime.core.node.FileNodePersistor.loadPort(FileNodePersistor.java:367)
+	at org.knime.core.node.FileNodePersistor.loadPorts(FileNodePersistor.java:331)
+	at org.knime.core.node.FileNodePersistor.load(FileNodePersistor.java:996)
+	at org.knime.core.node.workflow.FileNativeNodeContainerPersistor.loadNCAndModelSettings(FileNativeNodeContainerPersistor.java:281)
+	at org.knime.core.node.workflow.FileSingleNodeContainerPersistor.loadNodeContainer(FileSingleNodeContainerPersistor.java:265)
+	at org.knime.core.node.workflow.WorkflowManager.postLoad(WorkflowManager.java:8999)
+	at org.knime.core.node.workflow.WorkflowManager.loadContent(WorkflowManager.java:8901)
+	at org.knime.core.node.workflow.WorkflowManager.postLoad(WorkflowManager.java:9015)
+	at org.knime.core.node.workflow.WorkflowManager.loadContent(WorkflowManager.java:8901)
+	at org.knime.core.node.workflow.WorkflowManager.load(WorkflowManager.java:8765)
+	at org.knime.core.node.workflow.WorkflowManager.load(WorkflowManager.java:8686)
+	at org.knime.core.node.workflow.WorkflowManager.load(WorkflowManager.java:8659)
+	at org.knime.core.node.workflow.WorkflowManager.loadProject(WorkflowManager.java:8505)
+	at org.knime.workbench.editor2.LoadWorkflowRunnable.run(LoadWorkflowRunnable.java:199)
+	at org.knime.ui.java.util.DesktopAPUtil.loadWorkflow(DesktopAPUtil.java:188)
+	at org.knime.ui.java.util.DesktopAPUtil.fetchAndLoadWorkflowWithTask(DesktopAPUtil.java:152)
+	at org.knime.ui.java.api.OpenProject.loadProject(OpenProject.java:260)
+	at org.knime.ui.java.api.OpenProject.openProjectWithProgress(OpenProject.java:187)
+	at org.knime.ui.java.api.OpenProject.lambda$0(OpenProject.java:106)
+	at org.knime.ui.java.util.DesktopAPUtil.lambda$13(DesktopAPUtil.java:477)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:124)
+2025-04-23 16:49:02,439 : WARN  : ModalContext :  : FileNodePersistor : Concatenate : 5:51 : Unable to load port content for node "Concatenate": No BufferedDataTable  with ID 1419
+org.knime.core.node.InvalidSettingsException: No BufferedDataTable  with ID 1419
+	at org.knime.core.node.BufferedDataTable.getDataTable(BufferedDataTable.java:154)
+	at org.knime.core.data.container.ConcatenateTable.load(ConcatenateTable.java:279)
+	at org.knime.core.node.BufferedDataTable.loadFromFile(BufferedDataTable.java:871)
+	at org.knime.core.node.FileNodePersistor.loadBufferedDataTable(FileNodePersistor.java:478)
+	at org.knime.core.node.FileNodePersistor.loadPort(FileNodePersistor.java:367)
+	at org.knime.core.node.FileNodePersistor.loadPorts(FileNodePersistor.java:331)
+	at org.knime.core.node.FileNodePersistor.load(FileNodePersistor.java:996)
+	at org.knime.core.node.workflow.FileNativeNodeContainerPersistor.loadNCAndModelSettings(FileNativeNodeContainerPersistor.java:281)
+	at org.knime.core.node.workflow.FileSingleNodeContainerPersistor.loadNodeContainer(FileSingleNodeContainerPersistor.java:265)
+	at org.knime.core.node.workflow.WorkflowManager.postLoad(WorkflowManager.java:8999)
+	at org.knime.core.node.workflow.WorkflowManager.loadContent(WorkflowManager.java:8901)
+	at org.knime.core.node.workflow.WorkflowManager.postLoad(WorkflowManager.java:9015)
+	at org.knime.core.node.workflow.WorkflowManager.loadContent(WorkflowManager.java:8901)
+	at org.knime.core.node.workflow.WorkflowManager.load(WorkflowManager.java:8765)
+	at org.knime.core.node.workflow.WorkflowManager.load(WorkflowManager.java:8686)
+	at org.knime.core.node.workflow.WorkflowManager.load(WorkflowManager.java:8659)
+	at org.knime.core.node.workflow.WorkflowManager.loadProject(WorkflowManager.java:8505)
+	at org.knime.workbench.editor2.LoadWorkflowRunnable.run(LoadWorkflowRunnable.java:199)
+	at org.knime.ui.java.util.DesktopAPUtil.loadWorkflow(DesktopAPUtil.java:188)
+	at org.knime.ui.java.util.DesktopAPUtil.fetchAndLoadWorkflowWithTask(DesktopAPUtil.java:152)
+	at org.knime.ui.java.api.OpenProject.loadProject(OpenProject.java:260)
+	at org.knime.ui.java.api.OpenProject.openProjectWithProgress(OpenProject.java:187)
+	at org.knime.ui.java.api.OpenProject.lambda$0(OpenProject.java:106)
+	at org.knime.ui.java.util.DesktopAPUtil.lambda$13(DesktopAPUtil.java:477)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:124)
+2025-04-23 16:49:02,470 : WARN  : ModalContext :  : FileNodePersistor : String to Date&Time : 5:20 : Unable to load port content for node "String to Date&Time": No BufferedDataTable  with ID 1420
+org.knime.core.node.InvalidSettingsException: No BufferedDataTable  with ID 1420
+	at org.knime.core.node.BufferedDataTable.getDataTable(BufferedDataTable.java:154)
+	at org.knime.core.data.container.RearrangeColumnsTable.<init>(RearrangeColumnsTable.java:195)
+	at org.knime.core.node.BufferedDataTable.loadFromFile(BufferedDataTable.java:862)
+	at org.knime.core.node.FileNodePersistor.loadBufferedDataTable(FileNodePersistor.java:478)
+	at org.knime.core.node.FileNodePersistor.loadPort(FileNodePersistor.java:367)
+	at org.knime.core.node.FileNodePersistor.loadPorts(FileNodePersistor.java:331)
+	at org.knime.core.node.FileNodePersistor.load(FileNodePersistor.java:996)
+	at org.knime.core.node.workflow.FileNativeNodeContainerPersistor.loadNCAndModelSettings(FileNativeNodeContainerPersistor.java:281)
+	at org.knime.core.node.workflow.FileSingleNodeContainerPersistor.loadNodeContainer(FileSingleNodeContainerPersistor.java:265)
+	at org.knime.core.node.workflow.WorkflowManager.postLoad(WorkflowManager.java:8999)
+	at org.knime.core.node.workflow.WorkflowManager.loadContent(WorkflowManager.java:8901)
+	at org.knime.core.node.workflow.WorkflowManager.postLoad(WorkflowManager.java:9015)
+	at org.knime.core.node.workflow.WorkflowManager.loadContent(WorkflowManager.java:8901)
+	at org.knime.core.node.workflow.WorkflowManager.load(WorkflowManager.java:8765)
+	at org.knime.core.node.workflow.WorkflowManager.load(WorkflowManager.java:8686)
+	at org.knime.core.node.workflow.WorkflowManager.load(WorkflowManager.java:8659)
+	at org.knime.core.node.workflow.WorkflowManager.loadProject(WorkflowManager.java:8505)
+	at org.knime.workbench.editor2.LoadWorkflowRunnable.run(LoadWorkflowRunnable.java:199)
+	at org.knime.ui.java.util.DesktopAPUtil.loadWorkflow(DesktopAPUtil.java:188)
+	at org.knime.ui.java.util.DesktopAPUtil.fetchAndLoadWorkflowWithTask(DesktopAPUtil.java:152)
+	at org.knime.ui.java.api.OpenProject.loadProject(OpenProject.java:260)
+	at org.knime.ui.java.api.OpenProject.openProjectWithProgress(OpenProject.java:187)
+	at org.knime.ui.java.api.OpenProject.lambda$0(OpenProject.java:106)
+	at org.knime.ui.java.util.DesktopAPUtil.lambda$13(DesktopAPUtil.java:477)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:124)
+2025-04-23 16:49:05,380 : ERROR : ModalContext :  : LoadWorkflowRunnable :  :  : Errors during load: Status: DataLoadError: FraudDetectionWorkflowFinal-AIHacks4Good 5 loaded with error during data load
+2025-04-23 16:49:05,381 : ERROR : ModalContext :  : LoadWorkflowRunnable :  :  :   Status: DataLoadError: FraudDetectionWorkflowFinal-AIHacks4Good 5
+2025-04-23 16:49:05,381 : ERROR : ModalContext :  : LoadWorkflowRunnable :  :  :     Status: Error: Node "PDF Parser" not available from extension "KNIME Textprocessing" (provided by "KNIME AG, Zurich, Switzerland"; plugin "org.knime.ext.textprocessing" is not installed)
+2025-04-23 16:49:05,381 : ERROR : ModalContext :  : LoadWorkflowRunnable :  :  :     Status: Error: Node "Document Data Extractor" not available from extension "KNIME Textprocessing" (provided by "KNIME AG, Zurich, Switzerland"; plugin "org.knime.ext.textprocessing" is not installed)
+2025-04-23 16:49:05,381 : ERROR : ModalContext :  : LoadWorkflowRunnable :  :  :     Status: DataLoadError: MISSING PDF Parser 5:8
+2025-04-23 16:49:05,381 : ERROR : ModalContext :  : LoadWorkflowRunnable :  :  :       Status: DataLoadError: Unable to load port content for node "MISSING PDF Parser": Data cell implementation 'org.knime.ext.textprocessing.data.filestore.DocumentBufferedFileStoreCell' not found.
+2025-04-23 16:49:05,381 : ERROR : ModalContext :  : LoadWorkflowRunnable :  :  :       Status: DataLoadError: State has changed from EXECUTED to IDLE
+2025-04-23 16:49:05,381 : ERROR : ModalContext :  : LoadWorkflowRunnable :  :  :     Status: DataLoadError: MISSING Document Data Extractor 5:49
+2025-04-23 16:49:05,381 : ERROR : ModalContext :  : LoadWorkflowRunnable :  :  :       Status: DataLoadError: Unable to load port content for node "MISSING Document Data Extractor": Data cell implementation 'org.knime.ext.textprocessing.data.filestore.DocumentBufferedFileStoreCell' not found.
+2025-04-23 16:49:05,381 : ERROR : ModalContext :  : LoadWorkflowRunnable :  :  :     Status: DataLoadError: String Splitter (Regex) 5:9
+2025-04-23 16:49:05,381 : ERROR : ModalContext :  : LoadWorkflowRunnable :  :  :       Status: DataLoadError: Unable to load port content for node "String Splitter (Regex)": Data cell implementation 'org.knime.ext.textprocessing.data.filestore.DocumentBufferedFileStoreCell' not found.
+2025-04-23 16:49:05,381 : ERROR : ModalContext :  : LoadWorkflowRunnable :  :  :     Status: DataLoadError: String Splitter (Regex) 5:48
+2025-04-23 16:49:05,381 : ERROR : ModalContext :  : LoadWorkflowRunnable :  :  :       Status: DataLoadError: Unable to load port content for node "String Splitter (Regex)": Data cell implementation 'org.knime.ext.textprocessing.data.filestore.DocumentBufferedFileStoreCell' not found.
+2025-04-23 16:49:05,381 : ERROR : ModalContext :  : LoadWorkflowRunnable :  :  :     Status: DataLoadError: String Splitter (Regex) 5:47
+2025-04-23 16:49:05,381 : ERROR : ModalContext :  : LoadWorkflowRunnable :  :  :       Status: DataLoadError: Unable to load port content for node "String Splitter (Regex)": Data cell implementation 'org.knime.ext.textprocessing.data.filestore.DocumentBufferedFileStoreCell' not found.
+2025-04-23 16:49:05,381 : ERROR : ModalContext :  : LoadWorkflowRunnable :  :  :     Status: DataLoadError: String Splitter (Regex) 5:46
+2025-04-23 16:49:05,381 : ERROR : ModalContext :  : LoadWorkflowRunnable :  :  :       Status: DataLoadError: Unable to load port content for node "String Splitter (Regex)": Data cell implementation 'org.knime.ext.textprocessing.data.filestore.DocumentBufferedFileStoreCell' not found.
+2025-04-23 16:49:05,381 : ERROR : ModalContext :  : LoadWorkflowRunnable :  :  :     Status: DataLoadError: String to Number 5:44
+2025-04-23 16:49:05,381 : ERROR : ModalContext :  : LoadWorkflowRunnable :  :  :       Status: DataLoadError: Unable to load port content for node "String to Number": Data cell implementation 'org.knime.ext.textprocessing.data.filestore.DocumentBufferedFileStoreCell' not found.
+2025-04-23 16:49:05,381 : ERROR : ModalContext :  : LoadWorkflowRunnable :  :  :     Status: DataLoadError: Column Renamer 5:43
+2025-04-23 16:49:05,381 : ERROR : ModalContext :  : LoadWorkflowRunnable :  :  :       Status: DataLoadError: Unable to load port content for node "Column Renamer": Data cell implementation 'org.knime.ext.textprocessing.data.filestore.DocumentBufferedFileStoreCell' not found.
+2025-04-23 16:49:05,382 : ERROR : ModalContext :  : LoadWorkflowRunnable :  :  :     Status: DataLoadError: Column Filter 5:45
+2025-04-23 16:49:05,382 : ERROR : ModalContext :  : LoadWorkflowRunnable :  :  :       Status: DataLoadError: Unable to load port content for node "Column Filter": No BufferedDataTable  with ID 8
+2025-04-23 16:49:05,382 : ERROR : ModalContext :  : LoadWorkflowRunnable :  :  :     Status: DataLoadError: String Manipulation 5:53
+2025-04-23 16:49:05,382 : ERROR : ModalContext :  : LoadWorkflowRunnable :  :  :       Status: DataLoadError: Unable to load port content for node "String Manipulation": No BufferedDataTable  with ID 9
+2025-04-23 16:49:05,382 : ERROR : ModalContext :  : LoadWorkflowRunnable :  :  :     Status: DataLoadError: String Manipulation 5:54
+2025-04-23 16:49:05,382 : ERROR : ModalContext :  : LoadWorkflowRunnable :  :  :       Status: DataLoadError: Unable to load port content for node "String Manipulation": No BufferedDataTable  with ID 1401
+2025-04-23 16:49:05,382 : ERROR : ModalContext :  : LoadWorkflowRunnable :  :  :     Status: DataLoadError: Concatenate 5:50
+2025-04-23 16:49:05,382 : ERROR : ModalContext :  : LoadWorkflowRunnable :  :  :       Status: DataLoadError: Unable to load port content for node "Concatenate": No BufferedDataTable  with ID 1418
+2025-04-23 16:49:05,382 : ERROR : ModalContext :  : LoadWorkflowRunnable :  :  :     Status: DataLoadError: Concatenate 5:51
+2025-04-23 16:49:05,382 : ERROR : ModalContext :  : LoadWorkflowRunnable :  :  :       Status: DataLoadError: Unable to load port content for node "Concatenate": No BufferedDataTable  with ID 1419
+2025-04-23 16:49:05,382 : ERROR : ModalContext :  : LoadWorkflowRunnable :  :  :     Status: DataLoadError: String to Date&Time 5:20
+2025-04-23 16:49:05,382 : ERROR : ModalContext :  : LoadWorkflowRunnable :  :  :       Status: DataLoadError: Unable to load port content for node "String to Date&Time": No BufferedDataTable  with ID 1420
+2025-04-23 16:49:05,382 : ERROR : ModalContext :  : LoadWorkflowRunnable :  :  :     Status: DataLoadError: State has changed from CONFIGURED to IDLE
+2025-04-23 20:19:12,169 : ERROR : main :  : KnimeBrowserView :  :  : %cerror%c Desktop API:: Error response 
+      background: #c0392b;
+      border-radius: 0.5em;
+      color: white;
+      font-weight: bold;
+      padding: 2px 0.5em;
+      [object Object] (source: http://org.knime.ui.java/assets/index-CPG1Nwkw.js; line: 87)
+2025-04-23 20:19:12,174 : ERROR : main :  : KnimeBrowserView :  :  : %cerror%c Unhandled rejection:: 
+      background: #c0392b;
+      border-radius: 0.5em;
+      color: white;
+      font-weight: bold;
+      padding: 2px 0.5em;
+      [object Object] (source: http://org.knime.ui.java/assets/index-CPG1Nwkw.js; line: 87)
+2025-04-23 20:19:12,174 : ERROR : main :  : KnimeBrowserView :  :  : Uncaught (in promise) No space found for id '*QYNVLMcYB2kIOW04' (source: http://org.knime.ui.java/assets/index-CPG1Nwkw.js; line: 45)
+2025-04-23 20:19:45,026 : ERROR : main :  : SpaceAPI :  :  : Download error: No space found for id '*QYNVLMcYB2kIOW04'
+java.util.NoSuchElementException: No space found for id '*QYNVLMcYB2kIOW04'
+	at com.knime.explorer.server.internal.HubSpaceProviders$HubSpaceProvider.lambda$2(HubSpaceProviders.java:118)
+	at java.base/java.util.Optional.orElseThrow(Unknown Source)
+	at com.knime.explorer.server.internal.HubSpaceProviders$HubSpaceProvider.getSpace(HubSpaceProviders.java:118)
+	at org.knime.ui.java.api.Locator$Space.space(Locator.java:154)
+	at org.knime.ui.java.api.SpaceAPI.performAsyncHubDownload(SpaceAPI.java:261)
+	at org.knime.ui.java.api.SpaceAPI.copyBetweenSpaces(SpaceAPI.java:235)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.knime.ui.java.api.DesktopAPI.invokeMethod(DesktopAPI.java:177)
+	at org.knime.ui.java.api.DesktopAPI.lambda$1(DesktopAPI.java:147)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4047)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3663)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1042)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:152)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:639)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:546)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+	at org.knime.product.rcp.KNIMEApplication.start(KNIMEApplication.java:211)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:143)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:109)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:439)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:271)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:651)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:588)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1459)
+2025-04-23 20:19:53,523 : ERROR : main :  : KnimeBrowserView :  :  : %cerror%c Desktop API:: Error response 
+      background: #c0392b;
+      border-radius: 0.5em;
+      color: white;
+      font-weight: bold;
+      padding: 2px 0.5em;
+      [object Object] (source: http://org.knime.ui.java/assets/index-CPG1Nwkw.js; line: 87)
+2025-04-23 20:19:53,527 : ERROR : main :  : KnimeBrowserView :  :  : %cerror%c Unhandled rejection:: 
+      background: #c0392b;
+      border-radius: 0.5em;
+      color: white;
+      font-weight: bold;
+      padding: 2px 0.5em;
+      [object Object] (source: http://org.knime.ui.java/assets/index-CPG1Nwkw.js; line: 87)
+2025-04-23 20:19:53,528 : ERROR : main :  : KnimeBrowserView :  :  : Uncaught (in promise) No space found for id '*QYNVLMcYB2kIOW04' (source: http://org.knime.ui.java/assets/index-CPG1Nwkw.js; line: 45)
+2025-04-23 20:20:21,860 : ERROR : main :  : SpaceAPI :  :  : Download error: No space found for id '*QYNVLMcYB2kIOW04'
+java.util.NoSuchElementException: No space found for id '*QYNVLMcYB2kIOW04'
+	at com.knime.explorer.server.internal.HubSpaceProviders$HubSpaceProvider.lambda$2(HubSpaceProviders.java:118)
+	at java.base/java.util.Optional.orElseThrow(Unknown Source)
+	at com.knime.explorer.server.internal.HubSpaceProviders$HubSpaceProvider.getSpace(HubSpaceProviders.java:118)
+	at org.knime.ui.java.api.Locator$Space.space(Locator.java:154)
+	at org.knime.ui.java.api.SpaceAPI.performAsyncHubDownload(SpaceAPI.java:261)
+	at org.knime.ui.java.api.SpaceAPI.copyBetweenSpaces(SpaceAPI.java:235)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.knime.ui.java.api.DesktopAPI.invokeMethod(DesktopAPI.java:177)
+	at org.knime.ui.java.api.DesktopAPI.lambda$1(DesktopAPI.java:147)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4047)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3663)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1042)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:152)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:639)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:546)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+	at org.knime.product.rcp.KNIMEApplication.start(KNIMEApplication.java:211)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:143)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:109)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:439)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:271)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:651)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:588)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1459)
+2025-04-23 20:20:38,217 : WARN  : comm-pool-thread-8 :  : Node : MISSING PDF Parser : 3:8 : Node can't be executed - Node "PDF Parser" not available from extension "KNIME Textprocessing" (provided by "KNIME AG, Zurich, Switzerland"; plugin "org.knime.ext.textprocessing" is not installed)
+2025-04-23 20:20:38,220 : WARN  : comm-pool-thread-8 :  : Node : KNIME Hub Authenticator : 3:3 : Mountpoint 'shs-dataneers-hub-dev' not connected
+2025-04-23 20:22:26,929 : ERROR : main :  : WindowsDefenderExceptionHandler :  :  : PowerShell command powershell -inputformat none -outputformat text -NonInteractive -Command Get-Item -Path 'Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Defender\Exclusions\Processes' -ErrorAction Stop | Select-Object -ExpandProperty Property did not terminate successfully.
+2025-04-23 20:22:26,929 : ERROR : main :  : WindowsDefenderExceptionHandler :  :  : Stderr is:
+2025-04-23 20:22:26,929 : ERROR : main :  : WindowsDefenderExceptionHandler :  :  : Get-Item : Requested registry access is not allowed.
+2025-04-23 20:22:26,929 : ERROR : main :  : WindowsDefenderExceptionHandler :  :  : At line:1 char:1
+2025-04-23 20:22:26,929 : ERROR : main :  : WindowsDefenderExceptionHandler :  :  : + Get-Item -Path 'Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windo ...
+2025-04-23 20:22:26,929 : ERROR : main :  : WindowsDefenderExceptionHandler :  :  : + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-04-23 20:22:26,929 : ERROR : main :  : WindowsDefenderExceptionHandler :  :  :     + CategoryInfo          : PermissionDenied: (HKEY_LOCAL_MACH...sions\Processes:String) [Get-Item], SecurityExcepti 
+2025-04-23 20:22:26,929 : ERROR : main :  : WindowsDefenderExceptionHandler :  :  :    on
+2025-04-23 20:22:26,929 : ERROR : main :  : WindowsDefenderExceptionHandler :  :  :     + FullyQualifiedErrorId : System.Security.SecurityException,Microsoft.PowerShell.Commands.GetItemCommand
+2025-04-23 20:22:26,929 : ERROR : main :  : WindowsDefenderExceptionHandler :  :  :  
+2025-04-23 20:22:27,167 : WARN  : main :  : VariableReplacer$OriginVariableReplacer :  :  : Origin headers cache file 'C:\Program Files\KNIME\Profiles\.originHeaders' does not exist. 'origin' variables will not be replaced.
+2025-04-23 20:23:23,685 : WARN  : ModalContext :  : Node : KNIME Hub Authenticator : 3:3 : Mountpoint 'shs-dataneers-hub-dev' not connected
+2025-04-23 20:23:23,687 : WARN  : ModalContext :  : Node : KNIME Hub Authenticator : 3:3 : Mountpoint 'shs-dataneers-hub-dev' not connected
+2025-04-23 20:23:23,704 : WARN  : ModalContext :  : Node : PDF Parser : 3:8 : Node can't be executed - Node "PDF Parser" not available from extension "KNIME Textprocessing" (provided by "KNIME AG, Zurich, Switzerland"; plugin "org.knime.ext.textprocessing" is not installed)
+2025-04-23 20:23:23,709 : WARN  : ModalContext :  : Node : PDF Parser : 3:8 : Selected directory:  C:\Users\z004r5wv\Desktop\hackathon\Fraud Detection in Investment Contracts – Outlier Detection\data\Contracts\pdfs is not valid!
+2025-04-23 20:25:06,672 : ERROR : main :  : WindowsDefenderExceptionHandler :  :  : PowerShell command powershell -inputformat none -outputformat text -NonInteractive -Command Get-Item -Path 'Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Defender\Exclusions\Processes' -ErrorAction Stop | Select-Object -ExpandProperty Property did not terminate successfully.
+2025-04-23 20:25:06,672 : ERROR : main :  : WindowsDefenderExceptionHandler :  :  : Stderr is:
+2025-04-23 20:25:06,672 : ERROR : main :  : WindowsDefenderExceptionHandler :  :  : Get-Item : Requested registry access is not allowed.
+2025-04-23 20:25:06,672 : ERROR : main :  : WindowsDefenderExceptionHandler :  :  : At line:1 char:1
+2025-04-23 20:25:06,672 : ERROR : main :  : WindowsDefenderExceptionHandler :  :  : + Get-Item -Path 'Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windo ...
+2025-04-23 20:25:06,672 : ERROR : main :  : WindowsDefenderExceptionHandler :  :  : + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-04-23 20:25:06,672 : ERROR : main :  : WindowsDefenderExceptionHandler :  :  :     + CategoryInfo          : PermissionDenied: (HKEY_LOCAL_MACH...sions\Processes:String) [Get-Item], SecurityExcepti 
+2025-04-23 20:25:06,672 : ERROR : main :  : WindowsDefenderExceptionHandler :  :  :    on
+2025-04-23 20:25:06,672 : ERROR : main :  : WindowsDefenderExceptionHandler :  :  :     + FullyQualifiedErrorId : System.Security.SecurityException,Microsoft.PowerShell.Commands.GetItemCommand
+2025-04-23 20:25:06,672 : ERROR : main :  : WindowsDefenderExceptionHandler :  :  :  
+2025-04-23 20:25:06,803 : WARN  : main :  : VariableReplacer$OriginVariableReplacer :  :  : Origin headers cache file 'C:\Program Files\KNIME\Profiles\.originHeaders' does not exist. 'origin' variables will not be replaced.
+2025-04-23 20:25:34,148 : WARN  : ModalContext :  : Node : KNIME Hub Authenticator : 3:3 : Mountpoint 'shs-dataneers-hub-dev' not connected
+2025-04-23 20:25:34,154 : WARN  : ModalContext :  : Node : KNIME Hub Authenticator : 3:3 : Mountpoint 'shs-dataneers-hub-dev' not connected
+2025-04-23 20:25:34,188 : WARN  : ModalContext :  : Node : PDF Parser : 3:8 : Node can't be executed - Node "PDF Parser" not available from extension "KNIME Textprocessing" (provided by "KNIME AG, Zurich, Switzerland"; plugin "org.knime.ext.textprocessing" is not installed)
+2025-04-23 20:25:34,194 : WARN  : ModalContext :  : Node : PDF Parser : 3:8 : Selected directory:  C:\Users\z004r5wv\Desktop\hackathon\Fraud Detection in Investment Contracts – Outlier Detection\data\Contracts\pdfs is not valid!

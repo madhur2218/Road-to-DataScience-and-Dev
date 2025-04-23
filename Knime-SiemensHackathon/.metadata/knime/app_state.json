@@ -1,0 +1,40 @@
+{
+  "version" : "5.4.2.v202502121104",
+  "projects" : [ {
+    "name" : "KNIME_project",
+    "active" : true,
+    "origin" : {
+      "providerId" : "local",
+      "spaceId" : "local",
+      "relativePath" : "KNIME_project"
+    }
+  } ],
+  "mostRecentlyUsedProjects" : [ {
+    "name" : "KNIME_project",
+    "timeUsed" : "2025-04-23T09:32:06.1133822+05:30",
+    "origin" : {
+      "providerId" : "local",
+      "spaceId" : "local",
+      "projectType" : "WORKFLOW",
+      "relativePath" : "KNIME_project"
+    }
+  }, {
+    "name" : "Fraud Detection in Investment Contracts – Outlier Detection",
+    "timeUsed" : "2025-04-23T11:19:46.1634297+05:30",
+    "origin" : {
+      "providerId" : "local",
+      "spaceId" : "local",
+      "projectType" : "WORKFLOW",
+      "relativePath" : "Fraud Detection in Investment Contracts – Outlier Detection"
+    }
+  }, {
+    "name" : "FraudDetectionWorkflowFinal-AIHacks4Good",
+    "timeUsed" : "2025-04-23T16:49:05.4028406+05:30",
+    "origin" : {
+      "providerId" : "shs-dataneers-hub-dev",
+      "spaceId" : "*QYNVLMcYB2kIOW04",
+      "projectType" : "WORKFLOW",
+      "itemId" : "*pjSkEFNLL1GxyLmR"
+    }
+  } ]
+}

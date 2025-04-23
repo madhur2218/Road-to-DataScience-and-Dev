@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root xmlns:ns="http://www.knime.org/json2xml/originalKey/">
+    <item>
+        <AgreementNo. ns:originalKey="Agreement No.">C000062</AgreementNo.>
+        <product>Private Investment</product>
+        <date>2018-01-06</date>
+        <amount>1797.52</amount>
+    </item>
+    <item>
+        <AgreementNo. ns:originalKey="Agreement No.">C000063</AgreementNo.>
+        <product>Gold Investment</product>
+        <date>2018-06-17</date>
+        <amount>385.97</amount>
+    </item>
+    <item>
+        <AgreementNo. ns:originalKey="Agreement No.">C000064</AgreementNo.>
+        <product>P+B Investment</product>
+        <date>2018-12-03</date>
+        <amount>2097.01</amount>
+    </item>
+    <item>
+        <AgreementNo. ns:originalKey="Agreement No.">C000065</AgreementNo.>
+        <product>Private Investment</product>
+        <date>2018-09-21</date>
+        <amount>480.23</amount>
+    </item>
+    <item>
+        <AgreementNo. ns:originalKey="Agreement No.">C000066</AgreementNo.>
+        <product>P+B Investment</product>
+        <date>2018-12-20</date>
+        <amount>2066.02</amount>
+    </item>
+    <item>
+        <AgreementNo. ns:originalKey="Agreement No.">C000068</AgreementNo.>
+        <product>P+B Investment</product>
+        <date>2018-01-16</date>
+        <amount>1138.42</amount>
+    </item>
+    <item>
+        <AgreementNo. ns:originalKey="Agreement No.">C000069</AgreementNo.>
+        <product>P+B Investment</product>
+        <date>2018-04-03</date>
+        <amount>2053.24</amount>
+    </item>
+    <item>
+        <AgreementNo. ns:originalKey="Agreement No.">C000070</AgreementNo.>
+        <product>Private Investment</product>
+        <date>2018-04-01</date>
+        <amount>1436</amount>
+    </item>
+    <item>
+        <AgreementNo. ns:originalKey="Agreement No.">C000075</AgreementNo.>
+        <product>P+B Investment</product>
+        <date>2018-03-13</date>
+        <amount>1358.05</amount>
+    </item>
+    <item>
+        <AgreementNo. ns:originalKey="Agreement No.">C000077</AgreementNo.>
+        <product>P+B Investment</product>
+        <date>2018-05-21</date>
+        <amount>15126.65</amount>
+    </item>
+    <item>
+        <AgreementNo. ns:originalKey="Agreement No.">C000078</AgreementNo.>
+        <product>Private Investment</product>
+        <date>2018-10-05</date>
+        <amount>1801.48</amount>
+    </item>
+    <item>
+        <AgreementNo. ns:originalKey="Agreement No.">C000079</AgreementNo.>
+        <product>Private Investment</product>
+        <date>2018-07-05</date>
+        <amount>1054.29</amount>
+    </item>
+    <item>
+        <AgreementNo. ns:originalKey="Agreement No.">C000080</AgreementNo.>
+        <product>Private Investment</product>
+        <date>2018-03-07</date>
+        <amount>922.28</amount>
+    </item>
+    <item>
+        <AgreementNo. ns:originalKey="Agreement No.">C000081</AgreementNo.>
+        <product>P+B Investment</product>
+        <date>2018-01-06</date>
+        <amount>7.13</amount>
+    </item>
+    <item>
+        <AgreementNo. ns:originalKey="Agreement No.">C000082</AgreementNo.>
+        <product>P+B Investment</product>
+        <date>2018-11-04</date>
+        <amount>681.12</amount>
+    </item>
+    <item>
+        <AgreementNo. ns:originalKey="Agreement No.">C000083</AgreementNo.>
+        <product>Gold Investment</product>
+        <date>2018-10-08</date>
+        <amount>1752.59</amount>
+    </item>
+    <item>
+        <AgreementNo. ns:originalKey="Agreement No.">C000084</AgreementNo.>
+        <product>Private Investment</product>
+        <date>2018-06-24</date>
+        <amount>1863.44</amount>
+    </item>
+    <item>
+        <AgreementNo. ns:originalKey="Agreement No.">C000086</AgreementNo.>
+        <product>Gold Investment</product>
+        <date>2018-03-10</date>
+        <amount>1295.26</amount>
+    </item>
+    <item>
+        <AgreementNo. ns:originalKey="Agreement No.">C000088</AgreementNo.>
+        <product>Gold Investment</product>
+        <date>2018-05-25</date>
+        <amount>1547.14</amount>
+    </item>
+    <item>
+        <AgreementNo. ns:originalKey="Agreement No.">C000092</AgreementNo.>
+        <product>P+B Investment</product>
+        <date>2018-10-23</date>
+        <amount>1978.25</amount>
+    </item>
+</root>

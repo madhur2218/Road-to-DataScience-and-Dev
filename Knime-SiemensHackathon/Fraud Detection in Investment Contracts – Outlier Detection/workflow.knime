@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns="http://www.knime.org/2008/09/XMLConfig" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.knime.org/2008/09/XMLConfig http://www.knime.org/XMLConfig_2008_09.xsd" key="workflow.knime">
+    <entry key="created_by" type="xstring" value="5.4.2.v202502121104"/>
+    <entry key="created_by_nightly" type="xboolean" value="false"/>
+    <entry key="version" type="xstring" value="5.1.0"/>
+    <entry key="name" type="xstring" isnull="true" value=""/>
+    <config key="authorInformation">
+        <entry key="authored-by" type="xstring" value="z004shbs"/>
+        <entry key="authored-when" type="xstring" value="2025-04-11 12:08:13 +0530"/>
+        <entry key="lastEdited-by" type="xstring" value="z004rr9n"/>
+        <entry key="lastEdited-when" type="xstring" value="2025-04-23 16:53:50 +0530"/>
+    </config>
+    <entry key="customDescription" type="xstring" isnull="true" value=""/>
+    <entry key="state" type="xstring" value="IDLE"/>
+    <config key="nodecontainer_message">
+        <entry key="type" type="xstring" value="ERROR"/>
+        <entry key="message" type="xstring" value="Contains an unconnected node (&quot;String to Date/Time (legacy) #10&quot;)"/>
+        <config key="resolutions">
+            <entry key="array-size" type="xint" value="2"/>
+            <entry key="0" type="xstring" value="Properly connect the node(s)."/>
+            <entry key="1" type="xstring" value="Delete unconnected node(s) from inner workflow."/>
+        </config>
+    </config>
+    <config key="workflow_credentials"/>
+    <config key="annotations">
+        <config key="annotation_0">
+            <entry key="text" type="xstring" value="&lt;h6 style=&quot;text-align: center&quot;&gt;&lt;em&gt;Get 2019 Data via API&lt;/em&gt;&lt;/h6&gt;"/>
+            <entry key="contentType" type="xstring" value="text/html"/>
+            <entry key="bgcolor" type="xint" value="16777215"/>
+            <entry key="x-coordinate" type="xint" value="-690"/>
+            <entry key="y-coordinate" type="xint" value="310"/>
+            <entry key="width" type="xint" value="265"/>
+            <entry key="height" type="xint" value="150"/>
+            <entry key="alignment" type="xstring" value="LEFT"/>
+            <entry key="borderSize" type="xint" value="10"/>
+            <entry key="borderColor" type="xint" value="12633286"/>
+            <entry key="defFontSize" type="xint" value="-1"/>
+            <entry key="annotation-version" type="xint" value="20230412"/>
+            <config key="styles"/>
+        </config>
+        <config key="annotation_1">
+            <entry key="text" type="xstring" value="&lt;h3&gt;&lt;strong&gt;Challenge: Fraud Detection in Investment Contracts – Outlier Detection from PDFs, XML, JSON &amp;amp; APIs&lt;/strong&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt;&lt;br&gt;Use the provided &lt;strong&gt;PDFs, XML, JSON&lt;/strong&gt;, and &lt;strong&gt;REST API&lt;/strong&gt; datasets to identify potential fraudulent or anomalous investment contracts. You will analyze the contract data, detect unusual patterns, and flag outlier contracts based on &lt;strong&gt;investment type&lt;/strong&gt;, &lt;strong&gt;amount&lt;/strong&gt;, and &lt;strong&gt;contract date&lt;/strong&gt; and outlier detection techniques.&lt;/p&gt;&lt;h4&gt;&lt;strong&gt;Key Requirements:&lt;/strong&gt;&lt;/h4&gt;&lt;h5&gt;1. &lt;strong&gt;Data Ingestion&lt;/strong&gt;&lt;/h5&gt;&lt;ul&gt;&lt;li&gt;&lt;p&gt;&lt;strong&gt;XML and JSON Parsing&lt;/strong&gt;: Import contract datasets in XML and JSON formats containing contract data such as:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;p&gt;&lt;strong&gt;Contract ID&lt;/strong&gt; (e.g., C000100)&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;strong&gt;Investment Type&lt;/strong&gt; (e.g., P+B Investment)&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;strong&gt;Contract Date&lt;/strong&gt; (e.g., 2019-07-19)&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;strong&gt;Amount&lt;/strong&gt; (e.g., 1650.32)&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;strong&gt;Custom API Integration&lt;/strong&gt;: Connect to the &lt;strong&gt;custom API endpoint&lt;/strong&gt; to:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;p&gt;&lt;strong&gt;Enrich contract data&lt;/strong&gt; by pulling required details.&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;strong&gt;API Response Handling&lt;/strong&gt;: Ensure the response from your API is appropriately processed (e.g., error handling).&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;h5&gt;2. &lt;strong&gt;Data Cleaning &amp;amp; Preprocessing&lt;/strong&gt;&lt;/h5&gt;&lt;ul&gt;&lt;li&gt;&lt;p&gt;&lt;strong&gt;Ensure Correct Formatting&lt;/strong&gt;: Validate that contract dates are in a consistent date format and amounts are numeric.&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;strong&gt;Handle Missing Data&lt;/strong&gt;: Address any missing values in the dataset (e.g., missing investment types or amounts).&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;strong&gt;Remove Duplicates&lt;/strong&gt;: Ensure no duplicate records based on &lt;strong&gt;Contract ID&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;h5&gt;3. &lt;strong&gt;Feature Engineering&lt;/strong&gt;&lt;/h5&gt;&lt;ul&gt;&lt;li&gt;&lt;p&gt;&lt;strong&gt;Date Features&lt;/strong&gt;: Extract additional features such as:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;p&gt;&lt;strong&gt;Year&lt;/strong&gt;, &lt;strong&gt;Month&lt;/strong&gt;, &lt;strong&gt;Day of the Week&lt;/strong&gt; from contract dates to analyze seasonal trends or irregular patterns. These will be used to check if contracts are issued on unusual dates (e.g., weekends, holidays).&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;strong&gt;Investment Type Analysis&lt;/strong&gt;:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;p&gt;Create categorical variables for investment types (e.g., P+B Investment, Private Investment, Gold Investment).&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;Aggregate data by investment type and analyze for anomalies.&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;strong&gt;Amount Analysis&lt;/strong&gt;:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;p&gt;Calculate the &lt;strong&gt;mean&lt;/strong&gt;, &lt;strong&gt;median&lt;/strong&gt;, and &lt;strong&gt;standard deviation&lt;/strong&gt; of investment amounts per type.&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;Identify contracts with amounts significantly higher or lower than expected based on historical data.&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;strong&gt;Frequency Analysis&lt;/strong&gt;: Track how often each contract type is being executed, identifying whether certain vendors or contract types are overrepresented.&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;h5&gt;4. &lt;strong&gt;Outlier Detection&lt;/strong&gt;&lt;/h5&gt;&lt;ul&gt;&lt;li&gt;&lt;p&gt;Use &lt;strong&gt;Numerical outliers&lt;/strong&gt; to detect outliers based on contract &lt;strong&gt;amounts&lt;/strong&gt;.&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;Flag &lt;strong&gt;outlier contracts&lt;/strong&gt; based on unusual amounts compared to the mean for each investment type.&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;Identify contracts issued on &lt;strong&gt;unusual dates&lt;/strong&gt;, such as weekends or holidays, which may be indicative of fraudulent behavior.&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;h5&gt;5. &lt;strong&gt;Insight Generation &amp;amp; Reporting&lt;/strong&gt;&lt;/h5&gt;&lt;ul&gt;&lt;li&gt;&lt;p&gt;&lt;strong&gt;Visualization&lt;/strong&gt;:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;p&gt;&lt;strong&gt;Box Plots&lt;/strong&gt;: Visualize the distribution of contract amounts per investment type, highlighting the outliers.&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;strong&gt;Heatmaps&lt;/strong&gt;: Show correlations between investment type, contract date, and amount.&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;strong&gt;Bar Charts&lt;/strong&gt;: Show the frequency of contracts by year or investment type.&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;h4&gt;&lt;strong&gt;Expected Solution:&lt;/strong&gt;&lt;/h4&gt;&lt;h5&gt;%%55357%%57056 &lt;strong&gt;KNIME Workflow &lt;/strong&gt;containing:&lt;/h5&gt;&lt;p&gt;&lt;/p&gt;&lt;h5&gt;&lt;strong&gt;Expected solution:&lt;/strong&gt;&lt;/h5&gt;&lt;ol type=&quot;1&quot;&gt;&lt;li&gt;&lt;p&gt;&lt;strong&gt;Data Input:&lt;/strong&gt;&amp;nbsp;Extract data from XML,JSON, PDF and REST API.&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;strong&gt;Aggregations:&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;p&gt;Concatenate the data based on (Agreement No., product, date, amount).&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;Flag &lt;strong&gt;outlier contracts&lt;/strong&gt; based on unusual amounts and dates&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;strong&gt;Visualizations:&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;p&gt;Tile view(List of outliers)&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;Box Plot(Finding outliers visually on a box plot).&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;Histogram (Finding outliers visually on a histogram)&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;strong&gt;Output:&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;p&gt;Interactive dashboard.&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ol&gt;"/>
+            <entry key="contentType" type="xstring" value="text/html"/>
+            <entry key="bgcolor" type="xint" value="16777215"/>
+            <entry key="x-coordinate" type="xint" value="-410"/>
+            <entry key="y-coordinate" type="xint" value="-580"/>
+            <entry key="width" type="xint" value="1080"/>
+            <entry key="height" type="xint" value="460"/>
+            <entry key="alignment" type="xstring" value="LEFT"/>
+            <entry key="borderSize" type="xint" value="10"/>
+            <entry key="borderColor" type="xint" value="12633286"/>
+            <entry key="defFontSize" type="xint" value="-1"/>
+            <entry key="annotation-version" type="xint" value="20230412"/>
+            <config key="styles"/>
+        </config>
+        <config key="annotation_2">
+            <entry key="text" type="xstring" value="&lt;ul&gt;&lt;li&gt;&lt;p&gt;&lt;strong&gt;Scoring Criteria&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;p&gt;&lt;strong&gt;Core Solution&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;p&gt;Parsed PDF/XML/JSON data: &lt;strong&gt;15&lt;/strong&gt; points&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;Flagged outliers (amounts, dates): &lt;strong&gt;15&lt;/strong&gt; points&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;Risk scores assigned to contracts: &lt;strong&gt;10&lt;/strong&gt; points&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;Holiday/weekend flagging: &lt;strong&gt;10&lt;/strong&gt; points&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;strong&gt;Technical Execution&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;p&gt;Outlier detection logic (Z-score/IQR): &lt;strong&gt;15&lt;/strong&gt; points&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;Workflow accuracy: &lt;strong&gt;15&lt;/strong&gt; points&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;strong&gt;Clarity &amp;amp; Impact&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;p&gt;Box plot/heatmap of anomalies: &lt;strong&gt;10&lt;/strong&gt; points&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;Report with risk logic: &lt;strong&gt;10&lt;/strong&gt; points&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;strong&gt;Scoring&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;p&gt;Scoring will happen as follows:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;p&gt;Core Solution: &lt;strong&gt;50&lt;/strong&gt; points&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;Technical Execution: &lt;strong&gt;30&lt;/strong&gt; points&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;Clarity &amp;amp; Impact: &lt;strong&gt;20&lt;/strong&gt; points&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;"/>
+            <entry key="contentType" type="xstring" value="text/html"/>
+            <entry key="bgcolor" type="xint" value="16777215"/>
+            <entry key="x-coordinate" type="xint" value="700"/>
+            <entry key="y-coordinate" type="xint" value="-585"/>
+            <entry key="width" type="xint" value="600"/>
+            <entry key="height" type="xint" value="375"/>
+            <entry key="alignment" type="xstring" value="LEFT"/>
+            <entry key="borderSize" type="xint" value="10"/>
+            <entry key="borderColor" type="xint" value="12633286"/>
+            <entry key="defFontSize" type="xint" value="-1"/>
+            <entry key="annotation-version" type="xint" value="20230412"/>
+            <config key="styles"/>
+        </config>
+    </config>
+    <config key="nodes">
+        <config key="node_1">
+            <entry key="id" type="xint" value="1"/>
+            <entry key="node_settings_file" type="xstring" value="List Files_Folders (#1)/settings.xml"/>
+            <entry key="node_is_meta" type="xboolean" value="false"/>
+            <entry key="node_type" type="xstring" value="NativeNode"/>
+            <entry key="ui_classname" type="xstring" value="org.knime.core.node.workflow.NodeUIInformation"/>
+            <config key="ui_settings">
+                <config key="extrainfo.node.bounds">
+                    <entry key="array-size" type="xint" value="4"/>
+                    <entry key="0" type="xint" value="-15"/>
+                    <entry key="1" type="xint" value="-36"/>
+                    <entry key="2" type="xint" value="-1"/>
+                    <entry key="3" type="xint" value="-1"/>
+                </config>
+            </config>
+        </config>
+        <config key="node_2">
+            <entry key="id" type="xint" value="2"/>
+            <entry key="node_settings_file" type="xstring" value="List Files_Folders (#2)/settings.xml"/>
+            <entry key="node_is_meta" type="xboolean" value="false"/>
+            <entry key="node_type" type="xstring" value="NativeNode"/>
+            <entry key="ui_classname" type="xstring" value="org.knime.core.node.workflow.NodeUIInformation"/>
+            <config key="ui_settings">
+                <config key="extrainfo.node.bounds">
+                    <entry key="array-size" type="xint" value="4"/>
+                    <entry key="0" type="xint" value="-5"/>
+                    <entry key="1" type="xint" value="199"/>
+                    <entry key="2" type="xint" value="-1"/>
+                    <entry key="3" type="xint" value="-1"/>
+                </config>
+            </config>
+        </config>
+        <config key="node_3">
+            <entry key="id" type="xint" value="3"/>
+            <entry key="node_settings_file" type="xstring" value="KNIME Hub Authenticator (#3)/settings.xml"/>
+            <entry key="node_is_meta" type="xboolean" value="false"/>
+            <entry key="node_type" type="xstring" value="NativeNode"/>
+            <entry key="ui_classname" type="xstring" value="org.knime.core.node.workflow.NodeUIInformation"/>
+            <config key="ui_settings">
+                <config key="extrainfo.node.bounds">
+                    <entry key="array-size" type="xint" value="4"/>
+                    <entry key="0" type="xint" value="-630"/>
+                    <entry key="1" type="xint" value="374"/>
+                    <entry key="2" type="xint" value="-1"/>
+                    <entry key="3" type="xint" value="-1"/>
+                </config>
+            </config>
+        </config>
+        <config key="node_4">
+            <entry key="id" type="xint" value="4"/>
+            <entry key="node_settings_file" type="xstring" value="POST Request (#4)/settings.xml"/>
+            <entry key="node_is_meta" type="xboolean" value="false"/>
+            <entry key="node_type" type="xstring" value="NativeNode"/>
+            <entry key="ui_classname" type="xstring" value="org.knime.core.node.workflow.NodeUIInformation"/>
+            <config key="ui_settings">
+                <config key="extrainfo.node.bounds">
+                    <entry key="array-size" type="xint" value="4"/>
+                    <entry key="0" type="xint" value="-490"/>
+                    <entry key="1" type="xint" value="364"/>
+                    <entry key="2" type="xint" value="-1"/>
+                    <entry key="3" type="xint" value="-1"/>
+                </config>
+            </config>
+        </config>
+        <config key="node_5">
+            <entry key="id" type="xint" value="5"/>
+            <entry key="node_settings_file" type="xstring" value="JSON Reader (#5)/settings.xml"/>
+            <entry key="node_is_meta" type="xboolean" value="false"/>
+            <entry key="node_type" type="xstring" value="NativeNode"/>
+            <entry key="ui_classname" type="xstring" value="org.knime.core.node.workflow.NodeUIInformation"/>
+            <config key="ui_settings">
+                <config key="extrainfo.node.bounds">
+                    <entry key="array-size" type="xint" value="4"/>
+                    <entry key="0" type="xint" value="150"/>
+                    <entry key="1" type="xint" value="24"/>
+                    <entry key="2" type="xint" value="-1"/>
+                    <entry key="3" type="xint" value="-1"/>
+                </config>
+            </config>
+        </config>
+        <config key="node_6">
+            <entry key="id" type="xint" value="6"/>
+            <entry key="node_settings_file" type="xstring" value="XML Reader (#6)/settings.xml"/>
+            <entry key="node_is_meta" type="xboolean" value="false"/>
+            <entry key="node_type" type="xstring" value="NativeNode"/>
+            <entry key="ui_classname" type="xstring" value="org.knime.core.node.workflow.NodeUIInformation"/>
+            <config key="ui_settings">
+                <config key="extrainfo.node.bounds">
+                    <entry key="array-size" type="xint" value="4"/>
+                    <entry key="0" type="xint" value="555"/>
+                    <entry key="1" type="xint" value="209"/>
+                    <entry key="2" type="xint" value="-1"/>
+                    <entry key="3" type="xint" value="-1"/>
+                </config>
+            </config>
+        </config>
+        <config key="node_9">
+            <entry key="id" type="xint" value="9"/>
+            <entry key="node_settings_file" type="xstring" value="XPath (#9)/settings.xml"/>
+            <entry key="node_is_meta" type="xboolean" value="false"/>
+            <entry key="node_type" type="xstring" value="NativeNode"/>
+            <entry key="ui_classname" type="xstring" value="org.knime.core.node.workflow.NodeUIInformation"/>
+            <config key="ui_settings">
+                <config key="extrainfo.node.bounds">
+                    <entry key="array-size" type="xint" value="4"/>
+                    <entry key="0" type="xint" value="740"/>
+                    <entry key="1" type="xint" value="104"/>
+                    <entry key="2" type="xint" value="-1"/>
+                    <entry key="3" type="xint" value="-1"/>
+                </config>
+            </config>
+        </config>
+        <config key="node_10">
+            <entry key="id" type="xint" value="10"/>
+            <entry key="node_settings_file" type="xstring" value="String to Date_Time _legacy_ (#10)/settings.xml"/>
+            <entry key="node_is_meta" type="xboolean" value="false"/>
+            <entry key="node_type" type="xstring" value="NativeNode"/>
+            <entry key="ui_classname" type="xstring" value="org.knime.core.node.workflow.NodeUIInformation"/>
+            <config key="ui_settings">
+                <config key="extrainfo.node.bounds">
+                    <entry key="array-size" type="xint" value="4"/>
+                    <entry key="0" type="xint" value="900"/>
+                    <entry key="1" type="xint" value="94"/>
+                    <entry key="2" type="xint" value="-1"/>
+                    <entry key="3" type="xint" value="-1"/>
+                </config>
+            </config>
+        </config>
+        <config key="node_11">
+            <entry key="id" type="xint" value="11"/>
+            <entry key="node_settings_file" type="xstring" value="String to Date_Time (#11)/settings.xml"/>
+            <entry key="node_is_meta" type="xboolean" value="false"/>
+            <entry key="node_type" type="xstring" value="NativeNode"/>
+            <entry key="ui_classname" type="xstring" value="org.knime.core.node.workflow.NodeUIInformation"/>
+            <config key="ui_settings">
+                <config key="extrainfo.node.bounds">
+                    <entry key="array-size" type="xint" value="4"/>
+                    <entry key="0" type="xint" value="905"/>
+                    <entry key="1" type="xint" value="-31"/>
+                    <entry key="2" type="xint" value="-1"/>
+                    <entry key="3" type="xint" value="-1"/>
+                </config>
+            </config>
+        </config>
+        <config key="node_12">
+            <entry key="id" type="xint" value="12"/>
+            <entry key="node_settings_file" type="xstring" value="Duplicate Row Filter (#12)/settings.xml"/>
+            <entry key="node_is_meta" type="xboolean" value="false"/>
+            <entry key="node_type" type="xstring" value="NativeNode"/>
+            <entry key="ui_classname" type="xstring" value="org.knime.core.node.workflow.NodeUIInformation"/>
+            <config key="ui_settings">
+                <config key="extrainfo.node.bounds">
+                    <entry key="array-size" type="xint" value="4"/>
+                    <entry key="0" type="xint" value="1090"/>
+                    <entry key="1" type="xint" value="-36"/>
+                    <entry key="2" type="xint" value="-1"/>
+                    <entry key="3" type="xint" value="-1"/>
+                </config>
+            </config>
+        </config>
+    </config>
+    <config key="connections">
+        <config key="connection_0">
+            <entry key="sourceID" type="xint" value="3"/>
+            <entry key="destID" type="xint" value="4"/>
+            <entry key="sourcePort" type="xint" value="1"/>
+            <entry key="destPort" type="xint" value="2"/>
+        </config>
+        <config key="connection_1">
+            <entry key="sourceID" type="xint" value="6"/>
+            <entry key="destID" type="xint" value="9"/>
+            <entry key="sourcePort" type="xint" value="1"/>
+            <entry key="destPort" type="xint" value="1"/>
+        </config>
+        <config key="connection_2">
+            <entry key="sourceID" type="xint" value="9"/>
+            <entry key="destID" type="xint" value="11"/>
+            <entry key="sourcePort" type="xint" value="1"/>
+            <entry key="destPort" type="xint" value="1"/>
+        </config>
+        <config key="connection_3">
+            <entry key="sourceID" type="xint" value="11"/>
+            <entry key="destID" type="xint" value="12"/>
+            <entry key="sourcePort" type="xint" value="1"/>
+            <entry key="destPort" type="xint" value="1"/>
+        </config>
+    </config>
+    <config key="workflow_editor_settings">
+        <entry key="workflow.editor.snapToGrid" type="xboolean" value="false"/>
+        <entry key="workflow.editor.ShowGrid" type="xboolean" value="false"/>
+        <entry key="workflow.editor.gridX" type="xint" value="-1"/>
+        <entry key="workflow.editor.gridY" type="xint" value="-1"/>
+        <entry key="workflow.editor.zoomLevel" type="xdouble" value="1.0"/>
+        <entry key="workflow.editor.curvedConnections" type="xboolean" value="false"/>
+        <entry key="workflow.editor.connectionWidth" type="xint" value="1"/>
+    </config>
+</config>

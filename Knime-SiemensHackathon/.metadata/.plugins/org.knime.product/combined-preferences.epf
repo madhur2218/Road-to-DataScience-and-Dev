@@ -1,0 +1,50 @@
+#
+#Wed Apr 23 20:25:06 IST 2025
+org.knime.workbench.explorer.view/mountpointNode/shs-dataneers-hub/useRest=false
+org.knime.workbench.explorer.view/mountpointNode/shs-dataneers-hub/defaultMountID=shs-dataneers-hub
+org.knime.workbench.explorer.view/mountpointNode/shs-dataneers-hub/mountID=shs-dataneers-hub
+com.knime.customizations/updateSite.default.forceDisable=true
+org.knime.workbench.explorer.view/mountpointNode/shs-dataneers-hub/username=
+org.knime.workbench.explorer.view/mountpointNode/shs-dataneers-hub-dev/mountpointNumber=1
+org.knime.workbench.explorer.view/mountpointNode/shs-dataneers-hub-dev/isCommunityHub=false
+org.knime.database/drivers/Snowflake_CN/url_template=jdbc\:snowflake\://<account_name>.snowflakecomputing.cn/?warehouse\=<warehouse>&role\=[role]&db\=[database]&schema\=[schema]
+com.knime.customizations/updateSite.names=KNIME-AP-5-4,KNIME-Community-Ext-5-4
+org.knime.workbench.explorer.view/mountpointNode/shs-dataneers-hub-dev/defaultMountID=shs-dataneers-hub-dev
+org.knime.workbench.explorer.view/mountpointNode/shs-dataneers-hub/mountpointNumber=0
+org.knime.workbench.explorer.view/mountpointNode/shs-knime-hub-cn/username=
+org.knime.workbench.explorer.view/defaultMountpoint/defaultMountpoints=LOCAL,EXAMPLES
+org.knime.database/drivers/Snowflake/version=3.20.0
+com.knime.customizations/helpContact.address=mailto\:knime.support@siemens-healthineers.com
+org.knime.workbench.explorer.view/mountpointNode/shs-knime-hub-cn/factoryID=com.knime.explorer.server.knime_hub
+org.knime.workbench.explorer.view/mountpointNode/shs-dataneers-hub/active=true
+org.knime.database/drivers/Snowflake_CN/database_type=snowflake
+org.knime.workbench.explorer.view/mountpointNode/shs-dataneers-hub-dev/username=
+org.knime.workbench.explorer.view/mountpointNode/shs-dataneers-hub-dev/factoryID=com.knime.explorer.server.knime_hub
+org.knime.workbench.explorer.view/mountpointNode/shs-dataneers-hub-dev/useRest=false
+org.knime.workbench.explorer.view/mountpointNode/shs-dataneers-hub-dev/mountID=shs-dataneers-hub-dev
+org.knime.database/drivers/Snowflake/driver_class=net.snowflake.client.jdbc.SnowflakeDriver
+org.knime.workbench.explorer.view/defaultMountpoint/enforceExclusion=true
+com.knime.customizations/documentation.address=https\://healthineers.sharepoint.com/sites/knime
+org.knime.workbench.explorer.view/mountpointNode/shs-dataneers-hub-dev/active=true
+org.knime.database/drivers/Snowflake_CN/version=3.20.0
+org.knime.database/drivers/Snowflake/url_template=jdbc\:snowflake\://<account_name>.snowflakecomputing.com/?warehouse\=<warehouse>&role\=[role]&db\=[database]&schema\=[schema]
+com.knime.customizations/documentation.buttonText=KNIME-SHS-Support
+com.knime.customizations/updateSite.uris=https\://registry-knime.siemens-healthineers.com/analytics-platform/5.4/latest,https\://registry-knime.siemens-healthineers.com/community-contributions/trusted/5.4
+org.knime.workbench.explorer.view/mountpointNode/shs-knime-hub-cn/serveraddress=https\://api.knime-hub.siemens-healthineers.cn
+org.knime.workbench.explorer.view/mountpointNode/shs-dataneers-hub-dev/serveraddress=https\://api.automation-knime-hub-dev.siemens-healthineers.com
+org.knime.database/drivers/Snowflake_CN/paths/0=C\:\\Program Files\\KNIME\\Profiles\\ap_5_4/snowflake-jdbc-3.20.0.jar
+org.knime.workbench.explorer.view/mountpointNode/shs-dataneers-hub/isCommunityHub=false
+org.knime.database/drivers/Snowflake/paths/0=C\:\\Program Files\\KNIME\\Profiles\\ap_5_4/snowflake-jdbc-3.20.0.jar
+com.knime.customizations/helpContact.buttonText=
+org.knime.database/drivers/Snowflake/database_type=snowflake
+org.knime.workbench.explorer.view/mountpointNode/shs-dataneers-hub/serveraddress=https\://api.automation-knime-hub.siemens-healthineers.com
+org.knime.workbench.explorer.view/mountpointNode/shs-knime-hub-cn/isCommunityHub=false
+org.knime.core/knime.core.ap-customization-configuration=C\:\\Program Files\\KNIME\\Profiles\\ap_5_4/customization.yml
+org.knime.workbench.explorer.view/mountpointNode/shs-knime-hub-cn/useRest=false
+org.knime.workbench.explorer.view/mountpointNode/shs-knime-hub-cn/defaultMountID=shs-knime-hub-cn
+org.knime.workbench.explorer.view/mountpointNode/shs-dataneers-hub/factoryID=com.knime.explorer.server.knime_hub
+org.knime.workbench.explorer.view/mountpointNode/shs-knime-hub-cn/active=true
+org.knime.workbench.explorer.view/mountpointNode/shs-knime-hub-cn/mountpointNumber=2
+com.knime.customizations/updateSite.default.disable=true
+org.knime.database/drivers/Snowflake_CN/driver_class=net.snowflake.client.jdbc.SnowflakeDriver
+org.knime.workbench.explorer.view/mountpointNode/shs-knime-hub-cn/mountID=shs-knime-hub-cn
