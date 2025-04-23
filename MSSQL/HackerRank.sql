@@ -52,6 +52,52 @@ UNION
 
 
 --11 Weather Observation Station 7
+SELECT DISTINCT CITY
+FROM STATION
+WHERE RIGHT(CITY, 1) IN ('a', 'e', 'i', 'o', 'u');
+
+SELECT DISTINCT CITY
+FROM STATION
+WHERE CITY LIKE '%a'
+   OR CITY LIKE '%e'
+   OR CITY LIKE '%i'
+   OR CITY LIKE '%o'
+   OR CITY LIKE '%u';
+
+
+--12 Weather Observation Station 8
+select distinct(city) from STATION 
+where left(city,1) in ('a','e','i','o','u') and right(city,1) in ('a','e','i','o','u')
+
+--13.Weather Observation Station 10
+select distinct(city) from STATION 
+where left(city,1) not in ('a','e','i','o','u')
+
+--14. Weather Observation Station 11
+select distinct(city) from STATION 
+where left(city,1) not in ('a','e','i','o','u') or right(city,1) not in ('a','e','i','o','u')
+
+--15. Weather Observation Station 12
+select distinct(city) from STATION 
+where right(city,1) not in ('a','e','i','o','u') and left(city,1) not in ('a','e','i','o','u')
+
+--16. Weather Observation Station 6
+select distinct(city) from STATION
+where left(city,1) in ('a','e','i','o','u')
+
+--17. Higher than 75 marks
+SELECT name FROM STUDENTS 
+WHERE marks>75 
+ORDER BY RIGHT(name,3),id asc
+
+--18. Employee names
+select name from Employee 
+order by name asc
+
+--19. Employee salaries
+select name from Employee 
+where salary >2000 and months < 10
+order by employee_id asc
 
 
  
