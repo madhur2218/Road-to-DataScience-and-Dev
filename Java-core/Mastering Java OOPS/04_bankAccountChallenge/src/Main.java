@@ -21,5 +21,11 @@ public class Main {
         bobsAccount.withdrawFunds(54.46);
 
         bobsAccount.withdrawFunds(54.45);
+
+        MyAccount madhurAccount = new MyAccount();
+        madhurAccount.setBalance(100);
+        madhurAccount.withdrawAmount(90);
+        System.out.println(madhurAccount.getBalance());
+
     }
 }
