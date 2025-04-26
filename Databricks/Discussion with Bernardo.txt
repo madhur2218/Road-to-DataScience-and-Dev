@@ -1,0 +1,11 @@
+1. need databricks access for trying out stuff for FR like creating notebooks and doing data transformations 
+by dumping data from postgres and sql and connecting with power bi 
+2. Need help in setting up my first notebook on databricks?
+2. Need to know the feasibility on how to migrate from spring batch jobs to databricks
+3. Before creating clusters in databricks, what was your thought process while creating clusters. eg. which cluster to choose for which jobs
+4. In the future even if we migrate out jobs to databricks, would they be written in Python ?
+5. What type of clusters would u prefer eg. (all purposr cluster, shared cluster etc) and for which job if we plan to migrate some jobs to databricks?
+6. Dont you think Databricks on azure would had been more beneficial as compared to AWS 
+7. If we plan to migrate our jobs in future in databricks, then this would mean that we will have to change our whole logic of parsing in python only? correct ?
+8. How we can improve the data engineering workflow of sami, for eg: in landing zone we get the raw data, using parsers we are getting the data in silver zone, and the gold data is present in out sql tables or the parquet files(gold layer) but still we see some data discrepency, so how to improve this ?
+9.  	
