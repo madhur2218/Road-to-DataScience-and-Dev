@@ -1,0 +1,1 @@
+installing llama in local : ollama run llama3.2
