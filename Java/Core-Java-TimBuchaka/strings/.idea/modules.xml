@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/ArraysAndArrayList_kk.iml" filepath="$PROJECT_DIR$/ArraysAndArrayList_kk.iml" />
+      <module fileurl="file://$PROJECT_DIR$/strings.iml" filepath="$PROJECT_DIR$/strings.iml" />
     </modules>
   </component>
 </project>
