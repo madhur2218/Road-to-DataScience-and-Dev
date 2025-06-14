@@ -1,0 +1,1649 @@
+CREATE TABLE BONUS
+        (ENAME VARCHAR(10),
+         JOB   VARCHAR(9),
+         SAL   NUMeric,
+         COMM  NUMeric);
+
+CREATE TABLE EMP
+       (EMPNO NUMERic(4) NOT NULL,
+        ENAME VARCHAR(10),
+        JOB VARCHAR(9),
+        MGR NUMERic(4),
+        HIREDATE DATE,
+        SAL NUMERic(7, 2),
+        COMM NUMeric(7, 2),
+        DEPTNO NUMERic(2));
+        
+       
+        CREATE TABLE SALGRADE
+        (GRADE NUMERIC,
+         LOSAL NUMERIC,
+         HISAL NUMERIC);
+
+INSERT INTO SALGRADE VALUES (1,  700, 1200);
+INSERT INTO SALGRADE VALUES (2, 1201, 1400);
+INSERT INTO SALGRADE VALUES (3, 1401, 2000);
+INSERT INTO SALGRADE VALUES (4, 2001, 3000);
+ 
+CREATE TABLE DEPT
+       (DEPTNO NUMERIC(2) not null,
+        DNAME VARCHAR(14),
+        LOC VARCHAR(13) );
+        
+
+INSERT INTO DEPT VALUES (10, 'ACCOUNTING', 'NEW YORK');
+INSERT INTO DEPT VALUES (20, 'RESEARCH',   'DALLAS');
+INSERT INTO DEPT VALUES (30, 'SALES',      'CHICAGO');
+INSERT INTO DEPT VALUES (40, 'OPERATIONS', 'BOSTON');
+
+INSERT INTO EMP VALUES
+        (7369, 'SMITH',  'CLERK',     7902,
+        '1980-12-17',   800, NULL, 20);
+INSERT INTO EMP VALUES
+        (7499, 'ALLEN',  'SALESMAN',  7698,
+        '1981-02-20',  1600,  300, 30);
+INSERT INTO EMP VALUES
+        (7521, 'WARD',   'SALESMAN',  7698,
+        '1981-02-22',  1250,  500, 30);
+INSERT INTO EMP VALUES
+        (7566, 'JONES',  'MANAGER',   7839,
+        '1981-04-02',   2975, NULL, 20);
+INSERT INTO EMP VALUES
+        (7654, 'MARTIN', 'SALESMAN',  7698,
+        '1981-09-28',  1250, 1400, 30);
+INSERT INTO EMP VALUES
+        (7698, 'BLAKE',  'MANAGER',   7839,
+        '1981-05-01',   2850, NULL, 30);
+INSERT INTO EMP VALUES
+        (7782, 'CLARK',  'MANAGER',   7839,
+        '1981-06-09',   2450, NULL, 10);
+INSERT INTO EMP VALUES
+        (7788, 'SCOTT',  'ANALYST',   7566,
+        '1982-12-09',  3000, NULL, 20);
+INSERT INTO EMP VALUES
+        (7839, 'KING',   'PRESIDENT', NULL,
+        '1981-11-17',  5000, NULL, 10);
+INSERT INTO EMP VALUES
+        (7844, 'TURNER', 'SALESMAN',  7698,
+        '1981-09-08',   1500, NULL, 30);
+INSERT INTO EMP VALUES
+        (7876, 'ADAMS',  'CLERK',     7788,
+        '1983-01-12',  1100, NULL, 20);
+INSERT INTO EMP VALUES
+        (7900, 'JAMES',  'CLERK',     7698,
+        '1981-12-03',    950, NULL, 30);
+INSERT INTO EMP VALUES
+        (7902, 'FORD',   'ANALYST',   7566,
+        '1981-12-03',   3000, NULL, 20);
+INSERT INTO EMP VALUES
+        (7934, 'MILLER', 'CLERK',     7782,
+        '1982-01-23',  1300, NULL, 10);
+
+
+
+SELECT 
+    i.name AS index_name,
+    i.type_desc AS index_type,
+    c.name AS column_name
+FROM 
+    sys.indexes i
+JOIN 
+    sys.index_columns ic ON i.object_id = ic.object_id AND i.index_id = ic.index_id
+JOIN 
+    sys.columns c ON ic.object_id = c.object_id AND ic.column_id = c.column_id
+WHERE 
+    i.object_id = OBJECT_ID('SALGRADE');
+
+
+
+--select * from emp
+--select * from dept
+
+--select EMPNO, ENAME, JOB, SAL FROM EMP
+
+--SELECT EMPNO, ENAME, JOB, SAL*10 AS YEAR_SAL FROM EMP
+
+SELECT EMPNO, ENAME AS EMPLOYEE_NAME, JOB, SAL*10 AS YEAR_SAL FROM EMP
+ 
+SELECT EMPNO, ENAME AS EMPLOYEE_NAME, JOB, SAL, SAL+COMM  FROM EMP   --null + 10 = null
+
+SELECT EMPNO, ENAME AS EMPLOYEE_NAME, JOB, SAL, SAL+ISNULL(COMM,0)  FROM EMP
+
+SELECT ENAME + ' WORKS AS ' + JOB AS WORK FROM EMP
+
+SELECT DISTINCT(JOB) FROM EMP
+
+SELECT DISTINCT JOB, DEPTNO FROM EMP
+
+SELECT * FROM EMP
+WHERE DEPTNO= 20
+
+SELECT * FROM EMP
+WHERE job = 'Clerk'
+
+select * from emp
+where job ='clerk' or job = 'salesman'
+
+select * from emp
+where job in ('clerk','salesman')
+
+select getdate()
+
+select * from emp
+where job != 'clerk'
+
+select * from emp 
+where sal between 1000 and 2000
+
+select * from emp
+where Ename between 'a' and 'g'
+
+select * from emp
+where ename like 'a%'
+
+select * from emp
+where ename like '%a'
+
+select * from emp
+where ename like '1980%'
+
+SELECT * FROM EMP
+WHERE HIREDATE < '2025-03-01'
+
+SELECT * FROM EMP
+WHERE HIREDATE LIKE '%-02-%'
+
+
+select * from emp
+where ename like '_a%'
+
+select * from emp
+where comm is null
+
+select * from emp
+where comm is not null
+
+select * from emp
+where job = 'clerk' and deptno = 20
+
+select * from emp 
+where job in ('clerk', 'salesman') and sal > 1000
+
+select * from emp
+where job = 'manager' and sal !< 3000 
+
+select * from emp
+where (job = 'clerk') and  (deptno = 20 or sal > 1500)
+
+
+--fetch n records
+select top (1) * from emp
+
+select top (2) * from emp
+
+--order by 
+SELECT * FROM EMP
+ORDER BY SAL DESC
+OFFSET 4 ROWS FETCH NEXT 2 ROWS ONLY
+
+SELECT * FROM EMP
+WHERE JOB = 'SALESMAN'
+ORDER BY HIREDATE 
+
+SELECT TOP 1 * FROM EMP
+ORDER BY SAL DESC
+
+SELECT * FROM EMP
+ORDER BY JOB
+
+SELECT * FROM EMP
+ORDER BY JOB, SAL DESC
+
+SELECT * FROM EMP
+ORDER BY JOB, SAL*12 AS TSAL FROM EMP ORDER BY TSAL DESC
+
+SELECT EMPNO, ENAME, JOB, DEPTNO FROM EMP ORDER BY 4
+
+SELECT * FROM EMP
+
+
+
+-----------10/06/2025---------------------
+
+select * from EMP
+
+--scalar functions (single row functions)
+
+select getdate() as todays_date , 10*10
+
+select lower(ename) from EMP
+
+select lower (ename) , upper(ename) , len(ename) from emp
+
+select left(ename,3) d from emp
+select right(ename,3) d from emp
+
+select upper(ename) as a , lower(ename) as  b, len(ename) as c,
+REPLACE (ename,'s','#'), charindex('s', ename), reverse(ename),concat(ename,job) from emp
+
+
+select concat( left(ename,5) , left(7,11)) 
+
+select left('manjunath@siemens.com', charindex('@', 'manjunath@siemens.com')-1)
+select charindex('@', 'manjunath@siem@ns.com',11)
+
+select abs(-10), sign(200), power(2,3), sqrt(64), round(123.32,1), floor(1.999), ceiling(1.0022)
+
+select round(123,-1), round(678, -1), round (654,-2), round(678,-3)
+
+select getdate()
+select dateadd(month,2,getdate())
+select hiredate,dateadd(day,2,hiredate) from emp
+select month(getdate()), year(getdate()), day(getdate())
+SELECT DATEDIFF(MONTH, hiredate, GETDATE()) FROM emp;
+select datediff(year, hiredate, GETDATE()) from emp
+select datediff(day , hiredate, getdate()) from emp
+select datename(weekday,getdate()) ,datename(quarter, getdate())
+
+--list of emp who had an off next day of joining
+SELECT empno, ename, hiredate
+FROM emp
+WHERE DATENAME(WEEKDAY, DATEADD(DAY, 1, hiredate)) IN ('Saturday', 'Sunday');
+
+--list all emp joined in 2nd half of the month
+SELECT empno, ename, hiredate
+FROM emp
+WHERE day(HIREDATE)> 15
+select datepart(week,getdate()), datepart(weekday,getdate());
+
+--conversion functions
+select cast(1.14 as int)
+select cast('2014-05-20' as datetime)
+
+--convert
+select convert(int, 14.58)
+select convert( float, 14.25)
+select convert(datetime, '2014-05-02')
+select convert(varchar, getdate(), 103)
+select convert(varchar, getdate(), 104), convert(varchar , getdate(),107), convert(varchar, getdate(), 108)
+select convert(char(10),getdate(),112)
+select convert(char(40),getdate(),111)
+select convert(char(25),getdate(),100)
+select convert(char(25),getdate(),22)
+
+
+--generic functions
+select empno, ename, sal, comm, isnull(convert(varchar,comm), 'N/A') as newcomm from emp
+
+
+--if else login in sql query
+--CASE (ACTS LIKE AN IF-ELSE LOGIC)
+
+SELECT empno, ename, deptno,
+       CASE deptno
+           WHEN 10 THEN 'A'
+           WHEN 20 THEN 'B'
+           WHEN 30 THEN 'C'
+           ELSE 'X'
+       END AS empgrade
+FROM emp;
+
+--extended case logic (range based criteria on multiple fields)
+SELECT ename, job, sal,
+       CASE 
+           WHEN sal > 500 AND sal <= 1000 THEN 'LGRADE'
+           WHEN sal BETWEEN 1001 AND 3000 THEN 'MGRADE'
+           ELSE 'AGRADE'
+       END AS empgrade
+FROM emp;
+
+--GROUP FUNCTIONS
+select sum(sal) from emp
+
+select ename , sum(sal) from emp
+Group By ename 
+
+select  sum(sal) from emp
+where deptno in (10,20)
+
+select min(sal) from emp
+
+select max(sal) from emp
+
+--when did the seniormost clerk join
+SELECT empno, ename, job, hiredate
+FROM emp
+WHERE job = 'CLERK'
+AND hiredate = (SELECT MIN(hiredate) FROM emp WHERE job = 'CLERK');
+
+
+--when was a manager recruited most recently
+SELECT empno, ename, job, hiredate
+FROM emp
+WHERE job = 'MANAGER'
+AND hiredate = (SELECT MAX(hiredate) FROM emp WHERE job = 'MANAGER');
+
+--get total sal paid for emp who earn comm
+select sum(sal) from emp
+where comm is not null
+
+select avg(comm) from emp
+where comm is not null
+
+select avg(comm), sum(comm)/14, avg(isnull(comm,0)) from emp
+
+select count(*), count(comm), count(distinct(job)) from emp
+
+--how many employees earn comission
+select count(*) from emp
+where comm is not null
+--how many managers salary more than 2500
+select count(*) from emp
+where job = 'MANAGER' AND SAL > 2500
+
+
+--headcount of emp in each dept
+select DEPTNO , count(*) from emp
+GROUP BY DEPTNO
+ORDER BY DEPTNO DESC
+
+--total salary paid for each job 
+select job, sum(sal) as tsal from emp
+group by job 
+order by tsal  desc
+
+--total salary paid for each job excluding clerks
+select job, sum(sal) as tsal from emp
+group by job 
+having job not in ('clerk')
+order by tsal  desc
+
+--TOTAL SAL PAID FOR EACH JOB EXCLUDING CLERKS ONLY IF THE TOTAL SAL > 5000
+select job, sum(sal) as tsal from emp
+group by job 
+having job not in ('clerk') and sum(sal) > 5000 
+order by tsal  desc
+
+--how many emp earn sal . 1000 in each dept
+SELECT deptno, COUNT(*) AS emp_count
+FROM emp
+WHERE sal > 1000
+GROUP BY deptno;
+
+--how many emp earn sal > 1000 in each dept with avg(sal) > 1500
+SELECT deptno, COUNT(*) AS emp_count
+FROM emp
+WHERE sal > 1000
+GROUP BY deptno
+having avg(sal) > 1500
+
+--dept wise head count
+select deptno, count(*) from emp
+group by deptno
+
+--dept wise, jobwise healdcount
+select * from emp
+SELECT deptno, job, COUNT(*) AS emp_count
+FROM emp
+GROUP BY deptno, job
+order by deptno desc
+
+--get managerwise count fo reportees
+select * from emp
+
+select MGR, count(*) from emp
+--where mgr is not null
+Group by MGR
+having mgr is not null
+
+-- GENERATE REPORT AS BELOW
+YOJ     hct
+1980	2
+1981	8
+1982	1
+1983	3
+
+SELECT YEAR(hiredate) AS YOJ, COUNT(*) AS HCT
+FROM emp
+GROUP BY YEAR(hiredate)
+ORDER BY YOJ;
+
+
+--GENERATE A REPORT AS BELOW
+DEPTNO   YOJ   HCT 
+10		1980   1
+10		1981   2
+
+SELECT DEPTNO, YEAR(hiredate) AS YOJ, COUNT(*) AS HCT
+FROM emp
+GROUP BY deptno,YEAR(hiredate)
+ORDER BY deptno, YOJ
+
+
+--2nd Half day 2 work:
+
+--- joins ---
+-- single select query written to fetch data from multiple tables
+-- join operation is performed based on join criteria-
+-- join (n) tables---- (n-1) join criteria-- where  t1.c1=t2.c3
+-- pk-fk, col with same name, cols with same data
+select * from dept;
+select * from emp;
+
+-- list empno,ename,sal,deptno,dname 
+--  table emp, dept
+-- join criteria --emp.deptno=dept.deptno
+-- inner join
+select e.empno,e.ename,e.sal,d.deptno,d.dname  from emp e,dept d
+where e.deptno=d.deptno
+
+-- ANSI Joins  (join, on, inner, outer)
+-- inner join-- return results matching the criteria
+-- outer join -- return results matching the criteria + non matched records
+select e.empno,e.ename,e.sal,d.deptno,d.dname from emp e inner join dept d
+on e.deptno=d.deptno;
+
+-- list empno,ename,sal,deptno,dname of emp with sal>2000
+select e.empno,e.ename,e.sal,d.deptno,d.dname from emp e inner join dept d
+on e.deptno=d.deptno where e.sal>2000
+
+------------------------
+select e.empno,e.ename,e.sal,d.deptno,d.dname from emp e inner join dept d
+on e.deptno=d.deptno and e.sal>2000
+-----------------------------
+
+select * from salgrade;
+
+
+-- Grade every emp based on the sal (inner non equi)
+select empno,ename,sal,grade from 
+emp e join salgrade s
+on e.sal between s.losal and s.hisal;
+
+
+
+-- 3 table join  (emp,dept,salgrade)
+
+
+select e.empno,e.ename,d.deptno,d.dname,e.sal,s.grade
+from emp e join dept d
+on e.deptno=d.deptno -- o/p1
+join  salgrade s on e.sal between s.losal and s.hisal;
+
+-- outer join -- return results matching the criteria + non matched records 
+-- Left Outer Join, Right Outer Join, Full Outer join
+
+select e.empno,e.ename,e.sal,d.deptno,d.dname from emp e right join dept d
+on e.deptno=d.deptno 
+
+select empno,ename,sal,grade,losal,hisal from 
+emp e full  join salgrade s
+on e.sal between s.losal and s.hisal;
+
+select e.empno,e.ename,d.deptno,d.dname,e.sal,s.grade
+from emp e right join dept d
+on e.deptno=d.deptno 
+left join  salgrade s on e.sal between s.losal and s.hisal;
+
+
+
+
+
+
+select empno,ename,sal,grade from emp e  left outer  join salgrade s on e.sal between s.losal and s.hisal;
+select e.empno,e.ename,e.sal,d.deptno,d.dname from emp e right outer join dept d on e.deptno=d.deptno;
+-- self join (table joining with self)- PK-FK mapping within the same table
+
+-- list ename , managername
+select * from emp;
+
+select   e.ename +' REPORTS TO '+ isnull(m.ename,'NONE') as emp_manager_details
+from emp e left join emp m on e.mgr=m.empno;
+
+select comm,mgr,sal,coalesce(comm,mgr,sal) from emp;
+--how many emp earn comm
+select count(*) from emp where comm is not null;
+select count(comm) from emp where job='salesman';
+-- mgrwise count of reportees
+select mgr, count(*) rct from emp  where mgr is not null group by mgr;
+-- list dname, count(employees)  in each dname
+select dname,count(empno)  from emp e right join dept d  on e.deptno=d.deptno
+group by dname
+select dname,count(*)  from emp e right join dept d  on e.deptno=d.deptno
+group by dname
+
+select dname,sum(sal)  from emp e right join dept d  on e.deptno=d.deptno
+group by dname
+
+-- list  dname,  min(sal) , max(sal) in each dname
+select dname,min(sal) msal,max(sal) hsal  from emp e  right join dept d  on e.deptno=d.deptno
+group by dname
+-- list grade, count(employees) in each grade
+select s.grade, count(e.empno) from emp e  left join salgrade s on e.sal between s.losal and s.hisal
+group by s.grade
+
+
+
+select   e.ename, isnull(m.ename,'NONE')  managername from emp e left  join emp m on e.mgr=m.empno;
+-- cross join (cartesian product) (m*n)-- cross product
+select ename, dname from emp cross join dept;
+-- full outrer join  (m+n), cross join (m*n)
+-- t1--- m, t2--n  o/p not be >(m+n) if o/p> (m+n) then join criteria missing, wrong join criteria
+
+-- set operators (union all, union, intersect, except)
+-- queries should identical in structure
+-- corresponding cols shd of compatible datatype
+/* select sal+comm,ename from emp where deptno in(10,20) and job='clerk'
+  union all
+   select sal+comm,ename from emp where deptno in(10,20) and job='clerk'  */
+
+ select ename, job, sal from emp where sal>2000
+ union 
+  select ename, job, sal from emp where job='manager'
+
+   select ename, job, sal from emp where sal>2000
+ intersect
+  select ename, job, sal from emp where job='manager'
+  ----------------------------------------------------------------------------
+  select ename, job, sal from emp where sal>2000
+ except
+  select ename, job, sal from emp where job='manager'
+  union
+  select dname, loc, 1 from dept
+
+  select 'a' as A, 'b'  as B
+  union all
+  select '1+3', 'ab'
+  ------------------------------------------
+
+
+
+
+   select deptno,count(*) from emp group by rollup(deptno)
+   --------------------------------------------
+   select deptno,job,count(*) hct from emp
+ group by  rollup (deptno,job)
+ order by deptno;
+----------------------------
+select deptno,job,count(*) hct, grouping(deptno) dno, grouping(job) ejob from emp
+ group by  cube (deptno,job)
+ order by deptno; /* select count(*) from emp, select count(*) from emp group by deptno,
+ select count(*)  from emp group by job, select count(*) from emp group by  deptno,job */
+
+select deptno,job,count(*) hct from emp 
+group by grouping sets((),(deptno),(job),(deptno,job)) order by deptno
+
+
+--Day 3 (wednesday)
+--NESTED QUERIES  (what it returns and column type is imp)
+select hiredate from emp where ename = 'FORD'
+SELECT * FROM EMP WHERE HIREDATE > (SELECT HIREDATE FROM EMP WHERE ENAME = 'FORD')
+
+--single row subquery(=, >,<,!=,>=,<=),  multirow sub query (in, or, any)
+--if subquery has not data then outer query will not work
+
+--list all emp who earn sal> max(sal) among clerks
+select * from emp
+where sal > (select max(sal) from emp where job = 'CLERK')
+
+--list all emp who work in chicago
+select * from emp where deptno = (select deptno from dept where loc = 'chicago')
+
+--list all emp who report to blakes manager
+SELECT * FROM EMP WHERE MGR = (SELECT MGR FROM EMP WHERE ENAME = 'BLAKE') AND ENAME != 'BLAKE'
+
+--list the details of dept which has > 3 emp working in it 
+select * from dept where deptno in (
+select deptno from emp
+group by deptno having count(*) > 3)
+
+--list all emp who earn sal > avg(sal) of any dept
+select * from emp where sal > any (select avg(sal) as avg_sal from emp   -- any does as or operation
+group by deptno)
+
+--list all emp who earn sal > avg(sal) of all the dept
+select * from emp where sal > all (select avg(sal) as avg_sal from emp
+group by deptno)
+
+--list all emp who earn sal>avg(sal)
+select * from emp where sal > (select avg(sal) as avg_sal from emp)
+
+--Multiple subqueries
+--list all emp who work with FORD and report to FORDS manager
+select * from emp 
+where deptno = (SELECT deptno from emp where ename = 'FORD') 
+and mgr = (select mgr from emp where ename = 'FORD ') 
+and ename = 'ford'
+
+--list all emp who earn sal> avg(sal) of their respective dept
+--below is correlated sub-query
+select * from emp e1
+where sal > (select avg(sal) from emp e2 where e1.deptno = e2.deptno)
+
+--below query will also give same output to above query here the inner subquery is called inline views
+select e* from emp e join (select deptno, avg(sal) asal from emp group by deptno) x on edeptno= x.deptno and e.sal > x.asal
+
+
+--CTE, with query, commin table expression
+WITH one AS (
+    SELECT empno, ename, sal, deptno
+    FROM emp
+),
+two AS (
+    SELECT deptno, dname
+    FROM dept
+),
+three AS (
+    SELECT grade, losal, hisal
+    FROM salgrade
+)
+SELECT o.empno, o.ename, o.sal, o.deptno, t.dname, th.grade
+FROM one o
+JOIN two t ON o.deptno = t.deptno
+JOIN three th ON o.sal BETWEEN th.losal AND th.hisal;
+
+--Exist operator (used with subqueries and return true or false)
+--when true- main query executes, when false-main query does not executes
+--exists operator makes sub queries faster
+
+--get details of dept which has atleast one employee
+select * from dept where exists(select deptno from emp where emp.deptno = dept.deptno)
+
+select * from dept where not exists(select ename from emp where job = 'Anna')
+
+
+
+--get details of the dept with no emp working in it
+ select * from dept where not exists (select deptno from emp where emp.dept = dept.deptno)
+
+--Window function, analytical functions -> over and partition by 
+--sum, min, max, avg, count, row_number, rank, dense_rank, lead, lag are used with window functions
+
+select empno, ename, sal , sum(sal) over() as tsal from emp
+select empno, ename, sal,deptno  , sum(sal) over(partition by deptno) as tsal from emp order by deptno
+
+--get the diff between salary and avg salary of emp from each dept
+WITH x AS (
+    SELECT empno, ename, sal, deptno,
+           AVG(sal) OVER (PARTITION BY deptno) AS asal
+    FROM emp
+)
+SELECT empno, sal, asal, sal - asal AS diff
+FROM x;
+
+
+--row number
+--arrange the emp based on seniory in each dept 
+select empno, ename, sal, deptno, hiredate
+row_number() over (partition by deptno order by hiredate) as elist emp
+order by deptno
+
+--get seniormost emp in each dept
+select * from (select empno, name, sla, deptno, hiredate, row_number() over (partition by deptno order by hiredate) as elist from emp)
+)x where elist = 1
+
+
+select empno, enama, sal ,deptno, hiredate,rank() over(partition by deptno order by sal desc) as srank from emp
+order by deptno;
+
+SELECT empno, ename, sal, deptno, hiredate,
+       DENSE_RANK() OVER (PARTITION BY deptno ORDER BY sal DESC) AS srank
+FROM emp
+ORDER BY deptno;
+
+--lead and lag 
+select empno, deptno, ename, sal, lead(sal,1) over(partition by deptno order by sal) as higher_salary, lag(sal,1) over(partition by deptno order by sal) as lower_salary from emp
+
+select empno, ename, deptno, sal, ntile(4) over (order by sal) from emp
+
+
+CREATE TABLE course (
+    cid NUMERIC(3),
+    cname VARCHAR(10) NOT NULL,
+    cfees NUMERIC(7,2) CHECK (cfees > 2000),
+    CONSTRAINT cid_pk PRIMARY KEY (cid),
+    CONSTRAINT cn_uq UNIQUE (cname)
+);
+
+
+CREATE TABLE student(
+	sid numeric (4) identity(1,1) primary key,
+	sname varchar(10) not null, sdob date,
+	sadd varchar(20) default 'PUNE',
+	scid numeric(3) constraint scie_fk references course (cid) on delete set null
+)
+
+ALTER TABLE student ADD sphno numeric (10);
+alter table student add unique (sphno);
+alter table student drop constraint UQ__student__5D62CE33B0112B6F
+alter table student drop column sphno
+alter table student alter column sadd varchar(30)
+
+select * from student
+
+--alter table student add constraint scid-fk1 foreign key (scid) references course(cid) on delete set null;
+
+drop table 
+truncate table 
+delete table 
+
+select * into copyemp from emp
+select * from copyemp
+drop table copyemp
+
+select empno, ename, deptno, sal into compyemp from emp where deptno= 20
+select * from compyemp
+drop table copyemp
+
+select empno, ename as empname,deptno, sal as empsal into copyemp from emp
+where deptno = 20
+
+select * from copyemp
+drop table copyemp
+
+select * into copyemp from emp where 1=2
+insert into copyemp select * from emp where sal>2000
+
+create table #temptab(id numeric(4)) 
+drop table #temptab
+
+--dml -> insert, update, delete ,merge
+select * from course
+insert into course values(5, 'MsSql', 3500)
+insert into course values(6, 'PLSQL',5000), (7,'LINUX',4000)
+select * from student
+insert into student (sname,sdob,scid) values('Asha','2000-07-09',null)
+select * from student
+insert into student (sname,sdob,scid) values('Kiran','2008-07-19',null)
+select * from student
+update student set sadd = null where sid in (1,2)
+
+insert into student (sname,sdob,scid,sadd) values ('Leena', '2000-07-09',null, 'Chennai')
+
+
+--transactions
+
+begin transaction
+select * from dept
+update dept set deptno = 44 where deptno = 40;
+select * from dept
+select * from emp
+rollback transaction
+select * from dept
+
+-------------12/06/2025------------------------
+
+-- College Database--
+-- DDL script to create table --
+-- Department Table --
+create table department(
+did NUMERIC(4) constraint did_pk primary key,
+dname varchar(20) constraint dname_nn not null,
+dloc varchar(20));
+
+-- Instructor Table --
+create table instructor(iid NUMERIC(2) constraint iid_pk primary key, iname  varchar(20) constraint iname_nn not null,
+idoj date constraint idoj_nn not null,iphno NUMERIC(10),
+idid NUMERIC(4) constraint idid_fk references department (did) );
+
+Alter table department add dhid NUMERIC(2) constraint dhid_fk references instructor(iid);
+
+-- course table --
+
+create table course(
+cid NUMERIC(3) constraint cid_pk primary key,
+cname varchar(15) constraint cname_nn not null,
+cfees NUMERIC(7,2) , cprereq varchar(30),cduration NUMERIC(2),iid NUMERIC(2) constraint ciid_fk  references instructor(iid),did NUMERIC(4)  constraint cdid_fk references department(did));
+
+
+-- 2. Now drop the department table:
+DROP TABLE department;
+
+-- Student Table --
+
+create table student(
+sid NUMERIC(3) constraint sid_pk primary key,
+sname varchar(20) constraint sname_nn not null, sdob date);
+
+-- Enrolls Table --
+
+create table enrolls(
+sid NUMERIC(3) constraint sidfk  references student(sid),cid NUMERIC(3) constraint cidfk references course(cid), score NUMERIC(3));
+
+--- Inserting data into tables ---
+
+
+-- Department Table ---
+ insert into department values(2001,'EC','Bangalore',null);
+ insert into department values(2002,'CS','Mysore',null);
+ insert into department values(2003,'IT','Cochin',null);
+ insert into department values(2004,'CV','Mumbai',null);
+ insert into department values(2005,'EE','Chennai',null);
+ insert into department values(2006,'IS','Pune',null);
+
+-- Instructor Table --
+ insert into instructor values(11,'Arun','2007-05-10',9899990910,2002);
+ insert into instructor values(12,'Ajay','2007-07-10',9899990918,2001);
+ insert into instructor values(13,'Smitha','2007-08-10',9899990911,2003);
+ insert into instructor values(14,'Raghuveer','2007-09-07',9899990912,2004);
+ insert into instructor values(15,'Manoj','2009-02-13',9899990913,2006);
+ insert into instructor values(16,'Sanjeev','2009-04-09',9899990914,2002);
+ insert into instructor values(17,'Geetha','2006-10-13',9899990915,2001);
+ insert into instructor values(18,'Leela','2007-03-22',9899990916,2005);
+ insert into instructor values(19,'Rekha','2010-08-10',9899990917,2006);
+insert into instructor values(20,'Kiran','2012-11-12',9899990919,2004);
+
+update department set dhid=13 where did=2001;
+update department set dhid=17 where did=2002;
+update department set dhid=15 where did=2003;
+update department set dhid=15 where did=2004;
+update department set dhid=12 where did=2005;
+update department set dhid=14 where did=2006;
+
+
+-- Course Table ---
+ insert into course values(101,'C',3000,'ProgLogic',2,11,2002);
+ insert into course values(102,'C++',8000,'OOPS',3,11,2002);
+ insert into course values(103,'Oracle',6000,'DataLogic',1,16,2002);
+ insert into course values(105,'CAD',2000,'Design',2,14,2004);
+ insert into course values(106,'AWS',13000,'ITInfra',2,13,2003);
+ insert into course values(107,'Linux',10000,'OS',2,15,2006);
+ insert into course values(104,'Java',9000,'ProgLogic',6,18,2005);
+
+-- student table ---
+         Insert into student values(1 ,'Akshay','1999-07-23');
+        Insert into student values(2,'Ajay','1998-08-13');
+         Insert into student values(3,'Bala','1997-10-20');
+         Insert into student values(4,'Hari','1999-05-15');
+         Insert into student values(5,'Henry','2002-02-19');
+         Insert into student values(6,'Shruthi','1999-07-23');
+         Insert into student values(7,'Deepak','1999-09-14');
+         Insert into student values(8,'Prankaj','1999-06-18');
+         Insert into student values(9,'Vinay','1999-03-19');
+        Insert into student values(10,'Divya','2001-05-08');
+        Insert into student values(11,'Sagar','2008-01-16');
+        Insert into student values(12,'Sohan','1999-11-21');
+        Insert into student values(13,'Nikil','2003-12-16');
+        Insert into student values(14,'Vishal','2002-02-24');
+        Insert into student values(15,'Leena','2003-04-03');
+
+-- Enrolls Table --
+
+insert into enrolls values(1,101,68);
+insert into enrolls values(2,102,86);
+insert into enrolls values(3,102,77);
+insert into enrolls values(4,103,56);
+insert into enrolls values(5,105,80);
+insert into enrolls values(6,106,76);
+insert into enrolls values(7,101,58);
+insert into enrolls values(8,107,33);
+insert into enrolls values(9,103,81);
+insert into enrolls values(12,101,72);
+insert into enrolls values(13,101,66);
+insert into enrolls values(14,103,60);
+insert into enrolls values(15,102,92);
+insert into enrolls values(10,104,74);
+insert into enrolls values(11,104,65);
+
+
+select * from course
+select * from enrolls
+select * from instructor
+select * from student
+
+CREATE TABLE SMarks (
+    StID NUMERIC(3, 0) REFERENCES Student(sid),
+    StMarks INTEGER
+);
+
+insert into SMarks values (1,230),(3,255),(5,200)
+select * from smarks
+
+
+
+MERGE SMarks AS stm
+USING Student sd 
+ON (stm.StID = sd.sid)
+
+WHEN MATCHED AND stm.StMarks > 250 THEN 
+    DELETE
+
+WHEN MATCHED THEN 
+    UPDATE SET stm.StMarks = stm.StMarks + 100
+
+WHEN NOT MATCHED THEN 
+    INSERT (StID, StMarks)
+    VALUES (sd.sid, 25);
+GO
+
+select * from smarks
+
+----VIEWS-----
+--ment to show part of tables data 
+--Simple view and complex view
+--most of the time we use complex views
+--views are already complied and only execured, but normal query gets complied and then gets executed
+
+create view empv1 as select * from emp where sal > 2000
+
+select * from empv1
+
+update empv1 set sal = 1500 WHERE ename = 'FORD'
+
+ALTER  view empv1 as select * from emp where sal > 2000 WITH CHECK OPTION
+
+SELECT * FROM empv1 update empv1 set sal = 1500 where ename = 'king'
+
+select * from empv1
+update empv1 set sal = 1500 where ename = 'king'
+
+sp_helptext 'empv1'
+
+create view empdeptvw with encryption as 
+select e.*, d.dname from emp e join dept d on e.deptno = d.deptno
+
+select * from empdeptvw
+
+sp_helptext 'empdeptvw'
+
+alter view empdeptvw as select e.*, d.dname from emp e join dept d on e.deptno=d.deptno
+sp_helptext 'empdeptvw'
+
+-------------------------
+--EITHER INSERT/UPDATE/DELETE FAILS ON COMPLEX VIEW 
+update empdeptvw set sal = 3000 where ename = 'SMITH'
+DELETE FROM empdeptvw where empno = 7902
+
+create view courseview as select cname, cfees from course;
+select * from courseview
+
+update courseview set cname = 'UNIX' where cname = 'UNIC'
+insert into courseview values ('Java',8000) --fails
+
+sp_depends'EMP'
+sp_depends 'DEPT'
+sp_depends 'empdeptvw'
+
+alter table emp alter column sal numberc(9,2); --making dll change on base object
+select * from empdeptvw
+
+-- 1. Add a new column 'bonus' to the emp table
+ALTER TABLE emp 
+ADD bonus NUMERIC(8,2);
+
+-- 2. Create a view named 'deptvw' selecting all from dept
+CREATE VIEW deptvw AS 
+SELECT * FROM dept;
+
+-- 3. Query the view to check its contents
+SELECT * FROM deptvw;
+
+-- 4. View the definition of the view (if needed)
+EXEC sp_helptext 'deptvw';
+
+-- 5. Add a new column 'dhead' to the dept table
+ALTER TABLE dept 
+ADD dhead VARCHAR(10);
+
+-- 6. Update 'dhead' column with values based on deptno
+UPDATE dept SET dhead = 'SMITH'  WHERE deptno = 10;
+UPDATE dept SET dhead = 'BLAKE'  WHERE deptno = 20;
+UPDATE dept SET dhead = 'MARTIN' WHERE deptno = 30;
+UPDATE dept SET dhead = 'FORD'   WHERE deptno = 40;
+
+-- 7. Check the updated table
+SELECT * FROM dept;
+
+-- 8. Refresh the view to reflect new column 'dhead'
+EXEC sp_refreshview 'deptvw';
+
+--TSQL 
+	--conditional execution, iteratively -- implement some logic at backend
+	--code a block of code with multiple statements (dml, drl, tcl)
+	--tsql batch (reusability, security, modularity)
+	-- begin end, control structures, loop (dml, select, tcl)
+	--error handling, iterative execution
+	--named sql batch (stored procedure, udf, triggers)
+
+
+-- add two number --  
+declare @x int, @y int, @z int;
+  begin
+  set @x=100;
+  set @y=120;
+  select @z
+  set @z=@x+@y;
+  select @z as Result;
+  Print  'The sum is '+ convert(char(10), @z)
+  end;
+  go
+
+
+-- if exAMPLE
+IF DATENAME(weekday, GETDATE()) IN ('Saturday', 'Sunday')
+    SELECT 'Weekend';
+ELSE
+    SELECT 'Weekday';
+
+ IF EXISTS(SELECT ename FROM emp WHERE ename = 'scoott')
+begin
+PRINT 'Found it Scott'
+Print ' Search successful'
+end
+ELSE
+IF EXISTS(SELECT ename FROM emp WHERE ename = 'Smitth')
+begin
+PRINT 'Found  Smith'
+Print 'Search successful'
+end
+else
+print 'Search un successful'
+
+----------------------------------
+-- nested if
+DECLARE @Number INT;
+SET @Number = 50;
+IF @Number > 100
+    PRINT 'The number is large.';
+ELSE
+BEGIN
+    IF @Number < 10
+        PRINT 'The number is small.';
+    ELSE
+        PRINT 'The number is medium.';
+END;
+GO
+--------------------------------------
+
+DECLARE @Count int
+SET @Count = 0
+do_it:
+  	BEGIN
+	   PRINT 'Hello World'
+	   SET @Count = @Count + 1
+	END
+ IF @Count <5
+GOTO do_it 
+print 'No more going to the label do_it'
+
+------------------------------------------
+DECLARE @Count int
+SET @Count = 0
+do_it_again:
+IF @Count < 10 
+BEGIN
+PRINT 'Hello World'
+WAITFOR DELAY '00:00:01'
+SET @Count = @Count + 1
+END
+IF @Count < 10 
+GOTO do_it_again
+-------------------------------------------
+go
+declare @x  numeric(9,2) ,@y int
+set @y=7902
+set @x=(select  sal from emp where empno=@y);
+--select @x=(select  sal from emp where empno=@y);
+print  ' The sal of emp  ' + convert(char(10), @y) + ' is ' + convert(char(10), @x);
+ if @x <1500
+ update emp set comm=200 where empno=@y;
+ else
+ update emp set comm=250 where empno=@y;
+
+ --------------------------------------------
+
+ select sal ,comm from emp where empno=7902;
+SET NOCOUNT ON
+DECLARE @Id int
+DECLARE @name varchar(50)
+DECLARE @salary int
+DECLARE cur_emp CURSOR STATIC FOR SELECT Empno,EName,Sal from Emp where deptno=100 ;
+OPEN cur_emp; -- memory is allocated for the o/p of the select statment
+IF @@CURSOR_ROWS > 0
+ BEGIN 
+ FETCH NEXT FROM cur_emp INTO @Id,@name,@salary -- fetch the first record
+ WHILE @@Fetch_status = 0 -- for successful fetch
+ BEGIN
+ PRINT 'ID : '+ convert(varchar(20),@Id)+', Name : '+@name+ ', Salary : '+convert(varchar(20),@salary)
+ FETCH NEXT FROM cur_emp INTO @Id,@name,@salary -- fetch the next record
+ END
+END;
+print 'The result set is empty';
+CLOSE cur_emp
+DEALLOCATE cur_emp
+SET NOCOUNT OFF 
+--------------------------------------------------
+
+  go
+DECLARE @T table (s varchar(128))
+select 'old value #'  as s into #T
+INSERT into @T select 'old value @'
+ print 'before the update on temptable and table variable'
+  SELECT * from #T
+SELECT * from @T
+BEGIN transaction
+  UPDATE #T set s='new value #'
+  UPDATE @T set s='new value @'
+  print 'After the update on temptable and table variable'
+  SELECT * from #T
+SELECT * from @T
+ROLLBACK transaction --- affect the temptable not the tablevariable
+SELECT * from #T
+SELECT * from @T
+go
+-------------------------------
+
+declare @x int
+begin
+set @x =1/0 -- run time error
+insert into dept values(36,'qa','djbm','hgj') 
+end
+
+
+--------------------------------
+
+begin try
+declare @x int
+begin tran
+insert into dept values(65,'HR','PUNE','SCOTT');
+commit tran
+begin tran
+set @x =1/0 -- run time error
+insert into dept values(55,'Training','Mysore','MARTIN') -- statement never gets executed
+commit tran
+end try
+begin catch
+rollback tran
+PRINT 'Error Detected'
+end catch
+
+
+
+
+-------13/06/2025------------
+
+--system designed stored proc, extended stored proc, CLR and user defined sp
+
+CREATE PROCEDURE empdept10 AS
+BEGIN
+SELECT * FROM  emp where deptno=10;
+END
+-------------------
+exec empdept10
+-------------------
+
+alter PROCEDURE upempbydeptno @dno  INT = 20, @x int, @y varchar(20)
+AS
+BEGIN
+select sal from emp where deptno =@dno;
+update EMP set SAL=SAL+100 where DEPTNO=@dno;
+select sal from emp where deptno=@dno;
+select @@rowcount
+END
+--------------------------------------
+
+create procedure proc_cur  @dno int as
+ DECLARE @eno int, @es int
+ DECLARE c1 CURSOR dynamic FOR 
+ SELECT empno,sal   FROM emp where deptno=@dno
+   OPEN c1
+   FETCH NEXT FROM c1 INTO @eno,@es   
+  WHILE @@FETCH_STATUS = 0 
+  BEGIN
+   if @es>1000 and @es<2000 
+       update EMP set COMM=20 where empno=@eno
+    else
+     update EMP set COMM=30 where empno=@eno;
+       FETCH NEXT FROM c1 INTO @eno,@es  
+  END 
+  CLOSE c1
+    DEALLOCATE c1
+------------------------------------------------------------------------------------
+	select * from emp where deptno=20;
+---------------------------------------------------------------------------------
+exec proc_cur 20
+-----------------------------------
+select * from emp where deptno=20;
+
+----------------------------------------------------------------
+
+CREATE TABLE regions (
+	region_id INT IDENTITY(1,1) PRIMARY KEY,
+	region_name VARCHAR (25) DEFAULT NULL
+);
+
+CREATE TABLE countries (
+	country_id CHAR (2) PRIMARY KEY,
+	country_name VARCHAR (40) DEFAULT NULL,
+	region_id INT NOT NULL,
+	FOREIGN KEY (region_id) REFERENCES regions (region_id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE TABLE locations (
+	location_id INT IDENTITY(1,1) PRIMARY KEY,
+	street_address VARCHAR (40) DEFAULT NULL,
+	postal_code VARCHAR (12) DEFAULT NULL,
+	city VARCHAR (30) NOT NULL,
+	state_province VARCHAR (25) DEFAULT NULL,
+	country_id CHAR (2) NOT NULL,
+	FOREIGN KEY (country_id) REFERENCES countries (country_id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE TABLE jobs (
+	job_id INT IDENTITY(1,1) PRIMARY KEY,
+	job_title VARCHAR (35) NOT NULL,
+	min_salary DECIMAL (8, 2) DEFAULT NULL,
+	max_salary DECIMAL (8, 2) DEFAULT NULL
+);
+
+CREATE TABLE departments (
+	department_id INT IDENTITY(1,1) PRIMARY KEY,
+	department_name VARCHAR (30) NOT NULL,
+	location_id INT DEFAULT NULL,
+	FOREIGN KEY (location_id) REFERENCES locations (location_id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE TABLE employees (
+	employee_id INT IDENTITY(1,1) PRIMARY KEY,
+	first_name VARCHAR (20) DEFAULT NULL,
+	last_name VARCHAR (25) NOT NULL,
+	email VARCHAR (100) NOT NULL,
+	phone_number VARCHAR (20) DEFAULT NULL,
+	hire_date DATE NOT NULL,
+	job_id INT NOT NULL,
+	salary DECIMAL (8, 2) NOT NULL,
+	manager_id INT DEFAULT NULL,
+	department_id INT DEFAULT NULL,
+	FOREIGN KEY (job_id) REFERENCES jobs (job_id) ON DELETE CASCADE ON UPDATE CASCADE,
+	FOREIGN KEY (department_id) REFERENCES departments (department_id) ON DELETE CASCADE ON UPDATE CASCADE,
+	FOREIGN KEY (manager_id) REFERENCES employees (employee_id)
+);
+
+CREATE TABLE dependents (
+	dependent_id INT IDENTITY(1,1) PRIMARY KEY,
+	first_name VARCHAR (50) NOT NULL,
+	last_name VARCHAR (50) NOT NULL,
+	relationship VARCHAR (25) NOT NULL,
+	employee_id INT NOT NULL,
+	FOREIGN KEY (employee_id) REFERENCES employees (employee_id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+-----------------------------------------------------------------------------------------
+
+/*Data for the table regions */
+SET IDENTITY_INSERT regions ON;
+  
+INSERT INTO regions(region_id,region_name) VALUES (1,'Europe');
+INSERT INTO regions(region_id,region_name) VALUES (2,'Americas');
+INSERT INTO regions(region_id,region_name) VALUES (3,'Asia');
+INSERT INTO regions(region_id,region_name) VALUES (4,'Middle East and Africa');
+
+SET IDENTITY_INSERT regions OFF;  
+ 
+/*Data for the table countries */
+INSERT INTO countries(country_id,country_name,region_id) VALUES ('AR','Argentina',2);
+INSERT INTO countries(country_id,country_name,region_id) VALUES ('AU','Australia',3);
+INSERT INTO countries(country_id,country_name,region_id) VALUES ('BE','Belgium',1);
+INSERT INTO countries(country_id,country_name,region_id) VALUES ('BR','Brazil',2);
+INSERT INTO countries(country_id,country_name,region_id) VALUES ('CA','Canada',2);
+INSERT INTO countries(country_id,country_name,region_id) VALUES ('CH','Switzerland',1);
+INSERT INTO countries(country_id,country_name,region_id) VALUES ('CN','China',3);
+INSERT INTO countries(country_id,country_name,region_id) VALUES ('DE','Germany',1);
+INSERT INTO countries(country_id,country_name,region_id) VALUES ('DK','Denmark',1);
+INSERT INTO countries(country_id,country_name,region_id) VALUES ('EG','Egypt',4);
+INSERT INTO countries(country_id,country_name,region_id) VALUES ('FR','France',1);
+INSERT INTO countries(country_id,country_name,region_id) VALUES ('HK','HongKong',3);
+INSERT INTO countries(country_id,country_name,region_id) VALUES ('IL','Israel',4);
+INSERT INTO countries(country_id,country_name,region_id) VALUES ('IN','India',3);
+INSERT INTO countries(country_id,country_name,region_id) VALUES ('IT','Italy',1);
+INSERT INTO countries(country_id,country_name,region_id) VALUES ('JP','Japan',3);
+INSERT INTO countries(country_id,country_name,region_id) VALUES ('KW','Kuwait',4);
+INSERT INTO countries(country_id,country_name,region_id) VALUES ('MX','Mexico',2);
+INSERT INTO countries(country_id,country_name,region_id) VALUES ('NG','Nigeria',4);
+INSERT INTO countries(country_id,country_name,region_id) VALUES ('NL','Netherlands',1);
+INSERT INTO countries(country_id,country_name,region_id) VALUES ('SG','Singapore',3);
+INSERT INTO countries(country_id,country_name,region_id) VALUES ('UK','United Kingdom',1);
+INSERT INTO countries(country_id,country_name,region_id) VALUES ('US','United States of America',2);
+INSERT INTO countries(country_id,country_name,region_id) VALUES ('ZM','Zambia',4);
+INSERT INTO countries(country_id,country_name,region_id) VALUES ('ZW','Zimbabwe',4);
+ 
+/*Data for the table locations */
+SET IDENTITY_INSERT locations ON;
+INSERT INTO locations(location_id,street_address,postal_code,city,state_province,country_id) VALUES (1400,'2014 Jabberwocky Rd','26192','Southlake','Texas','US');
+INSERT INTO locations(location_id,street_address,postal_code,city,state_province,country_id) VALUES (1500,'2011 Interiors Blvd','99236','South San Francisco','California','US');
+INSERT INTO locations(location_id,street_address,postal_code,city,state_province,country_id) VALUES (1700,'2004 Charade Rd','98199','Seattle','Washington','US');
+INSERT INTO locations(location_id,street_address,postal_code,city,state_province,country_id) VALUES (1800,'147 Spadina Ave','M5V 2L7','Toronto','Ontario','CA');
+INSERT INTO locations(location_id,street_address,postal_code,city,state_province,country_id) VALUES (2400,'8204 Arthur St',NULL,'London',NULL,'UK');
+INSERT INTO locations(location_id,street_address,postal_code,city,state_province,country_id) VALUES (2500,'Magdalen Centre, The Oxford Science Park','OX9 9ZB','Oxford','Oxford','UK');
+INSERT INTO locations(location_id,street_address,postal_code,city,state_province,country_id) VALUES (2700,'Schwanthalerstr. 7031','80925','Munich','Bavaria','DE');
+SET IDENTITY_INSERT locations OFF;
+ 
+/*Data for the table jobs */
+SET IDENTITY_INSERT jobs ON;
+INSERT INTO jobs(job_id,job_title,min_salary,max_salary) VALUES (1,'Public Accountant',4200.00,9000.00);
+INSERT INTO jobs(job_id,job_title,min_salary,max_salary) VALUES (2,'Accounting Manager',8200.00,16000.00);
+INSERT INTO jobs(job_id,job_title,min_salary,max_salary) VALUES (3,'Administration Assistant',3000.00,6000.00);
+INSERT INTO jobs(job_id,job_title,min_salary,max_salary) VALUES (4,'President',20000.00,40000.00);
+INSERT INTO jobs(job_id,job_title,min_salary,max_salary) VALUES (5,'Administration Vice President',15000.00,30000.00);
+INSERT INTO jobs(job_id,job_title,min_salary,max_salary) VALUES (6,'Accountant',4200.00,9000.00);
+INSERT INTO jobs(job_id,job_title,min_salary,max_salary) VALUES (7,'Finance Manager',8200.00,16000.00);
+INSERT INTO jobs(job_id,job_title,min_salary,max_salary) VALUES (8,'Human Resources Representative',4000.00,9000.00);
+INSERT INTO jobs(job_id,job_title,min_salary,max_salary) VALUES (9,'Programmer',4000.00,10000.00);
+INSERT INTO jobs(job_id,job_title,min_salary,max_salary) VALUES (10,'Marketing Manager',9000.00,15000.00);
+INSERT INTO jobs(job_id,job_title,min_salary,max_salary) VALUES (11,'Marketing Representative',4000.00,9000.00);
+INSERT INTO jobs(job_id,job_title,min_salary,max_salary) VALUES (12,'Public Relations Representative',4500.00,10500.00);
+INSERT INTO jobs(job_id,job_title,min_salary,max_salary) VALUES (13,'Purchasing Clerk',2500.00,5500.00);
+INSERT INTO jobs(job_id,job_title,min_salary,max_salary) VALUES (14,'Purchasing Manager',8000.00,15000.00);
+INSERT INTO jobs(job_id,job_title,min_salary,max_salary) VALUES (15,'Sales Manager',10000.00,20000.00);
+INSERT INTO jobs(job_id,job_title,min_salary,max_salary) VALUES (16,'Sales Representative',6000.00,12000.00);
+INSERT INTO jobs(job_id,job_title,min_salary,max_salary) VALUES (17,'Shipping Clerk',2500.00,5500.00);
+INSERT INTO jobs(job_id,job_title,min_salary,max_salary) VALUES (18,'Stock Clerk',2000.00,5000.00);
+INSERT INTO jobs(job_id,job_title,min_salary,max_salary) VALUES (19,'Stock Manager',5500.00,8500.00);
+SET IDENTITY_INSERT jobs OFF;
+ 
+/*Data for the table departments */
+SET IDENTITY_INSERT departments ON;
+INSERT INTO departments(department_id,department_name,location_id) VALUES (1,'Administration',1700);
+INSERT INTO departments(department_id,department_name,location_id) VALUES (2,'Marketing',1800);
+INSERT INTO departments(department_id,department_name,location_id) VALUES (3,'Purchasing',1700);
+INSERT INTO departments(department_id,department_name,location_id) VALUES (4,'Human Resources',2400);
+INSERT INTO departments(department_id,department_name,location_id) VALUES (5,'Shipping',1500);
+INSERT INTO departments(department_id,department_name,location_id) VALUES (6,'IT',1400);
+INSERT INTO departments(department_id,department_name,location_id) VALUES (7,'Public Relations',2700);
+INSERT INTO departments(department_id,department_name,location_id) VALUES (8,'Sales',2500);
+INSERT INTO departments(department_id,department_name,location_id) VALUES (9,'Executive',1700);
+INSERT INTO departments(department_id,department_name,location_id) VALUES (10,'Finance',1700);
+INSERT INTO departments(department_id,department_name,location_id) VALUES (11,'Accounting',1700);
+SET IDENTITY_INSERT departments OFF;
+ 
+ 
+/*Data for the table employees */
+SET IDENTITY_INSERT employees ON;
+INSERT INTO employees(employee_id,first_name,last_name,email,phone_number,hire_date,job_id,salary,manager_id,department_id) VALUES (100,'Steven','King','steven.king@sqltutorial.org','515.123.4567','1987-06-17',4,24000.00,NULL,9);
+INSERT INTO employees(employee_id,first_name,last_name,email,phone_number,hire_date,job_id,salary,manager_id,department_id) VALUES (101,'Neena','Kochhar','neena.kochhar@sqltutorial.org','515.123.4568','1989-09-21',5,17000.00,100,9);
+INSERT INTO employees(employee_id,first_name,last_name,email,phone_number,hire_date,job_id,salary,manager_id,department_id) VALUES (102,'Lex','De Haan','lex.de haan@sqltutorial.org','515.123.4569','1993-01-13',5,17000.00,100,9);
+INSERT INTO employees(employee_id,first_name,last_name,email,phone_number,hire_date,job_id,salary,manager_id,department_id) VALUES (103,'Alexander','Hunold','alexander.hunold@sqltutorial.org','590.423.4567','1990-01-03',9,9000.00,102,6);
+INSERT INTO employees(employee_id,first_name,last_name,email,phone_number,hire_date,job_id,salary,manager_id,department_id) VALUES (104,'Bruce','Ernst','bruce.ernst@sqltutorial.org','590.423.4568','1991-05-21',9,6000.00,103,6);
+INSERT INTO employees(employee_id,first_name,last_name,email,phone_number,hire_date,job_id,salary,manager_id,department_id) VALUES (105,'David','Austin','david.austin@sqltutorial.org','590.423.4569','1997-06-25',9,4800.00,103,6);
+INSERT INTO employees(employee_id,first_name,last_name,email,phone_number,hire_date,job_id,salary,manager_id,department_id) VALUES (106,'Valli','Pataballa','valli.pataballa@sqltutorial.org','590.423.4560','1998-02-05',9,4800.00,103,6);
+INSERT INTO employees(employee_id,first_name,last_name,email,phone_number,hire_date,job_id,salary,manager_id,department_id) VALUES (107,'Diana','Lorentz','diana.lorentz@sqltutorial.org','590.423.5567','1999-02-07',9,4200.00,103,6);
+INSERT INTO employees(employee_id,first_name,last_name,email,phone_number,hire_date,job_id,salary,manager_id,department_id) VALUES (108,'Nancy','Greenberg','nancy.greenberg@sqltutorial.org','515.124.4569','1994-08-17',7,12000.00,101,10);
+INSERT INTO employees(employee_id,first_name,last_name,email,phone_number,hire_date,job_id,salary,manager_id,department_id) VALUES (109,'Daniel','Faviet','daniel.faviet@sqltutorial.org','515.124.4169','1994-08-16',6,9000.00,108,10);
+INSERT INTO employees(employee_id,first_name,last_name,email,phone_number,hire_date,job_id,salary,manager_id,department_id) VALUES (110,'John','Chen','john.chen@sqltutorial.org','515.124.4269','1997-09-28',6,8200.00,108,10);
+INSERT INTO employees(employee_id,first_name,last_name,email,phone_number,hire_date,job_id,salary,manager_id,department_id) VALUES (111,'Ismael','Sciarra','ismael.sciarra@sqltutorial.org','515.124.4369','1997-09-30',6,7700.00,108,10);
+INSERT INTO employees(employee_id,first_name,last_name,email,phone_number,hire_date,job_id,salary,manager_id,department_id) VALUES (112,'Jose Manuel','Urman','jose manuel.urman@sqltutorial.org','515.124.4469','1998-03-07',6,7800.00,108,10);
+INSERT INTO employees(employee_id,first_name,last_name,email,phone_number,hire_date,job_id,salary,manager_id,department_id) VALUES (113,'Luis','Popp','luis.popp@sqltutorial.org','515.124.4567','1999-12-07',6,6900.00,108,10);
+INSERT INTO employees(employee_id,first_name,last_name,email,phone_number,hire_date,job_id,salary,manager_id,department_id) VALUES (114,'Den','Raphaely','den.raphaely@sqltutorial.org','515.127.4561','1994-12-07',14,11000.00,100,3);
+INSERT INTO employees(employee_id,first_name,last_name,email,phone_number,hire_date,job_id,salary,manager_id,department_id) VALUES (115,'Alexander','Khoo','alexander.khoo@sqltutorial.org','515.127.4562','1995-05-18',13,3100.00,114,3);
+INSERT INTO employees(employee_id,first_name,last_name,email,phone_number,hire_date,job_id,salary,manager_id,department_id) VALUES (116,'Shelli','Baida','shelli.baida@sqltutorial.org','515.127.4563','1997-12-24',13,2900.00,114,3);
+INSERT INTO employees(employee_id,first_name,last_name,email,phone_number,hire_date,job_id,salary,manager_id,department_id) VALUES (117,'Sigal','Tobias','sigal.tobias@sqltutorial.org','515.127.4564','1997-07-24',13,2800.00,114,3);
+INSERT INTO employees(employee_id,first_name,last_name,email,phone_number,hire_date,job_id,salary,manager_id,department_id) VALUES (118,'Guy','Himuro','guy.himuro@sqltutorial.org','515.127.4565','1998-11-15',13,2600.00,114,3);
+INSERT INTO employees(employee_id,first_name,last_name,email,phone_number,hire_date,job_id,salary,manager_id,department_id) VALUES (119,'Karen','Colmenares','karen.colmenares@sqltutorial.org','515.127.4566','1999-08-10',13,2500.00,114,3);
+INSERT INTO employees(employee_id,first_name,last_name,email,phone_number,hire_date,job_id,salary,manager_id,department_id) VALUES (120,'Matthew','Weiss','matthew.weiss@sqltutorial.org','650.123.1234','1996-07-18',19,8000.00,100,5);
+INSERT INTO employees(employee_id,first_name,last_name,email,phone_number,hire_date,job_id,salary,manager_id,department_id) VALUES (121,'Adam','Fripp','adam.fripp@sqltutorial.org','650.123.2234','1997-04-10',19,8200.00,100,5);
+INSERT INTO employees(employee_id,first_name,last_name,email,phone_number,hire_date,job_id,salary,manager_id,department_id) VALUES (122,'Payam','Kaufling','payam.kaufling@sqltutorial.org','650.123.3234','1995-05-01',19,7900.00,100,5);
+INSERT INTO employees(employee_id,first_name,last_name,email,phone_number,hire_date,job_id,salary,manager_id,department_id) VALUES (123,'Shanta','Vollman','shanta.vollman@sqltutorial.org','650.123.4234','1997-10-10',19,6500.00,100,5);
+INSERT INTO employees(employee_id,first_name,last_name,email,phone_number,hire_date,job_id,salary,manager_id,department_id) VALUES (126,'Irene','Mikkilineni','irene.mikkilineni@sqltutorial.org','650.124.1224','1998-09-28',18,2700.00,120,5);
+INSERT INTO employees(employee_id,first_name,last_name,email,phone_number,hire_date,job_id,salary,manager_id,department_id) VALUES (145,'John','Russell','john.russell@sqltutorial.org',NULL,'1996-10-01',15,14000.00,100,8);
+INSERT INTO employees(employee_id,first_name,last_name,email,phone_number,hire_date,job_id,salary,manager_id,department_id) VALUES (146,'Karen','Partners','karen.partners@sqltutorial.org',NULL,'1997-01-05',15,13500.00,100,8);
+INSERT INTO employees(employee_id,first_name,last_name,email,phone_number,hire_date,job_id,salary,manager_id,department_id) VALUES (176,'Jonathon','Taylor','jonathon.taylor@sqltutorial.org',NULL,'1998-03-24',16,8600.00,100,8);
+INSERT INTO employees(employee_id,first_name,last_name,email,phone_number,hire_date,job_id,salary,manager_id,department_id) VALUES (177,'Jack','Livingston','jack.livingston@sqltutorial.org',NULL,'1998-04-23',16,8400.00,100,8);
+INSERT INTO employees(employee_id,first_name,last_name,email,phone_number,hire_date,job_id,salary,manager_id,department_id) VALUES (178,'Kimberely','Grant','kimberely.grant@sqltutorial.org',NULL,'1999-05-24',16,7000.00,100,8);
+INSERT INTO employees(employee_id,first_name,last_name,email,phone_number,hire_date,job_id,salary,manager_id,department_id) VALUES (179,'Charles','Johnson','charles.johnson@sqltutorial.org',NULL,'2000-01-04',16,6200.00,100,8);
+INSERT INTO employees(employee_id,first_name,last_name,email,phone_number,hire_date,job_id,salary,manager_id,department_id) VALUES (192,'Sarah','Bell','sarah.bell@sqltutorial.org','650.501.1876','1996-02-04',17,4000.00,123,5);
+INSERT INTO employees(employee_id,first_name,last_name,email,phone_number,hire_date,job_id,salary,manager_id,department_id) VALUES (193,'Britney','Everett','britney.everett@sqltutorial.org','650.501.2876','1997-03-03',17,3900.00,123,5);
+INSERT INTO employees(employee_id,first_name,last_name,email,phone_number,hire_date,job_id,salary,manager_id,department_id) VALUES (200,'Jennifer','Whalen','jennifer.whalen@sqltutorial.org','515.123.4444','1987-09-17',3,4400.00,101,1);
+INSERT INTO employees(employee_id,first_name,last_name,email,phone_number,hire_date,job_id,salary,manager_id,department_id) VALUES (201,'Michael','Hartstein','michael.hartstein@sqltutorial.org','515.123.5555','1996-02-17',10,13000.00,100,2);
+INSERT INTO employees(employee_id,first_name,last_name,email,phone_number,hire_date,job_id,salary,manager_id,department_id) VALUES (202,'Pat','Fay','pat.fay@sqltutorial.org','603.123.6666','1997-08-17',11,6000.00,201,2);
+INSERT INTO employees(employee_id,first_name,last_name,email,phone_number,hire_date,job_id,salary,manager_id,department_id) VALUES (203,'Susan','Mavris','susan.mavris@sqltutorial.org','515.123.7777','1994-06-07',8,6500.00,101,4);
+INSERT INTO employees(employee_id,first_name,last_name,email,phone_number,hire_date,job_id,salary,manager_id,department_id) VALUES (204,'Hermann','Baer','hermann.baer@sqltutorial.org','515.123.8888','1994-06-07',12,10000.00,101,7);
+INSERT INTO employees(employee_id,first_name,last_name,email,phone_number,hire_date,job_id,salary,manager_id,department_id) VALUES (205,'Shelley','Higgins','shelley.higgins@sqltutorial.org','515.123.8080','1994-06-07',2,12000.00,101,11);
+INSERT INTO employees(employee_id,first_name,last_name,email,phone_number,hire_date,job_id,salary,manager_id,department_id) VALUES (206,'William','Gietz','william.gietz@sqltutorial.org','515.123.8181','1994-06-07',1,8300.00,205,11);
+SET IDENTITY_INSERT employees OFF;
+ 
+/*Data for the table dependents */
+SET IDENTITY_INSERT dependents ON;
+INSERT INTO dependents(dependent_id,first_name,last_name,relationship,employee_id) VALUES (1,'Penelope','Gietz','Child',206);
+INSERT INTO dependents(dependent_id,first_name,last_name,relationship,employee_id) VALUES (2,'Nick','Higgins','Child',205);
+INSERT INTO dependents(dependent_id,first_name,last_name,relationship,employee_id) VALUES (3,'Ed','Whalen','Child',200);
+INSERT INTO dependents(dependent_id,first_name,last_name,relationship,employee_id) VALUES (4,'Jennifer','King','Child',100);
+INSERT INTO dependents(dependent_id,first_name,last_name,relationship,employee_id) VALUES (5,'Johnny','Kochhar','Child',101);
+INSERT INTO dependents(dependent_id,first_name,last_name,relationship,employee_id) VALUES (6,'Bette','De Haan','Child',102);
+INSERT INTO dependents(dependent_id,first_name,last_name,relationship,employee_id) VALUES (7,'Grace','Faviet','Child',109);
+INSERT INTO dependents(dependent_id,first_name,last_name,relationship,employee_id) VALUES (8,'Matthew','Chen','Child',110);
+INSERT INTO dependents(dependent_id,first_name,last_name,relationship,employee_id) VALUES (9,'Joe','Sciarra','Child',111);
+INSERT INTO dependents(dependent_id,first_name,last_name,relationship,employee_id) VALUES (10,'Christian','Urman','Child',112);
+INSERT INTO dependents(dependent_id,first_name,last_name,relationship,employee_id) VALUES (11,'Zero','Popp','Child',113);
+INSERT INTO dependents(dependent_id,first_name,last_name,relationship,employee_id) VALUES (12,'Karl','Greenberg','Child',108);
+INSERT INTO dependents(dependent_id,first_name,last_name,relationship,employee_id) VALUES (13,'Uma','Mavris','Child',203);
+INSERT INTO dependents(dependent_id,first_name,last_name,relationship,employee_id) VALUES (14,'Vivien','Hunold','Child',103);
+INSERT INTO dependents(dependent_id,first_name,last_name,relationship,employee_id) VALUES (15,'Cuba','Ernst','Child',104);
+INSERT INTO dependents(dependent_id,first_name,last_name,relationship,employee_id) VALUES (16,'Fred','Austin','Child',105);
+INSERT INTO dependents(dependent_id,first_name,last_name,relationship,employee_id) VALUES (17,'Helen','Pataballa','Child',106);
+INSERT INTO dependents(dependent_id,first_name,last_name,relationship,employee_id) VALUES (18,'Dan','Lorentz','Child',107);
+INSERT INTO dependents(dependent_id,first_name,last_name,relationship,employee_id) VALUES (19,'Bob','Hartstein','Child',201);
+INSERT INTO dependents(dependent_id,first_name,last_name,relationship,employee_id) VALUES (20,'Lucille','Fay','Child',202);
+INSERT INTO dependents(dependent_id,first_name,last_name,relationship,employee_id) VALUES (21,'Kirsten','Baer','Child',204);
+INSERT INTO dependents(dependent_id,first_name,last_name,relationship,employee_id) VALUES (22,'Elvis','Khoo','Child',115);
+INSERT INTO dependents(dependent_id,first_name,last_name,relationship,employee_id) VALUES (23,'Sandra','Baida','Child',116);
+INSERT INTO dependents(dependent_id,first_name,last_name,relationship,employee_id) VALUES (24,'Cameron','Tobias','Child',117);
+INSERT INTO dependents(dependent_id,first_name,last_name,relationship,employee_id) VALUES (25,'Kevin','Himuro','Child',118);
+INSERT INTO dependents(dependent_id,first_name,last_name,relationship,employee_id) VALUES (26,'Rip','Colmenares','Child',119);
+INSERT INTO dependents(dependent_id,first_name,last_name,relationship,employee_id) VALUES (27,'Julia','Raphaely','Child',114);
+INSERT INTO dependents(dependent_id,first_name,last_name,relationship,employee_id) VALUES (28,'Woody','Russell','Child',145);
+INSERT INTO dependents(dependent_id,first_name,last_name,relationship,employee_id) VALUES (29,'Alec','Partners','Child',146);
+INSERT INTO dependents(dependent_id,first_name,last_name,relationship,employee_id) VALUES (30,'Sandra','Taylor','Child',176);
+SET IDENTITY_INSERT dependents OFF;
+
+
+
+---------------------------------------------------------------------------------------
+
+CREATE PROCEDURE EmpPerfRpt
+AS BEGIN
+     CREATE TABLE #EmpSalSummary (DID INT, DName NVARCHAR(100),  TSal DECIMAL(18, 2), EmpCount INT );
+    -- Insert intermediate data into the temporary table
+    INSERT INTO #EmpSalSummary (DID, DName, TSal, EmpCount)
+    SELECT e.Department_ID,d.Department_Name,SUM(e.Salary),COUNT(e.Employee_ID)
+    FROM Employees e JOIN Departments d ON e.Department_ID = d.Department_ID
+    GROUP BY e.Department_ID, d.Department_Name;
+    -- Final report query using the temporary table
+    SELECT   DName, TSal, EmpCount,TSal / EmpCount AS AverageSalary
+    FROM   #EmpSalSummary;
+    -- Drop the temporary table
+    DROP TABLE #EmpSalSummary;
+	return 1;
+END;
+go
+-----------------------------------------------------------------
+exec EmpPerfRpt
+
+-----------------------------------------------------------------
+
+--triggers are written on tables and views
+--timing-- after/for, instead of, ddl (create, alter, drop)
+
+CREATE TRIGGER trdept 
+ON dept 
+FOR INSERT, UPDATE, DELETE
+AS
+BEGIN
+    IF DATEPART(WEEKDAY, GETDATE()) = 5  -- 5 = Friday (depends on server's DATEFIRST setting)
+    BEGIN
+        PRINT 'DML OPERATIONS ARE RESTRICTED ON FRIDAY'
+        ROLLBACK TRANSACTION
+    END
+END
+
+
+begin tran
+delete from dept;
+commit transaction
+
+disable trigger dbo.trdept on dbo.dept; 
+enable trigger dbo.trdept on dbo.dept;
+drop trigger dbo.trdept;
+
+----------indexing--------------------
+
+select * into emp1 from employees
+select * from emp1
+select * from emp1 where employee_id = 103
+
+
+select * from employees 
+where employee_id = 103
+
+select * from employees
+select first_name from employees where first_name='Lex'
+
+
+
+
+select FULLTEXTSERVICEPROPERTY('isfulltextinstalled')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
