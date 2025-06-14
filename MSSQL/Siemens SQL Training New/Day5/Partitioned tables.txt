@@ -1,0 +1,113 @@
+Partitioned  tables
+--"Divide and conqure"-- VLDB (10million records)
+
+sales data
+one huge table-- broken into multiple small tables
+all connected logically to the main table
+
+availability, performance, maintenance
+
+-- range, list, hash
+customer (customer_id,.,.,)
+  cust_part1  minvalue to 200
+  cust_part2  200 to 400
+cust_part3   400 to maxvalue
+
+
+
+
+
+
+
+
+
+
+
+
+CREATE TABLE customers (id INTEGER, status TEXT, arr NUMERIC) PARTITION BY RANGE(arr);
+
+CREATE TABLE cust_arr_small PARTITION OF customers FOR VALUES FROM (MINVALUE) TO (25);
+CREATE TABLE cust_arr_medium PARTITION OF customers FOR VALUES FROM (25) TO (75);
+CREATE TABLE cust_arr_large PARTITION OF customers FOR VALUES FROM (75) TO (MAXVALUE);
+---------------------------
+\d+ customers
+\d+ cust_arr_small
+------------------------
+INSERT INTO customers VALUES (1,'ACTIVE',100), (2,'RECURRING',20), (3,'EXPIRED',38), (4,'REACTIVATED',144);
+SELECT tableoid::regclass,* FROM customers;
+
+--------------------------
+ explain analyse select * from customers where arr=144;
+-----------------------------
+-- List partitions
+
+CREATE TABLE Lcustomers (id INTEGER, status TEXT, arr NUMERIC) PARTITION BY LIST(status);
+CREATE TABLE cust_active PARTITION OF lcustomers FOR VALUES IN ('ACTIVE','active');
+CREATE TABLE cust_archived PARTITION OF lcustomers FOR VALUES IN ('EXPIRED','expried');
+CREATE TABLE cust_others PARTITION OF lcustomers DEFAULT;
+---------------
+\d+ lcustomers;
+\d+ cust_artive;
+-------------------------------
+
+
+INSERT INTO lcustomers VALUES (1,'ACTIVE',100), (2,'RECURRING',20), (3,'EXPIRED',38), (4,'REACTIVATED',144);
+----------------
+SELECT tableoid::regclass,* FROM lcustomers;
+-------------------------------
+-- hash partition
+
+ CREATE TABLE hcustomers (id INTEGER, status TEXT, arr NUMERIC) PARTITION BY HASH(id);
+------------------------------
+ CREATE TABLE cust_part1 PARTITION OF hcustomers FOR VALUES WITH (modulus 3, remainder 0);
+--------------------
+ CREATE TABLE cust_part2 PARTITION OF hcustomers FOR VALUES WITH (modulus 3, remainder 1);
+-----------------------------
+
+ CREATE TABLE cust_part3 PARTITION OF hcustomers FOR VALUES WITH (modulus 3, remainder 2);
+-----------------------------
+-- to expand to 6 partitions
+--detach
+ALTER TABLE hcustomers DETACH PARTITION cust_part1; (repeat for all others) (repeat for all)
+--rename
+alter table cust_part1 rename to cust_part1bk;
+--create
+CREATE TABLE cust_part1 PARTITION OF hcustomers FOR VALUES WITH (MODULUS 6, REMAINDER 0); (create 5 more)
+move/insert data from all the detatched partitions
+insert into hcustomers select * from cust_part1bk; (insert from bk2,bk3)
+----------------------------------------------------
+-- subpartitioning/multilevel partitioning
+
+1. CREATE TABLE customers (id INTEGER, status TEXT, arr NUMERIC) PARTITION BY LIST(status);
+
+
+
+1.a CREATE TABLE cust_active PARTITION OF customers FOR VALUES IN ('ACTIVE','RECURRING','REACTIVATED') PARTITION BY RANGE(arr);
+ 1.aa CREATE TABLE cust_arr_small PARTITION OF cust_active FOR VALUES FROM (MINVALUE) TO (101); ;
+ 1.aaa CREATE TABLE cust_arr_all PARTITION OF cust_active FOR VALUES FROM (101) TO (maxvalue); 
+
+
+1.b CREATE TABLE cust_other PARTITION OF customers DEFAULT PARTITION BY RANGE(arr);
+1.bb CREATE TABLE cust_arr_small PARTITION OF cust_active FOR VALUES FROM (MINVALUE) TO (101); ;
+ 1.bbb CREATE TABLE cust_arr_all PARTITION OF cust_active FOR VALUES FROM (101) TO (maxvalue); 
+
+
+ CREATE TABLE cust_arr_large PARTITION OF cust_other FOR VALUES FROM (101) TO (MAXVALUE) PARTITION BY HASH(id);
+
+
+
+ CREATE TABLE cust_part21 PARTITION OF cust_arr_large FOR VALUES WITH (modulus 2, remainder 0);
+
+
+
+ CREATE TABLE cust_part22 PARTITION OF cust_arr_large FOR VALUES WITH (modulus 2, remainder 1);
+
+
+
+
+
+
+
+
+
+
