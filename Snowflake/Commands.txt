@@ -1,0 +1,4 @@
+Some imp snowflake commands:
+
+--use role accountadmin;
+--USE WAREHOUSE COMPUTE_WH;
