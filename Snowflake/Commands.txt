@@ -2,3 +2,192 @@ Some imp snowflake commands:
 
 --use role accountadmin;
 --USE WAREHOUSE COMPUTE_WH;
+
+
+use role accountadmin;
+use warehouse compute_wh;
+
+
+create or replace database mydb;
+create or replace schema myschema;
+
+USE SCHEMA MYDB.MYSCHEMA
+
+//Create a permanant table, by default this wull crete a permanent table
+CREATE OR REPLACE TABLE PERMANENT_TABLE(
+    ID INT,
+    NAME STRING
+);
+
+//VIEWING RESULTS FROM PERMANENT_TABLE 
+SELECT * FROM PERMANENT_TABLE 
+
+//CREATING A TRANSIENT TABLE 
+CREATE OR REPLACE TRANSIENT TABLE TRANSIENT_TABLE(
+    ID INT,
+    NAME STRING
+);
+
+//CREATING A TEMPORARY TABLE 
+CREATE OR REPLACE TEMPORARY TABLE TEMPORARY_TABLE(
+    ID INT,
+    NAME STRING
+);
+
+
+SHOW TABLES
+
+ALTER TABLE PERMANENT_TABLE SET DATA_RETENTION_TIME_IN_DAYS  = 90; 
+SHOW TABLES
+
+
+ALTER TABLE TRANSIENT_TABLE SET DATA_RETENTION_TIME_IN_DAYS  = 2; 
+ALTER TABLE TEMPORARY_TABLE SET DATA_RETENTION_TIME_IN_DAYS  = 2; 
+
+//different types of tables in snowflake
+
+//views in snowflake
+
+//Set the roles, warehouses and databases in snowflake
+CREATE OR REPLACE TABLE employees(
+    id integer,
+    name varchar(50),
+    department varchar(50),
+    salary integer
+
+);
+
+select * from employees
+
+//INSERTING INTO EMPLOYEES TABLE 
+INSERT INTO employees (id, name , department, salary)
+values
+    (1,'Pat Fay', 'HR', 50000),
+    (2,'Donald OConnel', 'IT', 60000),
+    (3,'Steven King', 'Sales', 70000),
+    (4,'Susan Marvis', 'IT', 50000),
+    (4,'Jeniffer Whalen', 'Marketing', 60000);
+
+SELECT * FROM EMPLOYEES
+
+//LETS CREATE A VIEW CALLED "IT_EMPLOYEES" THAT ONLY INCLUDES THE EMPLOYEES FROM IT DEPT
+
+CREATE OR REPLACE VIEW it_employees AS 
+SELECT * FROM EMPLOYEES
+WHERE DEPARTMENT = 'IT';
+
+SELECT * FROM it_employees
+
+//LETS CREATE A VIEW CALLED "IT_EMPLOYEES" THAT ONLY INCLUDES THE EMPLOYEES FROM HR DEPT
+CREATE OR REPLACE SECURE VIEW hr_employees AS 
+SELECT * FROM EMPLOYEES
+WHERE DEPARTMENT = 'HR';
+
+SELECT * FROM hr_employees
+
+//CREATING A STANDARD VIEW THAT AGGREGATES THE SALARIES BY DEPT
+CREATE OR REPLACE VIEW employee_salaries
+AS SELECT department, sum(salary) as total_salary
+from employees
+group by department;
+
+select * from employee_salaries
+
+//Creating a materialized view that aggregates the salaries by department 
+
+CREATE OR REPLACE MATERIALIZED VIEW materialized_employee_salaries
+AS SELECT department, sum(salary) as total_salary
+from employees
+group by department;
+
+select * from materialized_employee_salaries  //(this will bring the data from the cache)
+
+
+//Stages in snowflake - table stage, user stage and named stage
+
+CREATE OR REPLACE TABLE CUSTOMER(
+    id integer,
+    name varchar(50),
+    age integer,
+    state varchar(50)
+)
+
+//Access table stage 
+list @%customer
+
+//Access named stage
+list @~;
+
+//Create a named stage 
+list @CUSTOMER_STAGE;
+
+//Truncate the table CUSTOMER
+TRUNCATE TABLE CUSTOMER
+
+//CRETE A NAMED STAGE
+CREATE OR REPLACE STAGE CUSTOMER_STAGE
+
+//LOAD DATA TO CUSTOMER TABLE 
+copy into customer 
+from @CUSTOMER_STAGE
+file_format = (TYPE = 'CSV' SKIP_HEADER = 1);
+
+
+select * from titanic_dataset
+where name = 'Braund, Mr. Owen Harris'
+
+//use UI in order to create STAGES (internal and external) in snowflake 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
