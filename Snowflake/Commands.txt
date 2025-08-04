@@ -199,7 +199,7 @@ CREATE OR REPLACE TABLE USER(
     email varchar(50)
 );
 
-//creating a storage integration with s3 and iam role (IN S3, WE HAVE LOADED A CSV FILE FORMAT WHICH WE WOULD BE USING IN SNOWFLAKE STAGE)
+//creating a storage integration with s3 and iam role
 CREATE OR REPLACE STORAGE INTEGRATION s3_int
 TYPE = EXTERNAL_STAGE
 STORAGE_PROVIDER = 'S3'
@@ -210,28 +210,163 @@ STORAGE_ALLOWED_LOCATIONS= 'ENTER NAME OF BUCKET HERE'
 //DESCRIBING STORAGE INTEGRATION
 DESC INTEGRATION s3_int;
 
-//CREATE A FILE FORMAT
-CREATE OR REPLACE FILE FORMAT ms_csv_format
-TYPE = 'CSV'
-FIELD_DELIMITER = ','
-RECORD_DELIMITER = '\n'
-SKIP_HEADER = 1
+//Continuous Data loading(need to go through this topic)
 
-//CREATING AN EXTERNAL S3 STAGE IN SNOWFLAKE 
-CREATE OR REPLACE STAGE my_s3_stage
-STORAGE_INTEGRATION = s3_init 
-URL = 'REPLACE S3 STORAGE PATH HERE'
-FILE_FORMAT = ms_csv_format
 
-//ACCESS EXTERNAL STORAGE
-LIST @my_s3_stage
+//Snowflake streams (tracks all the DML operations against the source table)
 
-//LOAD DATA INTO USER TABLE 
-COPY INTO USER 
-FROM @my_s3_stage
-FILE_FORMAT  = (FILE_NAME = CSV_FORMAT)
+//creating a source table
+CREATE OR REPLACE TABLE source_table1(
+    id int,
+    name varchar,
+    created_date date
+);
 
-//CONTINUOUS DATA LOADING IN SNOWFLAKE(Fully automated (with Snowpipe + event triggers))
+insert into source_table1 values
+    (1, 'madhur', '2023-12-11'),
+    (2, 'naman', '2022-12-11'),
+    (3, 'ashutosh', '2024-12-11')
+
+//Creating a standard stream on the table 
+CREATE OR REPLACE STREAM standard_stream ON TABLE source_table1
+
+insert into 
+values
+    (4, 'ishant', '2023-12-11')
+    
+select * from standard_stream
+
+//delete data from table 
+delete from source_table1
+where id =4
+
+update source_table1 set name = 'Elon' 
+where id =1
+
+//APPEND ONLY STREAM
+
+CREATE OR REPLACE STREAM applend_only_stream ON TABLE source_table2 APPEND_ONLY = TRUE;
+
+select * from applend_only_stream
+
+insert into source_table2
+values
+    (1, 'ishant', '2023-12-11')
+
+select * from applend_only_stream
+
+update source_table1 set name = 'Elon' 
+where id =1
+
+//HOW TO USE STREAM IN ETL PROCESS
+
+CREATE OR REPLACE TABLE target_table2(
+    id int,
+    name varchar,
+    created_date date
+)
+
+select * from standard_stream
+
+insert into target_table2
+select id, name,created_date from append_only_stream;
+
+
+//INSERT ONLY STREAM
+
+CREATE EXTERNAL TABLE ext_table
+LOCATION = @MY_AWS_STAGE
+FILE_FORMAT = file_format
+
+create stream my_External_stream
+on external table ext_table
+insert_only = true
+
+
+//SNOWFLAKE TASKS (USER MANAGED TASK AND SERVERLESS SNOWFLAKE TASK)
+
+
+//without task 
+
+CREATE OR REPLACE TABLE SOURCE_TABLE (
+    id int,
+    name varchar,
+    created_date date
+)
+
+//insert some rows in source_table
+insert into SOURCE_TABLE
+values
+    (1, 'ishant', '2023-12-11')
+
+//create a target table
+CREATE OR REPLACE TABLE TARGET_TABLE(
+    id int,
+    name varchar,
+    crated_date date,
+    created_day varchar,
+    created_month varchar,
+    created_year varchar
+
+)
+
+INSERT INTO TARGET_TABLE
+SELECT
+    a.id,
+    a.name,
+    a.created_date,
+    DAY(a.created_date) AS created_day,
+    MONTH(a.created_date) AS created_month,
+    YEAR(a.created_date) AS created_year
+FROM SOURCE_TABLE a
+LEFT JOIN target_table b
+    ON a.id = b.id
+WHERE b.id IS NULL;
+
+
+insert into SOURCE_TABLE
+values
+    (3, 'MALHAR', '2023-12-11')
+
+
+//inserting data into target table through task 
+//(THIS TASK WILL RUN AFTER EVERY 5 MIN AND WILL INSERT INTO THE TARGET TABLE FROM THE SOURCE TABLE)
+CREATE OR REPLACE TASK my_task
+WAREHOUSE = COMPUTE_WH
+SCHEDULE = '5 MINUTE'
+AS
+INSERT INTO TARGET_TABLE
+SELECT
+    a.id,
+    a.name,
+    a.created_date,
+    DAY(a.created_date) AS created_day,
+    MONTH(a.created_date) AS created_month,
+    YEAR(a.created_date) AS created_year
+FROM SOURCE_TABLE a
+LEFT JOIN target_table b
+    ON a.id = b.id
+WHERE b.id IS NULL;
+
+//SHOW TASK IN SNOWFLAKE SCHEMA
+SHOW TASKS
+
+ALTER TASK my_task RESUME;
+ALTER TASK my_task SUSPEND;
+
+//SNOWFLAKE TIME TRAVEL AND FAIL SAFE
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
