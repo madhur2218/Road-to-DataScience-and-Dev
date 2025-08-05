@@ -356,6 +356,52 @@ ALTER TASK my_task SUSPEND;
 
 //SNOWFLAKE TIME TRAVEL AND FAIL SAFE
 
+create or replace table drop_table(
+    id int,
+    name varchar,
+);
+
+insert into drop_table values
+(1, 'john')
+(2, 'sam')
+(3,'mark')
+
+delete from drop_table where id =1
+
+select * from drop_table at (offset => -60*1)
+
+select * from drop_table at (timestamp => 'mention date and time here' ::timestamp_tz)
+
+select * from drop_table before (statement => 'paste query id over here');
+
+CREATE OR REPLACE TABLE DROP_TABLE_CLONE AS
+SELECT * FROM DROP_TABLE 
+BEFORE(STATEMENT => 'paste query id over here');
+
+TRUNCATE TABLE DROP_TABLE;
+
+INSERT INTO DROP_TABLE
+SELECT * FROM DROP_TABLE_CLONE;
+
+DROP TABLE DROP_TABLE_CLONE;
+
+SELECT * FROM DROP_TABLE;
+
+ALTER TABLE DROP_TABLE SET DATA_RETENTION_TIME_IN_DAYS = 30;
+
+//CLONING IN SNOWFLAKE (zero-copy cloning)
+
+create or replace DATABASE test_mydb
+clone mydb
+
+//drop the clone db
+drop database test_mydb
+
+
+
+
+
+
 
 
 
