@@ -1,4 +1,0 @@
-interface Trackable{
-
-    void track();
-}
