@@ -1,7 +1,7 @@
 package dev.lpa;
 
-import java.util.ArrayList;
-import java.util.Arrays;
+import java.sql.SQLOutput;
+import java.util.*;
 
 public class Main {
 
@@ -38,6 +38,63 @@ public class Main {
 
 
         System.out.println("---------LEC 3 -------------");
+
+        List names = new ArrayList(Arrays.asList("madhur","ashutosh","naman"));
+        System.out.println(names);
+
+        List moreNames = new ArrayList(List.of("ishant","adarsh"));
+        System.out.println(moreNames);
+
+        names.addAll(moreNames);
+        System.out.println(names);  //adding objects
+
+        System.out.println("Third item in list:" + names.get(2)); //print element based on index
+
+        System.out.println("Check if ishant is present in list");  //checking if element is present
+        if(names.contains("ishant")){
+            System.out.println("ishant is present in list");
+        }
+
+        System.out.println("Index of naman: "+ names.indexOf("naman"));
+
+        names.sort(Comparator.naturalOrder());
+        System.out.println(names);
+
+        names.sort(Comparator.reverseOrder());
+        System.out.println(names);
+
+        //groceryArrayList.sort(Comparator.comparing(e -> e.name()));
+
+        //Array vs ArrayList
+        String [] originalArray = new String[] {"First", "Second", "Third"};
+        var originalList = Arrays.asList(originalArray);
+
+        originalList.set(0, "one");
+        System.out.println("list: " + originalList);
+
+        originalList.sort(Comparator.naturalOrder());
+
+        List<String> newList = Arrays.asList("mon","tues","wed");
+        System.out.println(newList);
+
+        for(String i: newList){
+            System.out.println(i);
+        }
+
+        var placesToVisits = new LinkedList<String>();
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
