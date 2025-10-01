@@ -77,12 +77,14 @@ public class Main {
         List<String> newList = Arrays.asList("mon","tues","wed");
         System.out.println(newList);
 
-        for(String i: newList){
-            System.out.println(i);
-        }
+        System.out.println("----------ENUMS LECTURE-------");
+        Seasons seasons = Seasons.FALL;
+        System.out.println(seasons);
 
-        var placesToVisits = new LinkedList<String>();
 
+        Status s = Status.ERROR;
+        System.out.println(s);
+        System.out.println(s.getCode());
 
 
 
