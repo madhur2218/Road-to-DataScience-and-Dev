@@ -21,7 +21,7 @@ public class HighestElementinArray {
                 maxElement = arr[i];
             }
         }
-        System.out.println("max element in array is: "+maxElement );
+        System.out.println("max element in array is: "+maxElement);
     }
 
     public static void lowestElement(int[]arr){
