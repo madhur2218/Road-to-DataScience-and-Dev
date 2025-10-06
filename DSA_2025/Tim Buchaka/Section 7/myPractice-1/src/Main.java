@@ -174,7 +174,7 @@ public class Main {
     }
 
     public static void StringCompression(StringBuilder sc){
-        String string = "aaabbccccd ";
+        String string = "aaabbccccd";
         int count=0;
 
         for(int i=0;i<string.length();i++){
