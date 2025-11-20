@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/623512039701008501/1f0d5632e2924e8bb618875bddfb1e1d/artifacts
+end_time: 1763631643506
+entry_point_name: ''
+experiment_id: '623512039701008501'
+lifecycle_stage: active
+run_id: 1f0d5632e2924e8bb618875bddfb1e1d
+run_name: carefree-fly-485
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1763631641425
+status: 3
+tags: []
+user_id: Madhur
