@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/437757201473272197/b338e3c26ded47e5afdeaafeaf7c9628/artifacts
+end_time: 1763645082857
+entry_point_name: ''
+experiment_id: '437757201473272197'
+lifecycle_stage: active
+run_id: b338e3c26ded47e5afdeaafeaf7c9628
+run_name: gentle-snipe-404
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1763645082847
+status: 4
+tags: []
+user_id: Madhur

@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/437757201473272197/e495a0905a4f4465925fe95a82a6a1e0/artifacts
+end_time: 1763650044190
+entry_point_name: ''
+experiment_id: '437757201473272197'
+lifecycle_stage: active
+run_id: e495a0905a4f4465925fe95a82a6a1e0
+run_name: funny-goat-11
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1763650041714
+status: 3
+tags: []
+user_id: Madhur

@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/437757201473272197/b9378722359a4d158c70bd4ed7cc9c4a/artifacts
+end_time: 1763650026834
+entry_point_name: ''
+experiment_id: '437757201473272197'
+lifecycle_stage: active
+run_id: b9378722359a4d158c70bd4ed7cc9c4a
+run_name: colorful-lamb-67
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1763650026821
+status: 4
+tags: []
+user_id: Madhur

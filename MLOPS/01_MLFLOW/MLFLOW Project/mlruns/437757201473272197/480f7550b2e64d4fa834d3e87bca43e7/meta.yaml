@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/437757201473272197/480f7550b2e64d4fa834d3e87bca43e7/artifacts
+end_time: 1763649819146
+entry_point_name: ''
+experiment_id: '437757201473272197'
+lifecycle_stage: active
+run_id: 480f7550b2e64d4fa834d3e87bca43e7
+run_name: nosy-midge-349
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1763649819137
+status: 4
+tags: []
+user_id: Madhur

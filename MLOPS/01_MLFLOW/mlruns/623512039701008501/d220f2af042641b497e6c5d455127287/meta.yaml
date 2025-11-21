@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/623512039701008501/d220f2af042641b497e6c5d455127287/artifacts
+end_time: 1763632943775
+entry_point_name: ''
+experiment_id: '623512039701008501'
+lifecycle_stage: active
+run_id: d220f2af042641b497e6c5d455127287
+run_name: tasteful-mare-7
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1763632941710
+status: 3
+tags: []
+user_id: Madhur
