@@ -17,6 +17,11 @@ public class Controller {
       public String cooking(){
           return "I love cooking!";
       }
+
+      @GetMapping("/health")
+        public String health(){
+            return "I love health!";
+        }
   }
 
 
