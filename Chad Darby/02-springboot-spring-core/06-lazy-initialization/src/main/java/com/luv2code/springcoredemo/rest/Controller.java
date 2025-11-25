@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class Controller {
 
-   // @Qualifier("footballCoach")
+    @Qualifier("cricketCoach")
     @Autowired
     private Coach coach;
 
