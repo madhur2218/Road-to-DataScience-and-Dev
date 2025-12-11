@@ -1,0 +1,15 @@
+- docker build -t welcom-app . 
+- Get-Content Dockerfile
+- docker run -p 5000:5000 welcome-app
+
+
+Some imp docker commands:
+
+docker -v --> docker version command
+docker pull docker/getting-started -> downloading an image
+docker images --> to check which images are there 
+docker ps -> to check if container is running or not 
+docker stop 
+
+
+what is host port and container port 
